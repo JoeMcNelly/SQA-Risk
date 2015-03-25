@@ -1,0 +1,2 @@
+Problem Statement
+	The purpose of this project is to create a computer-based version of the board game Risk by implementing an interactive GUI that allows the user to easily navigate and play our version of the game. We intend to write the program in C# because of the numerous libraries which are helpful in creating and supporting game development. The following is a list of features we hope to have fully implemented in the final version of our Risk game.

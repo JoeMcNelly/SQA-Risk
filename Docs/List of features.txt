@@ -1,0 +1,11 @@
+List of Features:
+
+Supports multi-phase turns
+Can have multiple players
+Can add armies to region
+Can attack region
+Can take over continent - granting more armies per turn
+Can draw a card per turn
+Can redeem cards for armies
+Game ends when a player wins, new game can start
+Can move armies at end of turn
