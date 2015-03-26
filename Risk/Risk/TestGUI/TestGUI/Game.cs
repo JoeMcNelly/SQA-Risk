@@ -22,7 +22,7 @@ namespace TestGUI
 
         public int getNumOfPlayers()
         {
-            return -1000000;
+            return this.numOfPlayers;
         }
     }
 }
