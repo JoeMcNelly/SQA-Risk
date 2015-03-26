@@ -7,3 +7,12 @@ C:\CSSE 376\Test and Sample Code Snippets\TestGUI\TestGUI\obj\Debug\TestGUI.Prop
 C:\CSSE 376\Test and Sample Code Snippets\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache
 C:\CSSE 376\Test and Sample Code Snippets\TestGUI\TestGUI\obj\Debug\TestGUI.exe
 C:\CSSE 376\Test and Sample Code Snippets\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.pdb
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.Form1.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache

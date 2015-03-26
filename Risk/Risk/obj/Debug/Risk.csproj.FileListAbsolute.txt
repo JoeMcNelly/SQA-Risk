@@ -1,1 +1,2 @@
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
