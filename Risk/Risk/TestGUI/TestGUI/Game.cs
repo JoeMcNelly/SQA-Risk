@@ -8,9 +8,21 @@ namespace TestGUI
 {
     public class Game
     {
+        private int numOfPlayers;
+
         public Game()
         {
 
+        }
+
+        public Game(int numOfPlayers)
+        {
+            this.numOfPlayers = numOfPlayers;   
+        }
+
+        public int getNumOfPlayers()
+        {
+            return -1000000;
         }
     }
 }

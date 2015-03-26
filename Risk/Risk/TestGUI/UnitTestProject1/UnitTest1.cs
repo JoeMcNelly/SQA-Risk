@@ -13,5 +13,13 @@ namespace UnitTestProject1
             Game newgame = new Game();
             Assert.IsNotNull(newgame);
         }
+
+        [Test()]
+        public void TestNumberOfPlayersConstructor()
+        {
+            Game newgame = new Game(0);
+            Assert.AreEqual(0, newgame.getNumOfPlayers());
+            
+        }
     }
 }
