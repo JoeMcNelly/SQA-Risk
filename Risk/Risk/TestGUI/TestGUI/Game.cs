@@ -9,6 +9,8 @@ namespace TestGUI
     public class Game
     {
         private int numOfPlayers;
+        private List<Territory> map;
+        private List<Player> players;
 
         public Game()
         {
