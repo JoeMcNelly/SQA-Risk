@@ -8,6 +8,9 @@ namespace TestGUI
 {
     class Player
     {
+        private List<Territory> territories;
+        private List<Card> cards;
+
         public Player()
         {
             

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace TestGUI
 {
-    class Territory
+    class Card
     {
-        private List<Territory> adjacencies;
-        private int troops;
-        private String cont;
+        private Territory terr;
+        private String troopType;
 
-        public Territory()
+        public Card()
         {
 
         }
