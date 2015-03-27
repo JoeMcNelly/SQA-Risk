@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TestGUI
 {
-    public partial class Form1 : Form
+    public partial class RiskGame : Form
     {
-        public Form1()
+        public RiskGame()
         {
             InitializeComponent();
         }

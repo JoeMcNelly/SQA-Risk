@@ -1,6 +1,6 @@
 ﻿namespace TestGUI
 {
-    partial class Form1
+    partial class RiskGame
     {
         /// <summary>
         /// Required designer variable.
