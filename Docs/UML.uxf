@@ -11,9 +11,9 @@
     </coordinates>
     <panel_attributes>GameRunner
 --
-GameBoard game;
+Game game;
 --
-main()</panel_attributes>
+void main()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -22,13 +22,15 @@ main()</panel_attributes>
       <x>610</x>
       <y>160</y>
       <w>160</w>
-      <h>140</h>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>GameBoard
+    <panel_attributes>Game
 --
 List&lt;Territory&gt; map;
 List&lt;Player&gt; players;
+int numOfPlayers;
 --
+int getNumOfPlayers();
 void setup();
 void run();
 bool gameOver();</panel_attributes>
@@ -64,13 +66,13 @@ Territory getTerritory();</panel_attributes>
 List&lt;Territory&gt; territories;
 List&lt;Card&gt; cards;
 --
-takeTurn()
-redeemCards();
-incReinforce(terr);
-decReinforce(terr);
-saveReinforcements();
-attack(terr1,terr2);
-fortify(terr1, terr2, numTroops);
+void takeTurn()
+void redeemCards();
+void incReinforce(terr);
+void decReinforce(terr);
+void saveReinforcements();
+void attack(terr1,terr2);
+void fortify(terr1, terr2, numTroops);
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -122,12 +124,12 @@ void subtractTroops(int num);
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>290</y>
+      <y>300</y>
       <w>130</w>
-      <h>170</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>110.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
