@@ -47,9 +47,9 @@ bool gameOver();</panel_attributes>
     <panel_attributes>Card
 --
 Territory terr;
-int troops;
+String troopType;
 --
-int getTroops();
+String getTroopType();
 Territory getTerritory();</panel_attributes>
     <additional_attributes/>
   </element>
