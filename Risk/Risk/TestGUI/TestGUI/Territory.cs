@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestGUI
 {
-    class Territory
+    public class Territory
     {
         private List<Territory> adjacencies;
         private int troops;
@@ -15,6 +15,16 @@ namespace TestGUI
         public Territory()
         {
 
+        }
+
+        public void addTroops(int troop)  
+        {
+            this.troops += troop;
+        }
+
+        public int getNumTroops()
+        {
+            return this.troops;
         }
     }
 }
