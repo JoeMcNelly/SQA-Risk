@@ -16,5 +16,10 @@ namespace TestGUI
         {
 
         }
+        public void addTroops(int num) 
+        {
+            
+        }
     }
+
 }
