@@ -19,12 +19,36 @@ namespace TestGUI
 
         public Game(int numOfPlayers)
         {
-            this.numOfPlayers = numOfPlayers;   
+            this.numOfPlayers = numOfPlayers;
+            this.map = new List<Territory>();
+            this.players = new List<Player>();
         }
 
         public int getNumOfPlayers()
         {
             return this.numOfPlayers;
         }
+
+        public void addTerritoryToMap(Territory terr)
+        {
+            this.map.Add(terr);
+        }
+
+        public List<Territory> getMapList()
+        {
+            return this.map;
+        }
+
+        public void reinforce(Player player, int allowedTroops)
+        {
+            List<int> troops = new List<int>();
+            for (int i = 0; i < player.getTerritories().Count; i++)
+            {
+                troops.Add(0);
+            }
+
+
+        }
+
     }
 }

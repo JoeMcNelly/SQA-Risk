@@ -25,13 +25,14 @@ namespace UnitTestProject1
 
         }
 
-        //[Test()]
-        //public void TestReturnCorrectNumberOfTroops()
-        //{
-        //    Game newgame = new Game(2);
-        //    int numOfSoldiers = 5;
-
-        //}
+        [Test()]
+        public void TestReturnCorrectNumberOfTroops()
+        {
+            Territory terr = new Territory();
+            int numOfSoldiers = 5;
+            terr.addTroops(numOfSoldiers);
+            Assert.AreEqual(numOfSoldiers, terr.getNumTroops());
+        }
 
     }
 }

@@ -11,6 +11,7 @@ namespace TestGUI
         private List<Territory> adjacencies;
         private int troops;
         private String cont;
+        private String terrName;
 
         public Territory()
         {

@@ -15,5 +15,16 @@ namespace TestGUI
         {
             
         }
+
+        public List<Territory> getTerritories()
+        {
+            return this.territories;
+        }
+
+        public void finalize(List<int> troops)
+        {
+           
+        }
+
     }
 }
