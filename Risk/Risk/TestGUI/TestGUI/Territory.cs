@@ -16,7 +16,7 @@ namespace TestGUI
         {
 
         }
-
+        
         public void addTroops(int troop)  
         {
             this.troops += troop;
@@ -27,4 +27,5 @@ namespace TestGUI
             return this.troops;
         }
     }
+
 }
