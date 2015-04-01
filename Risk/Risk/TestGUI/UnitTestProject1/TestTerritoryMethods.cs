@@ -15,12 +15,15 @@ namespace UnitTestProject1
             Assert.IsNotNull(terr);
         }
 
-        //[Test()]
-        //public void TestCorrectlyAddedTerritoryToGameMap()
-        //{
-        //    Territory terr = new Territory();
+        [Test()]
+        public void TestCorrectlyAddedTerritoryToGameMap()
+        {
+            Game newgame = new Game(2);
+            Territory terr = new Territory();
+            newgame.addTerritoryToMap(terr);
+            Assert.AreEqual(terr, newgame.getMapList()[0]);
 
-        //}
+        }
 
         //[Test()]
         //public void TestReturnCorrectNumberOfTroops()
