@@ -30,7 +30,7 @@ namespace UnitTestProject1
         {
             Territory terr = new Territory();
             int numOfSoldiers = 5;
-            terr.addTroops(numOfSoldiers);
+            terr.addTroops();
             Assert.AreEqual(numOfSoldiers, terr.getNumTroops());
         }
 
