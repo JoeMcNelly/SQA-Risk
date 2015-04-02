@@ -17,6 +17,8 @@ namespace TestGUI
 
         public RiskGame()
         {
+            territories = new List<Territory>();
+
             InitializeComponent();
             Territory nAfrica = new Territory("Africa", "North Africa");
             Territory congo = new Territory("Africa", "Congo");
@@ -60,7 +62,11 @@ namespace TestGUI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.territories[0].addTroops(1);
+            int testInt = 0;
+           // this.territories[0].addTroops(1);
+            Console.WriteLine("You just clicked North Africa!");
+            Console.WriteLine("Number of troops currently in North Africa: " 
+                + this.territories[0].getNumTroops().ToString());
 
         }
 

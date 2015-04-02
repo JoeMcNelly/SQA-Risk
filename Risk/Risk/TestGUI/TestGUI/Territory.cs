@@ -10,6 +10,7 @@ namespace TestGUI
     {
         private List<Territory> adjacencies;
         private int troops;
+        private int tempTroops = 0;
         private String cont;
         private String terrName;
 
@@ -39,6 +40,11 @@ namespace TestGUI
         public int getNumTroops()
         {
             return this.troops;
+        }
+
+        public void resetTroops(int troops)
+        {
+            this.tempTroops = 0;
         }
     }
 
