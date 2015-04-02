@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestGUI
 {
+    //Move all dis to RiskGame.cs at some point
     public class Game
     {
         private int numOfPlayers;
@@ -39,16 +40,16 @@ namespace TestGUI
             return this.map;
         }
 
-        public void reinforce(Player player, int allowedTroops)
-        {
-            List<int> troops = new List<int>();
-            for (int i = 0; i < player.getTerritories().Count; i++)
-            {
-                troops.Add(0);
-            }
+        //public void reinforce(Player player, int allowedTroops)
+        //{
+        //    List<int> troops = new List<int>();
+        //    for (int i = 0; i < player.getTerritories().Count; i++)
+        //    {
+        //        troops.Add(0);
+        //    }
 
 
-        }
+        //}
 
     }
 }

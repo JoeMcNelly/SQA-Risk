@@ -17,6 +17,19 @@ namespace TestGUI
         {
 
         }
+
+        public Territory(String cont, String terrName)
+        {
+            this.cont = cont;
+            this.terrName = terrName;
+            this.troops = 0;
+        }
+
+        public void setAdjancencies()
+        {
+            //TODO: Should probably use a StringReader or something to auto-initialize 
+            //everything at the beginning of a game. Or something like that. 
+        }
         
         public void addTroops(int troop)  
         {
