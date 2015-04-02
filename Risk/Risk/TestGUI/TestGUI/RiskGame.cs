@@ -14,10 +14,13 @@ namespace TestGUI
     {
 
         List<Territory> territories;
+        int allowedReinforcements = 15;
 
         public RiskGame()
         {
             territories = new List<Territory>();
+
+            
 
             InitializeComponent();
             Territory nAfrica = new Territory("Africa", "North Africa");
@@ -30,14 +33,38 @@ namespace TestGUI
 
         }
 
+        private void clickTerritory(int index)
+        {
+            if (allowedReinforcements > 0)
+            {
+                this.territories[index].addTroops();
+                allowedReinforcements--;
+            }
+            label1.Text = "" + allowedReinforcements;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (allowedReinforcements == 0)
+            {
+                String name = "";
+                foreach (Territory t in territories)
+                {
+                    t.saveTroops();
+                    name += t.terrName;
+                    name += ": " + t.getNumTroops() + '\n';
+                }
+                Console.WriteLine(name);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            foreach (Territory t in territories)
+            {
+                allowedReinforcements += t.tempTroops;
+                t.tempTroops = 0;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -62,23 +89,17 @@ namespace TestGUI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            int testInt = 0;
-           // this.territories[0].addTroops(1);
-            Console.WriteLine("You just clicked North Africa!");
-            Console.WriteLine("Number of troops currently in North Africa: " 
-                + this.territories[0].getNumTroops().ToString());
-
+            clickTerritory(0);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.territories[1].addTroops(1);
-
+            clickTerritory(1);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.territories[2].addTroops(2);
+            clickTerritory(2);
 
         }
 

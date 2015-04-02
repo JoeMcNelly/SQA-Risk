@@ -10,9 +10,9 @@ namespace TestGUI
     {
         private List<Territory> adjacencies;
         private int troops;
-        private int tempTroops = 0;
+        public int tempTroops = 0;
         private String cont;
-        private String terrName;
+        public String terrName;
 
         public Territory()
         {
@@ -32,9 +32,15 @@ namespace TestGUI
             //everything at the beginning of a game. Or something like that. 
         }
         
-        public void addTroops(int troop)  
+        public void addTroops()  
         {
-            this.troops += troop;
+            this.tempTroops ++;
+        }
+
+        public void saveTroops()
+        {
+            this.troops+=this.tempTroops;
+            this.tempTroops = 0;
         }
 
         public int getNumTroops()
