@@ -25,6 +25,30 @@ namespace TestGUI
         {
            
         }
+        public void takeTurn()
+        {
+
+        }
+        public void redeemCards()
+        {
+
+        }
+        public void incReinforce()
+        {
+
+        }
+        public void decReinforce()
+        {
+
+        }
+        void attack(Territory t1, Territory t2)
+        {
+
+        }
+        public void fortify(Territory source, Territory dest, int numOfTroops)
+        {
+
+        }
 
     }
 }

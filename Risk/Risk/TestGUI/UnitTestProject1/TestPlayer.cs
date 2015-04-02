@@ -4,13 +4,12 @@ using TestGUI;
 
 namespace UnitTestProject1
 {
-    [TestFixture()]
-    public class TerritoryTest
+    [TestFixture]
+    public class TestPlayer
     {
         [Test()]
-        public void TestAddZeroTroops()
+        public void TestMethod1()
         {
-            
         }
     }
 }
