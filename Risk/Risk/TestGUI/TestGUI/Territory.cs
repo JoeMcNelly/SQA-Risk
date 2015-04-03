@@ -10,22 +10,37 @@ namespace TestGUI
     {
         private List<Territory> adjacencies;
         private int troops;
-        public int tempTroops = 0;
+        private int tempTroops = 0;
         private String cont;
-        public String terrName;
+        private String terrName;
+        private int owner;
 
-        public Territory()
-        {
-
-        }
-
-        public Territory(String cont, String terrName)
+        public Territory(String cont, String terrName, int owner)
         {
             this.cont = cont;
             this.terrName = terrName;
             this.troops = 0;
+            this.owner = owner;
         }
 
+        public int getOwner(){
+            return owner;
+        }
+        public void setOwner(int newOwner)
+        {
+            this.owner = newOwner;
+        }
+
+
+        public String getName()
+        {
+            return terrName;
+        }
+
+        public int getTemporaryReinforcements()
+        {
+            return tempTroops;
+        }
         public void setAdjancencies()
         {
             //TODO: Should probably use a StringReader or something to auto-initialize 
@@ -48,7 +63,7 @@ namespace TestGUI
             return this.troops;
         }
 
-        public void resetTroops(int troops)
+        public void resetReinforcements()
         {
             this.tempTroops = 0;
         }
