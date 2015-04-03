@@ -71,24 +71,8 @@ namespace TestGUI
 
             Territory temp = (Territory)obj;
 
-
-
-
             //not finished, needs to check adjacencies and troop count
             return (this.terrName.Equals(temp.getName())) && (this.cont.Equals(temp.getContinent())) && (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hash = 17;
-                hash = hash * 23 + terrName.GetHashCode();
-                hash = hash * 23 + cont.GetHashCode();
-                hash = hash * 23 + troops.GetHashCode();
-
-                return hash;
-            }
         }
 
 

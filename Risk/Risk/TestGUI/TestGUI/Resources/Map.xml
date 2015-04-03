@@ -3,10 +3,16 @@
   <territory>
     <name>Alaska</name>
     <continent>North America</continent>
-    <adjacent></adjacent>
+    <adjacent>Northwest Territory</adjacent>
   </territory>
   <territory>
     <name>Northwest Territory</name>
     <continent>North America</continent>
+    <adjacent>Alaska:Alberta</adjacent>
+  </territory>
+  <territory>
+    <name>Alberta</name>
+    <continent>North America</continent>
+    <adjacent>Northwest Territory</adjacent>
   </territory>
 </territories>

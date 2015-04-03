@@ -63,7 +63,18 @@ namespace TestGUI
             {
                 String name = node.SelectSingleNode("name").InnerText;
                 String continent = node.SelectSingleNode("continent").InnerText;
+
                 Territory terr = new Territory(continent, name);
+
+                if(node.SelectSingleNode("adjacent")!=null)
+                {
+                    String adjacencies = node.SelectSingleNode("adjacent").InnerText;
+                    terr.addAdjancent(adjacencies);
+                }
+                
+
+                
+
                 addTerritoryToMap(terr);
             }
             
