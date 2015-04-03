@@ -15,6 +15,7 @@ namespace TestGUI
         private String terrName;
         private int owner;
 
+        public Territory() { }
         public Territory(String cont, String terrName, int owner)
         {
             this.cont = cont;
