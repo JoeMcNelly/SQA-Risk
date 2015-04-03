@@ -57,11 +57,13 @@ namespace TestGUI
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml);
-            XmlNode node = doc.DocumentElement.SelectSingleNode("territory");
-            String name = node.SelectSingleNode("name").InnerText;
-            String continent = node.SelectSingleNode("continent").InnerText;
-            Territory terr = new Territory(continent, name);
-            addTerritoryToMap(terr);
+            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
+            {
+                String name = node.SelectSingleNode("name").InnerText;
+                String continent = node.SelectSingleNode("continent").InnerText;
+                Territory terr = new Territory(continent, name);
+                addTerritoryToMap(terr);
+            }
             
             return this.map;
         }
