@@ -69,7 +69,12 @@ namespace TestGUI
                 if(node.SelectSingleNode("adjacent")!=null)
                 {
                     String adjacencies = node.SelectSingleNode("adjacent").InnerText;
-                    terr.addAdjancent(adjacencies);
+                    string [] adjacenciesList = adjacencies.Split(':');
+
+                    foreach (string adj in adjacenciesList)
+                    {
+                        terr.addAdjancent(adj);
+                    }
                 }
                 
 
