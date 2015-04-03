@@ -90,7 +90,7 @@ namespace UnitTestProject1
             Northwest_Territory.addAdjancent("Alaska");
             Northwest_Territory.addAdjancent("Alberta");
             Alberta.addAdjancent("Northwest Territory");
-
+             
             Assert.AreEqual(Alaska, target[0]);
             Assert.AreEqual(Northwest_Territory, target[1]);
             Assert.AreEqual(Alberta, target[2]);
