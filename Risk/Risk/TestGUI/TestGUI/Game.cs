@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.XPath;
-
+using System.Xml;
 namespace TestGUI
 {
     //Move all dis to RiskGame.cs at some point
@@ -51,8 +50,17 @@ namespace TestGUI
 
 
         //}
-        public List<Territory> makeMapFromXML(XPathDocument document)
+        public List<Territory> makeMapFromXML(string xml)
         {
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
+            {
+                String name = node.SelectSingleNode("name").InnerText;
+                String continent = node.SelectSingleNode("continent").InnerText;
+                Territory terr = new Territory(continent, name);
+                addTerritoryToMap(terr);
+            }
             return this.map;
         }
     }

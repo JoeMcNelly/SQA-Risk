@@ -46,6 +46,26 @@ namespace TestGUI
         {
             this.tempTroops = 0;
         }
+        public String getContinent() 
+        {
+            return this.cont;
+        }
+        public String getName()
+        {
+            return this.terrName;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            Territory temp = (Territory)obj;
+
+            //not finished, needs to check adjacencies and troop count
+            return (this.terrName == temp.getName()) && (this.cont == temp.getContinent());
+        }
+
+
     }
 
 }
