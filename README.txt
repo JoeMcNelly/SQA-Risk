@@ -17,4 +17,5 @@ If a mistake has been made, the current troops added can be reset
 Once the troops are added, they can be saved
 After the save button is clicked, the next players turn starts
 
-NOTE: the territories are currently hardcoded to specific players(2)
+NOTE: the territories are currently hardcoded to specific players(6)
+Each player owns his own continent
