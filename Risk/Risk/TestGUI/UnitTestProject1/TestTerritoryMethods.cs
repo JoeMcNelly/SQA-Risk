@@ -26,12 +26,43 @@ namespace UnitTestProject1
         }
 
         [Test()]
-        public void TestReturnCorrectNumberOfTroops()
+        public void TestReturnCorrectNumberOfTempTroops()
         {
             Territory terr = new Territory();
             int numOfSoldiers = 5;
-            terr.addTroops();
-            Assert.AreEqual(numOfSoldiers, terr.getNumTroops());
+            for (int i = 0; i < numOfSoldiers; i++)
+            {
+                terr.addTroops();
+            }
+            Assert.AreEqual(numOfSoldiers, terr.getTemporaryReinforcements());
+        }
+
+        [Test()]
+        public void TestSaveTroopsMethod()
+        {
+            Territory terr = new Territory();
+            int numSoldiers = 15;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                terr.addTroops();
+            }
+            terr.saveTroops();
+            Assert.AreEqual(numSoldiers, terr.getNumTroops());
+        }
+
+        [Test()]
+        public void TestResetTroopsMethod()
+        {
+            Territory terr = new Territory();
+            int numSoldiers = 7;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                terr.addTroops();
+            }
+            terr.resetReinforcements();
+            terr.saveTroops();
+            Assert.AreEqual(0, terr.getTemporaryReinforcements());
+            Assert.AreEqual(0, terr.getNumTroops());
         }
 
     }

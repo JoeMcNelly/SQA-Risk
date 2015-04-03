@@ -50,7 +50,7 @@ namespace TestGUI
         
         public void addTroops()  
         {
-            this.tempTroops ++;
+            this.tempTroops++;
         }
 
         public void saveTroops()
