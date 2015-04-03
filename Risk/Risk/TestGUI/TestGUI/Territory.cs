@@ -8,7 +8,7 @@ namespace TestGUI
 {
     public class Territory
     {
-        private List<Territory> adjacencies;
+        private List<String> adjacencies;
         private int troops;
         private int tempTroops = 0;
         private String cont;
@@ -21,6 +21,7 @@ namespace TestGUI
 
         public Territory(String cont, String terrName)
         {
+            this.adjacencies = new List<String>();
             this.cont = cont;
             this.terrName = terrName;
             this.troops = 0;
@@ -30,6 +31,10 @@ namespace TestGUI
         {
             //TODO: Should probably use a StringReader or something to auto-initialize 
             //everything at the beginning of a game. Or something like that. 
+        }
+        public void addAdjancent(String territoryName)
+        {
+            adjacencies.Add(territoryName);
         }
         
         public void addTroops(int troop)  
@@ -54,15 +59,36 @@ namespace TestGUI
         {
             return this.terrName;
         }
+        public List<String> getAdjancencies()
+        {
+            return adjacencies;
+        }
 
         public override bool Equals(Object obj)
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
+
             Territory temp = (Territory)obj;
 
+
+
+
             //not finished, needs to check adjacencies and troop count
-            return (this.terrName == temp.getName()) && (this.cont == temp.getContinent());
+            return (this.terrName.Equals(temp.getName())) && (this.cont.Equals(temp.getContinent())) && (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + terrName.GetHashCode();
+                hash = hash * 23 + cont.GetHashCode();
+                hash = hash * 23 + troops.GetHashCode();
+
+                return hash;
+            }
         }
 
 

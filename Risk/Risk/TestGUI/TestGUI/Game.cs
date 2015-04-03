@@ -50,6 +50,8 @@ namespace TestGUI
 
 
         //}
+
+        //going to make 
         public List<Territory> makeMapFromXML(string xml)
         {
             if (xml.Equals(""))
