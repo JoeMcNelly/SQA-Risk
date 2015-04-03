@@ -5,4 +5,8 @@
     <continent>North America</continent>
     <adjacent></adjacent>
   </territory>
+  <territory>
+    <name>Northwest Territory</name>
+    <continent>North America</continent>
+  </territory>
 </territories>

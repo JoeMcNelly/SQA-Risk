@@ -52,15 +52,17 @@ namespace TestGUI
         //}
         public List<Territory> makeMapFromXML(string xml)
         {
+            if (xml.Equals(""))
+                return null;
+
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml);
-            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
-            {
-                String name = node.SelectSingleNode("name").InnerText;
-                String continent = node.SelectSingleNode("continent").InnerText;
-                Territory terr = new Territory(continent, name);
-                addTerritoryToMap(terr);
-            }
+            XmlNode node = doc.DocumentElement.SelectSingleNode("territory");
+            String name = node.SelectSingleNode("name").InnerText;
+            String continent = node.SelectSingleNode("continent").InnerText;
+            Territory terr = new Territory(continent, name);
+            addTerritoryToMap(terr);
+            
             return this.map;
         }
     }
