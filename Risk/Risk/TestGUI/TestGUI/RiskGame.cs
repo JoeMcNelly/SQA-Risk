@@ -17,7 +17,7 @@ namespace TestGUI
         int allowedReinforcements = 15;
         List<Button> buttons;
         int currentPlayer = 0;
-        int numberOfPlayers = 2;
+        int numberOfPlayers = 6;
 
 
         public RiskGame()
@@ -58,10 +58,10 @@ namespace TestGUI
 
             territories.Add(new Territory("Africa", "North Africa",0));
             territories.Add(new Territory("Africa", "Congo",0));
-            territories.Add(new Territory("Africa", "South Africa",1));
-            territories.Add(new Territory("Africa", "Madagascar", 1));
-            territories.Add(new Territory("Africa", "East Africa", 1));
-            territories.Add(new Territory("Africa", "Egypt", 1));
+            territories.Add(new Territory("Africa", "South Africa",0));
+            territories.Add(new Territory("Africa", "Madagascar", 0));
+            territories.Add(new Territory("Africa", "East Africa", 0));
+            territories.Add(new Territory("Africa", "Egypt", 0));
             buttons.Add(button7);
             buttons.Add(button8);
             buttons.Add(button9);
@@ -78,15 +78,15 @@ namespace TestGUI
             buttons.Add(button13);
             buttons.Add(button15);
 
-            territories.Add(new Territory("North America", "Central America", 1));
-            territories.Add(new Territory("North America", "Eastern US", 1));
-            territories.Add(new Territory("North America", "Western US", 1));
-            territories.Add(new Territory("North America", "Alberta", 1));
-            territories.Add(new Territory("North America", "Alaska", 1));
-            territories.Add(new Territory("North America", "Greenland", 1));
-            territories.Add(new Territory("North America", "Northwest Territory", 1));
-            territories.Add(new Territory("North America", "Quebec", 1));
-            territories.Add(new Territory("North America", "Ontario", 1));
+            territories.Add(new Territory("North America", "Central America", 2));
+            territories.Add(new Territory("North America", "Eastern US", 2));
+            territories.Add(new Territory("North America", "Western US", 2));
+            territories.Add(new Territory("North America", "Alberta", 2));
+            territories.Add(new Territory("North America", "Alaska", 2));
+            territories.Add(new Territory("North America", "Greenland", 2));
+            territories.Add(new Territory("North America", "Northwest Territory", 2));
+            territories.Add(new Territory("North America", "Quebec", 2));
+            territories.Add(new Territory("North America", "Ontario", 2));
             buttons.Add(button16);
             buttons.Add(button18);
             buttons.Add(button17);
@@ -97,13 +97,13 @@ namespace TestGUI
             buttons.Add(button23);
             buttons.Add(button22);
 
-            territories.Add(new Territory("Europe", "Great Britan", 1));
-            territories.Add(new Territory("Europe", "Iceland", 1));
-            territories.Add(new Territory("Europe", "North Europe", 1));
-            territories.Add(new Territory("Europe", "South Europe", 1));
-            territories.Add(new Territory("Europe", "West Europe", 1));
-            territories.Add(new Territory("Europe", "Scandinavia", 1));
-            territories.Add(new Territory("Europe", "Ukraine", 1));
+            territories.Add(new Territory("Europe", "Great Britan", 3));
+            territories.Add(new Territory("Europe", "Iceland", 3));
+            territories.Add(new Territory("Europe", "North Europe", 3));
+            territories.Add(new Territory("Europe", "South Europe", 3));
+            territories.Add(new Territory("Europe", "West Europe", 3));
+            territories.Add(new Territory("Europe", "Scandinavia", 3));
+            territories.Add(new Territory("Europe", "Ukraine", 3));
             buttons.Add(button26);
             buttons.Add(button25);
             buttons.Add(button29);
@@ -112,18 +112,18 @@ namespace TestGUI
             buttons.Add(button28);
             buttons.Add(button31);
 
-            territories.Add(new Territory("Asia", "China", 1));
-            territories.Add(new Territory("Asia", "Irkutsk", 1));
-            territories.Add(new Territory("Asia", "Kamchatka", 1));
-            territories.Add(new Territory("Asia", "Mongolia", 1));
-            territories.Add(new Territory("Asia", "Siberia", 1));
-            territories.Add(new Territory("Asia", "Yakutsk", 1));
-            territories.Add(new Territory("Asia", "Afghanistan", 1));
-            territories.Add(new Territory("Asia", "India", 1));
-            territories.Add(new Territory("Asia", "Japan", 1));
-            territories.Add(new Territory("Asia", "Middle-East", 1));
-            territories.Add(new Territory("Asia", "Siam", 1));
-            territories.Add(new Territory("Asia", "Ural", 1));
+            territories.Add(new Territory("Asia", "China", 4));
+            territories.Add(new Territory("Asia", "Irkutsk", 4));
+            territories.Add(new Territory("Asia", "Kamchatka", 4));
+            territories.Add(new Territory("Asia", "Mongolia", 4));
+            territories.Add(new Territory("Asia", "Siberia", 4));
+            territories.Add(new Territory("Asia", "Yakutsk", 4));
+            territories.Add(new Territory("Asia", "Afghanistan", 4));
+            territories.Add(new Territory("Asia", "India", 4));
+            territories.Add(new Territory("Asia", "Japan", 4));
+            territories.Add(new Territory("Asia", "Middle-East", 4));
+            territories.Add(new Territory("Asia", "Siam", 4));
+            territories.Add(new Territory("Asia", "Ural", 4));
             buttons.Add(button36);
             buttons.Add(button40);
             buttons.Add(button39);
@@ -137,14 +137,14 @@ namespace TestGUI
             buttons.Add(button42);
             buttons.Add(button32);
 
-            territories.Add(new Territory("Australia", "East Australia", 1));
-            territories.Add(new Territory("Australia", "West Australia", 1));
-            territories.Add(new Territory("Australia", "Indonesia", 1));
-            territories.Add(new Territory("Australia", "New-Guinea", 1));
+            territories.Add(new Territory("Australia", "East Australia", 5));
+            territories.Add(new Territory("Australia", "West Australia", 5));
+            territories.Add(new Territory("Australia", "Indonesia", 5));
+            territories.Add(new Territory("Australia", "New-Guinea", 5));
             buttons.Add(button46);
             buttons.Add(button45);
-            buttons.Add(button43);
             buttons.Add(button44);
+            buttons.Add(button43);
 
             for (int i = 0; i < buttons.Count; i++)
             {
@@ -263,17 +263,17 @@ namespace TestGUI
         }
         private void button12_Click(object sender, EventArgs e)
         {
-            clickTerritory(6, button12);
+            clickTerritory(7, button12);
 
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            clickTerritory(7, button13);
+            clickTerritory(8, button13);
 
         }
         private void button14_Click(object sender, EventArgs e)
         {
-            clickTerritory(8, button14);
+            clickTerritory(6, button14);
 
         }
         private void button15_Click(object sender, EventArgs e)
@@ -288,12 +288,12 @@ namespace TestGUI
         }
         private void button17_Click(object sender, EventArgs e)
         {
-            clickTerritory(11, button17);
+            clickTerritory(12, button17);
 
         }
         private void button18_Click(object sender, EventArgs e)
         {
-            clickTerritory(12, button18);
+            clickTerritory(11, button18);
 
         }
         private void button19_Click(object sender, EventArgs e)
@@ -308,12 +308,12 @@ namespace TestGUI
         }
         private void button21_Click(object sender, EventArgs e)
         {
-            clickTerritory(15, button21);
+            clickTerritory(16, button21);
 
         }
         private void button22_Click(object sender, EventArgs e)
         {
-            clickTerritory(16, button22);
+            clickTerritory(18, button22);
 
         }
         private void button23_Click(object sender, EventArgs e)
@@ -323,37 +323,37 @@ namespace TestGUI
         }
         private void button24_Click(object sender, EventArgs e)
         {
-            clickTerritory(18, button24);
+            clickTerritory(15, button24);
 
         }
         private void button25_Click(object sender, EventArgs e)
         {
-            clickTerritory(19, button25);
+            clickTerritory(20, button25);
 
         }
         private void button26_Click(object sender, EventArgs e)
         {
-            clickTerritory(20, button26);
+            clickTerritory(19, button26);
 
         }
         private void button27_Click(object sender, EventArgs e)
         {
-            clickTerritory(21, button27);
+            clickTerritory(23, button27);
 
         }
         private void button28_Click(object sender, EventArgs e)
         {
-            clickTerritory(22, button28);
+            clickTerritory(24, button28);
 
         }
         private void button29_Click(object sender, EventArgs e)
         {
-            clickTerritory(23, button29);
+            clickTerritory(21, button29);
 
         }
         private void button30_Click(object sender, EventArgs e)
         {
-            clickTerritory(24, button30);
+            clickTerritory(22, button30);
 
         }
         private void button31_Click(object sender, EventArgs e)
@@ -363,52 +363,52 @@ namespace TestGUI
         }
         private void button32_Click(object sender, EventArgs e)
         {
-            clickTerritory(26, button32);
+            clickTerritory(37, button32);
 
         }
         private void button33_Click(object sender, EventArgs e)
         {
-            clickTerritory(27, button33);
+            clickTerritory(35, button33);
 
         }
         private void button34_Click(object sender, EventArgs e)
         {
-            clickTerritory(28, button34);
+            clickTerritory(32, button34);
 
         }
         private void button35_Click(object sender, EventArgs e)
         {
-            clickTerritory(29, button35);
+            clickTerritory(33, button35);
 
         }
         private void button36_Click(object sender, EventArgs e)
         {
-            clickTerritory(30, button36);
+            clickTerritory(26, button36);
 
         }
         private void button37_Click(object sender, EventArgs e)
         {
-            clickTerritory(31, button37);
+            clickTerritory(30, button37);
 
         }
         private void button38_Click(object sender, EventArgs e)
         {
-            clickTerritory(32, button38);
+            clickTerritory(31, button38);
 
         }
         private void button39_Click(object sender, EventArgs e)
         {
-            clickTerritory(33, button39);
+            clickTerritory(28, button39);
 
         }
         private void button40_Click(object sender, EventArgs e)
         {
-            clickTerritory(34, button40);
+            clickTerritory(27, button40);
 
         }
         private void button41_Click(object sender, EventArgs e)
         {
-            clickTerritory(35, button41);
+            clickTerritory(29, button41);
 
         }
         private void button42_Click(object sender, EventArgs e)
@@ -418,12 +418,12 @@ namespace TestGUI
         }
         private void button43_Click(object sender, EventArgs e)
         {
-            clickTerritory(37, button43);
+            clickTerritory(40, button43);
 
         }
         private void button44_Click(object sender, EventArgs e)
         {
-            clickTerritory(38, button44);
+            clickTerritory(39, button44);
 
         }
         private void button45_Click(object sender, EventArgs e)
@@ -433,12 +433,12 @@ namespace TestGUI
         }
         private void button46_Click(object sender, EventArgs e)
         {
-            clickTerritory(40, button46);
+            clickTerritory(38, button46);
 
         }
         private void button47_Click(object sender, EventArgs e)
         {
-            clickTerritory(41, button47);
+            clickTerritory(34, button47);
 
         }
 
