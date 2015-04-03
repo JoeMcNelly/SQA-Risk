@@ -51,9 +51,9 @@ namespace TestGUI
 
 
         //}
-        public List<Territory> makeMapFromXML(String xmlString)
+        public List<Territory> makeMapFromXML(XPathDocument document)
         {
-            return null;
+            return this.map;
         }
     }
 }
