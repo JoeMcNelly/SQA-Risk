@@ -8,7 +8,7 @@ namespace TestGUI
 {
     public class Territory
     {
-        private List<String> adjacencies;
+        private List<Territory> adjacencies;
         private int troops;
         private int tempTroops = 0;
         private String cont;
@@ -16,12 +16,15 @@ namespace TestGUI
 
         public Territory()
         {
-
+            adjacencies = new List<Territory>();
+            troops = 0;
+            cont = null;
+            terrName = null;
         }
 
         public Territory(String cont, String terrName)
         {
-            this.adjacencies = new List<String>();
+            this.adjacencies = new List<Territory>();
             this.cont = cont;
             this.terrName = terrName;
             this.troops = 0;
@@ -32,9 +35,9 @@ namespace TestGUI
             //TODO: Should probably use a StringReader or something to auto-initialize 
             //everything at the beginning of a game. Or something like that. 
         }
-        public void addAdjancent(String territoryName)
+        public void addAdjancent(Territory territory)
         {
-            adjacencies.Add(territoryName);
+            adjacencies.Add(territory);
         }
         
         public void addTroops(int troop)  
@@ -59,7 +62,7 @@ namespace TestGUI
         {
             return this.terrName;
         }
-        public List<String> getAdjancencies()
+        public List<Territory> getAdjancencies()
         {
             return adjacencies;
         }
@@ -72,7 +75,9 @@ namespace TestGUI
             Territory temp = (Territory)obj;
 
             //not finished, needs to check adjacencies and troop count
-            return (this.terrName.Equals(temp.getName())) && (this.cont.Equals(temp.getContinent())) && (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
+            return (this.terrName.Equals(temp.getName())) && 
+                   (this.cont.Equals(temp.getContinent())) && 
+                   (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
         }
 
 

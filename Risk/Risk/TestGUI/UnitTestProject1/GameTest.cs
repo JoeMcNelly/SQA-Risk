@@ -54,48 +54,43 @@ namespace UnitTestProject1
             Assert.AreEqual(testTerritory2, target[1]);
         }
 
-        [Test()]
-        public void TestMakeMapFromXMLSingleAdjacent()
-        {
-            Game gameTest = new Game(2);
-            List<Territory> target = new List<Territory>();
-
-            String str = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><territories> <territory> <name>Alaska</name> <continent>North America</continent> <adjacent>Northwest Territory</adjacent> </territory> <territory> <name>Northwest Territory</name> <continent>North America</continent> <adjacent>Alaska</adjacent> </territory> </territories>";
-            target = gameTest.makeMapFromXML(str);
-
-            Territory testTerritory = new Territory("North America", "Alaska");
-            Territory testTerritory2 = new Territory("North America", "Northwest Territory");
-
-            testTerritory.addAdjancent("Northwest Territory");
-            testTerritory2.addAdjancent("Alaska");
-
-            Assert.AreEqual(testTerritory, target[0]);
-            Assert.AreEqual(testTerritory2, target[1]);
-        }
-
-        [Test()]
-        public void TestMakeMapFromXMLTwoAdjacencies()
-        {
-            Game gameTest = new Game(2);
-            List<Territory> target = new List<Territory>();
-
-            String str = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><territories><territory><name>Alaska</name><continent>North America</continent><adjacent>Northwest Territory</adjacent></territory><territory><name>Northwest Territory</name><continent>North America</continent><adjacent>Alaska:Alberta</adjacent></territory><territory><name>Alberta</name><continent>North America</continent><adjacent>Northwest Territory</adjacent></territory></territories>";
-            target = gameTest.makeMapFromXML(str);
-
-            Territory Alaska = new Territory("North America", "Alaska");
-            Territory Northwest_Territory = new Territory("North America", "Northwest Territory");
-            Territory Alberta = new Territory("North America", "Alberta");
-
-            Alaska.addAdjancent("Northwest Territory");
-            Northwest_Territory.addAdjancent("Alaska");
-            Northwest_Territory.addAdjancent("Alberta");
-            Alberta.addAdjancent("Northwest Territory");
-             
-            Assert.AreEqual(Alaska, target[0]);
-            Assert.AreEqual(Northwest_Territory, target[1]);
-            Assert.AreEqual(Alberta, target[2]);
-        }
-
+//        [Test()]
+//        public void TestMakeMapFromXMLSingleAdjacent()
+//        {
+//            Game gameTest = new Game(2);
+//            List<Territory> target = new List<Territory>();
+//
+//            String str = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><territories> <territory> <name>Alaska</name> <continent>North America</continent> <adjacent>Northwest Territory</adjacent> </territory> <territory> <name>Northwest Territory</name> <continent>North America</continent> <adjacent>Alaska</adjacent> </territory> </territories>";
+//            target = gameTest.makeMapFromXML(str);
+//
+//            Territory testTerritory = new Territory("North America", "Alaska");
+//            Territory testTerritory2 = new Territory("North America", "Northwest Territory");
+//
+//            testTerritory.addAdjancent("Northwest Territory");
+//            testTerritory2.addAdjancent("Alaska");
+//
+//            Assert.AreEqual(testTerritory, target[0]);
+//            Assert.AreEqual(testTerritory2, target[1]);
+//        }
+//
+//        [Test()]
+//        public void TestMakeMapFromXMLTwoAdjacencies()
+//        {
+//            Game gameTest = new Game(2);
+//            List<Territory> target = new List<Territory>();
+//
+//            String str = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><territories><territory><name>Alaska</name><continent>North America</continent><adjacent>Northwest Territory</adjacent></territory><territory><name>Northwest Territory</name><continent>North America</continent><adjacent>Alaska:Alberta</adjacent></territory><territory><name>Alberta</name><continent>North America</continent><adjacent>Northwest Territory</adjacent></territory></territories>";
+//            target = gameTest.makeMapFromXML(str);
+//
+//            Territory Alaska = new Territory("North America", "Alaska");
+//            Territory Northwest_Territory = new Territory("North America", "Northwest Territory");
+//            Territory Alberta = new Territory("North America", "Alberta");
+//             
+//            Assert.AreEqual(Alaska, target[0]);
+//            Assert.AreEqual(Northwest_Territory, target[1]);
+//            Assert.AreEqual(Alberta, target[2]);
+//        }
+//
 
     }
 }

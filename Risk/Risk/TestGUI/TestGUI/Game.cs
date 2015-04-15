@@ -71,10 +71,6 @@ namespace TestGUI
                     String adjacencies = node.SelectSingleNode("adjacent").InnerText;
                     string [] adjacenciesList = adjacencies.Split(':');
 
-                    foreach (string adj in adjacenciesList)
-                    {
-                        terr.addAdjancent(adj);
-                    }
                 }
                 
 
