@@ -17,6 +17,14 @@ namespace UnitTestProject1
             Assert.IsTrue(test.Equals(target));
         }
         [Test()]
+        public void TestTerritoryIsNotEqualToNullObj()
+        {
+            Territory target = new Territory();
+
+            Assert.IsFalse(target.Equals(null));
+        }
+
+        [Test()]
         public void TestTerritoryAreNotEqualWhenNameDifference()
         {
             Territory target = new Territory("A", "");
