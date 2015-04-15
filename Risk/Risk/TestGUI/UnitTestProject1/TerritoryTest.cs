@@ -35,8 +35,8 @@ namespace UnitTestProject1
         [Test()]
         public void TestTerritoryAreNotEqualWhenNameDifference()
         {
-            Territory target = new Territory("A", "");
-            Territory test = new Territory("B", "");
+            Territory target = new Territory("", "A");
+            Territory test = new Territory("", "B");
 
             Assert.IsFalse(test.Equals(target));
         }

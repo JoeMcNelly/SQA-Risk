@@ -18,8 +18,8 @@ namespace TestGUI
         {
             adjacencies = new List<Territory>();
             troops = 0;
-            cont = null;
-            terrName = null;
+            cont = "";
+            terrName = "";
         }
 
         public Territory(String cont, String terrName)
@@ -71,11 +71,13 @@ namespace TestGUI
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
-            return true;
 
+            Territory temp = (Territory)obj;
 
-//            if (obj == null || GetType() != obj.GetType())
-//                return false;
+            bool names = (this.terrName.Equals(temp.getName()));
+
+            return names;
+
 //
 //            Territory temp = (Territory)obj;
 //
