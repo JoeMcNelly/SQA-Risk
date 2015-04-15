@@ -69,6 +69,8 @@ namespace TestGUI
 
         public override bool Equals(Object obj)
         {
+            if (obj == null)
+                return false;
             return true;
 
 
