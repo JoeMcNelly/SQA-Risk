@@ -69,15 +69,18 @@ namespace TestGUI
 
         public override bool Equals(Object obj)
         {
-            if (obj == null || GetType() != obj.GetType())
-                return false;
+            return true;
 
-            Territory temp = (Territory)obj;
 
-            //not finished, needs to check adjacencies and troop count
-            return (this.terrName.Equals(temp.getName())) && 
-                   (this.cont.Equals(temp.getContinent())) && 
-                   (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
+//            if (obj == null || GetType() != obj.GetType())
+//                return false;
+//
+//            Territory temp = (Territory)obj;
+//
+//            //not finished, needs to check adjacencies and troop count
+//            return (this.terrName.Equals(temp.getName())) && 
+//                   (this.cont.Equals(temp.getContinent())) && 
+//                   (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
         }
 
 
