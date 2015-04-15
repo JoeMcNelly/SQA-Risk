@@ -69,7 +69,7 @@ namespace TestGUI
 
         public override bool Equals(Object obj)
         {
-            if (obj == null)
+            if (obj == null || GetType() != obj.GetType())
                 return false;
             return true;
 
