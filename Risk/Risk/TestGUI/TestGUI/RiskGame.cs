@@ -19,7 +19,7 @@ namespace TestGUI
         int currentPlayer = 0;
         int numberOfPlayers = 6;
         Game game;
-
+        int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
 
         public RiskGame()
         {
@@ -201,6 +201,7 @@ namespace TestGUI
                 nextPlayer();
                 allowedReinforcements = 15; ////magic number here
                 label1.Text = "" + allowedReinforcements;
+
             }
             
         }
