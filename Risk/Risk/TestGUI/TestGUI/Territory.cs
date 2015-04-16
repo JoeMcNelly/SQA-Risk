@@ -77,9 +77,9 @@ namespace TestGUI
             bool names = (this.terrName.Equals(temp.getName()));
             bool cont = (this.cont.Equals(temp.getContinent()));
             bool troops = (this.getNumTroops() == temp.getNumTroops());
-            //bool adjacencies = (this.getAdjancencies().Equals(temp.getAdjancencies()));
+            bool adjacencies = (this.getAdjancencies().Equals(temp.getAdjancencies()));
 
-            return names && cont && troops;
+            return names && cont && troops && adjacencies;
         }
 
         public override string ToString()
