@@ -60,7 +60,7 @@ namespace TestGUI
 
         public bool isOver()
         {
-            return false;
+            return true;
 
         }   
 
