@@ -59,5 +59,17 @@ namespace UnitTestProject1
 
             Assert.IsFalse(test.Equals(target));
         }
+
+        [Test()]
+        public void TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent()
+        {
+            Territory target = new Territory("A", "a");
+            Territory test = target;
+
+            Territory adjacency = new Territory("B", "b");
+            target.addAdjancent(adjacency);
+
+            Assert.IsFalse(test.Equals(target));
+        }
     }
 }
