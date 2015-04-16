@@ -89,7 +89,8 @@ namespace TestGUI
 
 
             return "Continent: "+ this.cont +
-                   "\nTerritory: \nTroops: \nAdjacencies: ";
+                   "\nTerritory: "+ this.terrName +
+                   "\nTroops: \nAdjacencies: ";
         }
 
 
