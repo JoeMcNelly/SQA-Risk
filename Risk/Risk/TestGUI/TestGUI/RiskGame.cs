@@ -19,44 +19,30 @@ namespace TestGUI
         int currentPlayer = 0;
         int numberOfPlayers = 6;
         Game game;
-        int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
+        public int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
 
         public RiskGame()
         {
+            InitializeComponent();
             territories = new List<Territory>();
             this.game = new Game(2); // Hard coding in 2 players for now
 
+            
+
+            save.Enabled = false;
+            reset.Enabled = false;
+            attack.Enabled = false;
+            endAttack.Enabled = false;
+            fortify.Enabled = false;
+            resetFortify.Enabled = false;
+            initReinforcePhase();
+
+
+
+
+            #region terrirories
             buttons = new List<Button>();
-            InitializeComponent();
-            //Africa
-            /*
-            Territory nAfrica = new Territory("Africa", "North Africa",0);
-            Territory congo = new Territory("Africa", "Congo",0);
-            Territory sAfrica = new Territory("Africa", "South Africa",1);
-            Territory madagascar = new Territory("Africa", "Madagascar", 1);
-            Territory eAfrica = new Territory("Africa", "East Africa", 1);
-            Territory egypt = new Territory("Africa", "Egypt", 1);
-            //S-America
-            Territory brazil = new Territory("South America", "Brazil", 1);
-            Territory argentina = new Territory("South America", "Argentina", 1);
-            Territory peru = new Territory("South America", "Peru", 1);
-            Territory venezuela = new Territory("South America", "Venezuela", 1);
-            //N-America
-            Territory centralAmerica = new Territory("North America", "North Africa", 0);
-            Territory eastUS = new Territory("North America", "Congo", 0);
-            Territory westUS = new Territory("North America", "South Africa", 1);
-            Territory alberta = new Territory("North America", "Madagascar", 1);
-            Territory alaska = new Territory("North America", "East Africa", 1);
-            Territory greenland = new Territory("North America", "Egypt", 1);
-            Territory northWestTerr = new Territory("North America", "Madagascar", 1);
-            Territory quebec = new Territory("North America", "East Africa", 1);
-            Territory ontario = new Territory("North America", "Egypt", 1);
-            */
-
-
-
-
-
+            
             territories.Add(new Territory("Africa", "North Africa",0));
             territories.Add(new Territory("Africa", "Congo",0));
             territories.Add(new Territory("Africa", "South Africa",0));
@@ -143,21 +129,21 @@ namespace TestGUI
             buttons.Add(button42);
             buttons.Add(button32);
 
-            territories.Add(new Territory("Australia", "East Australia", 0));
-            territories.Add(new Territory("Australia", "West Australia", 0));
-            territories.Add(new Territory("Australia", "Indonesia", 0));
-            territories.Add(new Territory("Australia", "New-Guinea", 0));
+            territories.Add(new Territory("Australia", "East Australia", 5));
+            territories.Add(new Territory("Australia", "West Australia", 5));
+            territories.Add(new Territory("Australia", "Indonesia", 5));
+            territories.Add(new Territory("Australia", "New-Guinea", 5));
             //4
             buttons.Add(button46);
             buttons.Add(button45);
             buttons.Add(button43);
             buttons.Add(button44);
-
+            #endregion
             for (int i = 0; i < buttons.Count; i++)
             {
                 buttons[i].Text = territories[i].getNumTroops().ToString();
             }
-                label1.Text = allowedReinforcements.ToString();
+            label1.Text = allowedReinforcements.ToString();
         }
 
         public void nextPlayer()
@@ -194,7 +180,36 @@ namespace TestGUI
             
         }
 
-        private void save_Click(object sender, EventArgs e)
+        private void initReinforcePhase()
+        {
+            allowedReinforcements = 15; ////magic number here
+            label1.Text = "" + allowedReinforcements;
+            save.Enabled = true;
+            reset.Enabled = true;
+            fortify.Enabled = false;
+            resetFortify.Enabled = false;
+            this.phase = 0;
+        }
+
+        private void initAttackPhase()
+        {
+            save.Enabled = false;
+            reset.Enabled = false;
+            attack.Enabled = true;
+            endAttack.Enabled = true;
+            this.phase = 1;
+        }
+
+        private void initFortifyPhase()
+        {
+            attack.Enabled = false;
+            endAttack.Enabled = false;
+            fortify.Enabled = true;
+            resetFortify.Enabled = true;
+            this.phase = 2;
+        }
+
+        public void save_Click(object sender, EventArgs e)
         {
             if (allowedReinforcements == 0)
             {
@@ -211,13 +226,15 @@ namespace TestGUI
                 {
                     buttons[i].Text = territories[i].getNumTroops().ToString();
                 }
-                nextPlayer();
-                allowedReinforcements = 15; ////magic number here
-                label1.Text = "" + allowedReinforcements;
+                initAttackPhase();
+                label1.Text = "";
+
+                
 
             }
             
         }
+
 
         private void reset_Click(object sender, EventArgs e)
         {
@@ -232,6 +249,29 @@ namespace TestGUI
                 buttons[i].Text = territories[i].getNumTroops().ToString();
             }
         }
+
+        private void attack_click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void endAttack_click(object sender, EventArgs e)
+        {
+            initFortifyPhase();
+        }
+
+        private void fortify_click(object sender, EventArgs e)
+        {
+            initReinforcePhase();
+            nextPlayer();
+        }
+
+        private void resetFortify_click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         private void endTurn_Click(object sender, EventArgs e)
         {
@@ -258,7 +298,7 @@ namespace TestGUI
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        public void button7_Click(object sender, EventArgs e)
         {
             clickTerritory(0, button7);
         }
@@ -469,6 +509,12 @@ namespace TestGUI
         {
 
         }
+
+       
+
+        
+
+        
 
     }
 }
