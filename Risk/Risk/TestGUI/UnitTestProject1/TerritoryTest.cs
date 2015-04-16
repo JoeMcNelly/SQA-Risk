@@ -88,7 +88,7 @@ namespace UnitTestProject1
         {
             Territory target = new Territory("A", "");
 
-            Assert.AreEqual("Continent: A\nTerritory: \nTroops: \nAdjacencies: ", target.ToString());
+            Assert.AreEqual("Continent: A\nTerritory: \nTroops: 0\nAdjacencies: ", target.ToString());
         }
 
         [Test()]
@@ -96,7 +96,7 @@ namespace UnitTestProject1
         {
             Territory target = new Territory("", "a");
 
-            Assert.AreEqual("Continent: \nTerritory: a\nTroops: \nAdjacencies: ", target.ToString());
+            Assert.AreEqual("Continent: \nTerritory: a\nTroops: 0\nAdjacencies: ", target.ToString());
         }
 
         [Test()]

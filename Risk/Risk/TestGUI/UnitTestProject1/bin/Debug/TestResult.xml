@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" total="11" errors="0" failures="2" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-04-16" time="17:44:02">
+<test-results name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" total="11" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-04-16" time="17:45:12">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="DANIELLEHMAN-PC" user="Daniel Lehman" user-domain="DanielLehman-PC" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" executed="True" result="Failure" success="False" time="0.172" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" executed="True" result="Failure" success="False" time="0.091" asserts="0">
     <results>
-      <test-suite type="Namespace" name="UnitTestProject1" executed="True" result="Failure" success="False" time="0.155" asserts="0">
+      <test-suite type="Namespace" name="UnitTestProject1" executed="True" result="Failure" success="False" time="0.090" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="TerritoryTest" executed="True" result="Failure" success="False" time="0.152" asserts="0">
+          <test-suite type="TestFixture" name="TerritoryTest" executed="True" result="Failure" success="False" time="0.089" asserts="0">
             <results>
-              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent" executed="True" result="Failure" success="False" time="0.058" asserts="1">
+              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent" executed="True" result="Failure" success="False" time="0.034" asserts="1">
                 <failure>
                   <message><![CDATA[  Expected: False
   But was:  True
@@ -18,26 +18,16 @@
 ]]></stack-trace>
                 </failure>
               </test-case>
-              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenContAreDifferent" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenContAreDifferent" executed="True" result="Success" success="True" time="0.001" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenNameDifference" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenTroopNumberDiffers" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenTroopNumberDiffers" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryEqualsEmpty" executed="True" result="Success" success="True" time="0.001" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryIsNotEqualToNullObj" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryIsNotEqualToOtherObjects" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="UnitTestProject1.TerritoryTest.TestToStringCont" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+              <test-case name="UnitTestProject1.TerritoryTest.TestToStringCont" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestToStringOnEmptyTerritoryReturnsEmpty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="UnitTestProject1.TerritoryTest.TestToStringTerritoryName" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="UnitTestProject1.TerritoryTest.TestToStringTroops" executed="True" result="Failure" success="False" time="0.009" asserts="1">
-                <failure>
-                  <message><![CDATA[  Expected string length 47 but was 46. Strings differ at index 32.
-  Expected: "Continent: \nTerritory: \nTroops: 1\nAdjacencies: "
-  But was:  "Continent: \nTerritory: \nTroops: \nAdjacencies: "
-  ---------------------------------------------^
-]]></message>
-                  <stack-trace><![CDATA[at UnitTestProject1.TerritoryTest.TestToStringTroops() in c:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\TerritoryTest.cs:line 108
-]]></stack-trace>
-                </failure>
-              </test-case>
+              <test-case name="UnitTestProject1.TerritoryTest.TestToStringTroops" executed="True" result="Success" success="True" time="0.000" asserts="1" />
             </results>
           </test-suite>
         </results>
