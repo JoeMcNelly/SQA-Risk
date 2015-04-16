@@ -71,5 +71,17 @@ namespace UnitTestProject1
 
             Assert.IsFalse(test.Equals(target));
         }
+
+
+     
+        //toString() method tests
+        [Test()]
+        public void TestToStringOnEmptyTerritoryReturnsEmpty()
+        {
+            Territory target = new Territory();
+
+            Assert.AreEqual("Empty", target.ToString());
+        }
     }
+
 }

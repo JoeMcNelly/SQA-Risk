@@ -76,19 +76,13 @@ namespace TestGUI
 
             bool names = (this.terrName.Equals(temp.getName()));
             bool cont = (this.cont.Equals(temp.getContinent()));
-            bool troops = (this.getNumTroops() == temp.getNumTroops()); 
-            
+            bool troops = (this.getNumTroops() == temp.getNumTroops());
+            //bool adjacencies = (this.getAdjancencies().Equals(temp.getAdjancencies()));
 
             return names && cont && troops;
-
-//
-//            Territory temp = (Territory)obj;
-//
-//            //not finished, needs to check adjacencies and troop count
-//            return (this.terrName.Equals(temp.getName())) && 
-//                   (this.cont.Equals(temp.getContinent())) && 
-//                   (this.adjacencies.SequenceEqual(temp.getAdjancencies()));
         }
+
+
 
 
     }

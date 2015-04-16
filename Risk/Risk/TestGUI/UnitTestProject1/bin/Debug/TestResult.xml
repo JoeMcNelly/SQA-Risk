@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-04-16" time="17:17:05">
+<test-results name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-04-16" time="17:26:56">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="DANIELLEHMAN-PC" user="Daniel Lehman" user-domain="DanielLehman-PC" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" executed="True" result="Failure" success="False" time="0.002" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" executed="True" result="Failure" success="False" time="0.009" asserts="0">
     <results>
-      <test-suite type="Namespace" name="UnitTestProject1" executed="True" result="Failure" success="False" time="0.002" asserts="0">
+      <test-suite type="Namespace" name="UnitTestProject1" executed="True" result="Failure" success="False" time="0.008" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="TerritoryTest" executed="True" result="Failure" success="False" time="0.002" asserts="0">
+          <test-suite type="TestFixture" name="TerritoryTest" executed="True" result="Failure" success="False" time="0.007" asserts="0">
             <results>
-              <test-case name="UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent" executed="True" result="Failure" success="False" time="0.001" asserts="1">
+              <test-case name="UnitTestProject1.TerritoryTest.TestToStringOnEmptyTerritoryReturnsEmpty" executed="True" result="Failure" success="False" time="0.001" asserts="1">
                 <failure>
-                  <message><![CDATA[  Expected: False
-  But was:  True
+                  <message><![CDATA[  Expected string length 5 but was 17. Strings differ at index 0.
+  Expected: "Empty"
+  But was:  "TestGUI.Territory"
+  -----------^
 ]]></message>
-                  <stack-trace><![CDATA[at UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent() in c:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\TerritoryTest.cs:line 72
+                  <stack-trace><![CDATA[at UnitTestProject1.TerritoryTest.TestToStringOnEmptyTerritoryReturnsEmpty() in c:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\TerritoryTest.cs:line 83
 ]]></stack-trace>
                 </failure>
               </test-case>
