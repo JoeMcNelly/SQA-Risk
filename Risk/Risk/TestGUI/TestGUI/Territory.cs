@@ -84,7 +84,12 @@ namespace TestGUI
 
         public override string ToString()
         {
-            return "Empty";
+            if (this.troops == 0 && this.cont == "" && this.terrName == "" && this.adjacencies.Count == 0)
+                return "Empty";
+
+
+            return "Continent: "+ this.cont +
+                   "\nTerritory: \nTroops: \nAdjacencies: ";
         }
 
 
