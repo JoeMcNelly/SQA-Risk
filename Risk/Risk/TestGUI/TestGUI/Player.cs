@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace TestGUI
 {
-    class Player
+    public class Player
     {
         private List<Territory> territories;
         private List<Card> cards;
+        public bool inPlay = true;
+        public bool winner = false;
+        public String playerName;
 
         public Player()
         {
             
+        }
+
+        public Player(String name, Boolean whatever) // Constructor strictly for testing
+        {
+            this.territories = new List<Territory>();
+            this.playerName = name;
+            for (int i = 0; i < 42; i++)
+            {
+                this.territories.Add(new Territory());
+            }
         }
 
         public List<Territory> getTerritories()

@@ -18,12 +18,13 @@ namespace TestGUI
         List<Button> buttons;
         int currentPlayer = 0;
         int numberOfPlayers = 6;
+        Game game;
 
 
         public RiskGame()
         {
             territories = new List<Territory>();
-
+            this.game = new Game(2); // Hard coding in 2 players for now
 
             buttons = new List<Button>();
             InitializeComponent();
@@ -204,7 +205,7 @@ namespace TestGUI
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void reset_Click(object sender, EventArgs e)
         {
             foreach (Territory t in territories)
             {
@@ -218,10 +219,11 @@ namespace TestGUI
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void endTurn_Click(object sender, EventArgs e)
         {
-
+            
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             clickTerritory(3, button1);
