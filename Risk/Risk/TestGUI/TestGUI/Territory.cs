@@ -82,6 +82,11 @@ namespace TestGUI
             return names && cont && troops;
         }
 
+        public override string ToString()
+        {
+            return "Empty";
+        }
+
 
 
 
