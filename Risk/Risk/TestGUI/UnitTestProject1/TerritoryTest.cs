@@ -54,7 +54,7 @@ namespace UnitTestProject1
         public void TestTerritoryAreNotEqualWhenTroopNumberDiffers()
         {
             Territory target = new Territory("A", "a");
-            Territory test = target;
+            Territory test = new Territory("A", "a");
             test.addTroops(1);
 
             Assert.IsFalse(test.Equals(target));

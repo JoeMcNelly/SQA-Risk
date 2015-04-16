@@ -76,8 +76,9 @@ namespace TestGUI
 
             bool names = (this.terrName.Equals(temp.getName()));
             bool cont = (this.cont.Equals(temp.getContinent()));
+            bool troops = (this.getNumTroops() == temp.getNumTroops()); 
 
-            return names && cont;
+            return names && cont && troops;
 
 //
 //            Territory temp = (Territory)obj;
