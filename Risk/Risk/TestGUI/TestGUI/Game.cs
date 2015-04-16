@@ -10,7 +10,7 @@ namespace TestGUI
     public class Game
     {
         private int numOfPlayers;
-        private List<Territory> map;
+        private Dictionary<String, Territory> map;
         private List<Player> players;
 
         public Game()
@@ -21,7 +21,7 @@ namespace TestGUI
         public Game(int numOfPlayers)
         {
             this.numOfPlayers = numOfPlayers;
-            this.map = new List<Territory>();
+            this.map = new Dictionary<String, Territory>();
             this.players = new List<Player>();
         }
 
@@ -32,10 +32,10 @@ namespace TestGUI
 
         public void addTerritoryToMap(Territory terr)
         {
-            this.map.Add(terr);
+            this.map.Add(terr.getName(), terr);
         }
 
-        public List<Territory> getMapList()
+        public Dictionary<String, Territory> getMapList()
         {
             return this.map;
         }
@@ -52,7 +52,7 @@ namespace TestGUI
         //}
 
         //going to make 
-        public List<Territory> makeMapFromXML(string xml)
+        public Dictionary<String, Territory> makeMapFromXML(string xml)
         {
             if (xml.Equals(""))
                 return null;
@@ -65,18 +65,25 @@ namespace TestGUI
                 String continent = node.SelectSingleNode("continent").InnerText;
 
                 Territory terr = new Territory(continent, name);
+                
+                addTerritoryToMap(terr);
+            }
 
-                if(node.SelectSingleNode("adjacent")!=null)
+            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
+            {
+                if (node.SelectSingleNode("adjacent") != null)
                 {
                     String adjacencies = node.SelectSingleNode("adjacent").InnerText;
-                    string [] adjacenciesList = adjacencies.Split(':');
+                    string[] adjacenciesList = adjacencies.Split(':');
+                    List<Territory> adjacencyList = new List<Territory>();
+
+                    foreach (String adjName in adjacenciesList)
+                    {
+                        adjacencyList.Add(this.map[adjName]);
+                    }
+                    this.map[node.SelectSingleNode("name").InnerText].setAdjacencyList(adjacencyList);
 
                 }
-                
-
-                
-
-                addTerritoryToMap(terr);
             }
             
             return this.map;

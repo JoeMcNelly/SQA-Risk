@@ -118,6 +118,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual("Continent: A\nTerritory: a\nTroops: 0\nAdjacencies: b; ", target.ToString());
         }
+        
     }
 
 }
