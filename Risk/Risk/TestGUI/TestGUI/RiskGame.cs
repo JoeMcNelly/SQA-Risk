@@ -170,13 +170,26 @@ namespace TestGUI
         {
            
             Territory current = this.territories[index];
-            if (allowedReinforcements > 0 && current.getOwner() == currentPlayer)
+            switch (this.phase) 
             {
-                current.addTroops();
-                allowedReinforcements--;
-                button.Text = (current.getTemporaryReinforcements()+current.getNumTroops())+"";
-                label1.Text = "" + allowedReinforcements;
+                case 0:
+                    if (allowedReinforcements > 0 && current.getOwner() == currentPlayer)
+                    {
+                        current.addTroops();
+                        allowedReinforcements--;
+                        button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
+                        label1.Text = "" + allowedReinforcements;
+                    }
+                    break;
+                case 1:
+                    //do attacking things
+                    break;
+                case 2:
+                    //do fortify things
+                    break;
             }
+
+
             
             
         }
