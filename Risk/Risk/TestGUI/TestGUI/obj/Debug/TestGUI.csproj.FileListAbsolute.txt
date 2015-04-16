@@ -25,3 +25,6 @@ C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb

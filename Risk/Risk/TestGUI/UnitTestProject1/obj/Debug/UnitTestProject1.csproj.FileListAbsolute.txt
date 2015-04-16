@@ -16,3 +16,11 @@ C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\TestGUI.exe
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\TestGUI.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\nunit.framework.xml
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

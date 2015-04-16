@@ -40,11 +40,22 @@ namespace UnitTestProject1
 
             Assert.IsFalse(test.Equals(target));
         }
+
         [Test()]
         public void TestTerritoryAreNotEqualWhenContAreDifferent()
         {
             Territory target = new Territory("A", "");
             Territory test = new Territory("B", "");
+
+            Assert.IsFalse(test.Equals(target));
+        }
+
+        [Test()]
+        public void TestTerritoryAreNotEqualWhenTroopNumberDiffers()
+        {
+            Territory target = new Territory("A", "a");
+            Territory test = target;
+            test.addTroops(1);
 
             Assert.IsFalse(test.Equals(target));
         }
