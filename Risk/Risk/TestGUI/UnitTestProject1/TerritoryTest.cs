@@ -98,6 +98,15 @@ namespace UnitTestProject1
 
             Assert.AreEqual("Continent: \nTerritory: a\nTroops: \nAdjacencies: ", target.ToString());
         }
+
+        [Test()]
+        public void TestToStringTroops()
+        {
+            Territory target = new Territory("", "");
+            target.addTroops(1);
+
+            Assert.AreEqual("Continent: \nTerritory: \nTroops: 1\nAdjacencies: ", target.ToString());
+        }
     }
 
 }
