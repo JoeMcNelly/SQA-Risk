@@ -87,11 +87,17 @@ namespace TestGUI
             if (this.troops == 0 && this.cont == "" && this.terrName == "" && this.adjacencies.Count == 0)
                 return "Empty";
 
+            string adjacent = "";
+            foreach (Territory adj in this.adjacencies)
+            {
+                adjacent += adj.terrName + "; ";
+            }
+
 
             return "Continent: "+ this.cont +
                    "\nTerritory: "+ this.terrName +
                    "\nTroops: "+this.troops+
-                   "\nAdjacencies: ";
+                   "\nAdjacencies: "+ adjacent;
         }
 
 

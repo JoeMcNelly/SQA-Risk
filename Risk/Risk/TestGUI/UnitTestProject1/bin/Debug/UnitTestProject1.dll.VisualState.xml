@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1015]C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll</TopNode>
-  <SelectedNode>[0-1007]UnitTestProject1.TerritoryTest.TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent</SelectedNode>
+  <TopNode>[0-1020]C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll</TopNode>
+  <SelectedNode>[0-1011]UnitTestProject1.TerritoryTest.TestToStringTroops</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1015]C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" Expanded="true" />
-    <Node UniqueName="[0-1016]UnitTestProject1" Expanded="true" />
-    <Node UniqueName="[0-1011]UnitTestProject1.GameTest" Expanded="true" />
+    <Node UniqueName="[0-1020]C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\UnitTestProject1\bin\Debug\UnitTestProject1.dll" Expanded="true" />
+    <Node UniqueName="[0-1021]UnitTestProject1" Expanded="true" />
+    <Node UniqueName="[0-1016]UnitTestProject1.GameTest" Expanded="true" />
     <Node UniqueName="[0-1000]UnitTestProject1.TerritoryTest" Expanded="true" />
-    <Node UniqueName="[0-1008]UnitTestProject1.UnitTest1" Expanded="true" />
+    <Node UniqueName="[0-1013]UnitTestProject1.UnitTest1" Expanded="true" />
   </Nodes>
 </VisualState>
