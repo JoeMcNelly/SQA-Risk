@@ -30,10 +30,22 @@ namespace TestGUI
             this.troops = 0;
         }
 
+        public Territory(String cont, String terrName, List<Territory> adjacencyList)
+        {
+            this.adjacencies = adjacencyList;
+            this.cont = cont;
+            this.terrName = terrName;
+            this.troops = 0;
+        }
+
         public void setAdjancencies()
         {
             //TODO: Should probably use a StringReader or something to auto-initialize 
             //everything at the beginning of a game. Or something like that. 
+        }
+        public void setAdjacencyList(List<Territory> adjacencies)
+        {
+            this.adjacencies = adjacencies;
         }
         public void addAdjancent(Territory territory)
         {
@@ -77,7 +89,7 @@ namespace TestGUI
             bool names = (this.terrName.Equals(temp.getName()));
             bool cont = (this.cont.Equals(temp.getContinent()));
             bool troops = (this.getNumTroops() == temp.getNumTroops());
-            bool adjacencies = (this.getAdjancencies().Equals(temp.getAdjancencies()));
+            bool adjacencies = (this.adjacencies.GetHashCode() == temp.getAdjancencies().GetHashCode());
 
             return names && cont && troops && adjacencies;
         }
@@ -100,7 +112,19 @@ namespace TestGUI
                    "\nAdjacencies: "+ adjacent;
         }
 
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + cont.GetHashCode();
+                hash = hash * 23 + terrName.GetHashCode();
+                hash = hash * 23 + troops.GetHashCode();
+                hash = hash * 23 + adjacencies.GetHashCode();
 
+                return hash;
+            }
+        }
 
 
     }

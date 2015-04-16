@@ -13,7 +13,8 @@ namespace UnitTestProject1
         {
             Territory target = new Territory();
             Territory test = new Territory();
-
+            test.setAdjacencyList(target.getAdjancencies());
+            
             Assert.IsTrue(test.Equals(target));
         }
         [Test()]
@@ -64,7 +65,7 @@ namespace UnitTestProject1
         public void TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent()
         {
             Territory target = new Territory("A", "a");
-            Territory test = target;
+            Territory test = new Territory("A", "a");
 
             Territory adjacency = new Territory("B", "b");
             target.addAdjancent(adjacency);
