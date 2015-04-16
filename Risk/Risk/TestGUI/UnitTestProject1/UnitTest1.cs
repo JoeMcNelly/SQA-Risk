@@ -15,6 +15,12 @@ namespace UnitTestProject1
         }
 
         [Test()]
+        public void TestGameConstructorWithOnePlayer()
+        {
+            //Should throw an error; worry about this later
+        }
+
+        [Test()]
         public void TestNumberOfPlayersConstructor()
         {
             Game newgame = new Game(0);
@@ -23,10 +29,17 @@ namespace UnitTestProject1
         }
 
         [Test()]
-        public void testisOver()
+        public void testisOverBasic()
         {
             Game game = new Game();
             Assert.AreEqual(true, game.isOver());
         }
+
+        //[Test()]
+        //public void testIsOverWithOnePlayer()
+        //{
+        //    Game game = new Game(1);
+        //    Assert.AreEqual(true, game.isOver());
+        //}
     }
 }
