@@ -82,6 +82,14 @@ namespace UnitTestProject1
 
             Assert.AreEqual("Empty", target.ToString());
         }
+        
+        [Test()]
+        public void TestToStringCont()
+        {
+            Territory target = new Territory("A", "");
+
+            Assert.AreEqual("Continent: A\nTerritory: \nTroops: \nAdjacencies: ", target.ToString());
+        }
     }
 
 }
