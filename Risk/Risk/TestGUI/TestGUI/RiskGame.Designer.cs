@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.JapanButton = new System.Windows.Forms.Button();
+            this.EastAustraliaButton = new System.Windows.Forms.Button();
+            this.WestAustraliaButton = new System.Windows.Forms.Button();
+            this.NewGuineaButton = new System.Windows.Forms.Button();
+            this.IndonesiaButton = new System.Windows.Forms.Button();
+            this.SiamButton = new System.Windows.Forms.Button();
+            this.MongoliaButton = new System.Windows.Forms.Button();
+            this.IrkutskButton = new System.Windows.Forms.Button();
+            this.KamchatkaButton = new System.Windows.Forms.Button();
+            this.YakutskButton = new System.Windows.Forms.Button();
+            this.SiberiaButton = new System.Windows.Forms.Button();
+            this.ChinaButton = new System.Windows.Forms.Button();
+            this.IndiaButton = new System.Windows.Forms.Button();
+            this.AfghanistanButton = new System.Windows.Forms.Button();
+            this.MiddleEastButton = new System.Windows.Forms.Button();
+            this.UralButton = new System.Windows.Forms.Button();
+            this.UkraineButton = new System.Windows.Forms.Button();
+            this.SouthEuropeButton = new System.Windows.Forms.Button();
+            this.NorthEuropeButton = new System.Windows.Forms.Button();
+            this.ScandinaviaButton = new System.Windows.Forms.Button();
+            this.WestEuropeButton = new System.Windows.Forms.Button();
+            this.GreatBritainButton = new System.Windows.Forms.Button();
+            this.IcelandButton = new System.Windows.Forms.Button();
+            this.GreenlandButton = new System.Windows.Forms.Button();
+            this.QuebecButton = new System.Windows.Forms.Button();
+            this.OntarioButton = new System.Windows.Forms.Button();
+            this.NorthwestTerritoryButton = new System.Windows.Forms.Button();
+            this.AlaskaButton = new System.Windows.Forms.Button();
+            this.AlbertaButton = new System.Windows.Forms.Button();
+            this.EasternUSButton = new System.Windows.Forms.Button();
+            this.WesternUSButton = new System.Windows.Forms.Button();
+            this.CentralAmericaButton = new System.Windows.Forms.Button();
+            this.VenezuelaButton = new System.Windows.Forms.Button();
+            this.BrazilButton = new System.Windows.Forms.Button();
+            this.PeruButton = new System.Windows.Forms.Button();
+            this.ArgentinaButton = new System.Windows.Forms.Button();
+            this.EgyptButton = new System.Windows.Forms.Button();
+            this.EastAfricaButton = new System.Windows.Forms.Button();
+            this.MadagascarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.SouthAfricaButton = new System.Windows.Forms.Button();
+            this.CongoButton = new System.Windows.Forms.Button();
+            this.NorthAfricaButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.resetFortify = new System.Windows.Forms.Button();
@@ -107,50 +107,50 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button47);
-            this.panel1.Controls.Add(this.button46);
-            this.panel1.Controls.Add(this.button45);
-            this.panel1.Controls.Add(this.button44);
-            this.panel1.Controls.Add(this.button43);
-            this.panel1.Controls.Add(this.button42);
-            this.panel1.Controls.Add(this.button41);
-            this.panel1.Controls.Add(this.button40);
-            this.panel1.Controls.Add(this.button39);
-            this.panel1.Controls.Add(this.button38);
-            this.panel1.Controls.Add(this.button37);
-            this.panel1.Controls.Add(this.button36);
-            this.panel1.Controls.Add(this.button35);
-            this.panel1.Controls.Add(this.button34);
-            this.panel1.Controls.Add(this.button33);
-            this.panel1.Controls.Add(this.button32);
-            this.panel1.Controls.Add(this.button31);
-            this.panel1.Controls.Add(this.button30);
-            this.panel1.Controls.Add(this.button29);
-            this.panel1.Controls.Add(this.button28);
-            this.panel1.Controls.Add(this.button27);
-            this.panel1.Controls.Add(this.button26);
-            this.panel1.Controls.Add(this.button25);
-            this.panel1.Controls.Add(this.button24);
-            this.panel1.Controls.Add(this.button23);
-            this.panel1.Controls.Add(this.button22);
-            this.panel1.Controls.Add(this.button21);
-            this.panel1.Controls.Add(this.button20);
-            this.panel1.Controls.Add(this.button19);
-            this.panel1.Controls.Add(this.button18);
-            this.panel1.Controls.Add(this.button17);
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button15);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.JapanButton);
+            this.panel1.Controls.Add(this.EastAustraliaButton);
+            this.panel1.Controls.Add(this.WestAustraliaButton);
+            this.panel1.Controls.Add(this.NewGuineaButton);
+            this.panel1.Controls.Add(this.IndonesiaButton);
+            this.panel1.Controls.Add(this.SiamButton);
+            this.panel1.Controls.Add(this.MongoliaButton);
+            this.panel1.Controls.Add(this.IrkutskButton);
+            this.panel1.Controls.Add(this.KamchatkaButton);
+            this.panel1.Controls.Add(this.YakutskButton);
+            this.panel1.Controls.Add(this.SiberiaButton);
+            this.panel1.Controls.Add(this.ChinaButton);
+            this.panel1.Controls.Add(this.IndiaButton);
+            this.panel1.Controls.Add(this.AfghanistanButton);
+            this.panel1.Controls.Add(this.MiddleEastButton);
+            this.panel1.Controls.Add(this.UralButton);
+            this.panel1.Controls.Add(this.UkraineButton);
+            this.panel1.Controls.Add(this.SouthEuropeButton);
+            this.panel1.Controls.Add(this.NorthEuropeButton);
+            this.panel1.Controls.Add(this.ScandinaviaButton);
+            this.panel1.Controls.Add(this.WestEuropeButton);
+            this.panel1.Controls.Add(this.GreatBritainButton);
+            this.panel1.Controls.Add(this.IcelandButton);
+            this.panel1.Controls.Add(this.GreenlandButton);
+            this.panel1.Controls.Add(this.QuebecButton);
+            this.panel1.Controls.Add(this.OntarioButton);
+            this.panel1.Controls.Add(this.NorthwestTerritoryButton);
+            this.panel1.Controls.Add(this.AlaskaButton);
+            this.panel1.Controls.Add(this.AlbertaButton);
+            this.panel1.Controls.Add(this.EasternUSButton);
+            this.panel1.Controls.Add(this.WesternUSButton);
+            this.panel1.Controls.Add(this.CentralAmericaButton);
+            this.panel1.Controls.Add(this.VenezuelaButton);
+            this.panel1.Controls.Add(this.BrazilButton);
+            this.panel1.Controls.Add(this.PeruButton);
+            this.panel1.Controls.Add(this.ArgentinaButton);
+            this.panel1.Controls.Add(this.EgyptButton);
+            this.panel1.Controls.Add(this.EastAfricaButton);
+            this.panel1.Controls.Add(this.MadagascarButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.SouthAfricaButton);
+            this.panel1.Controls.Add(this.CongoButton);
+            this.panel1.Controls.Add(this.NorthAfricaButton);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(10, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -160,393 +160,393 @@
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(1103, 204);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(30, 23);
-            this.button47.TabIndex = 43;
-            this.button47.Text = "button47";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.Click += new System.EventHandler(this.button47_Click);
+            this.JapanButton.Location = new System.Drawing.Point(1103, 204);
+            this.JapanButton.Name = "button47";
+            this.JapanButton.Size = new System.Drawing.Size(30, 23);
+            this.JapanButton.TabIndex = 43;
+            this.JapanButton.Text = "button47";
+            this.JapanButton.UseVisualStyleBackColor = true;
+            this.JapanButton.Click += new System.EventHandler(this.button47_Click);
             // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(1128, 510);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(30, 23);
-            this.button46.TabIndex = 42;
-            this.button46.Text = "button46";
-            this.button46.UseVisualStyleBackColor = true;
-            this.button46.Click += new System.EventHandler(this.button46_Click);
+            this.EastAustraliaButton.Location = new System.Drawing.Point(1128, 510);
+            this.EastAustraliaButton.Name = "button46";
+            this.EastAustraliaButton.Size = new System.Drawing.Size(30, 23);
+            this.EastAustraliaButton.TabIndex = 42;
+            this.EastAustraliaButton.Text = "button46";
+            this.EastAustraliaButton.UseVisualStyleBackColor = true;
+            this.EastAustraliaButton.Click += new System.EventHandler(this.button46_Click);
             // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(1036, 515);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(30, 23);
-            this.button45.TabIndex = 41;
-            this.button45.Text = "button45";
-            this.button45.UseVisualStyleBackColor = true;
-            this.button45.Click += new System.EventHandler(this.button45_Click);
+            this.WestAustraliaButton.Location = new System.Drawing.Point(1036, 515);
+            this.WestAustraliaButton.Name = "button45";
+            this.WestAustraliaButton.Size = new System.Drawing.Size(30, 23);
+            this.WestAustraliaButton.TabIndex = 41;
+            this.WestAustraliaButton.Text = "button45";
+            this.WestAustraliaButton.UseVisualStyleBackColor = true;
+            this.WestAustraliaButton.Click += new System.EventHandler(this.button45_Click);
             // 
             // button44
             // 
-            this.button44.Location = new System.Drawing.Point(1135, 407);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(30, 23);
-            this.button44.TabIndex = 40;
-            this.button44.Text = "button44";
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button44_Click);
+            this.NewGuineaButton.Location = new System.Drawing.Point(1135, 407);
+            this.NewGuineaButton.Name = "button44";
+            this.NewGuineaButton.Size = new System.Drawing.Size(30, 23);
+            this.NewGuineaButton.TabIndex = 40;
+            this.NewGuineaButton.Text = "button44";
+            this.NewGuineaButton.UseVisualStyleBackColor = true;
+            this.NewGuineaButton.Click += new System.EventHandler(this.button44_Click);
             // 
             // button43
             // 
-            this.button43.Location = new System.Drawing.Point(1021, 382);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(30, 23);
-            this.button43.TabIndex = 39;
-            this.button43.Text = "button43";
-            this.button43.UseVisualStyleBackColor = true;
-            this.button43.Click += new System.EventHandler(this.button43_Click);
+            this.IndonesiaButton.Location = new System.Drawing.Point(1021, 382);
+            this.IndonesiaButton.Name = "button43";
+            this.IndonesiaButton.Size = new System.Drawing.Size(30, 23);
+            this.IndonesiaButton.TabIndex = 39;
+            this.IndonesiaButton.Text = "button43";
+            this.IndonesiaButton.UseVisualStyleBackColor = true;
+            this.IndonesiaButton.Click += new System.EventHandler(this.button43_Click);
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(969, 300);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(30, 23);
-            this.button42.TabIndex = 38;
-            this.button42.Text = "button42";
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
+            this.SiamButton.Location = new System.Drawing.Point(969, 300);
+            this.SiamButton.Name = "button42";
+            this.SiamButton.Size = new System.Drawing.Size(30, 23);
+            this.SiamButton.TabIndex = 38;
+            this.SiamButton.Text = "button42";
+            this.SiamButton.UseVisualStyleBackColor = true;
+            this.SiamButton.Click += new System.EventHandler(this.button42_Click);
             // 
             // button41
             // 
-            this.button41.Location = new System.Drawing.Point(956, 161);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(30, 23);
-            this.button41.TabIndex = 37;
-            this.button41.Text = "button41";
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
+            this.MongoliaButton.Location = new System.Drawing.Point(956, 161);
+            this.MongoliaButton.Name = "button41";
+            this.MongoliaButton.Size = new System.Drawing.Size(30, 23);
+            this.MongoliaButton.TabIndex = 37;
+            this.MongoliaButton.Text = "button41";
+            this.MongoliaButton.UseVisualStyleBackColor = true;
+            this.MongoliaButton.Click += new System.EventHandler(this.button41_Click);
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(943, 121);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(30, 23);
-            this.button40.TabIndex = 36;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
+            this.IrkutskButton.Location = new System.Drawing.Point(943, 121);
+            this.IrkutskButton.Name = "button40";
+            this.IrkutskButton.Size = new System.Drawing.Size(30, 23);
+            this.IrkutskButton.TabIndex = 36;
+            this.IrkutskButton.Text = "button40";
+            this.IrkutskButton.UseVisualStyleBackColor = true;
+            this.IrkutskButton.Click += new System.EventHandler(this.button40_Click);
             // 
             // button39
             // 
-            this.button39.Location = new System.Drawing.Point(1066, 71);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(30, 23);
-            this.button39.TabIndex = 35;
-            this.button39.Text = "button39";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
+            this.KamchatkaButton.Location = new System.Drawing.Point(1066, 71);
+            this.KamchatkaButton.Name = "button39";
+            this.KamchatkaButton.Size = new System.Drawing.Size(30, 23);
+            this.KamchatkaButton.TabIndex = 35;
+            this.KamchatkaButton.Text = "button39";
+            this.KamchatkaButton.UseVisualStyleBackColor = true;
+            this.KamchatkaButton.Click += new System.EventHandler(this.button39_Click);
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(951, 70);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(30, 23);
-            this.button38.TabIndex = 34;
-            this.button38.Text = "button38";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.button38_Click);
+            this.YakutskButton.Location = new System.Drawing.Point(951, 70);
+            this.YakutskButton.Name = "button38";
+            this.YakutskButton.Size = new System.Drawing.Size(30, 23);
+            this.YakutskButton.TabIndex = 34;
+            this.YakutskButton.Text = "button38";
+            this.YakutskButton.UseVisualStyleBackColor = true;
+            this.YakutskButton.Click += new System.EventHandler(this.button38_Click);
             // 
             // button37
             // 
-            this.button37.Location = new System.Drawing.Point(855, 73);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(30, 23);
-            this.button37.TabIndex = 33;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
+            this.SiberiaButton.Location = new System.Drawing.Point(855, 73);
+            this.SiberiaButton.Name = "button37";
+            this.SiberiaButton.Size = new System.Drawing.Size(30, 23);
+            this.SiberiaButton.TabIndex = 33;
+            this.SiberiaButton.Text = "button37";
+            this.SiberiaButton.UseVisualStyleBackColor = true;
+            this.SiberiaButton.Click += new System.EventHandler(this.button37_Click);
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(942, 218);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(30, 23);
-            this.button36.TabIndex = 32;
-            this.button36.Text = "button36";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.button36_Click);
+            this.ChinaButton.Location = new System.Drawing.Point(942, 218);
+            this.ChinaButton.Name = "button36";
+            this.ChinaButton.Size = new System.Drawing.Size(30, 23);
+            this.ChinaButton.TabIndex = 32;
+            this.ChinaButton.Text = "button36";
+            this.ChinaButton.UseVisualStyleBackColor = true;
+            this.ChinaButton.Click += new System.EventHandler(this.button36_Click);
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(859, 265);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(30, 23);
-            this.button35.TabIndex = 31;
-            this.button35.Text = "button35";
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.button35_Click);
+            this.IndiaButton.Location = new System.Drawing.Point(859, 265);
+            this.IndiaButton.Name = "button35";
+            this.IndiaButton.Size = new System.Drawing.Size(30, 23);
+            this.IndiaButton.TabIndex = 31;
+            this.IndiaButton.Text = "button35";
+            this.IndiaButton.UseVisualStyleBackColor = true;
+            this.IndiaButton.Click += new System.EventHandler(this.button35_Click);
             // 
             // button34
             // 
-            this.button34.Location = new System.Drawing.Point(791, 163);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(30, 23);
-            this.button34.TabIndex = 30;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
+            this.AfghanistanButton.Location = new System.Drawing.Point(791, 163);
+            this.AfghanistanButton.Name = "button34";
+            this.AfghanistanButton.Size = new System.Drawing.Size(30, 23);
+            this.AfghanistanButton.TabIndex = 30;
+            this.AfghanistanButton.Text = "button34";
+            this.AfghanistanButton.UseVisualStyleBackColor = true;
+            this.AfghanistanButton.Click += new System.EventHandler(this.button34_Click);
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(714, 218);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(30, 23);
-            this.button33.TabIndex = 29;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
+            this.MiddleEastButton.Location = new System.Drawing.Point(714, 218);
+            this.MiddleEastButton.Name = "button33";
+            this.MiddleEastButton.Size = new System.Drawing.Size(30, 23);
+            this.MiddleEastButton.TabIndex = 29;
+            this.MiddleEastButton.Text = "button33";
+            this.MiddleEastButton.UseVisualStyleBackColor = true;
+            this.MiddleEastButton.Click += new System.EventHandler(this.button33_Click);
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(784, 91);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(30, 23);
-            this.button32.TabIndex = 28;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
+            this.UralButton.Location = new System.Drawing.Point(784, 91);
+            this.UralButton.Name = "button32";
+            this.UralButton.Size = new System.Drawing.Size(30, 23);
+            this.UralButton.TabIndex = 28;
+            this.UralButton.Text = "button32";
+            this.UralButton.UseVisualStyleBackColor = true;
+            this.UralButton.Click += new System.EventHandler(this.button32_Click);
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(680, 114);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(30, 23);
-            this.button31.TabIndex = 27;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
+            this.UkraineButton.Location = new System.Drawing.Point(680, 114);
+            this.UkraineButton.Name = "button31";
+            this.UkraineButton.Size = new System.Drawing.Size(30, 23);
+            this.UkraineButton.TabIndex = 27;
+            this.UkraineButton.Text = "button31";
+            this.UkraineButton.UseVisualStyleBackColor = true;
+            this.UkraineButton.Click += new System.EventHandler(this.button31_Click);
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(629, 167);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(30, 23);
-            this.button30.TabIndex = 26;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.SouthEuropeButton.Location = new System.Drawing.Point(629, 167);
+            this.SouthEuropeButton.Name = "button30";
+            this.SouthEuropeButton.Size = new System.Drawing.Size(30, 23);
+            this.SouthEuropeButton.TabIndex = 26;
+            this.SouthEuropeButton.Text = "button30";
+            this.SouthEuropeButton.UseVisualStyleBackColor = true;
+            this.SouthEuropeButton.Click += new System.EventHandler(this.button30_Click);
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(598, 130);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(30, 23);
-            this.button29.TabIndex = 25;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
+            this.NorthEuropeButton.Location = new System.Drawing.Point(598, 130);
+            this.NorthEuropeButton.Name = "button29";
+            this.NorthEuropeButton.Size = new System.Drawing.Size(30, 23);
+            this.NorthEuropeButton.TabIndex = 25;
+            this.NorthEuropeButton.Text = "button29";
+            this.NorthEuropeButton.UseVisualStyleBackColor = true;
+            this.NorthEuropeButton.Click += new System.EventHandler(this.button29_Click);
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(597, 79);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(30, 23);
-            this.button28.TabIndex = 24;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
+            this.ScandinaviaButton.Location = new System.Drawing.Point(597, 79);
+            this.ScandinaviaButton.Name = "button28";
+            this.ScandinaviaButton.Size = new System.Drawing.Size(30, 23);
+            this.ScandinaviaButton.TabIndex = 24;
+            this.ScandinaviaButton.Text = "button28";
+            this.ScandinaviaButton.UseVisualStyleBackColor = true;
+            this.ScandinaviaButton.Click += new System.EventHandler(this.button28_Click);
             // 
             // button27
             // 
-            this.button27.Location = new System.Drawing.Point(552, 169);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(30, 23);
-            this.button27.TabIndex = 23;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
+            this.WestEuropeButton.Location = new System.Drawing.Point(552, 169);
+            this.WestEuropeButton.Name = "button27";
+            this.WestEuropeButton.Size = new System.Drawing.Size(30, 23);
+            this.WestEuropeButton.TabIndex = 23;
+            this.WestEuropeButton.Text = "button27";
+            this.WestEuropeButton.UseVisualStyleBackColor = true;
+            this.WestEuropeButton.Click += new System.EventHandler(this.button27_Click);
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(503, 122);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(30, 23);
-            this.button26.TabIndex = 22;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.GreatBritainButton.Location = new System.Drawing.Point(503, 122);
+            this.GreatBritainButton.Name = "button26";
+            this.GreatBritainButton.Size = new System.Drawing.Size(30, 23);
+            this.GreatBritainButton.TabIndex = 22;
+            this.GreatBritainButton.Text = "button26";
+            this.GreatBritainButton.UseVisualStyleBackColor = true;
+            this.GreatBritainButton.Click += new System.EventHandler(this.button26_Click);
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(482, 84);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(30, 23);
-            this.button25.TabIndex = 21;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.IcelandButton.Location = new System.Drawing.Point(482, 84);
+            this.IcelandButton.Name = "button25";
+            this.IcelandButton.Size = new System.Drawing.Size(30, 23);
+            this.IcelandButton.TabIndex = 21;
+            this.IcelandButton.Text = "button25";
+            this.IcelandButton.UseVisualStyleBackColor = true;
+            this.IcelandButton.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(417, 36);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(30, 23);
-            this.button24.TabIndex = 20;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.GreenlandButton.Location = new System.Drawing.Point(417, 36);
+            this.GreenlandButton.Name = "button24";
+            this.GreenlandButton.Size = new System.Drawing.Size(30, 23);
+            this.GreenlandButton.TabIndex = 20;
+            this.GreenlandButton.Text = "button24";
+            this.GreenlandButton.UseVisualStyleBackColor = true;
+            this.GreenlandButton.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(300, 118);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(30, 23);
-            this.button23.TabIndex = 19;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.QuebecButton.Location = new System.Drawing.Point(300, 118);
+            this.QuebecButton.Name = "button23";
+            this.QuebecButton.Size = new System.Drawing.Size(30, 23);
+            this.QuebecButton.TabIndex = 19;
+            this.QuebecButton.Text = "button23";
+            this.QuebecButton.UseVisualStyleBackColor = true;
+            this.QuebecButton.Click += new System.EventHandler(this.button23_Click);
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(221, 121);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(30, 23);
-            this.button22.TabIndex = 18;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.OntarioButton.Location = new System.Drawing.Point(221, 121);
+            this.OntarioButton.Name = "button22";
+            this.OntarioButton.Size = new System.Drawing.Size(30, 23);
+            this.OntarioButton.TabIndex = 18;
+            this.OntarioButton.Text = "button22";
+            this.OntarioButton.UseVisualStyleBackColor = true;
+            this.OntarioButton.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(167, 67);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(30, 23);
-            this.button21.TabIndex = 17;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.NorthwestTerritoryButton.Location = new System.Drawing.Point(167, 67);
+            this.NorthwestTerritoryButton.Name = "button21";
+            this.NorthwestTerritoryButton.Size = new System.Drawing.Size(30, 23);
+            this.NorthwestTerritoryButton.TabIndex = 17;
+            this.NorthwestTerritoryButton.Text = "button21";
+            this.NorthwestTerritoryButton.UseVisualStyleBackColor = true;
+            this.NorthwestTerritoryButton.Click += new System.EventHandler(this.button21_Click);
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(68, 70);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(30, 23);
-            this.button20.TabIndex = 16;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.AlaskaButton.Location = new System.Drawing.Point(68, 70);
+            this.AlaskaButton.Name = "button20";
+            this.AlaskaButton.Size = new System.Drawing.Size(30, 23);
+            this.AlaskaButton.TabIndex = 16;
+            this.AlaskaButton.Text = "button20";
+            this.AlaskaButton.UseVisualStyleBackColor = true;
+            this.AlaskaButton.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(130, 116);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(30, 23);
-            this.button19.TabIndex = 15;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.AlbertaButton.Location = new System.Drawing.Point(130, 116);
+            this.AlbertaButton.Name = "button19";
+            this.AlbertaButton.Size = new System.Drawing.Size(30, 23);
+            this.AlbertaButton.TabIndex = 15;
+            this.AlbertaButton.Text = "button19";
+            this.AlbertaButton.UseVisualStyleBackColor = true;
+            this.AlbertaButton.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(201, 193);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(30, 23);
-            this.button18.TabIndex = 14;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.EasternUSButton.Location = new System.Drawing.Point(201, 193);
+            this.EasternUSButton.Name = "button18";
+            this.EasternUSButton.Size = new System.Drawing.Size(30, 23);
+            this.EasternUSButton.TabIndex = 14;
+            this.EasternUSButton.Text = "button18";
+            this.EasternUSButton.UseVisualStyleBackColor = true;
+            this.EasternUSButton.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(111, 172);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(30, 23);
-            this.button17.TabIndex = 13;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.WesternUSButton.Location = new System.Drawing.Point(111, 172);
+            this.WesternUSButton.Name = "button17";
+            this.WesternUSButton.Size = new System.Drawing.Size(30, 23);
+            this.WesternUSButton.TabIndex = 13;
+            this.WesternUSButton.Text = "button17";
+            this.WesternUSButton.UseVisualStyleBackColor = true;
+            this.WesternUSButton.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(127, 262);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(30, 23);
-            this.button16.TabIndex = 12;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.CentralAmericaButton.Location = new System.Drawing.Point(127, 262);
+            this.CentralAmericaButton.Name = "button16";
+            this.CentralAmericaButton.Size = new System.Drawing.Size(30, 23);
+            this.CentralAmericaButton.TabIndex = 12;
+            this.CentralAmericaButton.Text = "button16";
+            this.CentralAmericaButton.UseVisualStyleBackColor = true;
+            this.CentralAmericaButton.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(257, 351);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(30, 23);
-            this.button15.TabIndex = 11;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.VenezuelaButton.Location = new System.Drawing.Point(257, 351);
+            this.VenezuelaButton.Name = "button15";
+            this.VenezuelaButton.Size = new System.Drawing.Size(30, 23);
+            this.VenezuelaButton.TabIndex = 11;
+            this.VenezuelaButton.Text = "button15";
+            this.VenezuelaButton.UseVisualStyleBackColor = true;
+            this.VenezuelaButton.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(330, 434);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(30, 23);
-            this.button14.TabIndex = 10;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.BrazilButton.Location = new System.Drawing.Point(330, 434);
+            this.BrazilButton.Name = "button14";
+            this.BrazilButton.Size = new System.Drawing.Size(30, 23);
+            this.BrazilButton.TabIndex = 10;
+            this.BrazilButton.Text = "button14";
+            this.BrazilButton.UseVisualStyleBackColor = true;
+            this.BrazilButton.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(271, 458);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(30, 23);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.PeruButton.Location = new System.Drawing.Point(271, 458);
+            this.PeruButton.Name = "button13";
+            this.PeruButton.Size = new System.Drawing.Size(30, 23);
+            this.PeruButton.TabIndex = 9;
+            this.PeruButton.Text = "button13";
+            this.PeruButton.UseVisualStyleBackColor = true;
+            this.PeruButton.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(282, 539);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 23);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.ArgentinaButton.Location = new System.Drawing.Point(282, 539);
+            this.ArgentinaButton.Name = "button12";
+            this.ArgentinaButton.Size = new System.Drawing.Size(30, 23);
+            this.ArgentinaButton.TabIndex = 8;
+            this.ArgentinaButton.Text = "button12";
+            this.ArgentinaButton.UseVisualStyleBackColor = true;
+            this.ArgentinaButton.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(628, 247);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 23);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.EgyptButton.Location = new System.Drawing.Point(628, 247);
+            this.EgyptButton.Name = "button11";
+            this.EgyptButton.Size = new System.Drawing.Size(30, 23);
+            this.EgyptButton.TabIndex = 7;
+            this.EgyptButton.Text = "button11";
+            this.EgyptButton.UseVisualStyleBackColor = true;
+            this.EgyptButton.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(707, 340);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 23);
-            this.button10.TabIndex = 6;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.EastAfricaButton.Location = new System.Drawing.Point(707, 340);
+            this.EastAfricaButton.Name = "button10";
+            this.EastAfricaButton.Size = new System.Drawing.Size(31, 23);
+            this.EastAfricaButton.TabIndex = 6;
+            this.EastAfricaButton.Text = "button10";
+            this.EastAfricaButton.UseVisualStyleBackColor = true;
+            this.EastAfricaButton.Click += new System.EventHandler(this.button10_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(733, 473);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MadagascarButton.Location = new System.Drawing.Point(733, 473);
+            this.MadagascarButton.Name = "button1";
+            this.MadagascarButton.Size = new System.Drawing.Size(32, 23);
+            this.MadagascarButton.TabIndex = 5;
+            this.MadagascarButton.Text = "button1";
+            this.MadagascarButton.UseVisualStyleBackColor = true;
+            this.MadagascarButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -568,36 +568,36 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(633, 477);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 24);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.SouthAfricaButton.Location = new System.Drawing.Point(633, 477);
+            this.SouthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SouthAfricaButton.Name = "button9";
+            this.SouthAfricaButton.Size = new System.Drawing.Size(30, 24);
+            this.SouthAfricaButton.TabIndex = 3;
+            this.SouthAfricaButton.Text = "button9";
+            this.SouthAfricaButton.UseVisualStyleBackColor = true;
+            this.SouthAfricaButton.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(628, 380);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(31, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.CongoButton.Location = new System.Drawing.Point(628, 380);
+            this.CongoButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CongoButton.Name = "button8";
+            this.CongoButton.Size = new System.Drawing.Size(31, 23);
+            this.CongoButton.TabIndex = 2;
+            this.CongoButton.Text = "button8";
+            this.CongoButton.UseVisualStyleBackColor = true;
+            this.CongoButton.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(537, 290);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 22);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.NorthAfricaButton.Location = new System.Drawing.Point(537, 290);
+            this.NorthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.NorthAfricaButton.Name = "button7";
+            this.NorthAfricaButton.Size = new System.Drawing.Size(30, 22);
+            this.NorthAfricaButton.TabIndex = 1;
+            this.NorthAfricaButton.Text = "button7";
+            this.NorthAfricaButton.UseVisualStyleBackColor = true;
+            this.NorthAfricaButton.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox1
             // 
@@ -837,50 +837,50 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button SouthAfricaButton;
+        private System.Windows.Forms.Button CongoButton;
+        private System.Windows.Forms.Button NorthAfricaButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button45;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button JapanButton;
+        private System.Windows.Forms.Button EastAustraliaButton;
+        private System.Windows.Forms.Button WestAustraliaButton;
+        private System.Windows.Forms.Button NewGuineaButton;
+        private System.Windows.Forms.Button IndonesiaButton;
+        private System.Windows.Forms.Button SiamButton;
+        private System.Windows.Forms.Button MongoliaButton;
+        private System.Windows.Forms.Button IrkutskButton;
+        private System.Windows.Forms.Button KamchatkaButton;
+        private System.Windows.Forms.Button YakutskButton;
+        private System.Windows.Forms.Button SiberiaButton;
+        private System.Windows.Forms.Button ChinaButton;
+        private System.Windows.Forms.Button IndiaButton;
+        private System.Windows.Forms.Button AfghanistanButton;
+        private System.Windows.Forms.Button MiddleEastButton;
+        private System.Windows.Forms.Button UralButton;
+        private System.Windows.Forms.Button UkraineButton;
+        private System.Windows.Forms.Button SouthEuropeButton;
+        private System.Windows.Forms.Button NorthEuropeButton;
+        private System.Windows.Forms.Button ScandinaviaButton;
+        private System.Windows.Forms.Button WestEuropeButton;
+        private System.Windows.Forms.Button GreatBritainButton;
+        private System.Windows.Forms.Button IcelandButton;
+        private System.Windows.Forms.Button GreenlandButton;
+        private System.Windows.Forms.Button QuebecButton;
+        private System.Windows.Forms.Button OntarioButton;
+        private System.Windows.Forms.Button NorthwestTerritoryButton;
+        private System.Windows.Forms.Button AlaskaButton;
+        private System.Windows.Forms.Button AlbertaButton;
+        private System.Windows.Forms.Button EasternUSButton;
+        private System.Windows.Forms.Button WesternUSButton;
+        private System.Windows.Forms.Button CentralAmericaButton;
+        private System.Windows.Forms.Button VenezuelaButton;
+        private System.Windows.Forms.Button BrazilButton;
+        private System.Windows.Forms.Button PeruButton;
+        private System.Windows.Forms.Button ArgentinaButton;
+        private System.Windows.Forms.Button EgyptButton;
+        private System.Windows.Forms.Button EastAfricaButton;
+        private System.Windows.Forms.Button MadagascarButton;
         private System.Windows.Forms.Button resetFortify;
     }
 }
