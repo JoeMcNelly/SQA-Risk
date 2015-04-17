@@ -141,7 +141,7 @@ namespace TestGUI
             {
                 buttons[i].Text = territories[i].getNumTroops().ToString();
             }
-            label1.Text = "reinforcements left: " + allowedReinforcements.ToString();
+            label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
         }
 
         public void nextPlayer()
