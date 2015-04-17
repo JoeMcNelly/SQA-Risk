@@ -16,3 +16,21 @@ C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\D
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.RiskGame.resources
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.pdb
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csprojResolveAssemblyReference.cache
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.RiskGame.resources
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.Properties.Resources.resources
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\bin\Debug\TestGUI.pdb
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.RiskGame.resources
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.Properties.Resources.resources
+C:\Users\Daniel Lehman\Documents\GitHub\SQA-Risk\Risk\Risk\TestGUI\TestGUI\obj\Debug\TestGUI.csproj.GenerateResource.Cache
