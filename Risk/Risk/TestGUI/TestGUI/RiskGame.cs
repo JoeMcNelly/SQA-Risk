@@ -263,7 +263,7 @@ namespace TestGUI
                 allowedReinforcements += t.getTemporaryReinforcements();
                 t.resetReinforcements();
             }
-            label1.Text = allowedReinforcements.ToString();
+            label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
             for (int i = 0; i < buttons.Count; i++)
             {
                 buttons[i].Text = territories[i].getNumTroops().ToString();
