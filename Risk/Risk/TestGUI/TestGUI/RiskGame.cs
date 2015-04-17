@@ -37,10 +37,7 @@ namespace TestGUI
             resetFortify.Enabled = false;
             initReinforcePhase();
 
-
-
-
-            #region terrirories
+            #region territories
             buttons = new List<Button>();
 
             territories.Add(new Territory("Africa", "North Africa", 0));
@@ -139,11 +136,12 @@ namespace TestGUI
             buttons.Add(button43);
             buttons.Add(button44);
             #endregion
+
             for (int i = 0; i < buttons.Count; i++)
             {
                 buttons[i].Text = territories[i].getNumTroops().ToString();
             }
-            label1.Text = allowedReinforcements.ToString();
+            label1.Text = "reinforcements left: " + allowedReinforcements.ToString();
         }
 
         public void nextPlayer()
@@ -164,7 +162,7 @@ namespace TestGUI
                         current.addTroops();
                         allowedReinforcements--;
                         button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
-                        label1.Text = "" + allowedReinforcements;
+                        label1.Text = "reinforcements left: " + allowedReinforcements.ToString();
                     }
                     break;
                 case 1:
@@ -277,12 +275,6 @@ namespace TestGUI
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            clickTerritory(3, button1);
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -297,6 +289,14 @@ namespace TestGUI
         {
 
         }
+
+        #region Territory Buttons
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clickTerritory(3, button1);
+        }
+
+        
 
         public void button7_Click(object sender, EventArgs e)
         {
@@ -504,7 +504,7 @@ namespace TestGUI
 
         }
 
-
+        #endregion
         private void label1_Click(object sender, EventArgs e)
         {
 
