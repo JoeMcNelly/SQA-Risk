@@ -147,7 +147,8 @@ namespace TestGUI
         public void nextPlayer()
         {
             currentPlayer = (currentPlayer + 1) % numberOfPlayers;
-            label2.Text = "Player " + (currentPlayer + 1);
+            //label2.Text = "Player " + (currentPlayer + 1);
+            setPlayerPhaseLabel();
         }
 
         private void clickTerritory(int index, Button button)
@@ -178,6 +179,24 @@ namespace TestGUI
 
         }
 
+        private void setPlayerPhaseLabel()
+        {
+            var stringPhase = "";
+            switch (this.phase)
+            {
+                case 0:
+                    stringPhase = " Reinforce";
+                    break;
+                case 1:
+                    stringPhase = " Attack";
+                    break;
+                case 2:
+                    stringPhase = " Fortify";
+                    break;
+            }
+            label2.Text = "Player " + (currentPlayer + 1) + stringPhase;
+        }
+
         private void initReinforcePhase()
         {
             allowedReinforcements = 15; ////magic number here
@@ -187,6 +206,7 @@ namespace TestGUI
             fortify.Enabled = false;
             resetFortify.Enabled = false;
             this.phase = 0;
+            setPlayerPhaseLabel();
         }
 
         private void initAttackPhase()
@@ -196,6 +216,7 @@ namespace TestGUI
             attack.Enabled = true;
             endAttack.Enabled = true;
             this.phase = 1;
+            setPlayerPhaseLabel();
         }
 
         private void initFortifyPhase()
@@ -205,6 +226,7 @@ namespace TestGUI
             fortify.Enabled = true;
             resetFortify.Enabled = true;
             this.phase = 2;
+            setPlayerPhaseLabel();
         }
 
         public void save_Click(object sender, EventArgs e)
