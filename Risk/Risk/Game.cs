@@ -106,7 +106,7 @@ namespace TestGUI
 
         public int getPhase() 
         {
-            return -1;
+            return 0;
         }
 
         public List<Territory> getTerritories()
