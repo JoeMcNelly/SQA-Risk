@@ -108,6 +108,10 @@ namespace TestGUI
         {
             return 0;
         }
+        public void saveReinforcements() 
+        { 
+        
+        }
 
         public List<Territory> getTerritories()
         {

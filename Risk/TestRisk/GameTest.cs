@@ -74,6 +74,13 @@ namespace UnitTestProject1
             Assert.AreEqual(0, game.getPhase());
 
         }
+        [TestMethod]
+        public void TestgetPhaseAfterReinforce()
+        {
+            Game game = new Game();
+            game.saveReinforcements();
+            Assert.AreEqual(1, game.getPhase());
+        }
 
         [TestMethod]
         public void TestMakeMapFromXMLWithAdjacent()
