@@ -1,3 +1,9 @@
-C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
-C:\Users\lehmandr\Documents\CSSE376\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\TestGUI\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\TestGUI\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\TestGUI\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\TestGUI\bin\Debug\TestGUI.exe.config
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\TestGUI\obj\Debug\TestGUI.exe
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\TestGUI\obj\Debug\TestGUI.pdb
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe.config
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
+C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb

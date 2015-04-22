@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Risk.Properties
+namespace TestGUI.Properties
 {
 
 
