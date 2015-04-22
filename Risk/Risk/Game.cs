@@ -115,7 +115,7 @@ namespace TestGUI
                 t.saveTroops();
             }      
                 //initAttackPhase();
-                gamePhase++;
+                gamePhase = 1;
                 
         }
 
