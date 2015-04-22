@@ -167,22 +167,15 @@ namespace TestGUI
 
         public void save_Click(object sender, EventArgs e)
         {
-            if (allowedReinforcements == 0)
+            if (game.remainingReinforcements() == 0)
             {
-                String name = "";
-                foreach (Territory t in territories)
-                {
-                    t.saveTroops();
-                    name += t.getName();
-                    name += ": " + t.getNumTroops() + '\n';
-                }
-                Console.WriteLine(name);
 
+                game.saveReinforcements();
                 for (int i = 0; i < buttons.Count; i++)
                 {
                     buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
                 }
-                initAttackPhase();
+
                 label1.Text = "";
 
 

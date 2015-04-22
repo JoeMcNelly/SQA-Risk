@@ -106,11 +106,22 @@ namespace TestGUI
 
         public int getPhase() 
         {
-            return 0;
+            return this.gamePhase;
         }
         public void saveReinforcements() 
-        { 
-        
+        {
+            foreach (Territory t in territories)
+            {
+                t.saveTroops();
+            }      
+                //initAttackPhase();
+                gamePhase++;
+                
+        }
+
+        public int remainingReinforcements()
+        {
+            return reinforcements;
         }
 
         public List<Territory> getTerritories()
