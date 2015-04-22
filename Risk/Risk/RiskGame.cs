@@ -25,7 +25,7 @@ namespace TestGUI
         {
             InitializeComponent();
             territories = new List<Territory>();
-            this.game = new Game(2); // Hard coding in 2 players for now
+            this.game = new Game(); // Hard coding in 2 players for now
 
 
 
@@ -37,15 +37,9 @@ namespace TestGUI
             resetFortify.Enabled = false;
             initReinforcePhase();
 
-            #region territories
+            #region buttons
             buttons = new List<Button>();
 
-            territories.Add(new Territory("Africa", "North Africa", 0));
-            territories.Add(new Territory("Africa", "Congo", 0));
-            territories.Add(new Territory("Africa", "South Africa", 0));
-            territories.Add(new Territory("Africa", "Madagascar", 0));
-            territories.Add(new Territory("Africa", "East Africa", 0));
-            territories.Add(new Territory("Africa", "Egypt", 0));
             //6
             buttons.Add(NorthAfricaButton);
             buttons.Add(CongoButton);
@@ -54,25 +48,12 @@ namespace TestGUI
             buttons.Add(EastAfricaButton);
             buttons.Add(EgyptButton);
 
-            territories.Add(new Territory("South America", "Brazil", 1));
-            territories.Add(new Territory("South America", "Argentina", 1));
-            territories.Add(new Territory("South America", "Peru", 1));
-            territories.Add(new Territory("South America", "Venezuela", 1));
             //4
             buttons.Add(BrazilButton);
             buttons.Add(ArgentinaButton);
             buttons.Add(PeruButton);
             buttons.Add(VenezuelaButton);
 
-            territories.Add(new Territory("North America", "Central America", 2));
-            territories.Add(new Territory("North America", "Eastern US", 2));
-            territories.Add(new Territory("North America", "Western US", 2));
-            territories.Add(new Territory("North America", "Alberta", 2));
-            territories.Add(new Territory("North America", "Alaska", 2));
-            territories.Add(new Territory("North America", "Greenland", 2));
-            territories.Add(new Territory("North America", "Northwest Territory", 2));
-            territories.Add(new Territory("North America", "Quebec", 2));
-            territories.Add(new Territory("North America", "Ontario", 2));
             //9
             buttons.Add(CentralAmericaButton);
             buttons.Add(EasternUSButton);
@@ -84,13 +65,6 @@ namespace TestGUI
             buttons.Add(QuebecButton);
             buttons.Add(OntarioButton);
 
-            territories.Add(new Territory("Europe", "Great Britain", 3));
-            territories.Add(new Territory("Europe", "Iceland", 3));
-            territories.Add(new Territory("Europe", "North Europe", 3));
-            territories.Add(new Territory("Europe", "South Europe", 3));
-            territories.Add(new Territory("Europe", "West Europe", 3));
-            territories.Add(new Territory("Europe", "Scandinavia", 3));
-            territories.Add(new Territory("Europe", "Ukraine", 3));
             //7
             buttons.Add(GreatBritainButton);
             buttons.Add(IcelandButton);
@@ -100,18 +74,6 @@ namespace TestGUI
             buttons.Add(ScandinaviaButton);
             buttons.Add(UkraineButton);
 
-            territories.Add(new Territory("Asia", "China", 4));
-            territories.Add(new Territory("Asia", "Irkutsk", 4));
-            territories.Add(new Territory("Asia", "Kamchatka", 4));
-            territories.Add(new Territory("Asia", "Mongolia", 4));
-            territories.Add(new Territory("Asia", "Siberia", 4));
-            territories.Add(new Territory("Asia", "Yakutsk", 4));
-            territories.Add(new Territory("Asia", "Afghanistan", 4));
-            territories.Add(new Territory("Asia", "India", 4));
-            territories.Add(new Territory("Asia", "Japan", 4));
-            territories.Add(new Territory("Asia", "Middle-East", 4));
-            territories.Add(new Territory("Asia", "Siam", 4));
-            territories.Add(new Territory("Asia", "Ural", 4));
             //12
             buttons.Add(ChinaButton);
             buttons.Add(IrkutskButton);
@@ -126,10 +88,6 @@ namespace TestGUI
             buttons.Add(SiamButton);
             buttons.Add(UralButton);
 
-            territories.Add(new Territory("Australia", "East Australia", 5));
-            territories.Add(new Territory("Australia", "West Australia", 5));
-            territories.Add(new Territory("Australia", "Indonesia", 5));
-            territories.Add(new Territory("Australia", "New-Guinea", 5));
             //4
             buttons.Add(EastAustraliaButton);
             buttons.Add(WestAustraliaButton);
@@ -139,7 +97,7 @@ namespace TestGUI
 
             for (int i = 0; i < buttons.Count; i++)
             {
-                buttons[i].Text = territories[i].getNumTroops().ToString();
+                buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
             }
             label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
         }
@@ -153,29 +111,7 @@ namespace TestGUI
 
         private void clickTerritory(int index, Button button)
         {
-
-            Territory current = this.territories[index];
-            switch (this.phase)
-            {
-                case 0:
-                    if (allowedReinforcements > 0 && current.getOwner() == currentPlayer)
-                    {
-                        current.addTroops();
-                        allowedReinforcements--;
-                        button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
-                        label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
-                    }
-                    break;
-                case 1:
-                    //do attacking things
-                    break;
-                case 2:
-                    //do fortify things
-                    break;
-            }
-
-
-
+            this.game.clickTerritory(index, button, label1);
 
         }
 
@@ -244,7 +180,7 @@ namespace TestGUI
 
                 for (int i = 0; i < buttons.Count; i++)
                 {
-                    buttons[i].Text = territories[i].getNumTroops().ToString();
+                    buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
                 }
                 initAttackPhase();
                 label1.Text = "";
@@ -258,16 +194,18 @@ namespace TestGUI
 
         private void reset_Click(object sender, EventArgs e)
         {
-            foreach (Territory t in territories)
-            {
-                allowedReinforcements += t.getTemporaryReinforcements();
-                t.resetReinforcements();
-            }
-            label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                buttons[i].Text = territories[i].getNumTroops().ToString();
-            }
+            //foreach (Territory t in territories)
+            //{
+            //    allowedReinforcements += t.getTemporaryReinforcements();
+            //    t.resetReinforcements();
+            //}
+            //label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
+            //for (int i = 0; i < buttons.Count; i++)
+            //{
+            //    buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
+            //}
+
+            this.game.resetClick(this.buttons, label1);
         }
 
         private void attack_click(object sender, EventArgs e)

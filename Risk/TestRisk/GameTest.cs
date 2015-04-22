@@ -68,6 +68,14 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void TestgetPhaseOnConstruction()
+        {
+            Game game = new Game();
+            Assert.AreEqual(0, game.getPhase());
+
+        }
+
+        [TestMethod]
         public void TestMakeMapFromXMLWithAdjacent()
         {
             Game gameTest = new Game(2);
