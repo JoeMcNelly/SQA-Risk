@@ -1,18 +1,31 @@
 ﻿using System;
 using System.IO;
-using NUnit.Framework;
 using TestGUI;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Xml.XPath;
 
 namespace UnitTestProject1
 {
-    [TestFixture()]
+    [TestClass]
     public class GameTest
     {
         private readonly Game game = new Game();
 
-        [Test()]
+        [TestMethod]
+        public void TestGameInitializes()
+        {
+            Game newgame = new Game();
+            Assert.IsNotNull(newgame);
+        }
+
+        [TestMethod]
+        public void TestGameConstructorWithOnePlayer()
+        {
+            //Should throw an error; worry about this later
+        }
+
+        [TestMethod]
         public void TestMakeMapFromXMLEmptyString()
         {
             //if a valid empty xml document is given it simply returns null
@@ -24,7 +37,7 @@ namespace UnitTestProject1
             Assert.IsNull(target);
         }
 
-        [Test()]
+        [TestMethod]
         public void TestMakeMapFromXMLOneTerritory()
         {
             Game gameTest = new Game(2);
@@ -38,7 +51,7 @@ namespace UnitTestProject1
             Assert.AreEqual(testTerritory.ToString(), target["Alaska"].ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestMakeMapFromXMLTwoTerritories()
         {
             Game gameTest = new Game(2);
@@ -54,7 +67,7 @@ namespace UnitTestProject1
             Assert.AreEqual(testTerritory2.ToString(), target["Northwest Territory"].ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestMakeMapFromXMLWithAdjacent()
         {
             Game gameTest = new Game(2);
@@ -87,6 +100,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual(gameTest.getMapList()["Alaska"].ToString(), testTerritory.ToString());
         }
+
 
     }
 }

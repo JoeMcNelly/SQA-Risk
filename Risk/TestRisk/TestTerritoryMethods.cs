@@ -21,7 +21,7 @@ namespace UnitTestProject1
             Game newgame = new Game(2);
             Territory terr = new Territory();
             newgame.addTerritoryToMap(terr);
-            Assert.AreEqual(terr, newgame.getMapList()[0]);
+            Assert.True(newgame.getMapList().ContainsKey(terr.getName()));
 
         }
 
