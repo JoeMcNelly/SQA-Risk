@@ -182,6 +182,16 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void TestIsInPathForDirectlyAdjacentTerrThatIsNotOwned()
+        {
+            Map target = new Map();
+            target.makeMapFromXML(testXML);
+            target.setTerritoryOwner("Alaska", 1);
+
+            Assert.IsFalse(target.IsInPath("Alaska", "Alberta", 1));
+        }
+
+        [TestMethod]
         public void TestIsInPathForTerrSeperatedByOne()
         {
             Assert.IsTrue(false);
