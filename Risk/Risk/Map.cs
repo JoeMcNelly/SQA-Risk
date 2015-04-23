@@ -77,8 +77,6 @@ namespace Risk
         //going to represent player as an int because its represented as different things in different places
         public Boolean IsInPath(String start, String end, int player)
         {
-            
-
             return true;
         }
     }
