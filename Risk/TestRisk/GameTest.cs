@@ -86,6 +86,8 @@ namespace UnitTestProject1
         {
             Game game = new Game();
             game.saveReinforcements();
+            game.endAttack();
+            game.endFortify();
             game.saveReinforcements();
             Assert.AreEqual(1, game.getPhase());
         }
@@ -114,6 +116,15 @@ namespace UnitTestProject1
         }
 
 
+        [TestMethod]
+        public void TestNextPhase3()
+        {
+            Game game = new Game();
+            game.nextGamePhase();
+            game.nextGamePhase();
+            game.nextGamePhase();
+            Assert.AreEqual(0, game.getPhase());
+        }
 
 
 
