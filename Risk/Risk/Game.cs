@@ -212,7 +212,7 @@ namespace Risk
             //foreach (Territory t in territories)
             //{
             //    reinforcements += t.getTemporaryReinforcements();
-            //    territories[0].resetReinforcements();
+                territories[0].resetReinforcements();
             //}
            
         }
