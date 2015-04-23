@@ -77,21 +77,31 @@ namespace Risk
         }
 
         //going to represent player as an int because its represented as different things in different places
+        //Second Note: if we want we can alternativly have this method return the end territory if found and null otherwise
         public Boolean IsInPath(String start, String end, int player)
         {
             if (!this.map.ContainsKey(start) || !this.map.ContainsKey(end))
                 return false;
-            if (start.Equals(end))
-                return true;
 
-            foreach (Territory adjacency in this.map[start].getAdjancencies())
+            Queue<Territory> Q = new Queue<Territory>();
+            HashSet<Territory> S = new HashSet<Territory>();
+            Q.Enqueue(this.map[start]);
+            S.Add(this.map[start]);
+
+            while(Q.Count > 0)
             {
-                if(adjacency.getName().Equals(end) && adjacency.getOwner() == player)
-                {
+                Territory t = Q.Dequeue();
+                if (t.getName().Equals(end))//going to need to add check for ownership here
                     return true;
+                foreach(Territory adjacency in t.getAdjancencies())
+                {
+                    if(!S.Contains(adjacency))
+                    {
+                        Q.Enqueue(adjacency);
+                        S.Add(adjacency);
+                    }
                 }
             }
-            
             return false;
         }
     }

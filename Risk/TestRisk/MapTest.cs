@@ -186,7 +186,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestIsInPathForTerrSeperatedByOne()
         {
-            Assert.IsTrue(false);
+            Map target = new Map();
+            target.makeMapFromXML(testXML);
+            //going to use the -1 player since all territories are set to it by default
+
+            Assert.IsTrue(target.IsInPath("Alaska", "Ontario", -1));
         }
 
         [TestMethod]
