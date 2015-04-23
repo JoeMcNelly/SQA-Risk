@@ -209,12 +209,11 @@ namespace Risk
 
         public void resetClick()
         {
-            //foreach (Territory t in territories)
-            //{
+            foreach (Territory t in territories)
+            {
             //    reinforcements += t.getTemporaryReinforcements();
-                territories[0].resetReinforcements();
-                territories[1].resetReinforcements();
-            //}
+                 t.resetReinforcements();
+            }
            
         }
 
