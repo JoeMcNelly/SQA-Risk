@@ -208,18 +208,14 @@ namespace Risk
             }
         }
 
-        public void resetClick(List<Button> buttons, Label label)
+        public void resetClick()
         {
             foreach (Territory t in territories)
             {
                 reinforcements += t.getTemporaryReinforcements();
                 t.resetReinforcements();
             }
-            label.Text = "Reinforcements left: " + reinforcements.ToString();
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                buttons[i].Text = this.getTerritories()[i].getNumTroops().ToString();
-            }
+           
         }
 
         public Dictionary<String, Territory> makeMapFromXML(string xml)

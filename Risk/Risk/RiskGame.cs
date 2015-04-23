@@ -189,18 +189,13 @@ namespace Risk
 
         private void reset_Click(object sender, EventArgs e)
         {
-            //foreach (Territory t in territories)
-            //{
-            //    allowedReinforcements += t.getTemporaryReinforcements();
-            //    t.resetReinforcements();
-            //}
-            //label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
-            //for (int i = 0; i < buttons.Count; i++)
-            //{
-            //    buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
-            //}
+            this.game.resetClick();
 
-            this.game.resetClick(this.buttons, label1);
+            label1.Text = "Reinforcements left: " + game.getReinforcements().ToString();
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
+            }
         }
 
         private void attack_click(object sender, EventArgs e)
