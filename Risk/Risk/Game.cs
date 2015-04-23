@@ -120,7 +120,11 @@ namespace TestGUI
         }
         public void nextGamePhase()
         {
-            gamePhase = 1;
+            if (gamePhase == 0)
+                gamePhase = 1;
+            else {
+                gamePhase = 2;
+            }
         }
 
         public int remainingReinforcements()
