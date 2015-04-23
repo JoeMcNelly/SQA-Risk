@@ -213,6 +213,7 @@ namespace Risk
             //{
             //    reinforcements += t.getTemporaryReinforcements();
                 territories[0].resetReinforcements();
+                territories[1].resetReinforcements();
             //}
            
         }
