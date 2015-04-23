@@ -101,7 +101,23 @@ namespace Risk
 
         private void clickTerritory(int index, Button button)
         {
-            this.game.clickTerritory(index, button, label1);
+
+            this.game.clickTerritory(index);
+            Territory current = this.game.getTerritories()[index];
+
+            switch (this.game.getPhase())
+            {
+                case 0:
+                    button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
+                    label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
+                    break;
+                case 1:
+                    //attack button/label things
+                    break;
+                case 2:
+                    //fortify button/label things
+                    break;
+            }
 
         }
 

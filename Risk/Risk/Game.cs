@@ -185,7 +185,7 @@ namespace Risk
 
         }
 
-        public void clickTerritory(int index, Button button, Label label)
+        public void clickTerritory(int index)
         {
             Territory current = this.territories[index];
             switch (this.gamePhase)
@@ -195,8 +195,6 @@ namespace Risk
                     {
                         current.addTroops();
                         reinforcements--;
-                        button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
-                        label.Text = "Reinforcements left: " + reinforcements.ToString();
                     }
                     break;
                 case 1:
