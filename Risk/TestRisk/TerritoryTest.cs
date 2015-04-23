@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Risk;
 
 namespace TestRisk
 {
-    [TestFixture()]
+    [TestClass]
     public class TerritoryTest
     {
-        [Test()]
+        [TestMethod]
         public void TestTerritoryEqualsEmpty()
         {
             Territory target = new Territory();
@@ -17,7 +17,7 @@ namespace TestRisk
             
             Assert.IsTrue(test.Equals(target));
         }
-        [Test()]
+        [TestMethod]
         public void TestTerritoryIsNotEqualToNullObj()
         {
             Territory target = new Territory();
@@ -25,7 +25,7 @@ namespace TestRisk
             Assert.IsFalse(target.Equals(null));
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryIsNotEqualToOtherObjects()
         {
             Territory target = new Territory();
@@ -33,7 +33,7 @@ namespace TestRisk
             Assert.IsFalse(target.Equals(new Object()));
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryAreNotEqualWhenNameDifference()
         {
             Territory target = new Territory("", "A");
@@ -42,7 +42,7 @@ namespace TestRisk
             Assert.IsFalse(test.Equals(target));
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryAreNotEqualWhenContAreDifferent()
         {
             Territory target = new Territory("A", "");
@@ -51,7 +51,7 @@ namespace TestRisk
             Assert.IsFalse(test.Equals(target));
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryAreNotEqualWhenTroopNumberDiffers()
         {
             Territory target = new Territory("A", "a");
@@ -61,7 +61,7 @@ namespace TestRisk
             Assert.IsFalse(test.Equals(target));
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryAreNotEqualWhenAdjacenciesAreDifferent()
         {
             Territory target = new Territory("A", "a");
@@ -76,7 +76,7 @@ namespace TestRisk
 
      
         //toString() method tests
-        [Test()]
+        [TestMethod]
         public void TestToStringOnEmptyTerritoryReturnsEmpty()
         {
             Territory target = new Territory();
@@ -84,7 +84,7 @@ namespace TestRisk
             Assert.AreEqual("Empty", target.ToString());
         }
         
-        [Test()]
+        [TestMethod]
         public void TestToStringCont()
         {
             Territory target = new Territory("A", "");
@@ -92,7 +92,7 @@ namespace TestRisk
             Assert.AreEqual("Continent: A\nTerritory: \nTroops: 0\nOwner: -1\nAdjacencies: ", target.ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestToStringTerritoryName()
         {
             Territory target = new Territory("", "a");
@@ -100,7 +100,7 @@ namespace TestRisk
             Assert.AreEqual("Continent: \nTerritory: a\nTroops: 0\nOwner: -1\nAdjacencies: ", target.ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestToStringTroops()
         {
             Territory target = new Territory("", "");
@@ -110,7 +110,7 @@ namespace TestRisk
             Assert.AreEqual("Continent: \nTerritory: \nTroops: 1\nOwner: -1\nAdjacencies: ", target.ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestToStringAdjacencies()
         {
             Territory target = new Territory("A", "a");
@@ -120,24 +120,24 @@ namespace TestRisk
             Assert.AreEqual("Continent: A\nTerritory: a\nTroops: 0\nOwner: -1\nAdjacencies: b; ", target.ToString());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestTerritoryInitializes()
         {
             Territory terr = new Territory();
             Assert.IsNotNull(terr);
         }
 
-        [Test()]
+        [TestMethod]
         public void TestCorrectlyAddedTerritoryToGameMap()
         {
             Game newgame = new Game(2);
             Territory terr = new Territory();
             newgame.addTerritoryToMap(terr);
-            Assert.True(newgame.getMapList().ContainsKey(terr.getName()));
+            Assert.IsTrue(newgame.getMapList().ContainsKey(terr.getName()));
 
         }
 
-        [Test()]
+        [TestMethod]
         public void TestReturnCorrectNumberOfTempTroops()
         {
             Territory terr = new Territory();
@@ -149,7 +149,7 @@ namespace TestRisk
             Assert.AreEqual(numOfSoldiers, terr.getTemporaryReinforcements());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestSaveTroopsMethod()
         {
             Territory terr = new Territory();
@@ -162,7 +162,7 @@ namespace TestRisk
             Assert.AreEqual(numSoldiers, terr.getNumTroops());
         }
 
-        [Test()]
+        [TestMethod]
         public void TestResetTroopsMethod()
         {
             Territory terr = new Territory();
