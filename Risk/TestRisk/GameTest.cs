@@ -274,6 +274,22 @@ namespace TestRisk
             }
         }
 
+        [TestMethod]
+        public void TestResetMethodResetsAvailableReinforcements()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            int expected = game.getReinforcements();
+            int index = 0;
+            foreach (Territory t in territories)
+            {
+                game.clickTerritory(index);
+                index++;
+            }
+            game.resetClick();
+            Assert.AreEqual(expected, game.getReinforcements());
+        }
+
 
 
         [TestMethod]
