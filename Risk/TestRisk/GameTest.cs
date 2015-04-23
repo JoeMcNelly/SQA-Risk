@@ -209,6 +209,20 @@ namespace TestRisk
             Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
         }
 
+        [TestMethod]
+        public void TestClickTerritoryDoesNotReinforceWhenOutOfTroops()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            int num = game.getReinforcements();
+            for (int i = 0; i < num + 1; i++)
+            {
+                game.clickTerritory(0);
+            }
+            Assert.AreEqual(0, game.getReinforcements());
+            Assert.AreEqual(num, territories[0].getTemporaryReinforcements());
+        }
+
 
 
         [TestMethod]
