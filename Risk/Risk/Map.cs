@@ -83,6 +83,15 @@ namespace Risk
                 return false;
             if (start.Equals(end))
                 return true;
+
+            foreach (Territory adjacency in this.map[start].getAdjancencies())
+            {
+                if(adjacency.getName().Equals(end))
+                {
+                    return true;
+                }
+            }
+            
             return false;
         }
     }
