@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using TestGUI;
+using Risk;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Xml.XPath;
 
-namespace UnitTestProject1
+namespace TestRisk
 {
     [TestClass]
     public class GameTest

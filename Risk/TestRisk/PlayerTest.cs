@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestGUI;
+using Risk;
 
-namespace UnitTestProject1
+namespace TestRisk
 {
     [TestClass]
     public class PlayerTest

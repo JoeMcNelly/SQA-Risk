@@ -16,3 +16,12 @@ C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.Pro
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe.config
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.pdb
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csprojResolveAssemblyReference.cache
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.Properties.Resources.resources
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csproj.GenerateResource.Cache
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb
+C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.RiskGame.resources

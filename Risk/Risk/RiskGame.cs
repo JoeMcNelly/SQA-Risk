@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestGUI
+namespace Risk
 {
     public partial class RiskGame : Form
     {

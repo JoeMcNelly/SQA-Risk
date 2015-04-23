@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-namespace TestGUI
+namespace Risk
 {
     //Move all dis to RiskGame.cs at some point
     public class Game

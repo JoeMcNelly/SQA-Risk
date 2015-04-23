@@ -1,4 +1,4 @@
-﻿namespace TestGUI
+﻿namespace Risk
 {
     partial class RiskGame
     {
@@ -604,7 +604,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::TestGUI.Properties.Resources.Sample_Risk_game_image;
+            this.pictureBox1.BackgroundImage = global::Risk.Properties.Resources.Sample_Risk_game_image;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -736,7 +736,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::TestGUI.Properties.Resources.India_Artillery_Card;
+            this.pictureBox4.BackgroundImage = global::Risk.Properties.Resources.India_Artillery_Card;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(122, 3);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -747,7 +747,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::TestGUI.Properties.Resources.Iceland_Infantry_Card;
+            this.pictureBox3.BackgroundImage = global::Risk.Properties.Resources.Iceland_Infantry_Card;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(62, 3);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -759,7 +759,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::TestGUI.Properties.Resources.Eastern_United_States_Artillery_Card;
+            this.pictureBox2.BackgroundImage = global::Risk.Properties.Resources.Eastern_United_States_Artillery_Card;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
