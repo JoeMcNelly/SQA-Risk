@@ -92,9 +92,8 @@ namespace Risk
             {
                 Territory t = Q.Dequeue();
                 if (t.getName().Equals(end) && t.getOwner() == player)//if we need to change the player thing, just 
-                                                                      //change the == to a .Equals() method and change
+                    return true;                                      //change the == to a .Equals() method and change
                                                                       //the type in the method deff 
-                    return true;
                 foreach(Territory adjacency in t.getAdjancencies())
                 {
                     if(!S.Contains(adjacency))
