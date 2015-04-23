@@ -165,6 +165,15 @@ namespace TestRisk
             }
         }
 
+        [TestMethod]
+        public void TestClickTerritoryOnce()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            game.clickTerritory(0);
+            Assert.AreEqual(1,territories[0].getTemporaryReinforcements());
+        }
+
 
 
         [TestMethod]
