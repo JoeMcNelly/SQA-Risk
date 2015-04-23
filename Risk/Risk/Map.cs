@@ -81,7 +81,9 @@ namespace Risk
         {
             if (!this.map.ContainsKey(start) || !this.map.ContainsKey(end))
                 return false;
-            return true;
+            if (start.Equals(end))
+                return true;
+            return false;
         }
     }
 }

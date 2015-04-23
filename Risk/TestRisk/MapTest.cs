@@ -173,7 +173,12 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestIsInPathForDirectlyAdjacentTerr()
         {
-            Assert.IsTrue(false);
+            Map target = new Map();
+            target.makeMapFromXML(testXML);
+            target.setTerritoryOwner("Alaska", 1);
+            target.setTerritoryOwner("Alberta", 1);
+
+            Assert.IsTrue(target.IsInPath("Alaska", "Alberta", 1));
         }
 
         [TestMethod]
