@@ -135,7 +135,7 @@ namespace UnitTestProject1
                             "<continent>North America</continent>" +
                             "<adjacent>Alberta:Ontario:Eastern United States:Central America</adjacent>" +
                           "</territory>" +
-                        "<territories>";
+                        "</territories>";
 
 
         //Dont think I can finish this before 9:30 so I set up all the test to be written
@@ -145,7 +145,7 @@ namespace UnitTestProject1
         {
             Map target = new Map();
             target.makeMapFromXML(testXML);
-            target.setTerritoryOwner("Alaska", 1);
+            //target.setTerritoryOwner("Alaska", 1);
 
             Assert.IsFalse(target.IsInPath("test", "Alaska", 1));
         }
