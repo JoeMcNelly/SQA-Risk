@@ -191,12 +191,12 @@ namespace Risk
             switch (this.gamePhase)
             {
                 case 0:
-            //        if (reinforcements > 0 && current.getOwner() == currentPlayer)
-            //        {
-                current.addTroops();
-                reinforcements--;
+                   if (reinforcements > 0)// && current.getOwner() == currentPlayer)
+                    {
+                        current.addTroops();
+                        reinforcements--;
             
-            //        }
+                    }
                     break;
                 case 1:
                     //do attacking things
