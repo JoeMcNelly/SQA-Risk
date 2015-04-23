@@ -39,7 +39,7 @@ namespace Risk.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TestGUI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Risk.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -87,6 +87,30 @@ namespace Risk.Properties {
             get {
                 object obj = ResourceManager.GetObject("India Artillery Card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;territories&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Alaska&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Northwest Territory:Alberta:Kamchatka&lt;/adjacent&gt;
+        ///  &lt;/territory&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Alberta&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Northwest Territory:Alaska:Ontario:Western United States&lt;/adjacent&gt;
+        ///  &lt;/territory&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Central America&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Western [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
             }
         }
         

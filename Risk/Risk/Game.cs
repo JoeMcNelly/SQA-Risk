@@ -13,18 +13,26 @@ namespace Risk
         private int currentPlayer;
         private int gamePhase;  // 0 = reinforce, 1 = attack, 2 = fortify
         private int reinforcements;
-        private List<Territory> territories;
-        private Dictionary<String, Territory> map;
         private List<Player> players;
+        private Map map;
+
+        //These 2 variables should become depreciated when Map.cs is full implemented
+        private List<Territory> territories;
+        //private Dictionary<String, Territory> map;
+        
 
         public Game()
         {
-            this.map = new Dictionary<String, Territory>();
+            
             this.players = new List<Player>();
             this.currentPlayer = 0;
             this.numOfPlayers = 6; //hard coded
             this.gamePhase = 0;
             this.reinforcements = generateReinforcements();
+            this.map = new Map(global::Risk.Properties.Resources.Map); //probably shouldn't pass in the path right here but that can be changed easily
+
+            //These 2 variables should become depreciated when Map.cs is full implemented
+            //this.map = new Dictionary<String, Territory>();
             this.territories = new List<Territory>();
 
             #region territories 
@@ -171,12 +179,10 @@ namespace Risk
         {
             this.map.Add(terr.getName(), terr);
         }
-
-        public Dictionary<String, Territory> getMapList()
+        public Map getMap()
         {
             return this.map;
         }
-
 
         public bool isOver()
         {

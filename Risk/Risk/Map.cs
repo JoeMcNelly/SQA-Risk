@@ -19,10 +19,10 @@ namespace Risk
         }
 
         //Build map from XML file
-        public Map(String path)
+        public Map(String XML)
         {
             this.map = new Dictionary<String,Territory>();
-            makeMapFromXML(System.IO.File.ReadAllText(path));
+            makeMapFromXML(XML);
         }
 
         public Dictionary<String, Territory> getMap()
@@ -33,6 +33,16 @@ namespace Risk
         public void setTerritoryOwner(String territoryName, int player)
         {
             this.map[territoryName].setOwner(player);
+        }
+
+        public void Add(String name, Territory territory)
+        {
+            this.map.Add(name, territory);
+        }
+
+        public bool ContainsTerritory(String name)
+        {
+            return this.map.ContainsKey(name);
         }
 
 

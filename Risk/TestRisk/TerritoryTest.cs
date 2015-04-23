@@ -133,7 +133,7 @@ namespace TestRisk
             Game newgame = new Game(2);
             Territory terr = new Territory();
             newgame.addTerritoryToMap(terr);
-            Assert.IsTrue(newgame.getMapList().ContainsKey(terr.getName()));
+            Assert.IsTrue(newgame.getMap().ContainsTerritory(terr.getName()));
 
         }
 
