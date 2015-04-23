@@ -181,6 +181,14 @@ namespace UnitTestProject1
             Assert.IsTrue(target.IsInPath("Alaska", "Alberta", 1));
         }
 
+       
+
+        [TestMethod]
+        public void TestIsInPathForTerrSeperatedByOne()
+        {
+            Assert.IsTrue(false);
+        }
+
         [TestMethod]
         public void TestIsInPathForDirectlyAdjacentTerrThatIsNotOwned()
         {
@@ -189,12 +197,6 @@ namespace UnitTestProject1
             target.setTerritoryOwner("Alaska", 1);
 
             Assert.IsFalse(target.IsInPath("Alaska", "Alberta", 1));
-        }
-
-        [TestMethod]
-        public void TestIsInPathForTerrSeperatedByOne()
-        {
-            Assert.IsTrue(false);
         }
 
     }
