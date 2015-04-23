@@ -193,7 +193,7 @@ namespace Risk
             //    case 0:
             //        if (reinforcements > 0 && current.getOwner() == currentPlayer)
             //        {
-            //current.addTroops();
+            current.addTroops();
             //reinforcements--;
             //        }
             //        break;
