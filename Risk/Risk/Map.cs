@@ -76,7 +76,7 @@ namespace Risk
             return this.map;
         }
 
-        //going to represent player as an int because its represented as different things in different places
+        //Note: going to represent player as an int because its represented as different things in different places
         //Second Note: if we want we can alternativly have this method return the end territory if found and null otherwise
         public Boolean IsInPath(String start, String end, int player)
         {
@@ -91,7 +91,9 @@ namespace Risk
             while(Q.Count > 0)
             {
                 Territory t = Q.Dequeue();
-                if (t.getName().Equals(end))//going to need to add check for ownership here
+                if (t.getName().Equals(end) && t.getOwner() == player)//if we need to change the player thing, just 
+                                                                      //change the == to a .Equals() method and change
+                                                                      //the type in the method deff 
                     return true;
                 foreach(Territory adjacency in t.getAdjancencies())
                 {
