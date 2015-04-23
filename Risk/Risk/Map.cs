@@ -29,6 +29,10 @@ namespace Risk
         {
             return this.map;
         }
+        public List<Territory> GetMapAsList()
+        {
+            return this.map.Values.ToList();
+        }
 
         public void setTerritoryOwner(String territoryName, int player)
         {
@@ -43,6 +47,11 @@ namespace Risk
         public bool ContainsTerritory(String name)
         {
             return this.map.ContainsKey(name);
+        }
+        public Territory getTerritory(String name)
+        {
+
+            return this.map[name];
         }
 
 

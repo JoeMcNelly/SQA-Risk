@@ -161,7 +161,7 @@
             // button47
             // 
             this.JapanButton.Location = new System.Drawing.Point(1103, 204);
-            this.JapanButton.Name = "button47";
+            this.JapanButton.Name = "Japan";
             this.JapanButton.Size = new System.Drawing.Size(30, 23);
             this.JapanButton.TabIndex = 43;
             this.JapanButton.Text = "button47";
@@ -171,7 +171,7 @@
             // button46
             // 
             this.EastAustraliaButton.Location = new System.Drawing.Point(1128, 510);
-            this.EastAustraliaButton.Name = "button46";
+            this.EastAustraliaButton.Name = "Eastern Australia";
             this.EastAustraliaButton.Size = new System.Drawing.Size(30, 23);
             this.EastAustraliaButton.TabIndex = 42;
             this.EastAustraliaButton.Text = "button46";
@@ -181,7 +181,7 @@
             // button45
             // 
             this.WestAustraliaButton.Location = new System.Drawing.Point(1036, 515);
-            this.WestAustraliaButton.Name = "button45";
+            this.WestAustraliaButton.Name = "Western Australia";
             this.WestAustraliaButton.Size = new System.Drawing.Size(30, 23);
             this.WestAustraliaButton.TabIndex = 41;
             this.WestAustraliaButton.Text = "button45";
@@ -191,7 +191,7 @@
             // button44
             // 
             this.NewGuineaButton.Location = new System.Drawing.Point(1135, 407);
-            this.NewGuineaButton.Name = "button44";
+            this.NewGuineaButton.Name = "New Guinea";
             this.NewGuineaButton.Size = new System.Drawing.Size(30, 23);
             this.NewGuineaButton.TabIndex = 40;
             this.NewGuineaButton.Text = "button44";
@@ -201,7 +201,7 @@
             // button43
             // 
             this.IndonesiaButton.Location = new System.Drawing.Point(1021, 382);
-            this.IndonesiaButton.Name = "button43";
+            this.IndonesiaButton.Name = "Indonesia";
             this.IndonesiaButton.Size = new System.Drawing.Size(30, 23);
             this.IndonesiaButton.TabIndex = 39;
             this.IndonesiaButton.Text = "button43";
@@ -211,7 +211,7 @@
             // button42
             // 
             this.SiamButton.Location = new System.Drawing.Point(969, 300);
-            this.SiamButton.Name = "button42";
+            this.SiamButton.Name = "Siam";
             this.SiamButton.Size = new System.Drawing.Size(30, 23);
             this.SiamButton.TabIndex = 38;
             this.SiamButton.Text = "button42";
@@ -221,7 +221,7 @@
             // button41
             // 
             this.MongoliaButton.Location = new System.Drawing.Point(956, 161);
-            this.MongoliaButton.Name = "button41";
+            this.MongoliaButton.Name = "Mongolia";
             this.MongoliaButton.Size = new System.Drawing.Size(30, 23);
             this.MongoliaButton.TabIndex = 37;
             this.MongoliaButton.Text = "button41";
@@ -231,7 +231,7 @@
             // button40
             // 
             this.IrkutskButton.Location = new System.Drawing.Point(943, 121);
-            this.IrkutskButton.Name = "button40";
+            this.IrkutskButton.Name = "Irkutsk";
             this.IrkutskButton.Size = new System.Drawing.Size(30, 23);
             this.IrkutskButton.TabIndex = 36;
             this.IrkutskButton.Text = "button40";
@@ -241,7 +241,7 @@
             // button39
             // 
             this.KamchatkaButton.Location = new System.Drawing.Point(1066, 71);
-            this.KamchatkaButton.Name = "button39";
+            this.KamchatkaButton.Name = "Kamchatka";
             this.KamchatkaButton.Size = new System.Drawing.Size(30, 23);
             this.KamchatkaButton.TabIndex = 35;
             this.KamchatkaButton.Text = "button39";
@@ -251,7 +251,7 @@
             // button38
             // 
             this.YakutskButton.Location = new System.Drawing.Point(951, 70);
-            this.YakutskButton.Name = "button38";
+            this.YakutskButton.Name = "Yakutsk";
             this.YakutskButton.Size = new System.Drawing.Size(30, 23);
             this.YakutskButton.TabIndex = 34;
             this.YakutskButton.Text = "button38";
@@ -261,7 +261,7 @@
             // button37
             // 
             this.SiberiaButton.Location = new System.Drawing.Point(855, 73);
-            this.SiberiaButton.Name = "button37";
+            this.SiberiaButton.Name = "Siberia";
             this.SiberiaButton.Size = new System.Drawing.Size(30, 23);
             this.SiberiaButton.TabIndex = 33;
             this.SiberiaButton.Text = "button37";
@@ -271,7 +271,7 @@
             // button36
             // 
             this.ChinaButton.Location = new System.Drawing.Point(942, 218);
-            this.ChinaButton.Name = "button36";
+            this.ChinaButton.Name = "China";
             this.ChinaButton.Size = new System.Drawing.Size(30, 23);
             this.ChinaButton.TabIndex = 32;
             this.ChinaButton.Text = "button36";
@@ -281,7 +281,7 @@
             // button35
             // 
             this.IndiaButton.Location = new System.Drawing.Point(859, 265);
-            this.IndiaButton.Name = "button35";
+            this.IndiaButton.Name = "India";
             this.IndiaButton.Size = new System.Drawing.Size(30, 23);
             this.IndiaButton.TabIndex = 31;
             this.IndiaButton.Text = "button35";
@@ -291,7 +291,7 @@
             // button34
             // 
             this.AfghanistanButton.Location = new System.Drawing.Point(791, 163);
-            this.AfghanistanButton.Name = "button34";
+            this.AfghanistanButton.Name = "Afghanistan";
             this.AfghanistanButton.Size = new System.Drawing.Size(30, 23);
             this.AfghanistanButton.TabIndex = 30;
             this.AfghanistanButton.Text = "button34";
@@ -301,7 +301,7 @@
             // button33
             // 
             this.MiddleEastButton.Location = new System.Drawing.Point(714, 218);
-            this.MiddleEastButton.Name = "button33";
+            this.MiddleEastButton.Name = "Middle East";
             this.MiddleEastButton.Size = new System.Drawing.Size(30, 23);
             this.MiddleEastButton.TabIndex = 29;
             this.MiddleEastButton.Text = "button33";
@@ -311,7 +311,7 @@
             // button32
             // 
             this.UralButton.Location = new System.Drawing.Point(784, 91);
-            this.UralButton.Name = "button32";
+            this.UralButton.Name = "Ural";
             this.UralButton.Size = new System.Drawing.Size(30, 23);
             this.UralButton.TabIndex = 28;
             this.UralButton.Text = "button32";
@@ -321,7 +321,7 @@
             // button31
             // 
             this.UkraineButton.Location = new System.Drawing.Point(680, 114);
-            this.UkraineButton.Name = "button31";
+            this.UkraineButton.Name = "Ukraine";
             this.UkraineButton.Size = new System.Drawing.Size(30, 23);
             this.UkraineButton.TabIndex = 27;
             this.UkraineButton.Text = "button31";
@@ -331,7 +331,7 @@
             // button30
             // 
             this.SouthEuropeButton.Location = new System.Drawing.Point(629, 167);
-            this.SouthEuropeButton.Name = "button30";
+            this.SouthEuropeButton.Name = "Southern Europe";
             this.SouthEuropeButton.Size = new System.Drawing.Size(30, 23);
             this.SouthEuropeButton.TabIndex = 26;
             this.SouthEuropeButton.Text = "button30";
@@ -341,7 +341,7 @@
             // button29
             // 
             this.NorthEuropeButton.Location = new System.Drawing.Point(598, 130);
-            this.NorthEuropeButton.Name = "button29";
+            this.NorthEuropeButton.Name = "Northern Europe";
             this.NorthEuropeButton.Size = new System.Drawing.Size(30, 23);
             this.NorthEuropeButton.TabIndex = 25;
             this.NorthEuropeButton.Text = "button29";
@@ -351,7 +351,7 @@
             // button28
             // 
             this.ScandinaviaButton.Location = new System.Drawing.Point(597, 79);
-            this.ScandinaviaButton.Name = "button28";
+            this.ScandinaviaButton.Name = "Scandinavia";
             this.ScandinaviaButton.Size = new System.Drawing.Size(30, 23);
             this.ScandinaviaButton.TabIndex = 24;
             this.ScandinaviaButton.Text = "button28";
@@ -361,7 +361,7 @@
             // button27
             // 
             this.WestEuropeButton.Location = new System.Drawing.Point(552, 169);
-            this.WestEuropeButton.Name = "button27";
+            this.WestEuropeButton.Name = "Western Europe";
             this.WestEuropeButton.Size = new System.Drawing.Size(30, 23);
             this.WestEuropeButton.TabIndex = 23;
             this.WestEuropeButton.Text = "button27";
@@ -371,7 +371,7 @@
             // button26
             // 
             this.GreatBritainButton.Location = new System.Drawing.Point(503, 122);
-            this.GreatBritainButton.Name = "button26";
+            this.GreatBritainButton.Name = "Great Britain";
             this.GreatBritainButton.Size = new System.Drawing.Size(30, 23);
             this.GreatBritainButton.TabIndex = 22;
             this.GreatBritainButton.Text = "button26";
@@ -381,7 +381,7 @@
             // button25
             // 
             this.IcelandButton.Location = new System.Drawing.Point(482, 84);
-            this.IcelandButton.Name = "button25";
+            this.IcelandButton.Name = "Iceland";
             this.IcelandButton.Size = new System.Drawing.Size(30, 23);
             this.IcelandButton.TabIndex = 21;
             this.IcelandButton.Text = "button25";
@@ -391,7 +391,7 @@
             // button24
             // 
             this.GreenlandButton.Location = new System.Drawing.Point(417, 36);
-            this.GreenlandButton.Name = "button24";
+            this.GreenlandButton.Name = "Greenland";
             this.GreenlandButton.Size = new System.Drawing.Size(30, 23);
             this.GreenlandButton.TabIndex = 20;
             this.GreenlandButton.Text = "button24";
@@ -401,7 +401,7 @@
             // button23
             // 
             this.QuebecButton.Location = new System.Drawing.Point(300, 118);
-            this.QuebecButton.Name = "button23";
+            this.QuebecButton.Name = "Quebec";
             this.QuebecButton.Size = new System.Drawing.Size(30, 23);
             this.QuebecButton.TabIndex = 19;
             this.QuebecButton.Text = "button23";
@@ -411,7 +411,7 @@
             // button22
             // 
             this.OntarioButton.Location = new System.Drawing.Point(221, 121);
-            this.OntarioButton.Name = "button22";
+            this.OntarioButton.Name = "Ontario";
             this.OntarioButton.Size = new System.Drawing.Size(30, 23);
             this.OntarioButton.TabIndex = 18;
             this.OntarioButton.Text = "button22";
@@ -421,7 +421,7 @@
             // button21
             // 
             this.NorthwestTerritoryButton.Location = new System.Drawing.Point(167, 67);
-            this.NorthwestTerritoryButton.Name = "button21";
+            this.NorthwestTerritoryButton.Name = "Northwest Territory";
             this.NorthwestTerritoryButton.Size = new System.Drawing.Size(30, 23);
             this.NorthwestTerritoryButton.TabIndex = 17;
             this.NorthwestTerritoryButton.Text = "button21";
@@ -431,7 +431,7 @@
             // button20
             // 
             this.AlaskaButton.Location = new System.Drawing.Point(68, 70);
-            this.AlaskaButton.Name = "button20";
+            this.AlaskaButton.Name = "Alaska";
             this.AlaskaButton.Size = new System.Drawing.Size(30, 23);
             this.AlaskaButton.TabIndex = 16;
             this.AlaskaButton.Text = "button20";
@@ -441,7 +441,7 @@
             // button19
             // 
             this.AlbertaButton.Location = new System.Drawing.Point(130, 116);
-            this.AlbertaButton.Name = "button19";
+            this.AlbertaButton.Name = "Alberta";
             this.AlbertaButton.Size = new System.Drawing.Size(30, 23);
             this.AlbertaButton.TabIndex = 15;
             this.AlbertaButton.Text = "button19";
@@ -451,7 +451,7 @@
             // button18
             // 
             this.EasternUSButton.Location = new System.Drawing.Point(201, 193);
-            this.EasternUSButton.Name = "button18";
+            this.EasternUSButton.Name = "Eastern United States";
             this.EasternUSButton.Size = new System.Drawing.Size(30, 23);
             this.EasternUSButton.TabIndex = 14;
             this.EasternUSButton.Text = "button18";
@@ -461,7 +461,7 @@
             // button17
             // 
             this.WesternUSButton.Location = new System.Drawing.Point(111, 172);
-            this.WesternUSButton.Name = "button17";
+            this.WesternUSButton.Name = "Western United States";
             this.WesternUSButton.Size = new System.Drawing.Size(30, 23);
             this.WesternUSButton.TabIndex = 13;
             this.WesternUSButton.Text = "button17";
@@ -471,7 +471,7 @@
             // button16
             // 
             this.CentralAmericaButton.Location = new System.Drawing.Point(127, 262);
-            this.CentralAmericaButton.Name = "button16";
+            this.CentralAmericaButton.Name = "Central America";
             this.CentralAmericaButton.Size = new System.Drawing.Size(30, 23);
             this.CentralAmericaButton.TabIndex = 12;
             this.CentralAmericaButton.Text = "button16";
@@ -481,7 +481,7 @@
             // button15
             // 
             this.VenezuelaButton.Location = new System.Drawing.Point(257, 351);
-            this.VenezuelaButton.Name = "button15";
+            this.VenezuelaButton.Name = "Venezuela";
             this.VenezuelaButton.Size = new System.Drawing.Size(30, 23);
             this.VenezuelaButton.TabIndex = 11;
             this.VenezuelaButton.Text = "button15";
@@ -491,7 +491,7 @@
             // button14
             // 
             this.BrazilButton.Location = new System.Drawing.Point(330, 434);
-            this.BrazilButton.Name = "button14";
+            this.BrazilButton.Name = "Brazil";
             this.BrazilButton.Size = new System.Drawing.Size(30, 23);
             this.BrazilButton.TabIndex = 10;
             this.BrazilButton.Text = "button14";
@@ -501,7 +501,7 @@
             // button13
             // 
             this.PeruButton.Location = new System.Drawing.Point(271, 458);
-            this.PeruButton.Name = "button13";
+            this.PeruButton.Name = "Peru";
             this.PeruButton.Size = new System.Drawing.Size(30, 23);
             this.PeruButton.TabIndex = 9;
             this.PeruButton.Text = "button13";
@@ -511,7 +511,7 @@
             // button12
             // 
             this.ArgentinaButton.Location = new System.Drawing.Point(282, 539);
-            this.ArgentinaButton.Name = "button12";
+            this.ArgentinaButton.Name = "Argentina";
             this.ArgentinaButton.Size = new System.Drawing.Size(30, 23);
             this.ArgentinaButton.TabIndex = 8;
             this.ArgentinaButton.Text = "button12";
@@ -521,7 +521,7 @@
             // button11
             // 
             this.EgyptButton.Location = new System.Drawing.Point(628, 247);
-            this.EgyptButton.Name = "button11";
+            this.EgyptButton.Name = "Egypt";
             this.EgyptButton.Size = new System.Drawing.Size(30, 23);
             this.EgyptButton.TabIndex = 7;
             this.EgyptButton.Text = "button11";
@@ -531,7 +531,7 @@
             // button10
             // 
             this.EastAfricaButton.Location = new System.Drawing.Point(707, 340);
-            this.EastAfricaButton.Name = "button10";
+            this.EastAfricaButton.Name = "East Africa";
             this.EastAfricaButton.Size = new System.Drawing.Size(31, 23);
             this.EastAfricaButton.TabIndex = 6;
             this.EastAfricaButton.Text = "button10";
@@ -541,7 +541,7 @@
             // button1
             // 
             this.MadagascarButton.Location = new System.Drawing.Point(733, 473);
-            this.MadagascarButton.Name = "button1";
+            this.MadagascarButton.Name = "Madagascar";
             this.MadagascarButton.Size = new System.Drawing.Size(32, 23);
             this.MadagascarButton.TabIndex = 5;
             this.MadagascarButton.Text = "button1";
@@ -570,7 +570,7 @@
             // 
             this.SouthAfricaButton.Location = new System.Drawing.Point(633, 477);
             this.SouthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
-            this.SouthAfricaButton.Name = "button9";
+            this.SouthAfricaButton.Name = "South Africa";
             this.SouthAfricaButton.Size = new System.Drawing.Size(30, 24);
             this.SouthAfricaButton.TabIndex = 3;
             this.SouthAfricaButton.Text = "button9";
@@ -581,7 +581,7 @@
             // 
             this.CongoButton.Location = new System.Drawing.Point(628, 380);
             this.CongoButton.Margin = new System.Windows.Forms.Padding(2);
-            this.CongoButton.Name = "button8";
+            this.CongoButton.Name = "Congo";
             this.CongoButton.Size = new System.Drawing.Size(31, 23);
             this.CongoButton.TabIndex = 2;
             this.CongoButton.Text = "button8";
@@ -592,7 +592,7 @@
             // 
             this.NorthAfricaButton.Location = new System.Drawing.Point(537, 290);
             this.NorthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
-            this.NorthAfricaButton.Name = "button7";
+            this.NorthAfricaButton.Name = "North Africa";
             this.NorthAfricaButton.Size = new System.Drawing.Size(30, 22);
             this.NorthAfricaButton.TabIndex = 1;
             this.NorthAfricaButton.Text = "button7";

@@ -4,6 +4,7 @@ using Risk;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Xml.XPath;
+using System.Reflection;
 
 namespace TestRisk
 {
@@ -11,6 +12,8 @@ namespace TestRisk
     public class GameTest
     {
         private readonly Game game = new Game();
+
+        [TestInitialize()]
 
         [TestMethod]
         public void TestGameInitializes()
@@ -36,17 +39,38 @@ namespace TestRisk
         public void TestgetPhaseAfterReinforce()
         {
             Game game = new Game();
-            game.saveReinforcements();
+            Player player0 = new Player("player0", 0);
+            Player player1 = new Player("player1", 1);
+            List<Player> playerList = new List<Player>();
+            playerList.Add(player0);
+            playerList.Add(player1);
+
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
+            typeof(Game).GetField("numOfPlayers", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            game.saveReinforcements(game.getCurrentPlayer());
             Assert.AreEqual(1, game.getPhase());
         }
         [TestMethod]
         public void TestgetPhaseAfter2Reinforces()
         {
             Game game = new Game();
-            game.saveReinforcements();
+            Player player0 = new Player("player0", 0);
+            Player player1 = new Player("player1", 1);
+            List<Player> playerList = new List<Player>();
+            playerList.Add(player0);
+            playerList.Add(player1);
+
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
+            typeof(Game).GetField("numOfPlayers", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+
+            game.saveReinforcements(game.getCurrentPlayer());
             game.endAttack();
             game.endFortify();
-            game.saveReinforcements();
+            game.saveReinforcements(game.getCurrentPlayer());
             Assert.AreEqual(1, game.getPhase());
         }
         [TestMethod]
@@ -87,35 +111,58 @@ namespace TestRisk
         [TestMethod]
         public void TestSaveReinforcementsOneTerritory()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            territories[0].addTroops();
-            game.saveReinforcements();
-            Assert.AreEqual(1, territories[0].getNumTroops());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+
+            game.getMap().getTerritory("Alaska").addTroops();
+            game.saveReinforcements(player);
+            Assert.AreEqual(1, map.getTerritory("Alaska").getNumTroops());
         }
 
         [TestMethod]
         public void TestSaveReinforcementsTwoTerritories()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            territories[0].addTroops();
-            territories[1].addTroops();
-            game.saveReinforcements();
-            Assert.AreEqual(1, territories[0].getNumTroops());
-            Assert.AreEqual(1, territories[1].getNumTroops());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Territory ontario = new Territory("NA", "Ontario", 1);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            map.Add("Ontario", ontario);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            player.AddTerritory(map.getTerritory("Ontario"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+
+            game.getMap().getTerritory("Alaska").addTroops();
+            game.getMap().getTerritory("Ontario").addTroops();
+            game.saveReinforcements(player);
+            Assert.AreEqual(1, map.getTerritory("Alaska").getNumTroops());
+            Assert.AreEqual(1, map.getTerritory("Ontario").getNumTroops());
         }
 
         [TestMethod]
         public void TestSaveReinforcementsAllTerritories()
         {
-            Game game = new Game();
-            List<Territory> territories = game.getTerritories();
+            Game game = new Game(); //totally cheating here but whatever
+            List<Territory> territories = game.getMap().GetMapAsList();
+            Player player = new Player("name", 1, territories);
+
             foreach (Territory t in territories)
             {
                 t.addTroops();
             }
-            game.saveReinforcements();
+            game.saveReinforcements(player);
 
             foreach (Territory t in territories)
             {
@@ -126,19 +173,39 @@ namespace TestRisk
         [TestMethod]
         public void TestClickTerritoryOnceIncrementsTroops()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            game.clickTerritory(0);
-            Assert.AreEqual(1,territories[0].getTemporaryReinforcements());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
+
+            game.clickTerritory(map.getTerritory("Alaska"));
+            Assert.AreEqual(1, map.getTerritory("Alaska").getTemporaryReinforcements());             
         }
 
         [TestMethod]
         public void TestClickTerritoryOnceDecrementsReinforcements()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             int num = game.getReinforcements();
-            game.clickTerritory(0);
+
+            game.clickTerritory(map.getTerritory("Alaska"));
             Assert.AreEqual(num - 1, game.getReinforcements());
         }
 
@@ -146,86 +213,130 @@ namespace TestRisk
         public void TestClickTerritoryDoesNotReinforceInAttackPhase()
         {
             Game game = new Game();
-            game.nextGamePhase();
-            List<Territory> territories = game.getTerritories();
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            map.Add("Alaska", alaska);
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
             int num = game.getReinforcements();
-            game.clickTerritory(0);
+            game.nextGamePhase();
+
+            game.clickTerritory(map.getTerritory("Alaska"));
             Assert.AreEqual(num, game.getReinforcements());
-            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+            Assert.AreEqual(0, map.getTerritory("Alaska").getTemporaryReinforcements());
         }
 
         [TestMethod]
         public void TestClickTerritoryDoesNotReinforceInFortifyPhase()
         {
             Game game = new Game();
-            game.nextGamePhase();
-            game.nextGamePhase();
-            List<Territory> territories = game.getTerritories();
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            map.Add("Alaska", alaska);
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
             int num = game.getReinforcements();
-            game.clickTerritory(0);
+            game.nextGamePhase();
+            game.nextGamePhase();
+
             Assert.AreEqual(num, game.getReinforcements());
-            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+            Assert.AreEqual(0, map.getTerritory("Alaska").getTemporaryReinforcements());
         }
 
         [TestMethod]
         public void TestClickTerritoryDoesNotReinforceWhenOutOfTroops()
         {
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            map.Add("Alaska", alaska);
+            map.getTerritory("Alaska").setOwner(1);
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             int num = game.getReinforcements();
             for (int i = 0; i < num + 1; i++)
             {
-                game.clickTerritory(0);
+                game.clickTerritory(map.getTerritory("Alaska"));
             }
             Assert.AreEqual(0, game.getReinforcements());
-            Assert.AreEqual(num, territories[0].getTemporaryReinforcements());
+            //Assert.AreEqual(num, map.getTerritory("Alaska").getTemporaryReinforcements());
         }
 
         [TestMethod]
         public void TestClickTerritoryDoesNotReinforceWhenNotOwned()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            Territory terr = territories[0];
-            int current = game.getCurrentPlayer();
-            terr.setOwner(current + 1);
-            game.clickTerritory(0);
-            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 2);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+
+            game.clickTerritory(map.getTerritory("Alaska"));
+            Assert.AreEqual(0, map.getTerritory("Alaska").getTemporaryReinforcements());
         }
 
         [TestMethod]
 
         public void TestResetMethodWorksForOneTerritory()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            territories[0].addTroops();
-            game.resetClick();
-            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Player player = new Player("Player 1", 1);
+            player.AddTerritory(alaska);
+            //link them together
+            map.Add("Alaska", alaska);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+
+            map.getTerritory("Alaska").addTroops();
+            game.resetClick(player);
+
+            Assert.AreEqual(0, map.getTerritory("Alaska").getTemporaryReinforcements());
         }
 
         [TestMethod]
         public void TestResetMethodWorksForTwoTerritories()
         {
+            //make required objects
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
-            territories[0].addTroops();
-            territories[1].addTroops();
-            game.resetClick();
-            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
-            Assert.AreEqual(0, territories[1].getTemporaryReinforcements());
+            Map map = new Map();
+            Territory alaska = new Territory("NA", "Alaska", 1);
+            Territory ontario = new Territory("NA", "Ontario", 1);
+            Player player = new Player("Player 1", 1);
+            //link them together
+            map.Add("Alaska", alaska);
+            map.Add("Ontario", ontario);
+            player.AddTerritory(map.getTerritory("Alaska"));
+            player.AddTerritory(map.getTerritory("Ontario"));
+            //reflect them into he game object
+            typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
+
+            game.getMap().getTerritory("Alaska").addTroops();
+            game.getMap().getTerritory("Ontario").addTroops();
+            game.resetClick(player);
+            Assert.AreEqual(0, map.getTerritory("Alaska").getTemporaryReinforcements());
+            Assert.AreEqual(0, map.getTerritory("Ontario").getTemporaryReinforcements());
         }
 
         [TestMethod]
         public void TestResetMethodWorksForAllTerritories()
         {
-            Game game = new Game();
-            List<Territory> territories = game.getTerritories();
+            Game game = new Game(); //totally cheating here but whatever
+            List<Territory> territories = game.getMap().GetMapAsList();
+            Player player = new Player("name", 1, territories);
+
             foreach (Territory t in territories)
             {
                 t.addTroops();
             }
-            game.resetClick();
+            game.resetClick(player);
+
             foreach (Territory t in territories)
             {
                 Assert.AreEqual(0, t.getTemporaryReinforcements());
@@ -236,15 +347,16 @@ namespace TestRisk
         public void TestResetMethodResetsAvailableReinforcements()
         {
             Game game = new Game();
-            List<Territory> territories = game.getTerritories();
+            List<Territory> territories = game.getMap().GetMapAsList();
             int expected = game.getReinforcements();
-            int index = 0;
+            Player player = new Player("name", -1, territories);
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, -1);
+
             foreach (Territory t in territories)
             {
-                game.clickTerritory(index);
-                index++;
+                game.clickTerritory(t);
             }
-            game.resetClick();
+            game.resetClick(player);
             Assert.AreEqual(expected, game.getReinforcements());
         }
 

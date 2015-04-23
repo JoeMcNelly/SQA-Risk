@@ -14,7 +14,7 @@ namespace Risk
     {
 
         
-        List<Button> buttons;
+        Dictionary<String, Button> buttons;
         Game game;
 
         public RiskGame()
@@ -33,77 +33,80 @@ namespace Risk
             initReinforcePhase();
 
             #region buttons
-            buttons = new List<Button>();
+            buttons = new Dictionary<String, Button>();
 
             //6
-            buttons.Add(NorthAfricaButton);
-            buttons.Add(CongoButton);
-            buttons.Add(SouthAfricaButton);
-            buttons.Add(MadagascarButton);
-            buttons.Add(EastAfricaButton);
-            buttons.Add(EgyptButton);
+            buttons.Add(NorthAfricaButton.Name, NorthAfricaButton);
+            buttons.Add(CongoButton.Name, CongoButton);
+            buttons.Add(SouthAfricaButton.Name, SouthAfricaButton);
+            buttons.Add(MadagascarButton.Name, MadagascarButton);
+            buttons.Add(EastAfricaButton.Name, EastAfricaButton);
+            buttons.Add(EgyptButton.Name, EgyptButton);
 
             //4
-            buttons.Add(BrazilButton);
-            buttons.Add(ArgentinaButton);
-            buttons.Add(PeruButton);
-            buttons.Add(VenezuelaButton);
+            buttons.Add(BrazilButton.Name, BrazilButton);
+            buttons.Add(ArgentinaButton.Name, ArgentinaButton);
+            buttons.Add(PeruButton.Name, PeruButton);
+            buttons.Add(VenezuelaButton.Name, VenezuelaButton);
 
             //9
-            buttons.Add(CentralAmericaButton);
-            buttons.Add(EasternUSButton);
-            buttons.Add(WesternUSButton);
-            buttons.Add(AlbertaButton);
-            buttons.Add(AlaskaButton);
-            buttons.Add(GreenlandButton);
-            buttons.Add(NorthwestTerritoryButton);
-            buttons.Add(QuebecButton);
-            buttons.Add(OntarioButton);
+            buttons.Add(CentralAmericaButton.Name, CentralAmericaButton);
+            buttons.Add(EasternUSButton.Name, EasternUSButton);
+            buttons.Add(WesternUSButton.Name, WesternUSButton);
+            buttons.Add(AlbertaButton.Name, AlbertaButton);
+            buttons.Add(AlaskaButton.Name, AlaskaButton);
+            buttons.Add(GreenlandButton.Name, GreenlandButton);
+            buttons.Add(NorthwestTerritoryButton.Name, NorthwestTerritoryButton);
+            buttons.Add(QuebecButton.Name, QuebecButton);
+            buttons.Add(OntarioButton.Name, OntarioButton);
 
             //7
-            buttons.Add(GreatBritainButton);
-            buttons.Add(IcelandButton);
-            buttons.Add(NorthEuropeButton);
-            buttons.Add(SouthEuropeButton);
-            buttons.Add(WestEuropeButton);
-            buttons.Add(ScandinaviaButton);
-            buttons.Add(UkraineButton);
+            buttons.Add(GreatBritainButton.Name, GreatBritainButton);
+            buttons.Add(IcelandButton.Name, IcelandButton);
+            buttons.Add(NorthEuropeButton.Name, NorthEuropeButton);
+            buttons.Add(SouthEuropeButton.Name, SouthEuropeButton);
+            buttons.Add(WestEuropeButton.Name, WestEuropeButton);
+            buttons.Add(ScandinaviaButton.Name, ScandinaviaButton);
+            buttons.Add(UkraineButton.Name, UkraineButton);
 
             //12
-            buttons.Add(ChinaButton);
-            buttons.Add(IrkutskButton);
-            buttons.Add(KamchatkaButton);
-            buttons.Add(MongoliaButton);
-            buttons.Add(SiberiaButton);
-            buttons.Add(YakutskButton);
-            buttons.Add(AfghanistanButton);
-            buttons.Add(IndiaButton);
-            buttons.Add(JapanButton);
-            buttons.Add(MiddleEastButton);
-            buttons.Add(SiamButton);
-            buttons.Add(UralButton);
+            buttons.Add(ChinaButton.Name, ChinaButton);
+            buttons.Add(IrkutskButton.Name, IrkutskButton);
+            buttons.Add(KamchatkaButton.Name, KamchatkaButton);
+            buttons.Add(MongoliaButton.Name, MongoliaButton);
+            buttons.Add(SiberiaButton.Name, SiberiaButton);
+            buttons.Add(YakutskButton.Name, YakutskButton);
+            buttons.Add(AfghanistanButton.Name, AfghanistanButton);
+            buttons.Add(IndiaButton.Name, IndiaButton);
+            buttons.Add(JapanButton.Name, JapanButton);
+            buttons.Add(MiddleEastButton.Name, MiddleEastButton);
+            buttons.Add(SiamButton.Name, SiamButton);
+            buttons.Add(UralButton.Name, UralButton);
 
             //4
-            buttons.Add(EastAustraliaButton);
-            buttons.Add(WestAustraliaButton);
-            buttons.Add(IndonesiaButton);
-            buttons.Add(NewGuineaButton);
+            buttons.Add(EastAustraliaButton.Name, EastAustraliaButton);
+            buttons.Add(WestAustraliaButton.Name, WestAustraliaButton);
+            buttons.Add(IndonesiaButton.Name, IndonesiaButton);
+            buttons.Add(NewGuineaButton.Name, NewGuineaButton);
             #endregion
+
+            List<Territory> tempTerritoryList = game.getMap().GetMapAsList();
+            List<Button> tempButtonList = buttons.Values.ToList();
 
             for (int i = 0; i < buttons.Count; i++)
             {
-                buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
+                tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
             label1.Text = "Reinforcements left: " + game.getReinforcements().ToString();
         }
 
 
-
+        //NOTE: remove index at some point
         private void clickTerritory(int index, Button button)
         {
-
-            this.game.clickTerritory(index);
-            Territory current = this.game.getTerritories()[index];
+            
+            Territory current = this.game.getMap().getTerritory(button.Name);
+            this.game.clickTerritory(current);
 
             switch (this.game.getPhase())
             {
@@ -136,7 +139,7 @@ namespace Risk
                     stringPhase = " Fortify";
                     break;
             }
-            label2.Text = "Player " + (game.getCurrentPlayer() + 1) + stringPhase;
+            label2.Text = game.getCurrentPlayer().playerName + stringPhase;
         }
 
         private void initReinforcePhase()
@@ -172,11 +175,11 @@ namespace Risk
         {
             if (game.getReinforcements() == 0)
             {
-
-                game.saveReinforcements();
-                for (int i = 0; i < buttons.Count; i++)
+                game.saveReinforcements(game.getCurrentPlayer());
+                List<Territory> listToUpdate = game.getCurrentPlayer().getTerritories();
+                for (int i = 0; i < listToUpdate.Count; i++)
                 {
-                    buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
+                    buttons[listToUpdate[i].getName()].Text = listToUpdate[i].getNumTroops().ToString();
                 }
 
                 label1.Text = "";
@@ -205,12 +208,13 @@ namespace Risk
 
         private void reset_Click(object sender, EventArgs e)
         {
-            this.game.resetClick();
+            this.game.resetClick(game.getCurrentPlayer());
 
             label1.Text = "Reinforcements left: " + game.getReinforcements().ToString();
-            for (int i = 0; i < buttons.Count; i++)
+            List<Territory> listToUpdate = game.getCurrentPlayer().getTerritories();
+            for (int i = 0; i < listToUpdate.Count; i++)
             {
-                buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
+                buttons[listToUpdate[i].getName()].Text = listToUpdate[i].getNumTroops().ToString();
             }
         }
 

@@ -8,11 +8,13 @@ namespace Risk
 {
     public class Player
     {
+        //NOTE: may want to change List<Territory> to a Dictionary
         private List<Territory> territories;
         private List<Card> cards;
         public bool inPlay = true;
         public bool winner = false;
         public String playerName;
+        public int playerNumber;
 
         public Player()
         {
@@ -29,9 +31,28 @@ namespace Risk
             }
         }
 
+        public Player(String name, int number)
+        {
+            this.territories = new List<Territory>();
+            this.playerName = name;
+            this.playerNumber = number;
+        }
+
+        public Player(String name,int number, List<Territory> territories)
+        {
+            this.territories = territories;
+            this.playerName = name;
+            this.playerNumber = number;
+        }
+
         public List<Territory> getTerritories()
         {
             return this.territories;
+        }
+
+        public void AddTerritory(Territory territory)
+        {
+            this.territories.Add(territory);
         }
 
         public void finalize(List<int> troops)
