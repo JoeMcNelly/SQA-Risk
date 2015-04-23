@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 namespace Risk
 {
     public class Game
@@ -217,41 +216,6 @@ namespace Risk
            
         }
 
-        public Dictionary<String, Territory> makeMapFromXML(string xml)
-        {
-            if (xml.Equals(""))
-                return null;
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
-            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
-            {
-                String name = node.SelectSingleNode("name").InnerText;
-                String continent = node.SelectSingleNode("continent").InnerText;
-
-                Territory terr = new Territory(continent, name);
-                
-                addTerritoryToMap(terr);
-            }
-
-            foreach (XmlNode node in doc.DocumentElement.SelectNodes("territory"))
-            {
-                if (node.SelectSingleNode("adjacent") != null)
-                {
-                    String adjacencies = node.SelectSingleNode("adjacent").InnerText;
-                    string[] adjacenciesList = adjacencies.Split(':');
-                    List<Territory> adjacencyList = new List<Territory>();
-
-                    foreach (String adjName in adjacenciesList)
-                    {
-                        adjacencyList.Add(this.map[adjName]);
-                    }
-                    this.map[node.SelectSingleNode("name").InnerText].setAdjacencyList(adjacencyList);
-
-                }
-            }
-            
-            return this.map;
-        }
+        
     }
 }
