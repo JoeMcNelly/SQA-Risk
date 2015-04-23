@@ -162,7 +162,12 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestIsInPathForSelf()
         {
-            Assert.IsTrue(false);
+            Map target = new Map();
+            target.makeMapFromXML(testXML);
+            target.setTerritoryOwner("Alaska", 1);
+
+
+            Assert.IsTrue(target.IsInPath("Alaska", "Alaska", 1));
         }
 
         [TestMethod]
