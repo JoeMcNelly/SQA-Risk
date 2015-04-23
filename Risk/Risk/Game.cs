@@ -104,12 +104,11 @@ namespace Risk
        
         public void saveReinforcements() 
         {
-           // foreach (Territory t in territories)
-           // {
-                this.territories[0].saveTroops();
-                this.territories[1].saveTroops();
+            foreach (Territory t in territories)
+            {
+                t.saveTroops();
                 
-           // }      
+            }      
                 
             nextGamePhase();
                 
