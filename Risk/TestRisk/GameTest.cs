@@ -246,6 +246,18 @@ namespace TestRisk
             Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
         }
 
+        [TestMethod]
+        public void TestResetMethodWorksForTwoTerritories()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            territories[0].addTroops();
+            territories[1].addTroops();
+            game.resetClick();
+            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+            Assert.AreEqual(0, territories[1].getTemporaryReinforcements());
+        }
+
 
 
         [TestMethod]
