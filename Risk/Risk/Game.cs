@@ -106,7 +106,7 @@ namespace Risk
         {
            // foreach (Territory t in territories)
            // {
-           //     t.saveTroops();
+                this.territories[1].saveTroops();
            // }      
                 
             nextGamePhase();
