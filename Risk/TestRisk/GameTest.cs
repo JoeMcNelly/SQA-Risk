@@ -223,6 +223,18 @@ namespace TestRisk
             Assert.AreEqual(num, territories[0].getTemporaryReinforcements());
         }
 
+        [TestMethod]
+        public void TestClickTerritoryDoesNotReinforceWhenNotOwned()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            Territory terr = territories[0];
+            int current = game.getCurrentPlayer();
+            terr.setOwner(current + 1);
+            game.clickTerritory(0);
+            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+        }
+
 
 
         [TestMethod]
