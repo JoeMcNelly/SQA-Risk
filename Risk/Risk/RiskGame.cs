@@ -13,19 +13,14 @@ namespace Risk
     public partial class RiskGame : Form
     {
 
-        List<Territory> territories;
-        //int allowedReinforcements = 15;
+        
         List<Button> buttons;
-        int currentPlayer = 0;
-        int numberOfPlayers = 6;
         Game game;
-        //public int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
 
         public RiskGame()
         {
             InitializeComponent();
-            territories = new List<Territory>();
-            this.game = new Game(); // Hard coding in 2 players for now
+            this.game = new Game(); // Hard coding in 6 players for now
 
 
 
@@ -99,15 +94,10 @@ namespace Risk
             {
                 buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
             }
-            label1.Text = "Reinforcements left: " + game.remainingReinforcements().ToString();
+            label1.Text = "Reinforcements left: " + game.getReinforcements().ToString();
         }
 
-        public void nextPlayer()
-        {
-            currentPlayer = (currentPlayer + 1) % numberOfPlayers;
-            //label2.Text = "Player " + (currentPlayer + 1);
-            setPlayerPhaseLabel();
-        }
+
 
         private void clickTerritory(int index, Button button)
         {
@@ -130,13 +120,13 @@ namespace Risk
                     stringPhase = " Fortify";
                     break;
             }
-            label2.Text = "Player " + (currentPlayer + 1) + stringPhase;
+            label2.Text = "Player " + (game.getCurrentPlayer() + 1) + stringPhase;
         }
 
         private void initReinforcePhase()
         {
             
-            label1.Text = "Reinforcements left: " + game.remainingReinforcements();
+            label1.Text = "Reinforcements left: " + game.getReinforcements();
             save.Enabled = true;
             reset.Enabled = true;
             fortify.Enabled = false;
@@ -164,7 +154,7 @@ namespace Risk
 
         public void save_Click(object sender, EventArgs e)
         {
-            if (game.remainingReinforcements() == 0)
+            if (game.getReinforcements() == 0)
             {
 
                 game.saveReinforcements();
@@ -221,16 +211,13 @@ namespace Risk
         private void endAttack_click(object sender, EventArgs e)
         {
             game.endAttack();
-            setPlayerPhaseLabel();
             updatePhaseButtons();
         }
 
         private void fortify_click(object sender, EventArgs e)
         {
             game.endFortify();
-            setPlayerPhaseLabel();
             updatePhaseButtons();
-            nextPlayer();
         }
 
         private void resetFortify_click(object sender, EventArgs e)

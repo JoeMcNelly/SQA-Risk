@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using System.Xml;
 namespace Risk
 {
-    //Move all dis to RiskGame.cs at some point
     public class Game
     {
 
@@ -17,7 +16,6 @@ namespace Risk
         private int reinforcements;
         private List<Territory> territories;
         private Dictionary<String, Territory> map;
-
         private List<Player> players;
 
         public Game()
@@ -25,7 +23,7 @@ namespace Risk
             this.map = new Dictionary<String, Territory>();
             this.players = new List<Player>();
             this.currentPlayer = 0;
-            this.numOfPlayers = 6;
+            this.numOfPlayers = 6; //hard coded
             this.gamePhase = 0;
             this.reinforcements = generateReinforcements();
             this.territories = new List<Territory>();
@@ -89,12 +87,11 @@ namespace Risk
 
         }
 
-        public Game(int numOfPlayers)
+  
+        public Game(int numOfPlayers) : this()
         {
-
+            
             this.numOfPlayers = numOfPlayers;
-            this.map = new Dictionary<String, Territory>();
-            this.players = new List<Player>();
 
             for (int i = 0; i < numOfPlayers; i++)
             {
@@ -104,25 +101,18 @@ namespace Risk
             }
         }
 
-        public int getPhase() 
-        {
-            return this.gamePhase;
-        }
+       
         public void saveReinforcements() 
         {
-            foreach (Territory t in territories)
-            {
-                t.saveTroops();
-            }      
+           // foreach (Territory t in territories)
+           // {
+           //     t.saveTroops();
+           // }      
                 
             nextGamePhase();
-            initAttackPhase();
                 
         }
-        public void initAttackPhase()
-        {
 
-        }
         public void endAttack()
         {
             nextGamePhase();
@@ -150,7 +140,8 @@ namespace Risk
                 gamePhase = 0;
         }
 
-        public int remainingReinforcements()
+        #region getters and setters
+        public int getReinforcements()
         {
             return reinforcements;
         }
@@ -165,6 +156,17 @@ namespace Risk
             return this.players;
         }
 
+        public int getPhase()
+        {
+            return this.gamePhase;
+        }
+
+        public int getCurrentPlayer()
+        {
+            return this.currentPlayer;
+        }
+        #endregion
+
         public void addTerritoryToMap(Territory terr)
         {
             this.map.Add(terr.getName(), terr);
@@ -175,16 +177,6 @@ namespace Risk
             return this.map;
         }
 
-        //public void reinforce(Player player, int allowedTroops)
-        //{
-        //    List<int> troops = new List<int>();
-        //    for (int i = 0; i < player.getTerritories().Count; i++)
-        //    {
-        //        troops.Add(0);
-        //    }
-
-
-        //}
 
         public bool isOver()
         {

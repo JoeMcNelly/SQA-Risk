@@ -126,6 +126,16 @@ namespace TestRisk
             Assert.AreEqual(0, game.getPhase());
         }
 
+        [TestMethod]
+        public void TestSaveReinforcements()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            territories[1].addTroops();
+            game.saveReinforcements();
+            Assert.AreEqual(1, territories[1].getNumTroops());
+        }
+
 
 
         [TestMethod]
