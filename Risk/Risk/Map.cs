@@ -65,7 +65,7 @@ namespace Risk
 
                     foreach (String adjName in adjacenciesList)
                     {
-                        if (!this.map.ContainsKey(adjName))
+                        if(!this.map.ContainsKey(adjName))
                             break;
                         adjacencyList.Add(this.map[adjName]);
                     }
@@ -79,7 +79,7 @@ namespace Risk
         //going to represent player as an int because its represented as different things in different places
         public Boolean IsInPath(String start, String end, int player)
         {
-            if (!this.map.ContainsKey(start))
+            if (!this.map.ContainsKey(start) || !this.map.ContainsKey(end))
                 return false;
             return true;
         }
