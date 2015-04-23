@@ -25,9 +25,9 @@ namespace TestGUI
             this.map = new Dictionary<String, Territory>();
             this.players = new List<Player>();
             this.currentPlayer = 0;
-            this.numOfPlayers = 2;
+            this.numOfPlayers = 6;
             this.gamePhase = 0;
-            this.reinforcements = 15;
+            this.reinforcements = generateReinforcements();
             this.territories = new List<Territory>();
 
             #region territories 
@@ -130,7 +130,19 @@ namespace TestGUI
         public void endFortify()
         {
             nextGamePhase();
+            nextPlayer();
         }
+        public void nextPlayer() 
+        {
+            currentPlayer++;
+            currentPlayer = currentPlayer % this.numOfPlayers;
+            this.reinforcements = generateReinforcements();
+        }
+        public int generateReinforcements()
+        {
+            return 15;
+        }
+
         public void nextGamePhase()
         {
             gamePhase++;

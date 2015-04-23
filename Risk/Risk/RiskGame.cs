@@ -14,12 +14,12 @@ namespace TestGUI
     {
 
         List<Territory> territories;
-        int allowedReinforcements = 15;
+        //int allowedReinforcements = 15;
         List<Button> buttons;
         int currentPlayer = 0;
         int numberOfPlayers = 6;
         Game game;
-        public int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
+        //public int phase = 0; //0 is reinforce, 1 is attack, 2 is fortify
 
         public RiskGame()
         {
@@ -99,7 +99,7 @@ namespace TestGUI
             {
                 buttons[i].Text = game.getTerritories()[i].getNumTroops().ToString();
             }
-            label1.Text = "Reinforcements left: " + allowedReinforcements.ToString();
+            label1.Text = "Reinforcements left: " + game.remainingReinforcements().ToString();
         }
 
         public void nextPlayer()
@@ -118,7 +118,7 @@ namespace TestGUI
         private void setPlayerPhaseLabel()
         {
             var stringPhase = "";
-            switch (this.phase)
+            switch (game.getPhase())
             {
                 case 0:
                     stringPhase = " Reinforce";
@@ -135,13 +135,12 @@ namespace TestGUI
 
         private void initReinforcePhase()
         {
-            allowedReinforcements = 15; ////magic number here
-            label1.Text = "Reinforcements left: " + allowedReinforcements;
+            
+            label1.Text = "Reinforcements left: " + game.remainingReinforcements();
             save.Enabled = true;
             reset.Enabled = true;
             fortify.Enabled = false;
             resetFortify.Enabled = false;
-            this.phase = 0;
             setPlayerPhaseLabel();
         }
 
@@ -151,7 +150,6 @@ namespace TestGUI
             reset.Enabled = false;
             attack.Enabled = true;
             endAttack.Enabled = true;
-            this.phase = 1;
             setPlayerPhaseLabel();
         }
 
@@ -161,7 +159,6 @@ namespace TestGUI
             endAttack.Enabled = false;
             fortify.Enabled = true;
             resetFortify.Enabled = true;
-            this.phase = 2;
             setPlayerPhaseLabel();
         }
 
@@ -178,10 +175,25 @@ namespace TestGUI
 
                 label1.Text = "";
 
-
+                updatePhaseButtons();
 
             }
 
+        }
+        private void updatePhaseButtons()
+        {
+            switch (game.getPhase())
+            {
+                case 0:
+                    initReinforcePhase();
+                    break;
+                case 1:
+                    initAttackPhase();
+                    break;
+                case 2:
+                    initFortifyPhase();
+                    break;
+            }
         }
 
 
@@ -208,12 +220,16 @@ namespace TestGUI
 
         private void endAttack_click(object sender, EventArgs e)
         {
-            initFortifyPhase();
+            game.endAttack();
+            setPlayerPhaseLabel();
+            updatePhaseButtons();
         }
 
         private void fortify_click(object sender, EventArgs e)
         {
-            initReinforcePhase();
+            game.endFortify();
+            setPlayerPhaseLabel();
+            updatePhaseButtons();
             nextPlayer();
         }
 
