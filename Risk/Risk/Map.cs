@@ -86,7 +86,7 @@ namespace Risk
 
             foreach (Territory adjacency in this.map[start].getAdjancencies())
             {
-                if(adjacency.getName().Equals(end))
+                if(adjacency.getName().Equals(end) && adjacency.getOwner() == player)
                 {
                     return true;
                 }
