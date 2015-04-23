@@ -166,12 +166,22 @@ namespace TestRisk
         }
 
         [TestMethod]
-        public void TestClickTerritoryOnce()
+        public void TestClickTerritoryOnceIncrementsTroops()
         {
             Game game = new Game();
             List<Territory> territories = game.getTerritories();
             game.clickTerritory(0);
             Assert.AreEqual(1,territories[0].getTemporaryReinforcements());
+        }
+
+        [TestMethod]
+        public void TestClickTerritoryOnceDecrementsReinforcements()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            int num = game.getReinforcements();
+            game.clickTerritory(0);
+            Assert.AreEqual(num - 1, game.getReinforcements());
         }
 
 
