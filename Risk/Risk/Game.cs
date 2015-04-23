@@ -188,25 +188,23 @@ namespace Risk
         public void clickTerritory(int index)
         {
             Territory current = this.territories[index];
-            //switch (this.gamePhase)
-            //{
-            //    case 0:
+            switch (this.gamePhase)
+            {
+                case 0:
             //        if (reinforcements > 0 && current.getOwner() == currentPlayer)
             //        {
-            if (this.gamePhase != 1)
-            {
                 current.addTroops();
                 reinforcements--;
-            }
+            
             //        }
-            //        break;
-            //    case 1:
-            //        //do attacking things
-            //        break;
-            //    case 2:
-            //        //do fortify things
-            //        break;
-            //}
+                    break;
+                case 1:
+                    //do attacking things
+                    break;
+                case 2:
+                    //do fortify things
+                    break;
+            }
         }
 
         public void resetClick()
