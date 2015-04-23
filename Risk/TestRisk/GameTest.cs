@@ -127,12 +127,24 @@ namespace TestRisk
         }
 
         [TestMethod]
-        public void TestSaveReinforcements()
+        public void TestSaveReinforcementsOneTerritory()
         {
             Game game = new Game();
             List<Territory> territories = game.getTerritories();
+            territories[0].addTroops();
+            game.saveReinforcements();
+            Assert.AreEqual(1, territories[0].getNumTroops());
+        }
+
+        [TestMethod]
+        public void TestSaveReinforcementsTwoTerritories()
+        {
+            Game game = new Game();
+            List<Territory> territories = game.getTerritories();
+            territories[0].addTroops();
             territories[1].addTroops();
             game.saveReinforcements();
+            Assert.AreEqual(1, territories[0].getNumTroops());
             Assert.AreEqual(1, territories[1].getNumTroops());
         }
 
