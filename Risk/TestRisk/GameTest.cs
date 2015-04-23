@@ -68,6 +68,67 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void TestgetPhaseOnConstruction()
+        {
+            Game game = new Game();
+            Assert.AreEqual(0, game.getPhase());
+
+        }
+        [TestMethod]
+        public void TestgetPhaseAfterReinforce()
+        {
+            Game game = new Game();
+            game.saveReinforcements();
+            Assert.AreEqual(1, game.getPhase());
+        }
+        [TestMethod]
+        public void TestgetPhaseAfter2Reinforces()
+        {
+            Game game = new Game();
+            game.saveReinforcements();
+            game.endAttack();
+            game.endFortify();
+            game.saveReinforcements();
+            Assert.AreEqual(1, game.getPhase());
+        }
+        [TestMethod]
+        public void TestNextPhase0() 
+        {
+            Game game = new Game();
+            Assert.AreEqual(0, game.getPhase());
+        }
+
+        [TestMethod]
+        public void TestNextPhase1()
+        {
+            Game game = new Game();
+            game.nextGamePhase();
+            Assert.AreEqual(1, game.getPhase());
+        }
+
+        [TestMethod]
+        public void TestNextPhase2()
+        {
+            Game game = new Game();
+            game.nextGamePhase();
+            game.nextGamePhase();
+            Assert.AreEqual(2, game.getPhase());
+        }
+
+
+        [TestMethod]
+        public void TestNextPhase3()
+        {
+            Game game = new Game();
+            game.nextGamePhase();
+            game.nextGamePhase();
+            game.nextGamePhase();
+            Assert.AreEqual(0, game.getPhase());
+        }
+
+
+
+        [TestMethod]
         public void TestMakeMapFromXMLWithAdjacent()
         {
             Game gameTest = new Game(2);
