@@ -75,9 +75,11 @@ namespace Risk
         }
 
         //going to represent player as an int because its represented as different things in different places
-        public Boolean IsInPath(Territory start, Territory end, int player)
+        public Boolean IsInPath(String start, String end, int player)
         {
-            return false;
+            
+
+            return true;
         }
     }
 }

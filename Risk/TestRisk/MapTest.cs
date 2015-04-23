@@ -145,8 +145,9 @@ namespace UnitTestProject1
         {
             Map target = new Map();
             target.makeMapFromXML(testXML);
+            target.setTerritoryOwner("Alaska", 1);
 
-            Assert.IsTrue(false);
+            Assert.IsFalse(target.IsInPath("test", "Alaska", 1));
         }
         [TestMethod]
         public  void TestIsInPathForEndNotInMap()
