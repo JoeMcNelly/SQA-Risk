@@ -184,6 +184,18 @@ namespace TestRisk
             Assert.AreEqual(num - 1, game.getReinforcements());
         }
 
+        [TestMethod]
+        public void TestClickTerritoryDoesNotReinforceInAttackPhase()
+        {
+            Game game = new Game();
+            game.nextGamePhase();
+            List<Territory> territories = game.getTerritories();
+            int num = game.getReinforcements();
+            game.clickTerritory(0);
+            Assert.AreEqual(num, game.getReinforcements());
+            Assert.AreEqual(0, territories[0].getTemporaryReinforcements());
+        }
+
 
 
         [TestMethod]
