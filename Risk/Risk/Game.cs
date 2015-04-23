@@ -115,8 +115,12 @@ namespace TestGUI
                 t.saveTroops();
             }      
                 //initAttackPhase();
-                gamePhase = 1;
+            nextGamePhase();
                 
+        }
+        public void nextGamePhase()
+        {
+            gamePhase = 1;
         }
 
         public int remainingReinforcements()
