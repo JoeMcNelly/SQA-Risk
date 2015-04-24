@@ -213,9 +213,10 @@ namespace Risk
         }
 
   
-        public Game(int numOfPlayers) : this()
+        public Game(int numOfPlayers)
         {
-            
+            this.players = new List<Player>();
+            this.map = new Map(global::Risk.Properties.Resources.Map); 
             this.numOfPlayers = numOfPlayers;
 
             for (int i = 0; i < numOfPlayers; i++)
