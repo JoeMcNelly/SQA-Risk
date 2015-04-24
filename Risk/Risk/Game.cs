@@ -218,6 +218,8 @@ namespace Risk
             this.players = new List<Player>();
             this.map = new Map(global::Risk.Properties.Resources.Map); 
             this.numOfPlayers = numOfPlayers;
+            this.reinforcements = generateReinforcements();
+            this.currentPlayerIndex = 0;
 
             for (int i = 0; i < numOfPlayers; i++)
             {

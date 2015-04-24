@@ -360,6 +360,40 @@ namespace TestRisk
             Assert.AreEqual(expected, game.getReinforcements());
         }
 
+        [TestMethod]
+        //TODO: FIX THE SHIT OUT OF ME
+        public void TestCorrectlyFortifyFiveTroops() {
+            Game game = new Game(2);
+            List<Territory> terrList = new List<Territory>();
+            Territory testTerritory1 = new Territory("Terr1", "Dummy cont");
+            Territory testTerritory2 = new Territory("Terr2", "Dummy cont");
+            terrList.Add(testTerritory1);
+            terrList.Add(testTerritory2);
+            Player p1 = new Player("Dummy Player", 0, terrList);
+            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
+            for (int i = 0; i < 15; i++)
+            {
+                game.clickTerritory(testTerritory1);
+            }
+            game.saveReinforcements(p1);
+            // player 1 sets 15 reinforcements into testTerritory
+
+            game.nextGamePhase();
+            // puts game into fortify phase
+
+            game.clickTerritory(testTerritory1);
+            game.clickTerritory(testTerritory2);
+            for(int i = 0; i < 5; i++) {
+                game.clickTerritory(testTerritory2);
+            }
+            // player selects first territory as testTerritory1, then second as testTerritory2,
+            // then clicks testTerritory2 5 times to add 5 troops
+
+            game.endFortify();
+
+            Assert.AreEqual(5, testTerritory2.getNumTroops());
+        }
+
 
     }
 }

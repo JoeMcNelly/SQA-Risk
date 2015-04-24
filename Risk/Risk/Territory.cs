@@ -23,21 +23,21 @@ namespace Risk
             terrName = "";
             owner = -1;
         }
-        public Territory(String cont, String terrName, int owner)
-        {
-            this.cont = cont;
-            this.terrName = terrName;
-            this.troops = 0;
-            this.owner = owner;
-            this.adjacencies = new List<Territory>();
-        }
-
         public Territory (String cont, String terrName) 
         {
             this.cont = cont;
             this.terrName = terrName;
             this.troops = 0;
             this.owner = -1;
+            this.adjacencies = new List<Territory>();
+        }
+
+        public Territory(String cont, String terrName, int owner)
+        {
+            this.cont = cont;
+            this.terrName = terrName;
+            this.troops = 0;
+            this.owner = owner;
             this.adjacencies = new List<Territory>();
         }
 
