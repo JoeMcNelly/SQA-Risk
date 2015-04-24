@@ -88,6 +88,11 @@ namespace Risk
             this.tempTroops++;
         }
 
+        public void decTroops()
+        {
+            this.tempTroops--;
+        }
+
         public void saveTroops()
         {
             this.troops+=this.tempTroops;

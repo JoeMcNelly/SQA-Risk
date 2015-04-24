@@ -15,9 +15,11 @@ namespace Risk
         private int reinforcements;
         private List<Player> players;
         private Map map;
+        private Territory source = new Territory();
+        private Territory dest = new Territory();
 
         //These 2 variables should become depreciated when Map.cs is full implemented
-        //private List<Territory> territories;
+        private List<Territory> territories;
         //private Dictionary<String, Territory> map;
         
 
@@ -229,7 +231,8 @@ namespace Risk
         {
             foreach (Territory t in player.getTerritories())
             {
-                this.map.getMap()[t.getName()].saveTroops(); //may be able to replace with just t.saveTroops();
+                //this.map.getMap()[t.getName()].saveTroops(); //may be able to replace with just t.saveTroops();
+                t.saveTroops();
             }      
                 
             nextGamePhase();
@@ -242,9 +245,25 @@ namespace Risk
         }
         public void endFortify()
         {
+            this.source.saveTroops();
+            this.dest.saveTroops();
+            this.source = new Territory();
+            this.dest = new Territory();
             nextGamePhase();
             nextPlayer();
         }
+
+        public void resetFortify()
+        {
+            if (!this.dest.getName().Equals("") && !this.source.getName().Equals(""))
+            {
+                this.source.resetReinforcements();
+                this.dest.resetReinforcements();
+                this.source = new Territory();
+                this.dest = new Territory();
+            }
+        }
+
         public void nextPlayer() 
         {
             currentPlayerIndex++;
@@ -316,7 +335,36 @@ namespace Risk
                     //do attacking things
                     break;
                 case 2:
-                    //do fortify things
+                    if (this.source.getName().Equals(""))
+                    {
+                        this.source = current;
+                        Console.WriteLine("Hey asshole, you selected the first territory!");
+                        Console.WriteLine("You selected: " + this.source.getName());
+                    }
+                    else if (this.dest.getName().Equals("") && current != this.source)
+                    {
+                        this.dest = current;
+                        Console.WriteLine("Hey dumbass, you selected your destination territory!");
+                        Console.WriteLine("You selected: " + this.dest.getName());
+                    }
+                    else
+                    {
+                        //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayer)
+                        //    && this.source == current 
+                        //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
+                        if (this.dest.getName().Equals(current.getName()) 
+                            && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1) 
+                        {
+                            this.source.decTroops();
+                            this.dest.addTroops();
+                            Console.WriteLine("----TESTING VALUES----");
+                            Console.WriteLine("Number of troops in source: "
+                                + (this.source.getNumTroops() + this.source.getTemporaryReinforcements()));
+                            Console.WriteLine("Number of troops in destination: " 
+                                + (this.dest.getNumTroops() + this.dest.getTemporaryReinforcements()));
+                        }
+                    }
+
                     break;
             }
         }

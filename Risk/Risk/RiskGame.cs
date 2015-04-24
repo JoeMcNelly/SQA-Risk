@@ -16,6 +16,10 @@ namespace Risk
         
         Dictionary<String, Button> buttons;
         Game game;
+        Button src;
+        Button dest;
+        Territory srcT;
+        Territory destT;
 
         public RiskGame()
         {
@@ -30,6 +34,8 @@ namespace Risk
             endAttack.Enabled = false;
             fortify.Enabled = false;
             resetFortify.Enabled = false;
+            this.src = null;
+            this.dest = null;
             initReinforcePhase();
 
             #region buttons
@@ -118,7 +124,29 @@ namespace Risk
                     //attack button/label things
                     break;
                 case 2:
-                    //fortify button/label things
+                    if(this.src == null) 
+                   {
+                       this.src = button;
+                       this.srcT = current;
+
+                   } else if(this.dest == null && current != this.srcT) 
+                   {
+                       this.dest = button;
+                       this.destT = current;
+                   }
+                   else 
+                   {
+                       if(current == this.srcT) 
+                       {
+                           break;
+                       }
+                       if (this.destT.getName() == current.getName())
+                       {
+                       this.src.Text = (srcT.getTemporaryReinforcements() + srcT.getNumTroops()) + "";
+                       this.dest.Text = (destT.getTemporaryReinforcements() + destT.getNumTroops()) + "";
+
+                       }
+                   }
                     break;
             }
 
@@ -232,12 +260,18 @@ namespace Risk
         private void fortify_click(object sender, EventArgs e)
         {
             game.endFortify();
+            this.src = null;
+            this.dest = null;
             updatePhaseButtons();
         }
 
         private void resetFortify_click(object sender, EventArgs e)
         {
-
+            game.resetFortify();
+            this.src.Text = this.srcT.getNumTroops() + "";
+            this.dest.Text = this.destT.getNumTroops() + "";
+            this.src = null;
+            this.dest = null;
         }
 
 

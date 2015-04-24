@@ -7,15 +7,8 @@ C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\TestGUI\obj\Debug\TestGUI.pdb
 C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe.config
 C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
 C:\Users\mcnelljd\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe.config
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.pdb
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.RiskGame.resources
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csproj.GenerateResource.Cache
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
-C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe.config
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.exe
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\TestGUI.pdb
@@ -25,3 +18,10 @@ C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.csproj.Gene
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.exe
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\TestGUI.pdb
 C:\Users\jarvisoa\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.RiskGame.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe.config
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.exe
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\bin\Debug\Risk.pdb
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.RiskGame.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.exe
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.pdb
