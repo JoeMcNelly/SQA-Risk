@@ -17,6 +17,8 @@ namespace Risk
         private Map map;
         private Territory source = new Territory();
         private Territory dest = new Territory();
+        private bool canSetSrc = false;
+        private bool canSetDst = false;
 
         //These 2 variables should become depreciated when Map.cs is full implemented
         private List<Territory> territories;
@@ -252,6 +254,8 @@ namespace Risk
             this.dest.saveTroops();
             this.source = new Territory();
             this.dest = new Territory();
+            this.canSetSrc = false;
+            this.canSetDst = false;
             nextGamePhase();
             nextPlayer();
         }
@@ -282,7 +286,11 @@ namespace Risk
         {
             gamePhase++;
             if (gamePhase == 3)
+            {
                 gamePhase = 0;
+
+            }
+                
         }
 
         #region getters and setters
@@ -321,6 +329,14 @@ namespace Risk
             return true;
 
         }
+        public bool canSetSource()
+        {
+            return this.canSetSrc;
+        }
+        public bool canSetDestination()
+        {
+            return this.canSetDst;
+        }
 
         public void clickTerritory(Territory current)
         {
@@ -345,12 +361,14 @@ namespace Risk
                     else if (this.source.getName().Equals(""))
                     {
                         this.source = current;
+                        this.canSetSrc = true;
                         Console.WriteLine("Hey asshole, you selected the first territory!");
                         Console.WriteLine("You selected: " + this.source.getName());
                     }
                     else if (this.dest.getName().Equals("") && current != this.source)
                     {
                         this.dest = current;
+                        this.canSetDst = true;
                         Console.WriteLine("Hey dumbass, you selected your destination territory!");
                         Console.WriteLine("You selected: " + this.dest.getName());
                     }

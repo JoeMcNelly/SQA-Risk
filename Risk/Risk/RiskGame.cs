@@ -124,18 +124,22 @@ namespace Risk
                     //attack button/label things
                     break;
                 case 2:
-                    if(this.src == null) 
+                    if(this.src == null && game.canSetSource()) 
                    {
                        this.src = button;
                        this.srcT = current;
 
-                   } else if(this.dest == null && current != this.srcT) 
+                   } else if(this.dest == null && current != this.srcT && game.canSetDestination()) 
                    {
                        this.dest = button;
                        this.destT = current;
                    }
                    else 
                    {
+                       if (srcT == null || destT == null)
+                       {
+                           break;
+                       }
                        if(current == this.srcT) 
                        {
                            break;
@@ -170,6 +174,14 @@ namespace Risk
             label2.Text = game.getCurrentPlayer().playerName + stringPhase;
         }
 
+        private void resetSrcAndDest()
+        {
+            this.dest = null;
+            this.src = null;
+            this.srcT = null;
+            this.destT = null;
+        }
+
         private void initReinforcePhase()
         {
             
@@ -179,6 +191,7 @@ namespace Risk
             fortify.Enabled = false;
             resetFortify.Enabled = false;
             setPlayerPhaseLabel();
+            resetSrcAndDest();
         }
 
         private void initAttackPhase()
