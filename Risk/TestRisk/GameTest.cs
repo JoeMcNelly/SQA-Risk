@@ -367,6 +367,8 @@ namespace TestRisk
             List<Territory> terrList = new List<Territory>();
             Territory testTerritory1 = new Territory("Terr1", "Dummy cont");
             Territory testTerritory2 = new Territory("Terr2", "Dummy cont");
+            testTerritory1.setOwner(0);
+            testTerritory2.setOwner(0);
             terrList.Add(testTerritory1);
             terrList.Add(testTerritory2);
             Player p1 = new Player("Dummy Player", 0, terrList);
