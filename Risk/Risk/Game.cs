@@ -338,7 +338,11 @@ namespace Risk
                     //do attacking things
                     break;
                 case 2:
-                    if (this.source.getName().Equals(""))
+                    if (current.getOwner() != getCurrentPlayer().playerNumber)
+                    {
+                        Console.WriteLine("You selected something that isn't yours. Shame.");
+                    }
+                    else if (this.source.getName().Equals(""))
                     {
                         this.source = current;
                         Console.WriteLine("Hey asshole, you selected the first territory!");
@@ -350,12 +354,13 @@ namespace Risk
                         Console.WriteLine("Hey dumbass, you selected your destination territory!");
                         Console.WriteLine("You selected: " + this.dest.getName());
                     }
+
                     else
                     {
                         //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayer)
                         //    && this.source == current 
                         //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
-                        if (this.dest.getName().Equals(current.getName()) 
+                        if (this.dest.getName().Equals(current.getName())
                             && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1) 
                         {
                             this.source.decTroops();
