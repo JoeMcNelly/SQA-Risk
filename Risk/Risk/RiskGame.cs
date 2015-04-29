@@ -107,8 +107,8 @@ namespace Risk
         }
 
 
-        //NOTE: remove index at some point
-        private void clickTerritory(int index, Button button)
+        
+        private void clickTerritory(Button button)
         {
             
             Territory current = this.game.getMap().getTerritory(button.Name);
@@ -311,214 +311,214 @@ namespace Risk
         #region Territory Buttons
         private void button1_Click(object sender, EventArgs e)
         {
-            clickTerritory(3, MadagascarButton);
+            clickTerritory(MadagascarButton);
         }
 
         
 
         public void button7_Click(object sender, EventArgs e)
         {
-            clickTerritory(0, NorthAfricaButton);
+            clickTerritory(NorthAfricaButton);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            clickTerritory(1, CongoButton);
+            clickTerritory(CongoButton);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            clickTerritory(2, SouthAfricaButton);
+            clickTerritory(SouthAfricaButton);
 
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            clickTerritory(4, EastAfricaButton);
+            clickTerritory(EastAfricaButton);
 
         }
         private void button11_Click(object sender, EventArgs e)
         {
-            clickTerritory(5, EgyptButton);
+            clickTerritory(EgyptButton);
 
         }
         private void button12_Click(object sender, EventArgs e)
         {
-            clickTerritory(7, ArgentinaButton);
+            clickTerritory(ArgentinaButton);
 
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            clickTerritory(8, PeruButton);
+            clickTerritory(PeruButton);
 
         }
         private void button14_Click(object sender, EventArgs e)
         {
-            clickTerritory(6, BrazilButton);
+            clickTerritory(BrazilButton);
 
         }
         private void button15_Click(object sender, EventArgs e)
         {
-            clickTerritory(9, VenezuelaButton);
+            clickTerritory(VenezuelaButton);
 
         }
         private void button16_Click(object sender, EventArgs e)
         {
-            clickTerritory(10, CentralAmericaButton);
+            clickTerritory(CentralAmericaButton);
 
         }
         private void button17_Click(object sender, EventArgs e)
         {
-            clickTerritory(12, WesternUSButton);
+            clickTerritory(WesternUSButton);
 
         }
         private void button18_Click(object sender, EventArgs e)
         {
-            clickTerritory(11, EasternUSButton);
+            clickTerritory(EasternUSButton);
 
         }
         private void button19_Click(object sender, EventArgs e)
         {
-            clickTerritory(13, AlbertaButton);
+            clickTerritory(AlbertaButton);
 
         }
         private void button20_Click(object sender, EventArgs e)
         {
-            clickTerritory(14, AlaskaButton);
+            clickTerritory(AlaskaButton);
 
         }
         private void button21_Click(object sender, EventArgs e)
         {
-            clickTerritory(16, NorthwestTerritoryButton);
+            clickTerritory(NorthwestTerritoryButton);
 
         }
         private void button22_Click(object sender, EventArgs e)
         {
-            clickTerritory(18, OntarioButton);
+            clickTerritory(OntarioButton);
 
         }
         private void button23_Click(object sender, EventArgs e)
         {
-            clickTerritory(17, QuebecButton);
+            clickTerritory(QuebecButton);
 
         }
         private void button24_Click(object sender, EventArgs e)
         {
-            clickTerritory(15, GreenlandButton);
+            clickTerritory(GreenlandButton);
 
         }
         private void button25_Click(object sender, EventArgs e)
         {
-            clickTerritory(20, IcelandButton);
+            clickTerritory(IcelandButton);
 
         }
         private void button26_Click(object sender, EventArgs e)
         {
-            clickTerritory(19, GreatBritainButton);
+            clickTerritory(GreatBritainButton);
 
         }
         private void button27_Click(object sender, EventArgs e)
         {
-            clickTerritory(23, WestEuropeButton);
+            clickTerritory(WestEuropeButton);
 
         }
         private void button28_Click(object sender, EventArgs e)
         {
-            clickTerritory(24, ScandinaviaButton);
+            clickTerritory(ScandinaviaButton);
 
         }
         private void button29_Click(object sender, EventArgs e)
         {
-            clickTerritory(21, NorthEuropeButton);
+            clickTerritory(NorthEuropeButton);
 
         }
         private void button30_Click(object sender, EventArgs e)
         {
-            clickTerritory(22, SouthEuropeButton);
+            clickTerritory(SouthEuropeButton);
 
         }
         private void button31_Click(object sender, EventArgs e)
         {
-            clickTerritory(25, UkraineButton);
+            clickTerritory(UkraineButton);
 
         }
         private void button32_Click(object sender, EventArgs e)
         {
-            clickTerritory(37, UralButton);
+            clickTerritory(UralButton);
 
         }
         private void button33_Click(object sender, EventArgs e)
         {
-            clickTerritory(35, MiddleEastButton);
+            clickTerritory(MiddleEastButton);
 
         }
         private void button34_Click(object sender, EventArgs e)
         {
-            clickTerritory(32, AfghanistanButton);
+            clickTerritory(AfghanistanButton);
 
         }
         private void button35_Click(object sender, EventArgs e)
         {
-            clickTerritory(33, IndiaButton);
+            clickTerritory(IndiaButton);
 
         }
         private void button36_Click(object sender, EventArgs e)
         {
-            clickTerritory(26, ChinaButton);
+            clickTerritory(ChinaButton);
 
         }
         private void button37_Click(object sender, EventArgs e)
         {
-            clickTerritory(30, SiberiaButton);
+            clickTerritory(SiberiaButton);
 
         }
         private void button38_Click(object sender, EventArgs e)
         {
-            clickTerritory(31, YakutskButton);
+            clickTerritory(YakutskButton);
 
         }
         private void button39_Click(object sender, EventArgs e)
         {
-            clickTerritory(28, KamchatkaButton);
+            clickTerritory(KamchatkaButton);
 
         }
         private void button40_Click(object sender, EventArgs e)
         {
-            clickTerritory(27, IrkutskButton);
+            clickTerritory(IrkutskButton);
 
         }
         private void button41_Click(object sender, EventArgs e)
         {
-            clickTerritory(29, MongoliaButton);
+            clickTerritory(MongoliaButton);
 
         }
         private void button42_Click(object sender, EventArgs e)
         {
-            clickTerritory(36, SiamButton);
+            clickTerritory(SiamButton);
 
         }
         private void button43_Click(object sender, EventArgs e)
         {
-            clickTerritory(40, IndonesiaButton);
+            clickTerritory(IndonesiaButton);
 
         }
         private void button44_Click(object sender, EventArgs e)
         {
-            clickTerritory(41, NewGuineaButton);
+            clickTerritory(NewGuineaButton);
 
         }
         private void button45_Click(object sender, EventArgs e)
         {
-            clickTerritory(39, WestAustraliaButton);
+            clickTerritory(WestAustraliaButton);
 
         }
         private void button46_Click(object sender, EventArgs e)
         {
-            clickTerritory(38, EastAustraliaButton);
+            clickTerritory(EastAustraliaButton);
 
         }
         private void button47_Click(object sender, EventArgs e)
         {
-            clickTerritory(34, JapanButton);
+            clickTerritory(JapanButton);
 
         }
 
