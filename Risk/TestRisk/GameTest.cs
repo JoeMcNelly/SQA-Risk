@@ -403,5 +403,19 @@ namespace TestRisk
             Assert.AreEqual(20, game.generateReinforcements());
         }
 
+        [TestMethod]
+        public void testGenerateReinforcementsArgs()
+        {
+            Game game1 = new Game(2);
+            Game game2 = new Game(3);
+            Game game3 = new Game(4);
+            Game game4 = new Game(10);
+            Assert.AreEqual(40, game1.generateReinforcements());
+            Assert.AreEqual(35, game2.generateReinforcements());
+            Assert.AreEqual(30, game3.generateReinforcements());
+            Assert.AreEqual(0, game4.generateReinforcements());
+
+        }
+
     }
 }
