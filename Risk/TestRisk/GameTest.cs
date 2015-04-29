@@ -396,6 +396,12 @@ namespace TestRisk
             Assert.AreEqual(5, testTerritory2.getNumTroops());
         }
 
+        [TestMethod]
+        public void testGenerateReinforcementsNoArgs()
+        {
+            Game game = new Game(); // game constructor with no args sets numOfPlayers to 6
+            Assert.AreEqual(20, game.generateReinforcements());
+        }
 
     }
 }

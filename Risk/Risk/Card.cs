@@ -10,6 +10,7 @@ namespace Risk
     {
         private Territory terr;
         private String troopType;
+        private String filepath;
 
         public Card()
         {
