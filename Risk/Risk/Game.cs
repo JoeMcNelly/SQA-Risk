@@ -282,7 +282,7 @@ namespace Risk
         }
         public int generateReinforcements()
         {
-            return 15;
+            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
         }
 
         public void nextGamePhase()
