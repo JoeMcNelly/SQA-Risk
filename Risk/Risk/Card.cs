@@ -27,5 +27,10 @@ namespace Risk
             this.cardPic = cardPic;
         }
 
+        public int GetTroopType()
+        {
+            return -1;
+        }
+
     }
 }

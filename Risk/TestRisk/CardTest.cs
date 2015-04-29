@@ -22,5 +22,13 @@ namespace UnitTestProject1
 
             Assert.IsNotNull(target);
         }
+
+        [TestMethod]
+        public void TestCardGetTroopType()
+        {
+            Card target = new Card(0, "Alaska", new Bitmap(255, 255));
+
+            Assert.AreEqual(0, target.GetTroopType());
+        }
     }
 }
