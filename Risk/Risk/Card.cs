@@ -19,5 +19,6 @@ namespace Risk
             this.troopType = -1;
             this.cardPic = global::Risk.Properties.Resources.Blank;
         }
+
     }
 }

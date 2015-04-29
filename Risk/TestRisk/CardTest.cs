@@ -14,5 +14,12 @@ namespace UnitTestProject1
 
             Assert.IsNotNull(target);   
         }
+        [TestMethod]
+        public void TestCardInitalizesWithBaseParameters()
+        {
+            Card target = new Card(0, "Alaska", Risk.Properties.Resources.Blank);
+
+            Assert.IsNotNull(target);
+        }
     }
 }
