@@ -7,9 +7,11 @@ namespace UnitTestProject1
     public class CardTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestCardInitalizesForEmpty()
         {
+            Card target = new Card();
 
+            Assert.IsNotNull(target);   
         }
     }
 }
