@@ -115,9 +115,13 @@ namespace Risk
                                                                       //the type in the method deff 
                 foreach(Territory adjacency in t.getAdjancencies())
                 {
-                    if(!S.Contains(adjacency))
+                    if(!S.Contains(adjacency) && adjacency.getOwner() == player)
                     {
                         Q.Enqueue(adjacency);
+                        S.Add(adjacency);
+                    }
+                    else
+                    {
                         S.Add(adjacency);
                     }
                 }
