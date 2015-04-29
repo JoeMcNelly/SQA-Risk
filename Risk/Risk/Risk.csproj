@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Territory.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Game.cs" />
@@ -61,14 +66,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,7 +89,7 @@
     <None Include="Resources\Eastern United States Artillery Card.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Iceland Infantry Card.gif" />
+    <None Include="Resources\Blank.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\India Artillery Card.gif" />
@@ -101,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Map.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Iceland Infantry Card.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

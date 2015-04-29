@@ -63,6 +63,16 @@ namespace Risk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blank {
+            get {
+                object obj = ResourceManager.GetObject("Blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eastern_United_States_Artillery_Card {
             get {
                 object obj = ResourceManager.GetObject("Eastern United States Artillery Card", resourceCulture);
@@ -75,7 +85,7 @@ namespace Risk.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Iceland_Infantry_Card {
             get {
-                object obj = ResourceManager.GetObject("Iceland Infantry Card", resourceCulture);
+                object obj = ResourceManager.GetObject("Iceland_Infantry_Card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
