@@ -19,6 +19,8 @@ namespace Risk
         private Territory dest = new Territory();
         private bool canSetSrc = false;
         private bool canSetDst = false;
+        private Stack<Card> deck;
+        private List<Card> discardPile = new List<Card>(); // discard pile will always be empty at the start of any game
 
         //These 2 variables should become depreciated when Map.cs is full implemented
         private List<Territory> territories;
@@ -27,7 +29,7 @@ namespace Risk
 
         public Game()
         {
-            
+            this.deck = new Stack<Card>();
             this.players = new List<Player>();
             this.currentPlayerIndex = 0;
             this.numOfPlayers = 6; //hard coded
@@ -217,6 +219,7 @@ namespace Risk
   
         public Game(int numOfPlayers)
         {
+            this.deck = new Stack<Card>();
             this.players = new List<Player>();
             this.map = new Map(global::Risk.Properties.Resources.Map); 
             this.numOfPlayers = numOfPlayers;
@@ -375,19 +378,14 @@ namespace Risk
 
                     else
                     {
-                        //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayer)
-                        //    && this.source == current 
+                        //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayerIndex)
+                        //    && this.source == current
                         //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
-                        if (this.dest.getName().Equals(current.getName())
-                            && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1) 
+                            if (this.dest.getName().Equals(current.getName())
+                                && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1) 
                         {
                             this.source.decTroops();
                             this.dest.addTroops();
-                            Console.WriteLine("----TESTING VALUES----");
-                            Console.WriteLine("Number of troops in source: "
-                                + (this.source.getNumTroops() + this.source.getTemporaryReinforcements()));
-                            Console.WriteLine("Number of troops in destination: " 
-                                + (this.dest.getNumTroops() + this.dest.getTemporaryReinforcements()));
                         }
                     }
 
