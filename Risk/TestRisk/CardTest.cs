@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Risk;
+using System.Drawing;
 
 namespace UnitTestProject1
 {
@@ -17,7 +18,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestCardInitalizesWithBaseParameters()
         {
-            Card target = new Card(0, "Alaska", Risk.Properties.Resources.Blank);
+            Card target = new Card(0, "Alaska", new Bitmap(255, 255));
 
             Assert.IsNotNull(target);
         }

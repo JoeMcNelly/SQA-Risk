@@ -20,5 +20,12 @@ namespace Risk
             this.cardPic = global::Risk.Properties.Resources.Blank;
         }
 
+        public Card(int troopType, string territoryName, Bitmap cardPic)
+        {
+            this.terr = territoryName;
+            this.troopType = troopType;
+            this.cardPic = cardPic;
+        }
+
     }
 }
