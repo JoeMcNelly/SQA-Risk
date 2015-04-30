@@ -36,5 +36,10 @@ namespace Risk
         {
             return this.terr;
         }
+
+        public Image GetImage()
+        {
+            return this.cardPic;
+        }
     }
 }

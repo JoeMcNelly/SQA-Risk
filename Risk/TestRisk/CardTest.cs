@@ -42,9 +42,10 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestCardGetImage()
         {
-            Card target = new Card(0, "Alaska", new Bitmap(255, 255));
+            Bitmap test = new Bitmap(255, 255);
+            Card target = new Card(0, "Alaska", test);
 
-            Assert.AreEqual(new Bitmap(255, 255), target.GetImage());
+            Assert.AreEqual(test, target.GetImage());
         }
     }
 }
