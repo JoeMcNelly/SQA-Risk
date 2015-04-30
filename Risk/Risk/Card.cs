@@ -32,5 +32,9 @@ namespace Risk
             return this.troopType;
         }
 
+        public String GetTerritoryName()
+        {
+            return this.terr;
+        }
     }
 }
