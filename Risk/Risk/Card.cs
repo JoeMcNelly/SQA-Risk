@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Risk
 {
     class Card
@@ -12,9 +13,33 @@ namespace Risk
         private String troopType;
         private String filepath;
 
-        public Card()
+        public Card() // default constructor; hard-coded values are all placeholders
         {
+            this.terr = new Territory("TestTerr", "TestCont");
+            this.troopType = "Infantry";
+            this.filepath = "";
 
         }
+
+        #region getters
+        public Territory getTerritory()
+        {
+            return this.terr;
+        }
+
+        public String getTroopType()
+        {
+            return this.troopType;
+        }
+
+        public String getFilePath()
+        {
+            return this.filepath;
+        }
+        #endregion 
+
+        #region setters
+
+        #endregion
     }
 }

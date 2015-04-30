@@ -21,12 +21,13 @@ namespace Risk
         private bool canSetDst = false;
         private Stack<Card> deck;
         private List<Card> discardPile = new List<Card>(); // discard pile will always be empty at the start of any game
+        private int bonusReinforcements = 2;
 
         //These 2 variables should become depreciated when Map.cs is full implemented
         private List<Territory> territories;
         //private Dictionary<String, Territory> map;
-        
 
+        #region Constructors
         public Game()
         {
             this.deck = new Stack<Card>();
@@ -233,8 +234,35 @@ namespace Risk
                 this.players.Add(player);
             }
         }
+        #endregion
 
-       
+        #region Game Phase Methods
+        public void nextPlayer() 
+        {
+            currentPlayerIndex++;
+            currentPlayerIndex = currentPlayerIndex % this.numOfPlayers;
+
+            // check for cards here
+
+            this.reinforcements = generateReinforcements();
+        }
+        public int generateReinforcements()
+        {
+            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
+        }
+
+        public void nextGamePhase()
+        {
+            gamePhase++;
+            if (gamePhase == 3)
+            {
+                gamePhase = 0;
+
+            }
+                
+        }
+        #endregion
+
         public void saveReinforcements(Player player) 
         {
             foreach (Territory t in player.getTerritories())
@@ -251,6 +279,8 @@ namespace Risk
         {
             nextGamePhase();
         }
+
+        #region Fortify Methods
         public void endFortify()
         {
             this.source.saveTroops();
@@ -273,28 +303,8 @@ namespace Risk
                 this.dest = new Territory();
             }
         }
+        #endregion
 
-        public void nextPlayer() 
-        {
-            currentPlayerIndex++;
-            currentPlayerIndex = currentPlayerIndex % this.numOfPlayers;
-            this.reinforcements = generateReinforcements();
-        }
-        public int generateReinforcements()
-        {
-            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
-        }
-
-        public void nextGamePhase()
-        {
-            gamePhase++;
-            if (gamePhase == 3)
-            {
-                gamePhase = 0;
-
-            }
-                
-        }
 
         #region getters and setters
         public int getReinforcements()
@@ -316,22 +326,26 @@ namespace Risk
         {
             return players[this.currentPlayerIndex];
         }
+
+        public Map getMap()
+        {
+            return this.map;
+        }
         #endregion
 
         public void addTerritoryToMap(Territory terr)
         {
             this.map.Add(terr.getName(), terr);
         }
-        public Map getMap()
-        {
-            return this.map;
-        }
+
 
         public bool isOver()
         {
             return true;
 
         }
+
+        #region GUI-related Methods
         public bool canSetSource()
         {
             return this.canSetSrc;
@@ -402,7 +416,7 @@ namespace Risk
             }
            
         }
+        #endregion 
 
-        
     }
 }

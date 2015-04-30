@@ -16,6 +16,8 @@ namespace Risk
         public String playerName;
         public int playerNumber;
 
+
+        #region Constructors
         public Player()
         {
             
@@ -44,17 +46,23 @@ namespace Risk
             this.playerName = name;
             this.playerNumber = number;
         }
+        #endregion
 
+        #region Getters
         public List<Territory> getTerritories()
         {
             return this.territories;
         }
+        #endregion
 
+        #region Used Methods
         public void AddTerritory(Territory territory)
         {
             this.territories.Add(territory);
         }
+        #endregion
 
+        #region Method Stubs
         public void finalize(List<int> troops)
         {
            
@@ -83,6 +91,7 @@ namespace Risk
         {
 
         }
+        #endregion
 
     }
 }

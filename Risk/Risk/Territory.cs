@@ -15,6 +15,7 @@ namespace Risk
         private String terrName;
         private int owner;
 
+        #region Constructors
         public Territory()
         {
             adjacencies = new List<Territory>();
@@ -49,17 +50,28 @@ namespace Risk
             this.troops = 0;
             this.owner = -1;
         }
+        #endregion
 
+        #region Getters
         public int getOwner(){
             return owner;
         }
 
-        public void setOwner(int newOwner)
+        public List<Territory> getAdjancencies()
         {
-            this.owner = newOwner;
+            return adjacencies;
         }
 
+       public String getContinent() 
+        {
+            return this.cont;
+        }
 
+        public int getNumTroops()
+        {
+            return this.troops;
+        }
+      
         public String getName()
         {
             return terrName;
@@ -69,6 +81,29 @@ namespace Risk
         {
             return tempTroops;
         }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + cont.GetHashCode();
+                hash = hash * 23 + terrName.GetHashCode();
+                hash = hash * 23 + troops.GetHashCode();
+                hash = hash * 23 + adjacencies.GetHashCode();
+                hash = hash * 23 + owner.GetHashCode();
+
+                return hash;
+            }
+        }
+        #endregion
+
+        #region Setters
+        public void setOwner(int newOwner)
+        {
+            this.owner = newOwner;
+        }
+
         public void setAdjancencies()
         {
             //TODO: Should probably use a StringReader or something to auto-initialize 
@@ -78,10 +113,9 @@ namespace Risk
         {
             this.adjacencies = adjacencies;
         }
-        public void addAdjancent(Territory territory)
-        {
-            adjacencies.Add(territory);
-        }
+#endregion
+
+        #region Troop Methods
         
         public void addTroops()  
         {
@@ -99,24 +133,18 @@ namespace Risk
             this.tempTroops = 0;
         }
 
-        public int getNumTroops()
-        {
-            return this.troops;
-        }
-
         public void resetReinforcements()
         {
             this.tempTroops = 0;
         }
-        public String getContinent() 
-        {
-            return this.cont;
-        }
-        public List<Territory> getAdjancencies()
-        {
-            return adjacencies;
-        }
+#endregion
 
+        #region Territory Methods
+        public void addAdjancent(Territory territory)
+        {
+            adjacencies.Add(territory);
+        }
+ 
         public override bool Equals(Object obj)
         {
             if (obj == null || GetType() != obj.GetType())
@@ -151,22 +179,7 @@ namespace Risk
                    "\nOwner: "+this.owner+
                    "\nAdjacencies: "+ adjacent;
         }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hash = 17;
-                hash = hash * 23 + cont.GetHashCode();
-                hash = hash * 23 + terrName.GetHashCode();
-                hash = hash * 23 + troops.GetHashCode();
-                hash = hash * 23 + adjacencies.GetHashCode();
-                hash = hash * 23 + owner.GetHashCode();
-
-                return hash;
-            }
-        }
-
+#endregion
 
     }
 
