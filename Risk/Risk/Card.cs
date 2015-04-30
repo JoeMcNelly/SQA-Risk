@@ -29,7 +29,7 @@ namespace Risk
 
         public int GetTroopType()
         {
-            return -1;
+            return this.troopType;
         }
 
     }
