@@ -38,5 +38,13 @@ namespace UnitTestProject1
 
             Assert.AreEqual("Alaska", target.GetTerritoryName());
         }
+
+        [TestMethod]
+        public void TestCardGetImage()
+        {
+            Card target = new Card(0, "Alaska", new Bitmap(255, 255));
+
+            Assert.AreEqual(new Bitmap(255, 255), target.GetImage());
+        }
     }
 }
