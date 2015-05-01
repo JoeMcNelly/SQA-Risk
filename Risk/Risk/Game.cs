@@ -279,11 +279,10 @@ namespace Risk
         }
         public int getTerritoryBonus()
         {
-            if (getCurrentPlayer().getTerritories().Count == 15)
-                return 5;
-            if (getCurrentPlayer().getTerritories().Count == 12)
-                return 4;
-            return 3;
+            int number = (int)Math.Floor((Double)getCurrentPlayer().getTerritories().Count / 3);
+            if (number < 3)
+                return 3;
+            return number;
         }
         //For testing only
         public void turnOffInit()
