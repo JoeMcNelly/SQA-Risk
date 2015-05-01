@@ -471,5 +471,18 @@ namespace TestRisk
             Assert.IsFalse(game.cardTurnIn(game.getCurrentPlayer()));
         }
 
+        [TestMethod]
+        public void testCardTurnInOneSet()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+
+            Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
+        }
+
     }
 }
