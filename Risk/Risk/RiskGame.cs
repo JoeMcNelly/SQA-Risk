@@ -219,6 +219,7 @@ namespace Risk
             reset.Enabled = true;
             fortify.Enabled = false;
             resetFortify.Enabled = false;
+            tradeIn.Enabled = true;
             setPlayerPhaseLabel();
             resetSrcAndDest();
             loadPlayerCards();
@@ -230,6 +231,7 @@ namespace Risk
             reset.Enabled = false;
             attack.Enabled = true;
             endAttack.Enabled = true;
+            tradeIn.Enabled = false;
             setPlayerPhaseLabel();
         }
 
@@ -239,6 +241,7 @@ namespace Risk
             endAttack.Enabled = false;
             fortify.Enabled = true;
             resetFortify.Enabled = true;
+            tradeIn.Enabled = false;
             setPlayerPhaseLabel();
         }
 
@@ -319,7 +322,8 @@ namespace Risk
 
         private void loadPlayerCards()
         {
-            List<Card> hand = game.getCurrentPlayer().getHand();
+            resetHand();
+            List<Card> hand = game.getCurrentPlayer().getHand().Values.ToList();
             for(int i=0; i < hand.Count; i++)
             {
                 this.displayedHand[i].BackgroundImage = hand[i].GetImage();
@@ -589,6 +593,7 @@ namespace Risk
             selectedCards.Remove(picBox);
             picBox.Image = null;
             picBox.Refresh();
+            tradeIn.Enabled = false;
         }
         private void AddToSelected(PictureBox picBox)
         {
@@ -602,19 +607,31 @@ namespace Risk
             }
             picBox.Image = Risk.Properties.Resources.HIGHLIGHT;
             this.selectedCards = temp.ToList();
+            if(selectedCards.Count == 3)
+            {
+                Dictionary<String, Card> handCheck = game.getCurrentPlayer().getHand();
+                if(game.canTradeIn(handCheck[selectedCards[0].Tag.ToString()], handCheck[selectedCards[1].Tag.ToString()], handCheck[selectedCards[2].Tag.ToString()]))
+                {
+                    //activate the tradein button
+                    tradeIn.Enabled = true;
+                }
+            }
         }
 
         private void ToggleCardSelect(PictureBox picBox)
         {
-            if (picBox.Tag != null)
+            if (game.getPhase() == 0)
             {
-                if (selectedCards.Contains(picBox))
+                if (picBox.Tag != null)
                 {
-                    RemoveFromSelected(picBox);
-                }
-                else
-                {
-                    AddToSelected(picBox);
+                    if (selectedCards.Contains(picBox))
+                    {
+                        RemoveFromSelected(picBox);
+                    }
+                    else
+                    {
+                        AddToSelected(picBox);
+                    }
                 }
             }
         }
@@ -622,6 +639,25 @@ namespace Risk
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+            Dictionary<String, Card> playerHand = game.getCurrentPlayer().getHand();
+            game.getBonusReinforcementsFromCards(playerHand[selectedCards[0].Tag.ToString()], playerHand[selectedCards[1].Tag.ToString()], playerHand[selectedCards[2].Tag.ToString()]);
+            selectedCards.Clear();
+            loadPlayerCards();
+            tradeIn.Enabled = false;
+            label1.Text = "Reinforcements left: " + game.getReinforcements();
+        }
+
+        private void resetHand()
+        {
+            foreach(PictureBox card in displayedHand)
+            {
+                card.BackgroundImage = Risk.Properties.Resources.back;
+                card.Tag = null;
+                card.Image = null;
+                card.Cursor = Cursors.Arrow;
+                card.Refresh();
+
+            }
         }
 
 

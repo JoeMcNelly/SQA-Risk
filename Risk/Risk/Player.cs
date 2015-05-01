@@ -10,7 +10,7 @@ namespace Risk
     {
         //NOTE: may want to change List<Territory> to a Dictionary
         private List<Territory> territories;
-        private List<Card> cards;
+        private Dictionary<String,Card> cards;
         public bool inPlay = true;
         public bool winner = false;
         public String playerName;
@@ -24,7 +24,7 @@ namespace Risk
         public Player(String name, Boolean whatever) // Constructor strictly for testing
         {
             this.territories = new List<Territory>();
-            this.cards = new List<Card>();
+            this.cards = new Dictionary<String, Card>();
             this.playerName = name;
             for (int i = 0; i < 42; i++)
             {
@@ -35,7 +35,7 @@ namespace Risk
         public Player(String name, int number)
         {
             this.territories = new List<Territory>();
-            this.cards = new List<Card>();
+            this.cards = new Dictionary<String, Card>();
             this.playerName = name;
             this.playerNumber = number;
         }
@@ -43,7 +43,7 @@ namespace Risk
         public Player(String name,int number, List<Territory> territories)
         {
             this.territories = territories;
-            this.cards = new List<Card>();
+            this.cards = new Dictionary<String, Card>();
             this.playerName = name;
             this.playerNumber = number;
         }
@@ -86,13 +86,13 @@ namespace Risk
         {
 
         }
-        public List<Card> getHand()
+        public Dictionary<String, Card> getHand()
         {
             return this.cards;
         }
         public void addCard(Card card)
         {
-            this.cards.Add(card);
+            this.cards.Add(card.GetTerritoryName(), card);
         }
     }
 }

@@ -470,17 +470,17 @@ namespace Risk
 
         public int getBonusReinforcementsFromCards(Card c1, Card c2, Card c3)
         {
-            int c1t = c1.GetTroopType();
-            int c2t = c2.GetTroopType();
-            int c3t = c3.GetTroopType();
 
             int addedReinforcements = 0;
 
-            if((c1t == c2t && c1t == c3t && c2t == c3t) || (c1t != c2t && c1t != c3t && c2t != c3t))
+            if(canTradeIn(c1, c2, c3))
             {
                 addedReinforcements = this.setValues[GoldenCavalry];
                 this.reinforcements += addedReinforcements;
                 AdvanceGoldenCavalry();
+
+                //discarding cards
+                discardSet(c1, c2, c3);
 
                 //depending on what we decide, this is where the discard action would happen
             }
@@ -492,6 +492,28 @@ namespace Risk
         {
             if (GoldenCavalry < setValues.Length - 2)
                 GoldenCavalry++;
+        }
+
+        public bool canTradeIn(Card c1, Card c2, Card c3)
+        {
+            int c1t = c1.GetTroopType();
+            int c2t = c2.GetTroopType();
+            int c3t = c3.GetTroopType();
+
+            return (c1t == c2t && c1t == c3t && c2t == c3t) || (c1t != c2t && c1t != c3t && c2t != c3t);
+        }
+
+        public void discardSet(Card c1, Card c2, Card c3)
+        {
+            Dictionary<String, Card> playerHand = getCurrentPlayer().getHand();
+            //moving cards to what ever discard thing we decide to do
+            discardPile.Add(c1);
+            discardPile.Add(c2);
+            discardPile.Add(c3);
+            //actual removal of the cards from the hand
+            playerHand.Remove(c1.GetTerritoryName());
+            playerHand.Remove(c2.GetTerritoryName());
+            playerHand.Remove(c3.GetTerritoryName());
         }
 
         

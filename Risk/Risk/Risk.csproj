@@ -146,7 +146,7 @@
     <None Include="Resources\EGYPT.png" />
     <None Include="Resources\GREAT-BRITAIN.png" />
     <None Include="Resources\GREENLAND.png" />
-    <None Include="Resources\ARGENTINA1.png" />
+    <Content Include="Resources\HIGHLIGHT.png" />
     <Content Include="Resources\Iceland Infantry Card.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
