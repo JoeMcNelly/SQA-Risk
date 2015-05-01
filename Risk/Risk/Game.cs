@@ -50,61 +50,6 @@ namespace Risk
             //this.map = new Dictionary<String, Territory>();
             //this.territories = new List<Territory>();
 
-            #region territories 
-            //territories.Add(new Territory("Africa", "North Africa", 0));
-            //territories.Add(new Territory("Africa", "Congo", 0));
-            //territories.Add(new Territory("Africa", "South Africa", 0));
-            //territories.Add(new Territory("Africa", "Madagascar", 0));
-            //territories.Add(new Territory("Africa", "East Africa", 0));
-            //territories.Add(new Territory("Africa", "Egypt", 0));
-            //6
-
-            //territories.Add(new Territory("South America", "Brazil", 1));
-            //territories.Add(new Territory("South America", "Argentina", 1));
-            //territories.Add(new Territory("South America", "Peru", 1));
-            //territories.Add(new Territory("South America", "Venezuela", 1));
-            //4
-
-            //territories.Add(new Territory("North America", "Central America", 2));
-            //territories.Add(new Territory("North America", "Eastern US", 2));
-            //territories.Add(new Territory("North America", "Western US", 2));
-            //territories.Add(new Territory("North America", "Alberta", 2));
-            //territories.Add(new Territory("North America", "Alaska", 2));
-            //territories.Add(new Territory("North America", "Greenland", 2));
-            //territories.Add(new Territory("North America", "Northwest Territory", 2));
-            //territories.Add(new Territory("North America", "Quebec", 2));
-            //territories.Add(new Territory("North America", "Ontario", 2));
-            //9
-
-            //territories.Add(new Territory("Europe", "Great Britain", 3));
-            //territories.Add(new Territory("Europe", "Iceland", 3));
-            //territories.Add(new Territory("Europe", "North Europe", 3));
-            //territories.Add(new Territory("Europe", "South Europe", 3));
-            //territories.Add(new Territory("Europe", "West Europe", 3));
-            //territories.Add(new Territory("Europe", "Scandinavia", 3));
-            //territories.Add(new Territory("Europe", "Ukraine", 3));
-            //7
-
-            //territories.Add(new Territory("Asia", "China", 4));
-            //territories.Add(new Territory("Asia", "Irkutsk", 4));
-            //territories.Add(new Territory("Asia", "Kamchatka", 4));
-            //territories.Add(new Territory("Asia", "Mongolia", 4));
-            //territories.Add(new Territory("Asia", "Siberia", 4));
-            //territories.Add(new Territory("Asia", "Yakutsk", 4));
-            //territories.Add(new Territory("Asia", "Afghanistan", 4));
-            //territories.Add(new Territory("Asia", "India", 4));
-            //territories.Add(new Territory("Asia", "Japan", 4));
-            //territories.Add(new Territory("Asia", "Middle-East", 4));
-            //territories.Add(new Territory("Asia", "Siam", 4));
-            //territories.Add(new Territory("Asia", "Ural", 4));
-            //12
-
-            //territories.Add(new Territory("Australia", "East Australia", 5));
-            //territories.Add(new Territory("Australia", "West Australia", 5));
-            //territories.Add(new Territory("Australia", "Indonesia", 5));
-            //territories.Add(new Territory("Australia", "New-Guinea", 5));
-            //4
-            #endregion
             #region set territory owner, hard code
             this.map.getTerritory("North Africa").setOwner(0);
             this.map.getTerritory("Congo").setOwner(0);
@@ -263,6 +208,36 @@ namespace Risk
         }
         #endregion
 
+        #region Card Methods
+        // return values are for testing purposes; will modify public fields and be all void returns when finished
+
+        public void initializeDeck() // except for this one.
+        {
+            
+        } 
+
+        public List<Card> shuffleDeck() 
+        {
+            return null;
+            // not yet implemented
+        }
+
+        public Card drawCard(Player curr)
+        {
+            return null;
+            // not yet implemented
+        }
+
+        public Boolean cardTurnIn(Player curr)
+        {
+            return true;
+            // not yet implemented
+        }
+
+
+        #endregion
+
+
         public void saveReinforcements(Player player) 
         {
             foreach (Territory t in player.getTerritories())
@@ -307,6 +282,16 @@ namespace Risk
 
 
         #region getters and setters
+        public Stack<Card> getDeck()
+        {
+            return this.deck;
+        }
+
+        public List<Card> getDiscard()
+        {
+            return this.discardPile;
+        }
+
         public int getReinforcements()
         {
             return reinforcements;

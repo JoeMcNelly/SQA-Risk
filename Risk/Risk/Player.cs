@@ -15,26 +15,12 @@ namespace Risk
         public bool winner = false;
         public String playerName;
         public int playerNumber;
-
+        public List<Card> hand;
 
         #region Constructors
-        public Player()
-        {
-            
-        }
-
-        public Player(String name, Boolean whatever) // Constructor strictly for testing
-        {
-            this.territories = new List<Territory>();
-            this.playerName = name;
-            for (int i = 0; i < 42; i++)
-            {
-                this.territories.Add(new Territory());
-            }
-        }
-
         public Player(String name, int number)
         {
+            this.hand = new List<Card>();
             this.territories = new List<Territory>();
             this.playerName = name;
             this.playerNumber = number;
@@ -42,6 +28,7 @@ namespace Risk
 
         public Player(String name,int number, List<Territory> territories)
         {
+            this.hand = new List<Card>();
             this.territories = territories;
             this.playerName = name;
             this.playerNumber = number;

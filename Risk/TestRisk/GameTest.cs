@@ -417,5 +417,19 @@ namespace TestRisk
 
         }
 
+        [TestMethod]
+        public void testInitializeDeck()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            Assert.AreEqual(42, game.getDeck().Count);
+            for (int i = 0; i < 42; i++)
+            {
+                Assert.AreEqual("Infantry", game.getDeck().Peek().getTroopType());
+            }
+
+        }
+
     }
 }

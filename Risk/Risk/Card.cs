@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Risk
 {
-    class Card
+    public class Card
     {
         private Territory terr;
         private String troopType;
@@ -20,6 +20,13 @@ namespace Risk
             this.filepath = "";
 
         }
+
+        public Card(Territory terr, String type)
+        {
+            this.terr = terr;
+            this.troopType = type;
+        }
+
 
         #region getters
         public Territory getTerritory()
@@ -41,5 +48,6 @@ namespace Risk
         #region setters
 
         #endregion
+
     }
 }
