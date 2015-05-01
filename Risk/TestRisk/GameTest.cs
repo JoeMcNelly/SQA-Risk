@@ -529,7 +529,7 @@ namespace TestRisk
 
             List<List<Card>> beforeAndAfterLists = game.shuffleDeck();
             Assert.AreNotEqual(beforeAndAfterLists[0], beforeAndAfterLists[1]);
-            Assert.AreNotEqual(0, game.getDeck().Count);
+            Assert.AreEqual(42, game.getDeck().Count);
         }
 
     }

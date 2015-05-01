@@ -300,6 +300,7 @@ namespace Risk
                     randomIndex = rnd.Next(0, this.discardPile.Count); //Choose a random object in the list
                     list2.Add(this.discardPile[randomIndex]); //add it to the new, random list
                     this.discardPile.RemoveAt(randomIndex); //remove to avoid duplicates
+                    this.deck.Push(list2.ElementAt(list2.Count - 1));
                 }
                 listOfReturns.Add(list2);
                 return listOfReturns;
