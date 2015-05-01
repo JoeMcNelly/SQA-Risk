@@ -223,6 +223,7 @@ namespace Risk
 
         public Card drawCard(Player curr)
         {
+            this.getCurrentPlayer().hand.Add(this.deck.Peek());
             return this.deck.Pop();
         }
 
