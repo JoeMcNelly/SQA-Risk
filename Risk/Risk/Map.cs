@@ -37,7 +37,13 @@ namespace Risk
         public List<Territory> GetTerritoriesByContinent(String cont)
         {
             List<Territory> list = new List<Territory>();
-            list.Add(this.getTerritory("Congo"));
+            foreach(Territory t in this.GetMapAsList())
+            {
+                if (t.getContinent().Equals("Africa"))
+                {
+                    list.Add(t);
+                }
+            }
             return list;
         }
 
