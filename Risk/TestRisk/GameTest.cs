@@ -365,6 +365,7 @@ namespace TestRisk
         //TODO: FIX THE SHIT OUT OF ME
         public void TestCorrectlyFortifyFiveTroops() {
             Game game = new Game(2);
+            game.initializeDeck();
             List<Territory> terrList = new List<Territory>();
             Territory testTerritory1 = new Territory("Terr1", "Dummy cont");
             Territory testTerritory2 = new Territory("Terr2", "Dummy cont");
@@ -417,6 +418,84 @@ namespace TestRisk
             Assert.AreEqual(30, game3.initialReinforcements());
             Assert.AreEqual(0, game4.initialReinforcements());
 
+        }
+        [TestMethod]
+        public void TestTerrReinforcements1Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Territory> terr = new List<Territory>();
+            terr.Add(new Territory());
+            Player p = new Player("test", 0, terr);
+            Assert.AreEqual(3, game.getTerritoryBonus());
+        }
+        [TestMethod]
+        public void TestTerrReinforcements12Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> terr = new List<Territory>();
+            Player p = new Player("test", 0, terr);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+            
+            for (int i = 0; i < 12;i++ )
+                terr.Add(new Territory());
+            
+            Assert.AreEqual(4, game.getTerritoryBonus());
+        }
+        [TestMethod]
+        public void TestTerrReinforcements15Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> terr = new List<Territory>();
+            Player p = new Player("test", 0, terr);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            for (int i = 0; i < 15; i++)
+                terr.Add(new Territory());
+
+            Assert.AreEqual(5, game.getTerritoryBonus());
+        }
+        [TestMethod]
+        public void TestTerrReinforcements37Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> terr = new List<Territory>();
+            Player p = new Player("test", 0, terr);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            for (int i = 0; i < 37; i++)
+                terr.Add(new Territory());
+
+            Assert.AreEqual(12, game.getTerritoryBonus());
+        }
+
+        [TestMethod]
+        public void TestContinentReinforcementsNone()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> territoriesOwned = new List<Territory>();
+            Territory alaska = game.getMap().getTerritory("Alaska");
+            territoriesOwned.Add(alaska);
+            Player p = new Player("test", 0, territoriesOwned);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            Assert.AreEqual(0, game.getContinentBonus());
         }
 
     }
