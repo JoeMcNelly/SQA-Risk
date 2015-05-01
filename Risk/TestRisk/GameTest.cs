@@ -509,5 +509,27 @@ namespace TestRisk
             Assert.AreNotEqual(list1, list2);
         }
 
+        [TestMethod]
+        public void testShuffleDeck()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            for (int i = 0; i < 42; i++)
+            {
+                game.drawCard(game.getCurrentPlayer()); //empties deck
+            }
+
+            for (int i = 0; i < 14; i++) // player has 14 sets of 3 to turn in; this populates the discard pile 
+            {
+                game.cardTurnIn(game.getCurrentPlayer());
+            }
+
+            Assert.AreEqual(0, game.getCurrentPlayer().hand.Count); // checks to ensure player hand is empty
+
+            List<List<Card>> beforeAndAfterLists = game.shuffleDeck();
+            Assert.AreNotEqual(beforeAndAfterLists[0], beforeAndAfterLists[1]);
+        }
+
     }
 }

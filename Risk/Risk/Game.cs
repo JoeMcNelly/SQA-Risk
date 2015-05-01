@@ -246,7 +246,7 @@ namespace Risk
                 }
             }
 
-            if(numInf == 3) {
+            if(numInf >= 3) {
                 for(int i = 0; i < curr.hand.Count; i++) 
                 {
                     if(curr.hand.ElementAt(i).getTroopType().Equals("Infantry")) {
@@ -257,7 +257,7 @@ namespace Risk
                 }
                 return true;
 
-            } else if (numCalv == 3) {
+            } else if (numCalv >= 3) {
                 for(int i = 0; i < curr.hand.Count; i++) 
                 {
                     if(curr.hand.ElementAt(i).getTroopType().Equals("Calvalry")) {
@@ -268,7 +268,7 @@ namespace Risk
                 }
                 return true;
 
-            } else if (numCannon == 3) {
+            } else if (numCannon >= 3) {
                 for (int i = 0; i < curr.hand.Count; i++)
                 {
                     if (curr.hand.ElementAt(i).getTroopType().Equals("Cannoneer")) {
@@ -283,24 +283,28 @@ namespace Risk
             return false;
         }
 
-        public void shuffleDeck() 
+        public List<List<Card>> shuffleDeck() // return value is newly the shuffled list for comparison's sake in tests
         {
             if(this.deck.Count != 0) {
-                return; // do nothing ; deck is not yet empty, no need to shuffle
+                return null; // do nothing ; deck is not yet empty, no need to shuffle
             }
             else
             {
-                Console.WriteLine(this.deck.ToString());
-                var rnd = new Random();
-                this.discardPile.OrderBy(x => rnd.Next()).ToList();
-
-                foreach (Card card in this.discardPile)
+                List<List<Card>> listOfReturns = new List<List<Card>>();
+                listOfReturns.Add(this.discardPile);
+                List<Card> list2 = new List<Card>();
+                Random rnd = new Random();
+                int randomIndex = 0;
+                while (this.discardPile.Count > 0)
                 {
-                    this.discardPile.Remove(card);
-                    this.deck.Push(card);
+                    randomIndex = rnd.Next(0, this.discardPile.Count); //Choose a random object in the list
+                    list2.Add(this.discardPile[randomIndex]); //add it to the new, random list
+                    this.discardPile.RemoveAt(randomIndex); //remove to avoid duplicates
                 }
-                Console.WriteLine(this.deck.ToString());
+                listOfReturns.Add(list2);
+                return listOfReturns;
             }
+
 
         }
 
