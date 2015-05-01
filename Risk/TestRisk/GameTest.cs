@@ -405,7 +405,7 @@ namespace TestRisk
         public void testGenerateReinforcementsNoArgs()
         {
             Game game = new Game(); // game constructor with no args sets numOfPlayers to 6
-            Assert.AreEqual(20, game.initialReinforcements());
+            Assert.AreEqual(13, game.initialReinforcements());
         }
 
         [TestMethod]
@@ -414,11 +414,10 @@ namespace TestRisk
             Game game1 = new Game(2);
             Game game2 = new Game(3);
             Game game3 = new Game(4);
-            Game game4 = new Game(10);
-            Assert.AreEqual(40, game1.initialReinforcements());
-            Assert.AreEqual(35, game2.initialReinforcements());
-            Assert.AreEqual(30, game3.initialReinforcements());
-            Assert.AreEqual(0, game4.initialReinforcements());
+            Assert.AreEqual(33, game1.initialReinforcements());
+            Assert.AreEqual(28, game2.initialReinforcements());
+            Assert.AreEqual(23, game3.initialReinforcements());
+
 
         }
         [TestMethod]
@@ -664,7 +663,7 @@ namespace TestRisk
 
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
 
-            Assert.AreEqual(7, game.getContinentBonus());
+            Assert.AreEqual(0, game.getContinentBonus());
         }
 
         [TestMethod]
