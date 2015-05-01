@@ -237,7 +237,7 @@ namespace UnitTestProject1
             Map target = new Map(global::TestRisk.Properties.Resources.Map);
 
             List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
-            Assert.IsTrue(terrs[0].getName().Equals("Congo"));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Congo")));
         }
 
     }
