@@ -451,5 +451,15 @@ namespace TestRisk
             Assert.AreEqual(41, game.getDeck().Count);
         }
 
+        [TestMethod]
+        public void testCardGoesIntoPlayerHandOnDraw()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            game.drawCard(game.getCurrentPlayer());
+            Assert.AreNotEqual(0, game.getCurrentPlayer().hand.Count);
+        }
+
     }
 }
