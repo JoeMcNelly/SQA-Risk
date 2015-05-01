@@ -39,7 +39,7 @@ namespace Risk
             List<Territory> list = new List<Territory>();
             foreach(Territory t in this.GetMapAsList())
             {
-                if (t.getContinent().Equals("Africa"))
+                if (t.getContinent().Equals(cont))
                 {
                     list.Add(t);
                 }
