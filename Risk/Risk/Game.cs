@@ -284,6 +284,11 @@ namespace Risk
                 return 3;
             return number;
         }
+
+        public int getContinentBonus()
+        {
+            return -1;
+        }
         //For testing only
         public void turnOffInit()
         {

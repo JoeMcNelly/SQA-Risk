@@ -481,5 +481,22 @@ namespace TestRisk
             Assert.AreEqual(12, game.getTerritoryBonus());
         }
 
+        [TestMethod]
+        public void TestContinentReinforcementsNone()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> territoriesOwned = new List<Territory>();
+            Territory alaska = game.getMap().getTerritory("Alaska");
+            territoriesOwned.Add(alaska);
+            Player p = new Player("test", 0, territoriesOwned);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            Assert.AreEqual(0, game.getContinentBonus());
+        }
+
     }
 }
