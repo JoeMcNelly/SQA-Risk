@@ -34,6 +34,11 @@ namespace Risk
             return this.map.Values.ToList();
         }
 
+        public List<Territory> GetTerritoriesByContinent(String cont)
+        {
+            return new List<Territory>();
+        }
+
         public void setTerritoryOwner(String territoryName, int player)
         {
             this.map[territoryName].setOwner(player);
