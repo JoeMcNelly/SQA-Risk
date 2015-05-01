@@ -314,10 +314,13 @@ namespace Risk
         private void resetFortify_click(object sender, EventArgs e)
         {
             game.resetFortify();
-            this.src.Text = this.srcT.getNumTroops() + "";
-            this.dest.Text = this.destT.getNumTroops() + "";
-            this.src = null;
-            this.dest = null;
+            if (this.srcT != null && this.destT != null)
+            {
+                this.src.Text = this.srcT.getNumTroops() + "";
+                this.dest.Text = this.destT.getNumTroops() + "";
+                this.src = null;
+                this.dest = null;
+            }
         }
 
         private void loadPlayerCards()
