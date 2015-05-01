@@ -365,6 +365,7 @@ namespace TestRisk
         //TODO: FIX THE SHIT OUT OF ME
         public void TestCorrectlyFortifyFiveTroops() {
             Game game = new Game(2);
+            game.initializeDeck();
             List<Territory> terrList = new List<Territory>();
             Territory testTerritory1 = new Territory("Terr1", "Dummy cont");
             Territory testTerritory2 = new Territory("Terr2", "Dummy cont");
