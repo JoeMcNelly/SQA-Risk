@@ -24,6 +24,7 @@ namespace Risk
         public Player(String name, Boolean whatever) // Constructor strictly for testing
         {
             this.territories = new List<Territory>();
+            this.cards = new List<Card>();
             this.playerName = name;
             for (int i = 0; i < 42; i++)
             {
@@ -34,6 +35,7 @@ namespace Risk
         public Player(String name, int number)
         {
             this.territories = new List<Territory>();
+            this.cards = new List<Card>();
             this.playerName = name;
             this.playerNumber = number;
         }
@@ -41,6 +43,7 @@ namespace Risk
         public Player(String name,int number, List<Territory> territories)
         {
             this.territories = territories;
+            this.cards = new List<Card>();
             this.playerName = name;
             this.playerNumber = number;
         }
@@ -83,6 +86,13 @@ namespace Risk
         {
 
         }
-
+        public List<Card> getHand()
+        {
+            return this.cards;
+        }
+        public void addCard(Card card)
+        {
+            this.cards.Add(card);
+        }
     }
 }

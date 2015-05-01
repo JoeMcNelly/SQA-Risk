@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.JapanButton = new System.Windows.Forms.Button();
-            this.EastAustraliaButton = new System.Windows.Forms.Button();
-            this.WestAustraliaButton = new System.Windows.Forms.Button();
-            this.NewGuineaButton = new System.Windows.Forms.Button();
-            this.IndonesiaButton = new System.Windows.Forms.Button();
-            this.SiamButton = new System.Windows.Forms.Button();
-            this.MongoliaButton = new System.Windows.Forms.Button();
-            this.IrkutskButton = new System.Windows.Forms.Button();
-            this.KamchatkaButton = new System.Windows.Forms.Button();
-            this.YakutskButton = new System.Windows.Forms.Button();
-            this.SiberiaButton = new System.Windows.Forms.Button();
-            this.ChinaButton = new System.Windows.Forms.Button();
-            this.IndiaButton = new System.Windows.Forms.Button();
-            this.AfghanistanButton = new System.Windows.Forms.Button();
-            this.MiddleEastButton = new System.Windows.Forms.Button();
-            this.UralButton = new System.Windows.Forms.Button();
-            this.UkraineButton = new System.Windows.Forms.Button();
-            this.SouthEuropeButton = new System.Windows.Forms.Button();
-            this.NorthEuropeButton = new System.Windows.Forms.Button();
-            this.ScandinaviaButton = new System.Windows.Forms.Button();
-            this.WestEuropeButton = new System.Windows.Forms.Button();
-            this.GreatBritainButton = new System.Windows.Forms.Button();
-            this.IcelandButton = new System.Windows.Forms.Button();
-            this.GreenlandButton = new System.Windows.Forms.Button();
-            this.QuebecButton = new System.Windows.Forms.Button();
-            this.OntarioButton = new System.Windows.Forms.Button();
-            this.NorthwestTerritoryButton = new System.Windows.Forms.Button();
-            this.AlaskaButton = new System.Windows.Forms.Button();
-            this.AlbertaButton = new System.Windows.Forms.Button();
-            this.EasternUSButton = new System.Windows.Forms.Button();
-            this.WesternUSButton = new System.Windows.Forms.Button();
-            this.CentralAmericaButton = new System.Windows.Forms.Button();
-            this.VenezuelaButton = new System.Windows.Forms.Button();
-            this.BrazilButton = new System.Windows.Forms.Button();
-            this.PeruButton = new System.Windows.Forms.Button();
-            this.ArgentinaButton = new System.Windows.Forms.Button();
-            this.EgyptButton = new System.Windows.Forms.Button();
-            this.EastAfricaButton = new System.Windows.Forms.Button();
-            this.MadagascarButton = new System.Windows.Forms.Button();
+            this.Japan = new System.Windows.Forms.Button();
+            this.EasternAustralia = new System.Windows.Forms.Button();
+            this.WesternAustralia = new System.Windows.Forms.Button();
+            this.NewGuinea = new System.Windows.Forms.Button();
+            this.Indonesia = new System.Windows.Forms.Button();
+            this.Siam = new System.Windows.Forms.Button();
+            this.Mongolia = new System.Windows.Forms.Button();
+            this.Irkutsk = new System.Windows.Forms.Button();
+            this.Kamchatka = new System.Windows.Forms.Button();
+            this.Yakutsk = new System.Windows.Forms.Button();
+            this.Siberia = new System.Windows.Forms.Button();
+            this.China = new System.Windows.Forms.Button();
+            this.India = new System.Windows.Forms.Button();
+            this.Afghanistan = new System.Windows.Forms.Button();
+            this.MiddleEast = new System.Windows.Forms.Button();
+            this.Ural = new System.Windows.Forms.Button();
+            this.Ukraine = new System.Windows.Forms.Button();
+            this.SouthernEurope = new System.Windows.Forms.Button();
+            this.NorthernEurope = new System.Windows.Forms.Button();
+            this.Scandinavia = new System.Windows.Forms.Button();
+            this.WesternEurope = new System.Windows.Forms.Button();
+            this.GreatBritain = new System.Windows.Forms.Button();
+            this.Iceland = new System.Windows.Forms.Button();
+            this.Greenland = new System.Windows.Forms.Button();
+            this.Quebec = new System.Windows.Forms.Button();
+            this.Ontario = new System.Windows.Forms.Button();
+            this.NorthwestTerritory = new System.Windows.Forms.Button();
+            this.Alaska = new System.Windows.Forms.Button();
+            this.Alberta = new System.Windows.Forms.Button();
+            this.EasternUnitedStates = new System.Windows.Forms.Button();
+            this.WesternUnitedStates = new System.Windows.Forms.Button();
+            this.CentralAmerica = new System.Windows.Forms.Button();
+            this.Venezuela = new System.Windows.Forms.Button();
+            this.Brazil = new System.Windows.Forms.Button();
+            this.Peru = new System.Windows.Forms.Button();
+            this.Argentina = new System.Windows.Forms.Button();
+            this.Egypt = new System.Windows.Forms.Button();
+            this.EastAfrica = new System.Windows.Forms.Button();
+            this.Madagascar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SouthAfricaButton = new System.Windows.Forms.Button();
-            this.CongoButton = new System.Windows.Forms.Button();
-            this.NorthAfricaButton = new System.Windows.Forms.Button();
+            this.SouthAfrica = new System.Windows.Forms.Button();
+            this.Congo = new System.Windows.Forms.Button();
+            this.NorthAfrica = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.resetFortify = new System.Windows.Forms.Button();
@@ -82,6 +82,8 @@
             this.reset = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -93,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -107,50 +111,50 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.JapanButton);
-            this.panel1.Controls.Add(this.EastAustraliaButton);
-            this.panel1.Controls.Add(this.WestAustraliaButton);
-            this.panel1.Controls.Add(this.NewGuineaButton);
-            this.panel1.Controls.Add(this.IndonesiaButton);
-            this.panel1.Controls.Add(this.SiamButton);
-            this.panel1.Controls.Add(this.MongoliaButton);
-            this.panel1.Controls.Add(this.IrkutskButton);
-            this.panel1.Controls.Add(this.KamchatkaButton);
-            this.panel1.Controls.Add(this.YakutskButton);
-            this.panel1.Controls.Add(this.SiberiaButton);
-            this.panel1.Controls.Add(this.ChinaButton);
-            this.panel1.Controls.Add(this.IndiaButton);
-            this.panel1.Controls.Add(this.AfghanistanButton);
-            this.panel1.Controls.Add(this.MiddleEastButton);
-            this.panel1.Controls.Add(this.UralButton);
-            this.panel1.Controls.Add(this.UkraineButton);
-            this.panel1.Controls.Add(this.SouthEuropeButton);
-            this.panel1.Controls.Add(this.NorthEuropeButton);
-            this.panel1.Controls.Add(this.ScandinaviaButton);
-            this.panel1.Controls.Add(this.WestEuropeButton);
-            this.panel1.Controls.Add(this.GreatBritainButton);
-            this.panel1.Controls.Add(this.IcelandButton);
-            this.panel1.Controls.Add(this.GreenlandButton);
-            this.panel1.Controls.Add(this.QuebecButton);
-            this.panel1.Controls.Add(this.OntarioButton);
-            this.panel1.Controls.Add(this.NorthwestTerritoryButton);
-            this.panel1.Controls.Add(this.AlaskaButton);
-            this.panel1.Controls.Add(this.AlbertaButton);
-            this.panel1.Controls.Add(this.EasternUSButton);
-            this.panel1.Controls.Add(this.WesternUSButton);
-            this.panel1.Controls.Add(this.CentralAmericaButton);
-            this.panel1.Controls.Add(this.VenezuelaButton);
-            this.panel1.Controls.Add(this.BrazilButton);
-            this.panel1.Controls.Add(this.PeruButton);
-            this.panel1.Controls.Add(this.ArgentinaButton);
-            this.panel1.Controls.Add(this.EgyptButton);
-            this.panel1.Controls.Add(this.EastAfricaButton);
-            this.panel1.Controls.Add(this.MadagascarButton);
+            this.panel1.Controls.Add(this.Japan);
+            this.panel1.Controls.Add(this.EasternAustralia);
+            this.panel1.Controls.Add(this.WesternAustralia);
+            this.panel1.Controls.Add(this.NewGuinea);
+            this.panel1.Controls.Add(this.Indonesia);
+            this.panel1.Controls.Add(this.Siam);
+            this.panel1.Controls.Add(this.Mongolia);
+            this.panel1.Controls.Add(this.Irkutsk);
+            this.panel1.Controls.Add(this.Kamchatka);
+            this.panel1.Controls.Add(this.Yakutsk);
+            this.panel1.Controls.Add(this.Siberia);
+            this.panel1.Controls.Add(this.China);
+            this.panel1.Controls.Add(this.India);
+            this.panel1.Controls.Add(this.Afghanistan);
+            this.panel1.Controls.Add(this.MiddleEast);
+            this.panel1.Controls.Add(this.Ural);
+            this.panel1.Controls.Add(this.Ukraine);
+            this.panel1.Controls.Add(this.SouthernEurope);
+            this.panel1.Controls.Add(this.NorthernEurope);
+            this.panel1.Controls.Add(this.Scandinavia);
+            this.panel1.Controls.Add(this.WesternEurope);
+            this.panel1.Controls.Add(this.GreatBritain);
+            this.panel1.Controls.Add(this.Iceland);
+            this.panel1.Controls.Add(this.Greenland);
+            this.panel1.Controls.Add(this.Quebec);
+            this.panel1.Controls.Add(this.Ontario);
+            this.panel1.Controls.Add(this.NorthwestTerritory);
+            this.panel1.Controls.Add(this.Alaska);
+            this.panel1.Controls.Add(this.Alberta);
+            this.panel1.Controls.Add(this.EasternUnitedStates);
+            this.panel1.Controls.Add(this.WesternUnitedStates);
+            this.panel1.Controls.Add(this.CentralAmerica);
+            this.panel1.Controls.Add(this.Venezuela);
+            this.panel1.Controls.Add(this.Brazil);
+            this.panel1.Controls.Add(this.Peru);
+            this.panel1.Controls.Add(this.Argentina);
+            this.panel1.Controls.Add(this.Egypt);
+            this.panel1.Controls.Add(this.EastAfrica);
+            this.panel1.Controls.Add(this.Madagascar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.SouthAfricaButton);
-            this.panel1.Controls.Add(this.CongoButton);
-            this.panel1.Controls.Add(this.NorthAfricaButton);
+            this.panel1.Controls.Add(this.SouthAfrica);
+            this.panel1.Controls.Add(this.Congo);
+            this.panel1.Controls.Add(this.NorthAfrica);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(10, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -158,395 +162,395 @@
             this.panel1.Size = new System.Drawing.Size(1238, 682);
             this.panel1.TabIndex = 0;
             // 
-            // button47
-            // 
-            this.JapanButton.Location = new System.Drawing.Point(1103, 204);
-            this.JapanButton.Name = "Japan";
-            this.JapanButton.Size = new System.Drawing.Size(30, 23);
-            this.JapanButton.TabIndex = 43;
-            this.JapanButton.Text = "button47";
-            this.JapanButton.UseVisualStyleBackColor = true;
-            this.JapanButton.Click += new System.EventHandler(this.button47_Click);
-            // 
-            // button46
-            // 
-            this.EastAustraliaButton.Location = new System.Drawing.Point(1128, 510);
-            this.EastAustraliaButton.Name = "Eastern Australia";
-            this.EastAustraliaButton.Size = new System.Drawing.Size(30, 23);
-            this.EastAustraliaButton.TabIndex = 42;
-            this.EastAustraliaButton.Text = "button46";
-            this.EastAustraliaButton.UseVisualStyleBackColor = true;
-            this.EastAustraliaButton.Click += new System.EventHandler(this.button46_Click);
-            // 
-            // button45
-            // 
-            this.WestAustraliaButton.Location = new System.Drawing.Point(1036, 515);
-            this.WestAustraliaButton.Name = "Western Australia";
-            this.WestAustraliaButton.Size = new System.Drawing.Size(30, 23);
-            this.WestAustraliaButton.TabIndex = 41;
-            this.WestAustraliaButton.Text = "button45";
-            this.WestAustraliaButton.UseVisualStyleBackColor = true;
-            this.WestAustraliaButton.Click += new System.EventHandler(this.button45_Click);
-            // 
-            // button44
-            // 
-            this.NewGuineaButton.Location = new System.Drawing.Point(1135, 407);
-            this.NewGuineaButton.Name = "New Guinea";
-            this.NewGuineaButton.Size = new System.Drawing.Size(30, 23);
-            this.NewGuineaButton.TabIndex = 40;
-            this.NewGuineaButton.Text = "button44";
-            this.NewGuineaButton.UseVisualStyleBackColor = true;
-            this.NewGuineaButton.Click += new System.EventHandler(this.button44_Click);
-            // 
-            // button43
-            // 
-            this.IndonesiaButton.Location = new System.Drawing.Point(1021, 382);
-            this.IndonesiaButton.Name = "Indonesia";
-            this.IndonesiaButton.Size = new System.Drawing.Size(30, 23);
-            this.IndonesiaButton.TabIndex = 39;
-            this.IndonesiaButton.Text = "button43";
-            this.IndonesiaButton.UseVisualStyleBackColor = true;
-            this.IndonesiaButton.Click += new System.EventHandler(this.button43_Click);
-            // 
-            // button42
-            // 
-            this.SiamButton.Location = new System.Drawing.Point(969, 300);
-            this.SiamButton.Name = "Siam";
-            this.SiamButton.Size = new System.Drawing.Size(30, 23);
-            this.SiamButton.TabIndex = 38;
-            this.SiamButton.Text = "button42";
-            this.SiamButton.UseVisualStyleBackColor = true;
-            this.SiamButton.Click += new System.EventHandler(this.button42_Click);
-            // 
-            // button41
-            // 
-            this.MongoliaButton.Location = new System.Drawing.Point(956, 161);
-            this.MongoliaButton.Name = "Mongolia";
-            this.MongoliaButton.Size = new System.Drawing.Size(30, 23);
-            this.MongoliaButton.TabIndex = 37;
-            this.MongoliaButton.Text = "button41";
-            this.MongoliaButton.UseVisualStyleBackColor = true;
-            this.MongoliaButton.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // button40
-            // 
-            this.IrkutskButton.Location = new System.Drawing.Point(943, 121);
-            this.IrkutskButton.Name = "Irkutsk";
-            this.IrkutskButton.Size = new System.Drawing.Size(30, 23);
-            this.IrkutskButton.TabIndex = 36;
-            this.IrkutskButton.Text = "button40";
-            this.IrkutskButton.UseVisualStyleBackColor = true;
-            this.IrkutskButton.Click += new System.EventHandler(this.button40_Click);
-            // 
-            // button39
-            // 
-            this.KamchatkaButton.Location = new System.Drawing.Point(1066, 71);
-            this.KamchatkaButton.Name = "Kamchatka";
-            this.KamchatkaButton.Size = new System.Drawing.Size(30, 23);
-            this.KamchatkaButton.TabIndex = 35;
-            this.KamchatkaButton.Text = "button39";
-            this.KamchatkaButton.UseVisualStyleBackColor = true;
-            this.KamchatkaButton.Click += new System.EventHandler(this.button39_Click);
-            // 
-            // button38
-            // 
-            this.YakutskButton.Location = new System.Drawing.Point(951, 70);
-            this.YakutskButton.Name = "Yakutsk";
-            this.YakutskButton.Size = new System.Drawing.Size(30, 23);
-            this.YakutskButton.TabIndex = 34;
-            this.YakutskButton.Text = "button38";
-            this.YakutskButton.UseVisualStyleBackColor = true;
-            this.YakutskButton.Click += new System.EventHandler(this.button38_Click);
-            // 
-            // button37
-            // 
-            this.SiberiaButton.Location = new System.Drawing.Point(855, 73);
-            this.SiberiaButton.Name = "Siberia";
-            this.SiberiaButton.Size = new System.Drawing.Size(30, 23);
-            this.SiberiaButton.TabIndex = 33;
-            this.SiberiaButton.Text = "button37";
-            this.SiberiaButton.UseVisualStyleBackColor = true;
-            this.SiberiaButton.Click += new System.EventHandler(this.button37_Click);
-            // 
-            // button36
-            // 
-            this.ChinaButton.Location = new System.Drawing.Point(942, 218);
-            this.ChinaButton.Name = "China";
-            this.ChinaButton.Size = new System.Drawing.Size(30, 23);
-            this.ChinaButton.TabIndex = 32;
-            this.ChinaButton.Text = "button36";
-            this.ChinaButton.UseVisualStyleBackColor = true;
-            this.ChinaButton.Click += new System.EventHandler(this.button36_Click);
-            // 
-            // button35
-            // 
-            this.IndiaButton.Location = new System.Drawing.Point(859, 265);
-            this.IndiaButton.Name = "India";
-            this.IndiaButton.Size = new System.Drawing.Size(30, 23);
-            this.IndiaButton.TabIndex = 31;
-            this.IndiaButton.Text = "button35";
-            this.IndiaButton.UseVisualStyleBackColor = true;
-            this.IndiaButton.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // button34
-            // 
-            this.AfghanistanButton.Location = new System.Drawing.Point(791, 163);
-            this.AfghanistanButton.Name = "Afghanistan";
-            this.AfghanistanButton.Size = new System.Drawing.Size(30, 23);
-            this.AfghanistanButton.TabIndex = 30;
-            this.AfghanistanButton.Text = "button34";
-            this.AfghanistanButton.UseVisualStyleBackColor = true;
-            this.AfghanistanButton.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button33
-            // 
-            this.MiddleEastButton.Location = new System.Drawing.Point(714, 218);
-            this.MiddleEastButton.Name = "Middle East";
-            this.MiddleEastButton.Size = new System.Drawing.Size(30, 23);
-            this.MiddleEastButton.TabIndex = 29;
-            this.MiddleEastButton.Text = "button33";
-            this.MiddleEastButton.UseVisualStyleBackColor = true;
-            this.MiddleEastButton.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // button32
-            // 
-            this.UralButton.Location = new System.Drawing.Point(784, 91);
-            this.UralButton.Name = "Ural";
-            this.UralButton.Size = new System.Drawing.Size(30, 23);
-            this.UralButton.TabIndex = 28;
-            this.UralButton.Text = "button32";
-            this.UralButton.UseVisualStyleBackColor = true;
-            this.UralButton.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // button31
-            // 
-            this.UkraineButton.Location = new System.Drawing.Point(680, 114);
-            this.UkraineButton.Name = "Ukraine";
-            this.UkraineButton.Size = new System.Drawing.Size(30, 23);
-            this.UkraineButton.TabIndex = 27;
-            this.UkraineButton.Text = "button31";
-            this.UkraineButton.UseVisualStyleBackColor = true;
-            this.UkraineButton.Click += new System.EventHandler(this.button31_Click);
-            // 
-            // button30
-            // 
-            this.SouthEuropeButton.Location = new System.Drawing.Point(629, 167);
-            this.SouthEuropeButton.Name = "Southern Europe";
-            this.SouthEuropeButton.Size = new System.Drawing.Size(30, 23);
-            this.SouthEuropeButton.TabIndex = 26;
-            this.SouthEuropeButton.Text = "button30";
-            this.SouthEuropeButton.UseVisualStyleBackColor = true;
-            this.SouthEuropeButton.Click += new System.EventHandler(this.button30_Click);
-            // 
-            // button29
-            // 
-            this.NorthEuropeButton.Location = new System.Drawing.Point(598, 130);
-            this.NorthEuropeButton.Name = "Northern Europe";
-            this.NorthEuropeButton.Size = new System.Drawing.Size(30, 23);
-            this.NorthEuropeButton.TabIndex = 25;
-            this.NorthEuropeButton.Text = "button29";
-            this.NorthEuropeButton.UseVisualStyleBackColor = true;
-            this.NorthEuropeButton.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button28
-            // 
-            this.ScandinaviaButton.Location = new System.Drawing.Point(597, 79);
-            this.ScandinaviaButton.Name = "Scandinavia";
-            this.ScandinaviaButton.Size = new System.Drawing.Size(30, 23);
-            this.ScandinaviaButton.TabIndex = 24;
-            this.ScandinaviaButton.Text = "button28";
-            this.ScandinaviaButton.UseVisualStyleBackColor = true;
-            this.ScandinaviaButton.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button27
-            // 
-            this.WestEuropeButton.Location = new System.Drawing.Point(552, 169);
-            this.WestEuropeButton.Name = "Western Europe";
-            this.WestEuropeButton.Size = new System.Drawing.Size(30, 23);
-            this.WestEuropeButton.TabIndex = 23;
-            this.WestEuropeButton.Text = "button27";
-            this.WestEuropeButton.UseVisualStyleBackColor = true;
-            this.WestEuropeButton.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button26
-            // 
-            this.GreatBritainButton.Location = new System.Drawing.Point(503, 122);
-            this.GreatBritainButton.Name = "Great Britain";
-            this.GreatBritainButton.Size = new System.Drawing.Size(30, 23);
-            this.GreatBritainButton.TabIndex = 22;
-            this.GreatBritainButton.Text = "button26";
-            this.GreatBritainButton.UseVisualStyleBackColor = true;
-            this.GreatBritainButton.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button25
-            // 
-            this.IcelandButton.Location = new System.Drawing.Point(482, 84);
-            this.IcelandButton.Name = "Iceland";
-            this.IcelandButton.Size = new System.Drawing.Size(30, 23);
-            this.IcelandButton.TabIndex = 21;
-            this.IcelandButton.Text = "button25";
-            this.IcelandButton.UseVisualStyleBackColor = true;
-            this.IcelandButton.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // button24
-            // 
-            this.GreenlandButton.Location = new System.Drawing.Point(417, 36);
-            this.GreenlandButton.Name = "Greenland";
-            this.GreenlandButton.Size = new System.Drawing.Size(30, 23);
-            this.GreenlandButton.TabIndex = 20;
-            this.GreenlandButton.Text = "button24";
-            this.GreenlandButton.UseVisualStyleBackColor = true;
-            this.GreenlandButton.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button23
-            // 
-            this.QuebecButton.Location = new System.Drawing.Point(300, 118);
-            this.QuebecButton.Name = "Quebec";
-            this.QuebecButton.Size = new System.Drawing.Size(30, 23);
-            this.QuebecButton.TabIndex = 19;
-            this.QuebecButton.Text = "button23";
-            this.QuebecButton.UseVisualStyleBackColor = true;
-            this.QuebecButton.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button22
-            // 
-            this.OntarioButton.Location = new System.Drawing.Point(221, 121);
-            this.OntarioButton.Name = "Ontario";
-            this.OntarioButton.Size = new System.Drawing.Size(30, 23);
-            this.OntarioButton.TabIndex = 18;
-            this.OntarioButton.Text = "button22";
-            this.OntarioButton.UseVisualStyleBackColor = true;
-            this.OntarioButton.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // button21
-            // 
-            this.NorthwestTerritoryButton.Location = new System.Drawing.Point(167, 67);
-            this.NorthwestTerritoryButton.Name = "Northwest Territory";
-            this.NorthwestTerritoryButton.Size = new System.Drawing.Size(30, 23);
-            this.NorthwestTerritoryButton.TabIndex = 17;
-            this.NorthwestTerritoryButton.Text = "button21";
-            this.NorthwestTerritoryButton.UseVisualStyleBackColor = true;
-            this.NorthwestTerritoryButton.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button20
-            // 
-            this.AlaskaButton.Location = new System.Drawing.Point(68, 70);
-            this.AlaskaButton.Name = "Alaska";
-            this.AlaskaButton.Size = new System.Drawing.Size(30, 23);
-            this.AlaskaButton.TabIndex = 16;
-            this.AlaskaButton.Text = "button20";
-            this.AlaskaButton.UseVisualStyleBackColor = true;
-            this.AlaskaButton.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button19
-            // 
-            this.AlbertaButton.Location = new System.Drawing.Point(130, 116);
-            this.AlbertaButton.Name = "Alberta";
-            this.AlbertaButton.Size = new System.Drawing.Size(30, 23);
-            this.AlbertaButton.TabIndex = 15;
-            this.AlbertaButton.Text = "button19";
-            this.AlbertaButton.UseVisualStyleBackColor = true;
-            this.AlbertaButton.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button18
-            // 
-            this.EasternUSButton.Location = new System.Drawing.Point(201, 193);
-            this.EasternUSButton.Name = "Eastern United States";
-            this.EasternUSButton.Size = new System.Drawing.Size(30, 23);
-            this.EasternUSButton.TabIndex = 14;
-            this.EasternUSButton.Text = "button18";
-            this.EasternUSButton.UseVisualStyleBackColor = true;
-            this.EasternUSButton.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button17
-            // 
-            this.WesternUSButton.Location = new System.Drawing.Point(111, 172);
-            this.WesternUSButton.Name = "Western United States";
-            this.WesternUSButton.Size = new System.Drawing.Size(30, 23);
-            this.WesternUSButton.TabIndex = 13;
-            this.WesternUSButton.Text = "button17";
-            this.WesternUSButton.UseVisualStyleBackColor = true;
-            this.WesternUSButton.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button16
-            // 
-            this.CentralAmericaButton.Location = new System.Drawing.Point(127, 262);
-            this.CentralAmericaButton.Name = "Central America";
-            this.CentralAmericaButton.Size = new System.Drawing.Size(30, 23);
-            this.CentralAmericaButton.TabIndex = 12;
-            this.CentralAmericaButton.Text = "button16";
-            this.CentralAmericaButton.UseVisualStyleBackColor = true;
-            this.CentralAmericaButton.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button15
-            // 
-            this.VenezuelaButton.Location = new System.Drawing.Point(257, 351);
-            this.VenezuelaButton.Name = "Venezuela";
-            this.VenezuelaButton.Size = new System.Drawing.Size(30, 23);
-            this.VenezuelaButton.TabIndex = 11;
-            this.VenezuelaButton.Text = "button15";
-            this.VenezuelaButton.UseVisualStyleBackColor = true;
-            this.VenezuelaButton.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button14
-            // 
-            this.BrazilButton.Location = new System.Drawing.Point(330, 434);
-            this.BrazilButton.Name = "Brazil";
-            this.BrazilButton.Size = new System.Drawing.Size(30, 23);
-            this.BrazilButton.TabIndex = 10;
-            this.BrazilButton.Text = "button14";
-            this.BrazilButton.UseVisualStyleBackColor = true;
-            this.BrazilButton.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button13
-            // 
-            this.PeruButton.Location = new System.Drawing.Point(271, 458);
-            this.PeruButton.Name = "Peru";
-            this.PeruButton.Size = new System.Drawing.Size(30, 23);
-            this.PeruButton.TabIndex = 9;
-            this.PeruButton.Text = "button13";
-            this.PeruButton.UseVisualStyleBackColor = true;
-            this.PeruButton.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button12
-            // 
-            this.ArgentinaButton.Location = new System.Drawing.Point(282, 539);
-            this.ArgentinaButton.Name = "Argentina";
-            this.ArgentinaButton.Size = new System.Drawing.Size(30, 23);
-            this.ArgentinaButton.TabIndex = 8;
-            this.ArgentinaButton.Text = "button12";
-            this.ArgentinaButton.UseVisualStyleBackColor = true;
-            this.ArgentinaButton.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button11
-            // 
-            this.EgyptButton.Location = new System.Drawing.Point(628, 247);
-            this.EgyptButton.Name = "Egypt";
-            this.EgyptButton.Size = new System.Drawing.Size(30, 23);
-            this.EgyptButton.TabIndex = 7;
-            this.EgyptButton.Text = "button11";
-            this.EgyptButton.UseVisualStyleBackColor = true;
-            this.EgyptButton.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.EastAfricaButton.Location = new System.Drawing.Point(707, 340);
-            this.EastAfricaButton.Name = "East Africa";
-            this.EastAfricaButton.Size = new System.Drawing.Size(31, 23);
-            this.EastAfricaButton.TabIndex = 6;
-            this.EastAfricaButton.Text = "button10";
-            this.EastAfricaButton.UseVisualStyleBackColor = true;
-            this.EastAfricaButton.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button1
-            // 
-            this.MadagascarButton.Location = new System.Drawing.Point(733, 473);
-            this.MadagascarButton.Name = "Madagascar";
-            this.MadagascarButton.Size = new System.Drawing.Size(32, 23);
-            this.MadagascarButton.TabIndex = 5;
-            this.MadagascarButton.Text = "button1";
-            this.MadagascarButton.UseVisualStyleBackColor = true;
-            this.MadagascarButton.Click += new System.EventHandler(this.button1_Click);
+            // Japan
+            // 
+            this.Japan.Location = new System.Drawing.Point(1103, 204);
+            this.Japan.Name = "Japan";
+            this.Japan.Size = new System.Drawing.Size(30, 23);
+            this.Japan.TabIndex = 43;
+            this.Japan.Text = "button47";
+            this.Japan.UseVisualStyleBackColor = true;
+            this.Japan.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // EasternAustralia
+            // 
+            this.EasternAustralia.Location = new System.Drawing.Point(1128, 510);
+            this.EasternAustralia.Name = "Eastern Australia";
+            this.EasternAustralia.Size = new System.Drawing.Size(30, 23);
+            this.EasternAustralia.TabIndex = 42;
+            this.EasternAustralia.Text = "button46";
+            this.EasternAustralia.UseVisualStyleBackColor = true;
+            this.EasternAustralia.Click += new System.EventHandler(this.button46_Click);
+            // 
+            // WesternAustralia
+            // 
+            this.WesternAustralia.Location = new System.Drawing.Point(1036, 515);
+            this.WesternAustralia.Name = "Western Australia";
+            this.WesternAustralia.Size = new System.Drawing.Size(30, 23);
+            this.WesternAustralia.TabIndex = 41;
+            this.WesternAustralia.Text = "button45";
+            this.WesternAustralia.UseVisualStyleBackColor = true;
+            this.WesternAustralia.Click += new System.EventHandler(this.button45_Click);
+            // 
+            // NewGuinea
+            // 
+            this.NewGuinea.Location = new System.Drawing.Point(1135, 407);
+            this.NewGuinea.Name = "New Guinea";
+            this.NewGuinea.Size = new System.Drawing.Size(30, 23);
+            this.NewGuinea.TabIndex = 40;
+            this.NewGuinea.Text = "button44";
+            this.NewGuinea.UseVisualStyleBackColor = true;
+            this.NewGuinea.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // Indonesia
+            // 
+            this.Indonesia.Location = new System.Drawing.Point(1021, 382);
+            this.Indonesia.Name = "Indonesia";
+            this.Indonesia.Size = new System.Drawing.Size(30, 23);
+            this.Indonesia.TabIndex = 39;
+            this.Indonesia.Text = "button43";
+            this.Indonesia.UseVisualStyleBackColor = true;
+            this.Indonesia.Click += new System.EventHandler(this.button43_Click);
+            // 
+            // Siam
+            // 
+            this.Siam.Location = new System.Drawing.Point(969, 300);
+            this.Siam.Name = "Siam";
+            this.Siam.Size = new System.Drawing.Size(30, 23);
+            this.Siam.TabIndex = 38;
+            this.Siam.Text = "button42";
+            this.Siam.UseVisualStyleBackColor = true;
+            this.Siam.Click += new System.EventHandler(this.button42_Click);
+            // 
+            // Mongolia
+            // 
+            this.Mongolia.Location = new System.Drawing.Point(956, 161);
+            this.Mongolia.Name = "Mongolia";
+            this.Mongolia.Size = new System.Drawing.Size(30, 23);
+            this.Mongolia.TabIndex = 37;
+            this.Mongolia.Text = "button41";
+            this.Mongolia.UseVisualStyleBackColor = true;
+            this.Mongolia.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // Irkutsk
+            // 
+            this.Irkutsk.Location = new System.Drawing.Point(943, 121);
+            this.Irkutsk.Name = "Irkutsk";
+            this.Irkutsk.Size = new System.Drawing.Size(30, 23);
+            this.Irkutsk.TabIndex = 36;
+            this.Irkutsk.Text = "button40";
+            this.Irkutsk.UseVisualStyleBackColor = true;
+            this.Irkutsk.Click += new System.EventHandler(this.button40_Click);
+            // 
+            // Kamchatka
+            // 
+            this.Kamchatka.Location = new System.Drawing.Point(1066, 71);
+            this.Kamchatka.Name = "Kamchatka";
+            this.Kamchatka.Size = new System.Drawing.Size(30, 23);
+            this.Kamchatka.TabIndex = 35;
+            this.Kamchatka.Text = "button39";
+            this.Kamchatka.UseVisualStyleBackColor = true;
+            this.Kamchatka.Click += new System.EventHandler(this.button39_Click);
+            // 
+            // Yakutsk
+            // 
+            this.Yakutsk.Location = new System.Drawing.Point(951, 70);
+            this.Yakutsk.Name = "Yakutsk";
+            this.Yakutsk.Size = new System.Drawing.Size(30, 23);
+            this.Yakutsk.TabIndex = 34;
+            this.Yakutsk.Text = "button38";
+            this.Yakutsk.UseVisualStyleBackColor = true;
+            this.Yakutsk.Click += new System.EventHandler(this.button38_Click);
+            // 
+            // Siberia
+            // 
+            this.Siberia.Location = new System.Drawing.Point(855, 73);
+            this.Siberia.Name = "Siberia";
+            this.Siberia.Size = new System.Drawing.Size(30, 23);
+            this.Siberia.TabIndex = 33;
+            this.Siberia.Text = "button37";
+            this.Siberia.UseVisualStyleBackColor = true;
+            this.Siberia.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // China
+            // 
+            this.China.Location = new System.Drawing.Point(942, 218);
+            this.China.Name = "China";
+            this.China.Size = new System.Drawing.Size(30, 23);
+            this.China.TabIndex = 32;
+            this.China.Text = "button36";
+            this.China.UseVisualStyleBackColor = true;
+            this.China.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // India
+            // 
+            this.India.Location = new System.Drawing.Point(859, 265);
+            this.India.Name = "India";
+            this.India.Size = new System.Drawing.Size(30, 23);
+            this.India.TabIndex = 31;
+            this.India.Text = "button35";
+            this.India.UseVisualStyleBackColor = true;
+            this.India.Click += new System.EventHandler(this.button35_Click);
+            // 
+            // Afghanistan
+            // 
+            this.Afghanistan.Location = new System.Drawing.Point(791, 163);
+            this.Afghanistan.Name = "Afghanistan";
+            this.Afghanistan.Size = new System.Drawing.Size(30, 23);
+            this.Afghanistan.TabIndex = 30;
+            this.Afghanistan.Text = "button34";
+            this.Afghanistan.UseVisualStyleBackColor = true;
+            this.Afghanistan.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // MiddleEast
+            // 
+            this.MiddleEast.Location = new System.Drawing.Point(714, 218);
+            this.MiddleEast.Name = "Middle East";
+            this.MiddleEast.Size = new System.Drawing.Size(30, 23);
+            this.MiddleEast.TabIndex = 29;
+            this.MiddleEast.Text = "button33";
+            this.MiddleEast.UseVisualStyleBackColor = true;
+            this.MiddleEast.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // Ural
+            // 
+            this.Ural.Location = new System.Drawing.Point(784, 91);
+            this.Ural.Name = "Ural";
+            this.Ural.Size = new System.Drawing.Size(30, 23);
+            this.Ural.TabIndex = 28;
+            this.Ural.Text = "button32";
+            this.Ural.UseVisualStyleBackColor = true;
+            this.Ural.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // Ukraine
+            // 
+            this.Ukraine.Location = new System.Drawing.Point(680, 114);
+            this.Ukraine.Name = "Ukraine";
+            this.Ukraine.Size = new System.Drawing.Size(30, 23);
+            this.Ukraine.TabIndex = 27;
+            this.Ukraine.Text = "button31";
+            this.Ukraine.UseVisualStyleBackColor = true;
+            this.Ukraine.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // SouthernEurope
+            // 
+            this.SouthernEurope.Location = new System.Drawing.Point(629, 167);
+            this.SouthernEurope.Name = "Southern Europe";
+            this.SouthernEurope.Size = new System.Drawing.Size(30, 23);
+            this.SouthernEurope.TabIndex = 26;
+            this.SouthernEurope.Text = "button30";
+            this.SouthernEurope.UseVisualStyleBackColor = true;
+            this.SouthernEurope.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // NorthernEurope
+            // 
+            this.NorthernEurope.Location = new System.Drawing.Point(598, 130);
+            this.NorthernEurope.Name = "Northern Europe";
+            this.NorthernEurope.Size = new System.Drawing.Size(30, 23);
+            this.NorthernEurope.TabIndex = 25;
+            this.NorthernEurope.Text = "button29";
+            this.NorthernEurope.UseVisualStyleBackColor = true;
+            this.NorthernEurope.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // Scandinavia
+            // 
+            this.Scandinavia.Location = new System.Drawing.Point(597, 79);
+            this.Scandinavia.Name = "Scandinavia";
+            this.Scandinavia.Size = new System.Drawing.Size(30, 23);
+            this.Scandinavia.TabIndex = 24;
+            this.Scandinavia.Text = "button28";
+            this.Scandinavia.UseVisualStyleBackColor = true;
+            this.Scandinavia.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // WesternEurope
+            // 
+            this.WesternEurope.Location = new System.Drawing.Point(552, 169);
+            this.WesternEurope.Name = "Western Europe";
+            this.WesternEurope.Size = new System.Drawing.Size(30, 23);
+            this.WesternEurope.TabIndex = 23;
+            this.WesternEurope.Text = "button27";
+            this.WesternEurope.UseVisualStyleBackColor = true;
+            this.WesternEurope.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // GreatBritain
+            // 
+            this.GreatBritain.Location = new System.Drawing.Point(503, 122);
+            this.GreatBritain.Name = "Great Britain";
+            this.GreatBritain.Size = new System.Drawing.Size(30, 23);
+            this.GreatBritain.TabIndex = 22;
+            this.GreatBritain.Text = "button26";
+            this.GreatBritain.UseVisualStyleBackColor = true;
+            this.GreatBritain.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // Iceland
+            // 
+            this.Iceland.Location = new System.Drawing.Point(482, 84);
+            this.Iceland.Name = "Iceland";
+            this.Iceland.Size = new System.Drawing.Size(30, 23);
+            this.Iceland.TabIndex = 21;
+            this.Iceland.Text = "button25";
+            this.Iceland.UseVisualStyleBackColor = true;
+            this.Iceland.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // Greenland
+            // 
+            this.Greenland.Location = new System.Drawing.Point(417, 36);
+            this.Greenland.Name = "Greenland";
+            this.Greenland.Size = new System.Drawing.Size(30, 23);
+            this.Greenland.TabIndex = 20;
+            this.Greenland.Text = "button24";
+            this.Greenland.UseVisualStyleBackColor = true;
+            this.Greenland.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // Quebec
+            // 
+            this.Quebec.Location = new System.Drawing.Point(300, 118);
+            this.Quebec.Name = "Quebec";
+            this.Quebec.Size = new System.Drawing.Size(30, 23);
+            this.Quebec.TabIndex = 19;
+            this.Quebec.Text = "button23";
+            this.Quebec.UseVisualStyleBackColor = true;
+            this.Quebec.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // Ontario
+            // 
+            this.Ontario.Location = new System.Drawing.Point(221, 121);
+            this.Ontario.Name = "Ontario";
+            this.Ontario.Size = new System.Drawing.Size(30, 23);
+            this.Ontario.TabIndex = 18;
+            this.Ontario.Text = "button22";
+            this.Ontario.UseVisualStyleBackColor = true;
+            this.Ontario.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // NorthwestTerritory
+            // 
+            this.NorthwestTerritory.Location = new System.Drawing.Point(167, 67);
+            this.NorthwestTerritory.Name = "Northwest Territory";
+            this.NorthwestTerritory.Size = new System.Drawing.Size(30, 23);
+            this.NorthwestTerritory.TabIndex = 17;
+            this.NorthwestTerritory.Text = "button21";
+            this.NorthwestTerritory.UseVisualStyleBackColor = true;
+            this.NorthwestTerritory.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // Alaska
+            // 
+            this.Alaska.Location = new System.Drawing.Point(68, 70);
+            this.Alaska.Name = "Alaska";
+            this.Alaska.Size = new System.Drawing.Size(30, 23);
+            this.Alaska.TabIndex = 16;
+            this.Alaska.Text = "button20";
+            this.Alaska.UseVisualStyleBackColor = true;
+            this.Alaska.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // Alberta
+            // 
+            this.Alberta.Location = new System.Drawing.Point(130, 116);
+            this.Alberta.Name = "Alberta";
+            this.Alberta.Size = new System.Drawing.Size(30, 23);
+            this.Alberta.TabIndex = 15;
+            this.Alberta.Text = "button19";
+            this.Alberta.UseVisualStyleBackColor = true;
+            this.Alberta.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // EasternUnitedStates
+            // 
+            this.EasternUnitedStates.Location = new System.Drawing.Point(201, 193);
+            this.EasternUnitedStates.Name = "Eastern United States";
+            this.EasternUnitedStates.Size = new System.Drawing.Size(30, 23);
+            this.EasternUnitedStates.TabIndex = 14;
+            this.EasternUnitedStates.Text = "button18";
+            this.EasternUnitedStates.UseVisualStyleBackColor = true;
+            this.EasternUnitedStates.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // WesternUnitedStates
+            // 
+            this.WesternUnitedStates.Location = new System.Drawing.Point(111, 172);
+            this.WesternUnitedStates.Name = "Western United States";
+            this.WesternUnitedStates.Size = new System.Drawing.Size(30, 23);
+            this.WesternUnitedStates.TabIndex = 13;
+            this.WesternUnitedStates.Text = "button17";
+            this.WesternUnitedStates.UseVisualStyleBackColor = true;
+            this.WesternUnitedStates.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // CentralAmerica
+            // 
+            this.CentralAmerica.Location = new System.Drawing.Point(127, 262);
+            this.CentralAmerica.Name = "Central America";
+            this.CentralAmerica.Size = new System.Drawing.Size(30, 23);
+            this.CentralAmerica.TabIndex = 12;
+            this.CentralAmerica.Text = "button16";
+            this.CentralAmerica.UseVisualStyleBackColor = true;
+            this.CentralAmerica.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // Venezuela
+            // 
+            this.Venezuela.Location = new System.Drawing.Point(257, 351);
+            this.Venezuela.Name = "Venezuela";
+            this.Venezuela.Size = new System.Drawing.Size(30, 23);
+            this.Venezuela.TabIndex = 11;
+            this.Venezuela.Text = "button15";
+            this.Venezuela.UseVisualStyleBackColor = true;
+            this.Venezuela.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // Brazil
+            // 
+            this.Brazil.Location = new System.Drawing.Point(330, 434);
+            this.Brazil.Name = "Brazil";
+            this.Brazil.Size = new System.Drawing.Size(30, 23);
+            this.Brazil.TabIndex = 10;
+            this.Brazil.Text = "button14";
+            this.Brazil.UseVisualStyleBackColor = true;
+            this.Brazil.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // Peru
+            // 
+            this.Peru.Location = new System.Drawing.Point(271, 458);
+            this.Peru.Name = "Peru";
+            this.Peru.Size = new System.Drawing.Size(30, 23);
+            this.Peru.TabIndex = 9;
+            this.Peru.Text = "button13";
+            this.Peru.UseVisualStyleBackColor = true;
+            this.Peru.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // Argentina
+            // 
+            this.Argentina.Location = new System.Drawing.Point(282, 539);
+            this.Argentina.Name = "Argentina";
+            this.Argentina.Size = new System.Drawing.Size(30, 23);
+            this.Argentina.TabIndex = 8;
+            this.Argentina.Text = "button12";
+            this.Argentina.UseVisualStyleBackColor = true;
+            this.Argentina.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // Egypt
+            // 
+            this.Egypt.Location = new System.Drawing.Point(628, 247);
+            this.Egypt.Name = "Egypt";
+            this.Egypt.Size = new System.Drawing.Size(30, 23);
+            this.Egypt.TabIndex = 7;
+            this.Egypt.Text = "button11";
+            this.Egypt.UseVisualStyleBackColor = true;
+            this.Egypt.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // EastAfrica
+            // 
+            this.EastAfrica.Location = new System.Drawing.Point(707, 340);
+            this.EastAfrica.Name = "East Africa";
+            this.EastAfrica.Size = new System.Drawing.Size(31, 23);
+            this.EastAfrica.TabIndex = 6;
+            this.EastAfrica.Text = "button10";
+            this.EastAfrica.UseVisualStyleBackColor = true;
+            this.EastAfrica.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // Madagascar
+            // 
+            this.Madagascar.Location = new System.Drawing.Point(733, 473);
+            this.Madagascar.Name = "Madagascar";
+            this.Madagascar.Size = new System.Drawing.Size(32, 23);
+            this.Madagascar.TabIndex = 5;
+            this.Madagascar.Text = "button1";
+            this.Madagascar.UseVisualStyleBackColor = true;
+            this.Madagascar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -566,38 +570,38 @@
             this.label1.Size = new System.Drawing.Size(0, 26);
             this.label1.TabIndex = 4;
             // 
-            // button9
+            // SouthAfrica
             // 
-            this.SouthAfricaButton.Location = new System.Drawing.Point(633, 477);
-            this.SouthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
-            this.SouthAfricaButton.Name = "South Africa";
-            this.SouthAfricaButton.Size = new System.Drawing.Size(30, 24);
-            this.SouthAfricaButton.TabIndex = 3;
-            this.SouthAfricaButton.Text = "button9";
-            this.SouthAfricaButton.UseVisualStyleBackColor = true;
-            this.SouthAfricaButton.Click += new System.EventHandler(this.button9_Click);
+            this.SouthAfrica.Location = new System.Drawing.Point(633, 477);
+            this.SouthAfrica.Margin = new System.Windows.Forms.Padding(2);
+            this.SouthAfrica.Name = "South Africa";
+            this.SouthAfrica.Size = new System.Drawing.Size(30, 24);
+            this.SouthAfrica.TabIndex = 3;
+            this.SouthAfrica.Text = "button9";
+            this.SouthAfrica.UseVisualStyleBackColor = true;
+            this.SouthAfrica.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // Congo
             // 
-            this.CongoButton.Location = new System.Drawing.Point(628, 380);
-            this.CongoButton.Margin = new System.Windows.Forms.Padding(2);
-            this.CongoButton.Name = "Congo";
-            this.CongoButton.Size = new System.Drawing.Size(31, 23);
-            this.CongoButton.TabIndex = 2;
-            this.CongoButton.Text = "button8";
-            this.CongoButton.UseVisualStyleBackColor = true;
-            this.CongoButton.Click += new System.EventHandler(this.button8_Click);
+            this.Congo.Location = new System.Drawing.Point(628, 380);
+            this.Congo.Margin = new System.Windows.Forms.Padding(2);
+            this.Congo.Name = "Congo";
+            this.Congo.Size = new System.Drawing.Size(31, 23);
+            this.Congo.TabIndex = 2;
+            this.Congo.Text = "button8";
+            this.Congo.UseVisualStyleBackColor = true;
+            this.Congo.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // NorthAfrica
             // 
-            this.NorthAfricaButton.Location = new System.Drawing.Point(537, 290);
-            this.NorthAfricaButton.Margin = new System.Windows.Forms.Padding(2);
-            this.NorthAfricaButton.Name = "North Africa";
-            this.NorthAfricaButton.Size = new System.Drawing.Size(30, 22);
-            this.NorthAfricaButton.TabIndex = 1;
-            this.NorthAfricaButton.Text = "button7";
-            this.NorthAfricaButton.UseVisualStyleBackColor = true;
-            this.NorthAfricaButton.Click += new System.EventHandler(this.button7_Click);
+            this.NorthAfrica.Location = new System.Drawing.Point(537, 290);
+            this.NorthAfrica.Margin = new System.Windows.Forms.Padding(2);
+            this.NorthAfrica.Name = "North Africa";
+            this.NorthAfrica.Size = new System.Drawing.Size(30, 22);
+            this.NorthAfrica.TabIndex = 1;
+            this.NorthAfrica.Text = "button7";
+            this.NorthAfrica.UseVisualStyleBackColor = true;
+            this.NorthAfrica.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox1
             // 
@@ -703,6 +707,8 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.pictureBox8);
+            this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -714,8 +720,31 @@
             this.panel3.Size = new System.Drawing.Size(1235, 98);
             this.panel3.TabIndex = 2;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Risk.Properties.Resources.back;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(360, 3);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Risk.Properties.Resources.back;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(301, 3);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
             // pictureBox6
             // 
+            this.pictureBox6.BackgroundImage = global::Risk.Properties.Resources.back;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(242, 3);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
@@ -726,6 +755,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackgroundImage = global::Risk.Properties.Resources.back;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(182, 3);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
@@ -736,7 +766,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::Risk.Properties.Resources.India_Artillery_Card;
+            this.pictureBox4.BackgroundImage = global::Risk.Properties.Resources.back;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(122, 3);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -747,7 +777,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Risk.Properties.Resources.Iceland_Infantry_Card;
+            this.pictureBox3.BackgroundImage = global::Risk.Properties.Resources.back;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(62, 3);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -759,7 +789,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Risk.Properties.Resources.Eastern_United_States_Artillery_Card;
+            this.pictureBox2.BackgroundImage = global::Risk.Properties.Resources.back;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -809,6 +839,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -837,51 +869,53 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button SouthAfricaButton;
-        private System.Windows.Forms.Button CongoButton;
-        private System.Windows.Forms.Button NorthAfricaButton;
+        private System.Windows.Forms.Button SouthAfrica;
+        private System.Windows.Forms.Button Congo;
+        private System.Windows.Forms.Button NorthAfrica;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button JapanButton;
-        private System.Windows.Forms.Button EastAustraliaButton;
-        private System.Windows.Forms.Button WestAustraliaButton;
-        private System.Windows.Forms.Button NewGuineaButton;
-        private System.Windows.Forms.Button IndonesiaButton;
-        private System.Windows.Forms.Button SiamButton;
-        private System.Windows.Forms.Button MongoliaButton;
-        private System.Windows.Forms.Button IrkutskButton;
-        private System.Windows.Forms.Button KamchatkaButton;
-        private System.Windows.Forms.Button YakutskButton;
-        private System.Windows.Forms.Button SiberiaButton;
-        private System.Windows.Forms.Button ChinaButton;
-        private System.Windows.Forms.Button IndiaButton;
-        private System.Windows.Forms.Button AfghanistanButton;
-        private System.Windows.Forms.Button MiddleEastButton;
-        private System.Windows.Forms.Button UralButton;
-        private System.Windows.Forms.Button UkraineButton;
-        private System.Windows.Forms.Button SouthEuropeButton;
-        private System.Windows.Forms.Button NorthEuropeButton;
-        private System.Windows.Forms.Button ScandinaviaButton;
-        private System.Windows.Forms.Button WestEuropeButton;
-        private System.Windows.Forms.Button GreatBritainButton;
-        private System.Windows.Forms.Button IcelandButton;
-        private System.Windows.Forms.Button GreenlandButton;
-        private System.Windows.Forms.Button QuebecButton;
-        private System.Windows.Forms.Button OntarioButton;
-        private System.Windows.Forms.Button NorthwestTerritoryButton;
-        private System.Windows.Forms.Button AlaskaButton;
-        private System.Windows.Forms.Button AlbertaButton;
-        private System.Windows.Forms.Button EasternUSButton;
-        private System.Windows.Forms.Button WesternUSButton;
-        private System.Windows.Forms.Button CentralAmericaButton;
-        private System.Windows.Forms.Button VenezuelaButton;
-        private System.Windows.Forms.Button BrazilButton;
-        private System.Windows.Forms.Button PeruButton;
-        private System.Windows.Forms.Button ArgentinaButton;
-        private System.Windows.Forms.Button EgyptButton;
-        private System.Windows.Forms.Button EastAfricaButton;
-        private System.Windows.Forms.Button MadagascarButton;
+        private System.Windows.Forms.Button Japan;
+        private System.Windows.Forms.Button EasternAustralia;
+        private System.Windows.Forms.Button WesternAustralia;
+        private System.Windows.Forms.Button NewGuinea;
+        private System.Windows.Forms.Button Indonesia;
+        private System.Windows.Forms.Button Siam;
+        private System.Windows.Forms.Button Mongolia;
+        private System.Windows.Forms.Button Irkutsk;
+        private System.Windows.Forms.Button Kamchatka;
+        private System.Windows.Forms.Button Yakutsk;
+        private System.Windows.Forms.Button Siberia;
+        private System.Windows.Forms.Button China;
+        private System.Windows.Forms.Button India;
+        private System.Windows.Forms.Button Afghanistan;
+        private System.Windows.Forms.Button MiddleEast;
+        private System.Windows.Forms.Button Ural;
+        private System.Windows.Forms.Button Ukraine;
+        private System.Windows.Forms.Button SouthernEurope;
+        private System.Windows.Forms.Button NorthernEurope;
+        private System.Windows.Forms.Button Scandinavia;
+        private System.Windows.Forms.Button WesternEurope;
+        private System.Windows.Forms.Button GreatBritain;
+        private System.Windows.Forms.Button Iceland;
+        private System.Windows.Forms.Button Greenland;
+        private System.Windows.Forms.Button Quebec;
+        private System.Windows.Forms.Button Ontario;
+        private System.Windows.Forms.Button NorthwestTerritory;
+        private System.Windows.Forms.Button Alaska;
+        private System.Windows.Forms.Button Alberta;
+        private System.Windows.Forms.Button EasternUnitedStates;
+        private System.Windows.Forms.Button WesternUnitedStates;
+        private System.Windows.Forms.Button CentralAmerica;
+        private System.Windows.Forms.Button Venezuela;
+        private System.Windows.Forms.Button Brazil;
+        private System.Windows.Forms.Button Peru;
+        private System.Windows.Forms.Button Argentina;
+        private System.Windows.Forms.Button Egypt;
+        private System.Windows.Forms.Button EastAfrica;
+        private System.Windows.Forms.Button Madagascar;
         private System.Windows.Forms.Button resetFortify;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 
