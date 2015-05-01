@@ -215,19 +215,31 @@ namespace UnitTestProject1
             Assert.IsFalse(target.IsInPath("Alaska", "Greenland", 1));
 
         }
+        [TestMethod]
         public void TestIsInPathForTerrSeperatedByOneWhereStartAndEndAreOwnedButNotPathTwoAway()
         {
             Map target = new Map();
             target.makeMapFromXML(testXML);
 
             target.setTerritoryOwner("Alaska", 1);
-            target.setTerritoryOwner("Northwest Territory", 1);
-            target.setTerritoryOwner("Alberta", 1);
-            target.setTerritoryOwner("Ontario", 1);
+            target.setTerritoryOwner("Northwest Territory", 2);
+            target.setTerritoryOwner("Alberta", 2);
+            target.setTerritoryOwner("Ontario", 2);
             target.setTerritoryOwner("Central America", 1);
 
             Assert.IsFalse(target.IsInPath("Alaska", "Central America", 1));
 
+        }
+
+        [TestMethod]
+        public void TestGetTerritoriesByContinentAfrica()
+        {
+            Map target = new Map();
+            target.makeMapFromXML(testXML);
+
+            List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
+
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Congo")));
         }
 
     }
