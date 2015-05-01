@@ -89,6 +89,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EndTurn = new System.Windows.Forms.Button();
+            this.tradeIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -171,7 +172,7 @@
             // EasternAustralia
             // 
             this.EasternAustralia.Location = new System.Drawing.Point(1128, 510);
-            this.EasternAustralia.Name = "EasternAustralia";
+            this.EasternAustralia.Name = "Eastern Australia";
             this.EasternAustralia.Size = new System.Drawing.Size(30, 23);
             this.EasternAustralia.TabIndex = 42;
             this.EasternAustralia.Text = "button46";
@@ -181,7 +182,7 @@
             // WesternAustralia
             // 
             this.WesternAustralia.Location = new System.Drawing.Point(1036, 515);
-            this.WesternAustralia.Name = "WesternAustralia";
+            this.WesternAustralia.Name = "Western Australia";
             this.WesternAustralia.Size = new System.Drawing.Size(30, 23);
             this.WesternAustralia.TabIndex = 41;
             this.WesternAustralia.Text = "button45";
@@ -191,7 +192,7 @@
             // NewGuinea
             // 
             this.NewGuinea.Location = new System.Drawing.Point(1135, 407);
-            this.NewGuinea.Name = "NewGuinea";
+            this.NewGuinea.Name = "New Guinea";
             this.NewGuinea.Size = new System.Drawing.Size(30, 23);
             this.NewGuinea.TabIndex = 40;
             this.NewGuinea.Text = "button44";
@@ -301,7 +302,7 @@
             // MiddleEast
             // 
             this.MiddleEast.Location = new System.Drawing.Point(714, 218);
-            this.MiddleEast.Name = "MiddleEast";
+            this.MiddleEast.Name = "Middle East";
             this.MiddleEast.Size = new System.Drawing.Size(30, 23);
             this.MiddleEast.TabIndex = 29;
             this.MiddleEast.Text = "button33";
@@ -331,7 +332,7 @@
             // SouthernEurope
             // 
             this.SouthernEurope.Location = new System.Drawing.Point(629, 167);
-            this.SouthernEurope.Name = "SouthernEurope";
+            this.SouthernEurope.Name = "Southern Europe";
             this.SouthernEurope.Size = new System.Drawing.Size(30, 23);
             this.SouthernEurope.TabIndex = 26;
             this.SouthernEurope.Text = "button30";
@@ -341,7 +342,7 @@
             // NorthernEurope
             // 
             this.NorthernEurope.Location = new System.Drawing.Point(598, 130);
-            this.NorthernEurope.Name = "NorthernEurope";
+            this.NorthernEurope.Name = "Northern Europe";
             this.NorthernEurope.Size = new System.Drawing.Size(30, 23);
             this.NorthernEurope.TabIndex = 25;
             this.NorthernEurope.Text = "button29";
@@ -361,7 +362,7 @@
             // WesternEurope
             // 
             this.WesternEurope.Location = new System.Drawing.Point(552, 169);
-            this.WesternEurope.Name = "WesternEurope";
+            this.WesternEurope.Name = "Western Europe";
             this.WesternEurope.Size = new System.Drawing.Size(30, 23);
             this.WesternEurope.TabIndex = 23;
             this.WesternEurope.Text = "button27";
@@ -371,7 +372,7 @@
             // GreatBritain
             // 
             this.GreatBritain.Location = new System.Drawing.Point(503, 122);
-            this.GreatBritain.Name = "GreatBritain";
+            this.GreatBritain.Name = "Great Britain";
             this.GreatBritain.Size = new System.Drawing.Size(30, 23);
             this.GreatBritain.TabIndex = 22;
             this.GreatBritain.Text = "button26";
@@ -421,7 +422,7 @@
             // NorthwestTerritory
             // 
             this.NorthwestTerritory.Location = new System.Drawing.Point(167, 67);
-            this.NorthwestTerritory.Name = "NorthwestTerritory";
+            this.NorthwestTerritory.Name = "Northwest Territory";
             this.NorthwestTerritory.Size = new System.Drawing.Size(30, 23);
             this.NorthwestTerritory.TabIndex = 17;
             this.NorthwestTerritory.Text = "button21";
@@ -451,7 +452,7 @@
             // EasternUnitedStates
             // 
             this.EasternUnitedStates.Location = new System.Drawing.Point(201, 193);
-            this.EasternUnitedStates.Name = "EasternUnitedStates";
+            this.EasternUnitedStates.Name = "Eastern United States";
             this.EasternUnitedStates.Size = new System.Drawing.Size(30, 23);
             this.EasternUnitedStates.TabIndex = 14;
             this.EasternUnitedStates.Text = "button18";
@@ -461,7 +462,7 @@
             // WesternUnitedStates
             // 
             this.WesternUnitedStates.Location = new System.Drawing.Point(111, 172);
-            this.WesternUnitedStates.Name = "WesternUnitedStates";
+            this.WesternUnitedStates.Name = "Western United States";
             this.WesternUnitedStates.Size = new System.Drawing.Size(30, 23);
             this.WesternUnitedStates.TabIndex = 13;
             this.WesternUnitedStates.Text = "button17";
@@ -471,7 +472,7 @@
             // CentralAmerica
             // 
             this.CentralAmerica.Location = new System.Drawing.Point(127, 262);
-            this.CentralAmerica.Name = "CentralAmerica";
+            this.CentralAmerica.Name = "Central America";
             this.CentralAmerica.Size = new System.Drawing.Size(30, 23);
             this.CentralAmerica.TabIndex = 12;
             this.CentralAmerica.Text = "button16";
@@ -531,7 +532,7 @@
             // EastAfrica
             // 
             this.EastAfrica.Location = new System.Drawing.Point(707, 340);
-            this.EastAfrica.Name = "EastAfrica";
+            this.EastAfrica.Name = "East Africa";
             this.EastAfrica.Size = new System.Drawing.Size(31, 23);
             this.EastAfrica.TabIndex = 6;
             this.EastAfrica.Text = "button10";
@@ -570,7 +571,7 @@
             // 
             this.SouthAfrica.Location = new System.Drawing.Point(633, 477);
             this.SouthAfrica.Margin = new System.Windows.Forms.Padding(2);
-            this.SouthAfrica.Name = "SouthAfrica";
+            this.SouthAfrica.Name = "South Africa";
             this.SouthAfrica.Size = new System.Drawing.Size(30, 24);
             this.SouthAfrica.TabIndex = 3;
             this.SouthAfrica.Text = "button9";
@@ -592,7 +593,7 @@
             // 
             this.NorthAfrica.Location = new System.Drawing.Point(537, 290);
             this.NorthAfrica.Margin = new System.Windows.Forms.Padding(2);
-            this.NorthAfrica.Name = "NorthAfrica";
+            this.NorthAfrica.Name = "North Africa";
             this.NorthAfrica.Size = new System.Drawing.Size(30, 22);
             this.NorthAfrica.TabIndex = 1;
             this.NorthAfrica.Text = "button7";
@@ -703,6 +704,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.tradeIn);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -722,8 +724,10 @@
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -733,8 +737,10 @@
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -744,8 +750,10 @@
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -755,6 +763,7 @@
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(54, 89);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -767,8 +776,10 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 89);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel4
             // 
@@ -792,6 +803,18 @@
             this.EndTurn.Text = "End Turn";
             this.EndTurn.UseVisualStyleBackColor = true;
             this.EndTurn.Click += new System.EventHandler(this.endTurn_Click);
+            // 
+            // tradeIn
+            // 
+            this.tradeIn.Enabled = false;
+            this.tradeIn.Location = new System.Drawing.Point(301, 3);
+            this.tradeIn.Margin = new System.Windows.Forms.Padding(2);
+            this.tradeIn.Name = "tradeIn";
+            this.tradeIn.Size = new System.Drawing.Size(55, 89);
+            this.tradeIn.TabIndex = 6;
+            this.tradeIn.Text = "Trade In Cards";
+            this.tradeIn.UseVisualStyleBackColor = true;
+            this.tradeIn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // RiskGame
             // 
@@ -884,6 +907,7 @@
         private System.Windows.Forms.Button EastAfrica;
         private System.Windows.Forms.Button Madagascar;
         private System.Windows.Forms.Button resetFortify;
+        private System.Windows.Forms.Button tradeIn;
     }
 }
 

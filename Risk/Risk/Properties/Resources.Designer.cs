@@ -233,6 +233,16 @@ namespace Risk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HIGHLIGHT {
+            get {
+                object obj = ResourceManager.GetObject("HIGHLIGHT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ICELAND {
             get {
                 object obj = ResourceManager.GetObject("ICELAND", resourceCulture);

@@ -21,6 +21,7 @@ namespace Risk
         Button dest;
         Territory srcT;
         Territory destT;
+        List<PictureBox> selectedCards;
 
         public RiskGame()
         {
@@ -44,6 +45,7 @@ namespace Risk
             resetFortify.Enabled = false;
             this.src = null;
             this.dest = null;
+            selectedCards = new List<PictureBox>();
             initReinforcePhase();
 
             #region buttons
@@ -321,7 +323,8 @@ namespace Risk
             for(int i=0; i < hand.Count; i++)
             {
                 this.displayedHand[i].BackgroundImage = hand[i].GetImage();
-                this.displayedHand[i].Tag = hand[i].GetTroopType();
+                this.displayedHand[i].Tag = hand[i].GetTerritoryName();
+                this.displayedHand[i].Cursor = Cursors.Hand;
             }
         }
 
@@ -332,12 +335,28 @@ namespace Risk
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+       
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ToggleCardSelect(pictureBox2);
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            ToggleCardSelect(pictureBox3);
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ToggleCardSelect(pictureBox4);
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ToggleCardSelect(pictureBox5);
+        }
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ToggleCardSelect(pictureBox6);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -565,7 +584,45 @@ namespace Risk
 
         }
 
+        private void RemoveFromSelected(PictureBox picBox)
+        {
+            selectedCards.Remove(picBox);
+            picBox.Image = null;
+            picBox.Refresh();
+        }
+        private void AddToSelected(PictureBox picBox)
+        {
+            Queue<PictureBox> temp = new Queue<PictureBox>(selectedCards);
+            temp.Enqueue(picBox);
+            if (temp.Count == 4)
+            {
+                PictureBox tempimage = temp.Dequeue();
+                tempimage.Image = null;
+                tempimage.Refresh();
+            }
+            picBox.Image = Risk.Properties.Resources.HIGHLIGHT;
+            this.selectedCards = temp.ToList();
+        }
 
+        private void ToggleCardSelect(PictureBox picBox)
+        {
+            if (picBox.Tag != null)
+            {
+                if (selectedCards.Contains(picBox))
+                {
+                    RemoveFromSelected(picBox);
+                }
+                else
+                {
+                    AddToSelected(picBox);
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
 
 
 
