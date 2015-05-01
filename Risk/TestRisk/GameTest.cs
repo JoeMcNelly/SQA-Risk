@@ -434,10 +434,16 @@ namespace TestRisk
         {
             Game game = new Game();
             game.turnOffInit();
+            List<Player> playerList = new List<Player>();
             List<Territory> terr = new List<Territory>();
+            Player p = new Player("test", 0, terr);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+            
             for (int i = 0; i < 12;i++ )
                 terr.Add(new Territory());
-            Player p = new Player("test", 0, terr);
+            
             Assert.AreEqual(4, game.getTerritoryBonus());
         }
 

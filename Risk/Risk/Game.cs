@@ -279,6 +279,8 @@ namespace Risk
         }
         public int getTerritoryBonus()
         {
+            if (getCurrentPlayer().getTerritories().Count == 12)
+                return 4;
             return 3;
         }
         //For testing only
