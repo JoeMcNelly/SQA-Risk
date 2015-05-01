@@ -27,83 +27,8 @@ namespace Risk
         //private Dictionary<String, Territory> map;
         
 
-        public Game()
+        public Game() : this(6)
         {
-            this.deck = new Stack<Card>();
-            this.players = new List<Player>();
-            this.currentPlayerIndex = 0;
-            this.numOfPlayers = 6; //hard coded
-            this.gamePhase = 0;
-            this.reinforcements = generateReinforcements();
-            this.map = new Map(global::Risk.Properties.Resources.Map); 
-
-            //because we hard code players we also need a hard coded creation of a list of them
-            for (int i = 0; i < numOfPlayers; i++)
-            {
-                String name = "Player " + (i + 1);
-                Player player = new Player(name, i); // For testing purposes; remove boolean later
-                this.players.Add(player);
-            }
-
-            //These 2 variables should become depreciated when Map.cs is full implemented
-            //this.map = new Dictionary<String, Territory>();
-            //this.territories = new List<Territory>();
-
-            #region territories 
-            //territories.Add(new Territory("Africa", "North Africa", 0));
-            //territories.Add(new Territory("Africa", "Congo", 0));
-            //territories.Add(new Territory("Africa", "South Africa", 0));
-            //territories.Add(new Territory("Africa", "Madagascar", 0));
-            //territories.Add(new Territory("Africa", "East Africa", 0));
-            //territories.Add(new Territory("Africa", "Egypt", 0));
-            //6
-
-            //territories.Add(new Territory("South America", "Brazil", 1));
-            //territories.Add(new Territory("South America", "Argentina", 1));
-            //territories.Add(new Territory("South America", "Peru", 1));
-            //territories.Add(new Territory("South America", "Venezuela", 1));
-            //4
-
-            //territories.Add(new Territory("North America", "Central America", 2));
-            //territories.Add(new Territory("North America", "Eastern US", 2));
-            //territories.Add(new Territory("North America", "Western US", 2));
-            //territories.Add(new Territory("North America", "Alberta", 2));
-            //territories.Add(new Territory("North America", "Alaska", 2));
-            //territories.Add(new Territory("North America", "Greenland", 2));
-            //territories.Add(new Territory("North America", "Northwest Territory", 2));
-            //territories.Add(new Territory("North America", "Quebec", 2));
-            //territories.Add(new Territory("North America", "Ontario", 2));
-            //9
-
-            //territories.Add(new Territory("Europe", "Great Britain", 3));
-            //territories.Add(new Territory("Europe", "Iceland", 3));
-            //territories.Add(new Territory("Europe", "North Europe", 3));
-            //territories.Add(new Territory("Europe", "South Europe", 3));
-            //territories.Add(new Territory("Europe", "West Europe", 3));
-            //territories.Add(new Territory("Europe", "Scandinavia", 3));
-            //territories.Add(new Territory("Europe", "Ukraine", 3));
-            //7
-
-            //territories.Add(new Territory("Asia", "China", 4));
-            //territories.Add(new Territory("Asia", "Irkutsk", 4));
-            //territories.Add(new Territory("Asia", "Kamchatka", 4));
-            //territories.Add(new Territory("Asia", "Mongolia", 4));
-            //territories.Add(new Territory("Asia", "Siberia", 4));
-            //territories.Add(new Territory("Asia", "Yakutsk", 4));
-            //territories.Add(new Territory("Asia", "Afghanistan", 4));
-            //territories.Add(new Territory("Asia", "India", 4));
-            //territories.Add(new Territory("Asia", "Japan", 4));
-            //territories.Add(new Territory("Asia", "Middle-East", 4));
-            //territories.Add(new Territory("Asia", "Siam", 4));
-            //territories.Add(new Territory("Asia", "Ural", 4));
-            //12
-
-            //territories.Add(new Territory("Australia", "East Australia", 5));
-            //territories.Add(new Territory("Australia", "West Australia", 5));
-            //territories.Add(new Territory("Australia", "Indonesia", 5));
-            //territories.Add(new Territory("Australia", "New-Guinea", 5));
-            //4
-            #endregion
             #region set territory owner, hard code
             this.map.getTerritory("North Africa").setOwner(0);
             this.map.getTerritory("Congo").setOwner(0);
@@ -228,10 +153,13 @@ namespace Risk
 
             for (int i = 0; i < numOfPlayers; i++)
             {
-                String name = "Player " + i;
+                String name = "Player " + (i + 1);
                 Player player = new Player(name, i); // For testing purposes; remove boolean later
                 this.players.Add(player);
             }
+
+            
+
         }
 
        
