@@ -487,19 +487,26 @@ namespace TestRisk
         }
 
         [TestMethod]
-        public void testShuffleDeck()
+        public void testShuffleDeckAlgorithm()
         {
-            Game game = new Game();
-            game.initializeDeck();
-            Stack<Card> initialDeck = game.getDeck();
+            List<int> list1 = new List<int>();
+            List<int> list2 = new List<int>();
 
-            for (int i = 0; i < 42; i++)
+            for (int i = 1; i < 51; i++)
             {
-                game.drawCard(game.getCurrentPlayer());
+                list1.Add(i);
             }
 
-            game.shuffleDeck();
-            Assert.AreNotSame(initialDeck, game.getDeck());
+            Random rnd = new Random();
+            int randomIndex = 0;
+            while (list1.Count > 0)
+            {
+                randomIndex = rnd.Next(0, list1.Count); //Choose a random object in the list
+                list2.Add(list1[randomIndex]); //add it to the new, random list
+                list1.RemoveAt(randomIndex); //remove to avoid duplicates
+            }
+
+            Assert.AreNotEqual(list1, list2);
         }
 
     }
