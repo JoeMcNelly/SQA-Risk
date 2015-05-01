@@ -415,11 +415,11 @@ namespace Risk
 
                         else
                         {
-                            //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayerIndex)
-                            //    && this.source == current
-                            //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
-                            if (this.dest.getName().Equals(current.getName())
-                                && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1)
+                            if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayerIndex)
+                                && this.dest == current
+                                && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
+                            //if (this.dest.getName().Equals(current.getName())
+                            //    && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1)
                             {
                                 this.source.decTroops();
                                 this.dest.addTroops();

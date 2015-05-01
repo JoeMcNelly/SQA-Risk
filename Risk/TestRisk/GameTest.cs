@@ -367,8 +367,10 @@ namespace TestRisk
             Game game = new Game(2);
             game.initializeDeck();
             List<Territory> terrList = new List<Territory>();
-            Territory testTerritory1 = new Territory("Terr1", "Dummy cont");
-            Territory testTerritory2 = new Territory("Terr2", "Dummy cont");
+
+            Territory testTerritory1 = game.getMap().getTerritory("China");
+            Territory testTerritory2 = game.getMap().getTerritory("India");
+            
             testTerritory1.setOwner(0);
             testTerritory2.setOwner(0);
             terrList.Add(testTerritory1);
