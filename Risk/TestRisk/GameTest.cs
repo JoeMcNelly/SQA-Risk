@@ -482,6 +482,8 @@ namespace TestRisk
             game.drawCard(game.getCurrentPlayer());
 
             Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
+            Assert.IsNotNull(game.getDiscard());
+            Assert.AreEqual(3, game.getDiscard().Count);
         }
 
     }
