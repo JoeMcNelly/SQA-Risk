@@ -219,7 +219,7 @@ namespace Risk
             reset.Enabled = true;
             fortify.Enabled = false;
             resetFortify.Enabled = false;
-            tradeIn.Enabled = true;
+            tradeIn.Enabled = false;
             setPlayerPhaseLabel();
             resetSrcAndDest();
             loadPlayerCards();
