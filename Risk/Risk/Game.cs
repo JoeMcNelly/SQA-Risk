@@ -322,6 +322,14 @@ namespace Risk
                     allNorthAmerica = false;
                 }
             }
+            bool allEurope = true;
+            foreach (Territory t in europe)
+            {
+                if (!current.Contains(t))
+                {
+                    allEurope = false;
+                }
+            }
 
             
             if (allSouthAmerica)
@@ -333,6 +341,10 @@ namespace Risk
                 total += 2;
             }
             if (allNorthAmerica)
+            {
+                total += 5;
+            }
+            if (allEurope)
             {
                 total += 5;
             }
