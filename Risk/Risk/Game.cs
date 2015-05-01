@@ -278,6 +278,35 @@ namespace Risk
                     }
                 }
                 return true;
+            } else if(numInf == 1 && numCalv == 1 && numArt == 1) {
+                Boolean infRemove = false;
+                Boolean calvRemove = false;
+                Boolean artRemove = false;
+                for (int i = 0; i < curr.hand.Count; i++)
+                {
+                    if (curr.hand.ElementAt(i).getTroopType().Equals("Infantry") && !infRemove)
+                    {
+                        this.discardPile.Add(curr.hand.ElementAt(i));
+                        curr.hand.RemoveAt(i);
+                        i--;
+                        infRemove = true;
+                    }
+                    else if (curr.hand.ElementAt(i).getTroopType().Equals("Calvalry") && !calvRemove)
+                    {
+                        this.discardPile.Add(curr.hand.ElementAt(i));
+                        curr.hand.RemoveAt(i);
+                        i--;
+                        calvRemove = true;
+                    }
+                    else if (curr.hand.ElementAt(i).getTroopType().Equals("Artillery") && !artRemove)
+                    {
+                        this.discardPile.Add(curr.hand.ElementAt(i));
+                        curr.hand.RemoveAt(i);
+                        i--;
+                        artRemove = true;
+                    }
+                    return true;
+                }
             }
 
             return false;

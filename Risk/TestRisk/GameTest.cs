@@ -532,5 +532,18 @@ namespace TestRisk
             Assert.AreEqual(42, game.getDeck().Count);
         }
 
+        [TestMethod]
+        public void testTurnInOneOfEach()
+        {
+            Game game = new Game();
+            game.getDeck().Push(new Card(new Territory(), "Infantry"));
+            game.getDeck().Push(new Card(new Territory(), "Calvalry"));
+            game.getDeck().Push(new Card(new Territory(), "Artillery"));
+
+            Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
+
+
+        }
+         
     }
 }
