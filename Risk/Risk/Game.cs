@@ -275,7 +275,7 @@ namespace Risk
         }
         public int generateReinforcements()
         {
-            return 15;
+            return getTerritoryBonus() + getContinentBonus();
         }
         public int getTerritoryBonus()
         {
