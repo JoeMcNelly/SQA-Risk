@@ -150,7 +150,7 @@ namespace Risk
               */ 
             #endregion
 
-            initializeDeck();
+            
 
             //not needed
             #region set hands
@@ -191,6 +191,7 @@ namespace Risk
             this.reinforcements = initialReinforcements();
             this.currentPlayerIndex = 0;
             numberOfInitialTerritories = numOfPlayers*7;
+            
             for (int i = 0; i < numOfPlayers; i++)
             {
                 String name = "Player " + (i + 1);
@@ -204,6 +205,7 @@ namespace Risk
                 terr.setOwner(-1);
                 neutralPlayer.AddTerritory(terr);
             }
+            initializeDeck();
             
 
         }
