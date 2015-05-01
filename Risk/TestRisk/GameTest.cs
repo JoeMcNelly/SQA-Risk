@@ -577,6 +577,11 @@ namespace TestRisk
             territoriesOwned.Add(t2);
             territoriesOwned.Add(t3);
             territoriesOwned.Add(t4);
+            territoriesOwned.Add(t5);
+            territoriesOwned.Add(t6);
+            territoriesOwned.Add(t7);
+            territoriesOwned.Add(t8);
+            territoriesOwned.Add(t9);
 
 
 

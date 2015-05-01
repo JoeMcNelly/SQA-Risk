@@ -314,6 +314,15 @@ namespace Risk
                 }
             }
 
+            bool allNorthAmerica = true;
+            foreach (Territory t in northAmerica)
+            {
+                if (!current.Contains(t))
+                {
+                    allNorthAmerica = false;
+                }
+            }
+
             
             if (allSouthAmerica)
             {
@@ -322,6 +331,10 @@ namespace Risk
             if (allAustralia)
             {
                 total += 2;
+            }
+            if (allNorthAmerica)
+            {
+                total += 5;
             }
 
             return total;
