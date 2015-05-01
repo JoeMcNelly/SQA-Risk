@@ -487,6 +487,21 @@ namespace TestRisk
         }
 
         [TestMethod]
+        public void testTurnInOneOfEach()
+        {
+            Game game = new Game();
+            game.getDeck().Push(new Card(new Territory(), "Infantry"));
+            game.getDeck().Push(new Card(new Territory(), "Calvalry"));
+            game.getDeck().Push(new Card(new Territory(), "Artillery"));
+
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+
+            Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
+        }
+
+        [TestMethod]
         public void testShuffleDeckAlgorithm()
         {
             List<int> list1 = new List<int>();
@@ -531,23 +546,6 @@ namespace TestRisk
             Assert.AreNotEqual(beforeAndAfterLists[0], beforeAndAfterLists[1]);
             Assert.AreEqual(42, game.getDeck().Count);
         }
-
-        [TestMethod]
-        public void testTurnInOneOfEach()
-        {
-            Game game = new Game();
-            game.getDeck().Push(new Card(new Territory(), "Infantry"));
-            game.getDeck().Push(new Card(new Territory(), "Calvalry"));
-            game.getDeck().Push(new Card(new Territory(), "Artillery"));
-
-            game.drawCard(game.getCurrentPlayer());
-            game.drawCard(game.getCurrentPlayer());
-            game.drawCard(game.getCurrentPlayer());
-
-            Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
-
-
-        }
-         
+       
     }
 }
