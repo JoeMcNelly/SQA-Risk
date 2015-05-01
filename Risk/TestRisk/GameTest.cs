@@ -48,7 +48,7 @@ namespace TestRisk
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
             typeof(Game).GetField("numOfPlayers", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
-
+            game.turnOffInit();
             game.saveReinforcements(game.getCurrentPlayer());
             Assert.AreEqual(1, game.getPhase());
         }
@@ -65,7 +65,7 @@ namespace TestRisk
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
             typeof(Game).GetField("numOfPlayers", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
-
+            game.turnOffInit();
 
             game.saveReinforcements(game.getCurrentPlayer());
             game.endAttack();
@@ -184,7 +184,7 @@ namespace TestRisk
             //reflect them into he game object
             typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
-
+            game.turnOffInit();
             game.clickTerritory(map.getTerritory("Alaska"));
             Assert.AreEqual(1, map.getTerritory("Alaska").getTemporaryReinforcements());             
         }
@@ -204,7 +204,7 @@ namespace TestRisk
             typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             int num = game.getReinforcements();
-
+            game.turnOffInit();
             game.clickTerritory(map.getTerritory("Alaska"));
             Assert.AreEqual(num - 1, game.getReinforcements());
         }
@@ -252,6 +252,7 @@ namespace TestRisk
             typeof(Game).GetField("map", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, map);
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
             int num = game.getReinforcements();
+            game.turnOffInit();
             for (int i = 0; i < num + 1; i++)
             {
                 game.clickTerritory(map.getTerritory("Alaska"));
@@ -351,7 +352,7 @@ namespace TestRisk
             int expected = game.getReinforcements();
             Player player = new Player("name", -1, territories);
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, -1);
-
+            game.turnOffInit();
             foreach (Territory t in territories)
             {
                 game.clickTerritory(t);
@@ -373,6 +374,7 @@ namespace TestRisk
             terrList.Add(testTerritory2);
             Player p1 = new Player("Dummy Player", 0, terrList);
             typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
+            game.turnOffInit();
             for (int i = 0; i < 15; i++)
             {
                 game.clickTerritory(testTerritory1);
@@ -400,7 +402,7 @@ namespace TestRisk
         public void testGenerateReinforcementsNoArgs()
         {
             Game game = new Game(); // game constructor with no args sets numOfPlayers to 6
-            Assert.AreEqual(20, game.generateReinforcements());
+            Assert.AreEqual(20, game.initialReinforcements());
         }
 
         [TestMethod]
@@ -410,10 +412,10 @@ namespace TestRisk
             Game game2 = new Game(3);
             Game game3 = new Game(4);
             Game game4 = new Game(10);
-            Assert.AreEqual(40, game1.generateReinforcements());
-            Assert.AreEqual(35, game2.generateReinforcements());
-            Assert.AreEqual(30, game3.generateReinforcements());
-            Assert.AreEqual(0, game4.generateReinforcements());
+            Assert.AreEqual(40, game1.initialReinforcements());
+            Assert.AreEqual(35, game2.initialReinforcements());
+            Assert.AreEqual(30, game3.initialReinforcements());
+            Assert.AreEqual(0, game4.initialReinforcements());
 
         }
 

@@ -103,7 +103,7 @@ namespace Risk
             {
                 tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
-            label1.Text = "Reinforcements left: " + game.getReinforcements().ToString();
+            label1.Text = "Choose your territories";
         }
 
 
@@ -114,46 +114,57 @@ namespace Risk
             Territory current = this.game.getMap().getTerritory(button.Name);
             this.game.clickTerritory(current);
 
-            switch (this.game.getPhase())
+            if (game.getInitPhase())
             {
-                case 0:
-                    button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
-                    label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
-                    break;
-                case 1:
-                    //attack button/label things
-                    break;
-                case 2:
-                    if(this.src == null && game.canSetSource()) 
-                   {
-                       this.src = button;
-                       this.srcT = current;
-
-                   } else if(this.dest == null && current != this.srcT && game.canSetDestination()) 
-                   {
-                       this.dest = button;
-                       this.destT = current;
-                   }
-                   else 
-                   {
-                       if (srcT == null || destT == null)
-                       {
-                           break;
-                       }
-                       if(current == this.srcT) 
-                       {
-                           break;
-                       }
-                       if (this.destT.getName() == current.getName())
-                       {
-                       this.src.Text = (srcT.getTemporaryReinforcements() + srcT.getNumTroops()) + "";
-                       this.dest.Text = (destT.getTemporaryReinforcements() + destT.getNumTroops()) + "";
-
-                       }
-                   }
-                    break;
+                label2.Text = game.getCurrentPlayer().playerName;
+            }
+            else
+            {
+                setPlayerPhaseLabel();
             }
 
+
+                switch (this.game.getPhase())
+                {
+                    case 0:
+                        button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
+                        label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
+                        break;
+                    case 1:
+                        //attack button/label things
+                        break;
+                    case 2:
+                        if (this.src == null && game.canSetSource())
+                        {
+                            this.src = button;
+                            this.srcT = current;
+
+                        }
+                        else if (this.dest == null && current != this.srcT && game.canSetDestination())
+                        {
+                            this.dest = button;
+                            this.destT = current;
+                        }
+                        else
+                        {
+                            if (srcT == null || destT == null)
+                            {
+                                break;
+                            }
+                            if (current == this.srcT)
+                            {
+                                break;
+                            }
+                            if (this.destT.getName() == current.getName())
+                            {
+                                this.src.Text = (srcT.getTemporaryReinforcements() + srcT.getNumTroops()) + "";
+                                this.dest.Text = (destT.getTemporaryReinforcements() + destT.getNumTroops()) + "";
+
+                            }
+                        }
+                        break;
+                }
+            
         }
 
         private void setPlayerPhaseLabel()

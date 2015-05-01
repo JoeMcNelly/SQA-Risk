@@ -21,7 +21,11 @@ namespace Risk
         private bool canSetDst = false;
         private Stack<Card> deck;
         private List<Card> discardPile = new List<Card>(); // discard pile will always be empty at the start of any game
-
+        private bool initPhase = true;
+        private bool initReinforce = true;
+        private int initReinforceCounter = 0;
+        Player neutralPlayer = new Player("Neutral", -1);
+        private int numberOfInitialTerritories;
         //These 2 variables should become depreciated when Map.cs is full implemented
         private List<Territory> territories;
         //private Dictionary<String, Territory> map;
@@ -29,7 +33,9 @@ namespace Risk
 
         public Game() : this(6)
         {
+           
             #region set territory owner, hard code
+             /*
             this.map.getTerritory("North Africa").setOwner(0);
             this.map.getTerritory("Congo").setOwner(0);
             this.map.getTerritory("South Africa").setOwner(0);
@@ -84,6 +90,7 @@ namespace Risk
             this.map.getTerritory("New Guinea").setOwner(5);
             //4
             #endregion
+
             #region set players territory lists
             this.players[0].AddTerritory(this.map.getTerritory("North Africa"));
             this.players[0].AddTerritory(this.map.getTerritory("Congo"));
@@ -138,7 +145,10 @@ namespace Risk
             this.players[5].AddTerritory(this.map.getTerritory("Indonesia"));
             this.players[5].AddTerritory(this.map.getTerritory("New Guinea"));
             //4
+              */ 
             #endregion
+
+          
         }
 
   
@@ -148,9 +158,9 @@ namespace Risk
             this.players = new List<Player>();
             this.map = new Map(global::Risk.Properties.Resources.Map); 
             this.numOfPlayers = numOfPlayers;
-            this.reinforcements = generateReinforcements();
+            this.reinforcements = initialReinforcements();
             this.currentPlayerIndex = 0;
-
+            numberOfInitialTerritories = numOfPlayers*7;
             for (int i = 0; i < numOfPlayers; i++)
             {
                 String name = "Player " + (i + 1);
@@ -158,6 +168,12 @@ namespace Risk
                 this.players.Add(player);
             }
 
+            
+            foreach (Territory terr in map.GetMapAsList())
+            {
+                terr.setOwner(-1);
+                neutralPlayer.AddTerritory(terr);
+            }
             
 
         }
@@ -169,9 +185,22 @@ namespace Risk
             {
                 //this.map.getMap()[t.getName()].saveTroops(); //may be able to replace with just t.saveTroops();
                 t.saveTroops();
-            }      
-                
-            nextGamePhase();
+            }
+            if (initReinforce)
+            {
+                this.reinforcements=initialReinforcements();
+                nextPlayer();
+                initReinforceCounter++;
+                if (initReinforceCounter == this.numOfPlayers)
+                {
+                    initReinforce = false;
+                    //DRAWCARDS
+                    this.reinforcements = generateReinforcements();
+                }
+            }
+
+            else
+                nextGamePhase();
                 
         }
 
@@ -206,11 +235,22 @@ namespace Risk
         {
             currentPlayerIndex++;
             currentPlayerIndex = currentPlayerIndex % this.numOfPlayers;
-            this.reinforcements = generateReinforcements();
+            
+        }
+        public int initialReinforcements()
+        {
+            
+            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
         }
         public int generateReinforcements()
         {
-            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
+            return 15;
+        }
+        //For testing only
+        public void turnOffInit()
+        {
+            this.initPhase = false;
+            this.initReinforce = false;
         }
 
         public void nextGamePhase()
@@ -219,7 +259,7 @@ namespace Risk
             if (gamePhase == 3)
             {
                 gamePhase = 0;
-
+                this.reinforcements = generateReinforcements();
             }
                 
         }
@@ -269,55 +309,82 @@ namespace Risk
             return this.canSetDst;
         }
 
+        private void clickInitTerritory(Territory current){
+            Console.WriteLine(current.getOwner());
+            Console.WriteLine(current.getNumTroops());
+            if (current.getOwner() == -1)
+            {
+                current.setOwner(currentPlayerIndex);
+                players[currentPlayerIndex].AddTerritory(current);
+                current.addTroops();
+                current.saveTroops();
+                nextPlayer();
+                numberOfInitialTerritories--;
+                if (numberOfInitialTerritories == 0) {
+                    initPhase = false;
+                }
+            }
+        }
+        public bool getInitPhase()
+        {
+            return this.initPhase;
+        }
         public void clickTerritory(Territory current)
         {
-            switch (this.gamePhase)
+            if (initPhase)
             {
-                case 0:
-                   if (reinforcements > 0 && current.getOwner() == currentPlayerIndex)
-                    {
-                        current.addTroops();
-                        this.reinforcements--;
-            
-                    }
-                    break;
-                case 1:
-                    //do attacking things
-                    break;
-                case 2:
-                    if (current.getOwner() != getCurrentPlayer().playerNumber)
-                    {
-                        Console.WriteLine("You selected something that isn't yours. Shame.");
-                    }
-                    else if (this.source.getName().Equals(""))
-                    {
-                        this.source = current;
-                        this.canSetSrc = true;
-                        Console.WriteLine("Hey asshole, you selected the first territory!");
-                        Console.WriteLine("You selected: " + this.source.getName());
-                    }
-                    else if (this.dest.getName().Equals("") && current != this.source)
-                    {
-                        this.dest = current;
-                        this.canSetDst = true;
-                        Console.WriteLine("Hey dumbass, you selected your destination territory!");
-                        Console.WriteLine("You selected: " + this.dest.getName());
-                    }
-
-                    else
-                    {
-                        //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayerIndex)
-                        //    && this.source == current
-                        //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
-                            if (this.dest.getName().Equals(current.getName())
-                                && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1) 
+                clickInitTerritory(current);
+            }
+            else
+            {
+                switch (this.gamePhase)
+                {
+                    case 0:
+                        if (reinforcements > 0 && current.getOwner() == currentPlayerIndex)
                         {
-                            this.source.decTroops();
-                            this.dest.addTroops();
-                        }
-                    }
+                            current.addTroops();
+                            this.reinforcements--;
 
-                    break;
+                        }
+                        break;
+                    case 1:
+                        //do attacking things
+                        break;
+                    case 2:
+                        if (current.getOwner() != getCurrentPlayer().playerNumber)
+                        {
+                            Console.WriteLine("You selected something that isn't yours. Shame.");
+                        }
+                        else if (this.source.getName().Equals(""))
+                        {
+                            this.source = current;
+                            this.canSetSrc = true;
+                            Console.WriteLine("Hey asshole, you selected the first territory!");
+                            Console.WriteLine("You selected: " + this.source.getName());
+                        }
+                        else if (this.dest.getName().Equals("") && current != this.source)
+                        {
+                            this.dest = current;
+                            this.canSetDst = true;
+                            Console.WriteLine("Hey dumbass, you selected your destination territory!");
+                            Console.WriteLine("You selected: " + this.dest.getName());
+                        }
+
+                        else
+                        {
+                            //if (this.map.IsInPath(this.source.getName(), this.dest.getName(), this.currentPlayerIndex)
+                            //    && this.source == current
+                            //    && (this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1))
+                            if (this.dest.getName().Equals(current.getName())
+                                && this.source.getNumTroops() + this.source.getTemporaryReinforcements() > 1)
+                            {
+                                this.source.decTroops();
+                                this.dest.addTroops();
+                            }
+                        }
+
+                        break;
+                }
             }
         }
 
