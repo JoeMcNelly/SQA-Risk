@@ -667,5 +667,37 @@ namespace TestRisk
             Assert.AreEqual(7, game.getContinentBonus());
         }
 
+        [TestMethod]
+        public void TestContinentReinforcementsAfrica()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> territoriesOwned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            Territory t2 = game.getMap().getTerritory("East Africa");
+            Territory t3 = game.getMap().getTerritory("Egypt");
+            Territory t4 = game.getMap().getTerritory("Madagascar");
+            Territory t5 = game.getMap().getTerritory("North Africa");
+            Territory t6 = game.getMap().getTerritory("South Africa");
+            
+            territoriesOwned.Add(t1);
+            territoriesOwned.Add(t2);
+            territoriesOwned.Add(t3);
+            territoriesOwned.Add(t4);
+            territoriesOwned.Add(t5);
+            territoriesOwned.Add(t6);
+            
+
+
+
+            Player p = new Player("test", 0, territoriesOwned);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            Assert.AreEqual(3, game.getContinentBonus());
+        }
+
     }
 }

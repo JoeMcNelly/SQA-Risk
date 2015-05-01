@@ -331,6 +331,26 @@ namespace Risk
                 }
             }
 
+            bool allAsia = true;
+            foreach (Territory t in asia)
+            {
+                if (!current.Contains(t))
+                {
+                    allAsia = false;
+                }
+            }
+
+            bool allAfrica = true;
+            foreach (Territory t in africa)
+            {
+                if (!current.Contains(t))
+                {
+                    allAfrica = false;
+                }
+            }
+
+           
+
             
             if (allSouthAmerica)
             {
@@ -347,6 +367,14 @@ namespace Risk
             if (allEurope)
             {
                 total += 5;
+            }
+            if (allAsia)
+            {
+                total += 7;
+            }
+            if (allAfrica)
+            {
+                total += 3;
             }
 
             return total;
