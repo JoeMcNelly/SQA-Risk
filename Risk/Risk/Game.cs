@@ -335,12 +335,10 @@ namespace Risk
 
         #endregion
 
-
         public void saveReinforcements(Player player) 
         {
             foreach (Territory t in player.getTerritories())
             {
-                //this.map.getMap()[t.getName()].saveTroops(); //may be able to replace with just t.saveTroops();
                 t.saveTroops();
             }      
                 
@@ -377,7 +375,6 @@ namespace Risk
             }
         }
         #endregion
-
 
         #region getters and setters
         public Stack<Card> getDeck()
@@ -420,7 +417,6 @@ namespace Risk
         {
             this.map.Add(terr.getName(), terr);
         }
-
 
         public bool isOver()
         {
