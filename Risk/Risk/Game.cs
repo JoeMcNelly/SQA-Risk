@@ -231,7 +231,7 @@ namespace Risk
         {
             int numInf = 0;
             int numCalv = 0;
-            int numCannon = 0;
+            int numArt = 0;
 
             for (int i = 0; i < curr.hand.Count; i++)
             {
@@ -242,7 +242,7 @@ namespace Risk
                 {
                     numCalv++;
                 } else {
-                    numCannon++;
+                    numArt++;
                 }
             }
 
@@ -268,10 +268,10 @@ namespace Risk
                 }
                 return true;
 
-            } else if (numCannon >= 3) {
+            } else if (numArt >= 3) {
                 for (int i = 0; i < curr.hand.Count; i++)
                 {
-                    if (curr.hand.ElementAt(i).getTroopType().Equals("Cannoneer")) {
+                    if (curr.hand.ElementAt(i).getTroopType().Equals("Artillery")) {
                         this.discardPile.Add(curr.hand.ElementAt(i));
                         curr.hand.RemoveAt(i);
                         i--;
