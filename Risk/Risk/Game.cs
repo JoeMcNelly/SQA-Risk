@@ -29,6 +29,8 @@ namespace Risk
         //These 2 variables should become depreciated when Map.cs is full implemented
         private List<Territory> territories;
         //private Dictionary<String, Territory> map;
+        private int[] setValues = { 2, 4, 7, 10, 13, 17, 21, 25, 30 };
+        private int GoldenCavalry = 0;
         
 
         public Game() : this(6)
@@ -464,6 +466,32 @@ namespace Risk
                  t.resetReinforcements();
             }
            
+        }
+
+        public int getBonusReinforcementsFromCards(Card c1, Card c2, Card c3)
+        {
+            int c1t = c1.GetTroopType();
+            int c2t = c2.GetTroopType();
+            int c3t = c3.GetTroopType();
+
+            int addedReinforcements = 0;
+
+            if((c1t == c2t && c1t == c3t && c2t == c3t) || (c1t != c2t && c1t != c3t && c2t != c3t))
+            {
+                addedReinforcements = this.setValues[GoldenCavalry];
+                this.reinforcements += addedReinforcements;
+                AdvanceGoldenCavalry();
+
+                //depending on what we decide, this is where the discard action would happen
+            }
+
+            return addedReinforcements;
+        }
+
+        public void AdvanceGoldenCavalry()
+        {
+            if (GoldenCavalry < setValues.Length - 2)
+                GoldenCavalry++;
         }
 
         

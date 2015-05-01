@@ -34,8 +34,6 @@ namespace Risk
             this.displayedHand.Add(pictureBox4);
             this.displayedHand.Add(pictureBox5);
             this.displayedHand.Add(pictureBox6);
-            this.displayedHand.Add(pictureBox7);
-            this.displayedHand.Add(pictureBox8);
             #endregion
 
             save.Enabled = false;
@@ -323,6 +321,7 @@ namespace Risk
             for(int i=0; i < hand.Count; i++)
             {
                 this.displayedHand[i].BackgroundImage = hand[i].GetImage();
+                this.displayedHand[i].Tag = hand[i].GetTroopType();
             }
         }
 
