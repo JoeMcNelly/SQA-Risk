@@ -221,12 +221,6 @@ namespace Risk
             }
         } 
 
-        public List<Card> shuffleDeck() 
-        {
-            return null;
-            // not yet implemented
-        }
-
         public Card drawCard(Player curr)
         {
             return null;
@@ -236,6 +230,12 @@ namespace Risk
         public Boolean cardTurnIn(Player curr)
         {
             return true;
+            // not yet implemented
+        }
+
+        public List<Card> shuffleDeck() 
+        {
+            return null;
             // not yet implemented
         }
 

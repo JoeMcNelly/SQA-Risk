@@ -431,5 +431,15 @@ namespace TestRisk
 
         }
 
+        [TestMethod]
+        public void testDrawCard()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            Card card = game.drawCard(game.getCurrentPlayer());
+            Assert.AreEqual("Infantry", card.getTroopType());
+        }
+
     }
 }
