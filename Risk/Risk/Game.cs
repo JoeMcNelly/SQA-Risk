@@ -271,7 +271,7 @@ namespace Risk
         public int initialReinforcements()
         {
             
-            return 40 - 5 * (Math.Abs(2 - this.numOfPlayers));
+            return (40 - 5 * (Math.Abs(2 - this.numOfPlayers)))-7;
         }
         public int generateReinforcements()
         {
@@ -289,19 +289,64 @@ namespace Risk
         {
             int total = 0;
             List<Territory> current = getCurrentPlayer().getTerritories();
-            List<Territory> africa = this.map.GetTerritoriesByContinent("South America");
+            List<Territory> southAmerica = this.map.GetTerritoriesByContinent("South America");
+            List<Territory> australia = this.map.GetTerritoriesByContinent("Australia");
+            List<Territory> northAmerica = this.map.GetTerritoriesByContinent("North America");
+            List<Territory> africa = this.map.GetTerritoriesByContinent("Africa");
+            List<Territory> europe = this.map.GetTerritoriesByContinent("Europe");
+            List<Territory> asia = this.map.GetTerritoriesByContinent("Asia");
 
             bool allSouthAmerica = true;
-            foreach (Territory t in africa)
+            foreach (Territory t in southAmerica)
             {
                 if (!current.Contains(t))
                 {
                     allSouthAmerica = false;
                 }
             }
+
+            bool allAustralia = true;
+            foreach (Territory t in australia)
+            {
+                if (!current.Contains(t))
+                {
+                    allAustralia = false;
+                }
+            }
+
+            bool allNorthAmerica = true;
+            foreach (Territory t in northAmerica)
+            {
+                if (!current.Contains(t))
+                {
+                    allNorthAmerica = false;
+                }
+            }
+            bool allEurope = true;
+            foreach (Territory t in europe)
+            {
+                if (!current.Contains(t))
+                {
+                    allEurope = false;
+                }
+            }
+
+            
             if (allSouthAmerica)
             {
                 total += 2;
+            }
+            if (allAustralia)
+            {
+                total += 2;
+            }
+            if (allNorthAmerica)
+            {
+                total += 5;
+            }
+            if (allEurope)
+            {
+                total += 5;
             }
 
             return total;
