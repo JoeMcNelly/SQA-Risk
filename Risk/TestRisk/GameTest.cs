@@ -625,5 +625,47 @@ namespace TestRisk
             Assert.AreEqual(5, game.getContinentBonus());
         }
 
+        [TestMethod]
+        public void TestContinentReinforcementsAsia()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> territoriesOwned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Afghanistan");
+            Territory t2 = game.getMap().getTerritory("China");
+            Territory t3 = game.getMap().getTerritory("India");
+            Territory t4 = game.getMap().getTerritory("Irkutsk");
+            Territory t5 = game.getMap().getTerritory("Japan");
+            Territory t6 = game.getMap().getTerritory("Kamchatka");
+            Territory t7 = game.getMap().getTerritory("Middle East");
+            Territory t8 = game.getMap().getTerritory("Mongolia");
+            Territory t9 = game.getMap().getTerritory("Siam");
+            Territory t10 = game.getMap().getTerritory("Siberia");
+            Territory t11 = game.getMap().getTerritory("Ural");
+            Territory t12 = game.getMap().getTerritory("Yakutsk");
+            territoriesOwned.Add(t1);
+            territoriesOwned.Add(t2);
+            territoriesOwned.Add(t3);
+            territoriesOwned.Add(t4);
+            territoriesOwned.Add(t5);
+            territoriesOwned.Add(t6);
+            territoriesOwned.Add(t7);
+            territoriesOwned.Add(t8);
+            territoriesOwned.Add(t9);
+            territoriesOwned.Add(t10);
+            territoriesOwned.Add(t11);
+            territoriesOwned.Add(t12);
+
+
+
+            Player p = new Player("test", 0, territoriesOwned);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            Assert.AreEqual(7, game.getContinentBonus());
+        }
+
     }
 }
