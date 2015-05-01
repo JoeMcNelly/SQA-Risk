@@ -458,7 +458,7 @@ namespace TestRisk
 
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 15; i++)
                 terr.Add(new Territory());
 
             Assert.AreEqual(5, game.getTerritoryBonus());
