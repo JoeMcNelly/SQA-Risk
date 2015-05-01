@@ -252,6 +252,20 @@ namespace UnitTestProject1
             Assert.IsTrue(terrs.Contains(target.getTerritory("Madagascar")));
             Assert.IsTrue(terrs.Contains(target.getTerritory("North Africa")));
             Assert.IsTrue(terrs.Contains(target.getTerritory("South Africa")));
+            Assert.AreEqual(6, terrs.Count);
+        }
+
+        [TestMethod]
+        public void TestGetTerritoriesByContinentSouthAmericaContainsAll()
+        {
+            Map target = new Map(global::TestRisk.Properties.Resources.Map);
+
+            List<Territory> terrs = target.GetTerritoriesByContinent("South America");
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Brazil")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Peru")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Venezuela")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Argentina")));
+            Assert.AreEqual(4, terrs.Count);
         }
 
     }
