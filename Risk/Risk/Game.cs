@@ -287,7 +287,7 @@ namespace Risk
 
         public int getContinentBonus()
         {
-            return -1;
+            return 0;
         }
         //For testing only
         public void turnOffInit()
