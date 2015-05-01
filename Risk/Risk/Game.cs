@@ -229,7 +229,7 @@ namespace Risk
 
         public Boolean cardTurnIn(Player curr)
         {
-            return true;
+            return false;
             // not yet implemented
         }
 
