@@ -287,7 +287,24 @@ namespace Risk
 
         public int getContinentBonus()
         {
-            return 0;
+            int total = 0;
+            List<Territory> current = getCurrentPlayer().getTerritories();
+            List<Territory> africa = this.map.GetTerritoriesByContinent("South America");
+
+            bool allSouthAmerica = true;
+            foreach (Territory t in africa)
+            {
+                if (!current.Contains(t))
+                {
+                    allSouthAmerica = false;
+                }
+            }
+            if (allSouthAmerica)
+            {
+                total += 2;
+            }
+
+            return total;
         }
         //For testing only
         public void turnOffInit()
