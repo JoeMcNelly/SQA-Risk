@@ -663,7 +663,7 @@ namespace TestRisk
 
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
 
-            Assert.AreEqual(0, game.getContinentBonus());
+            Assert.AreEqual(7, game.getContinentBonus());
         }
 
         [TestMethod]
