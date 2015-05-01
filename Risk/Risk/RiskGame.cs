@@ -191,7 +191,8 @@ namespace Risk
             switch (game.getPhase())
             {
                 case 0:
-                    stringPhase = " Reinforce";
+                    if(!game.getInitPhase())
+                        stringPhase = " Reinforce";
                     break;
                 case 1:
                     stringPhase = " Attack";
