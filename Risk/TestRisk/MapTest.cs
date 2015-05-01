@@ -232,12 +232,26 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestGetTerritoriesByContinentAfrica()
+        public void TestGetTerritoriesByContinentAfricaContainsCongo()
         {
             Map target = new Map(global::TestRisk.Properties.Resources.Map);
 
             List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
             Assert.IsTrue(terrs.Contains(target.getTerritory("Congo")));
+        }
+
+        [TestMethod]
+        public void TestGetTerritoriesByContinentAfricaContainsAll()
+        {
+            Map target = new Map(global::TestRisk.Properties.Resources.Map);
+
+            List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Congo")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("East Africa")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Egypt")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("Madagascar")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("North Africa")));
+            Assert.IsTrue(terrs.Contains(target.getTerritory("South Africa")));
         }
 
     }
