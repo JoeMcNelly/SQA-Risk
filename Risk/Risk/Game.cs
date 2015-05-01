@@ -289,17 +289,37 @@ namespace Risk
         {
             int total = 0;
             List<Territory> current = getCurrentPlayer().getTerritories();
-            List<Territory> africa = this.map.GetTerritoriesByContinent("South America");
+            List<Territory> southAmerica = this.map.GetTerritoriesByContinent("South America");
+            List<Territory> australia = this.map.GetTerritoriesByContinent("Australia");
+            List<Territory> northAmerica = this.map.GetTerritoriesByContinent("North America");
+            List<Territory> africa = this.map.GetTerritoriesByContinent("Africa");
+            List<Territory> europe = this.map.GetTerritoriesByContinent("Europe");
+            List<Territory> asia = this.map.GetTerritoriesByContinent("Asia");
 
             bool allSouthAmerica = true;
-            foreach (Territory t in africa)
+            foreach (Territory t in southAmerica)
             {
                 if (!current.Contains(t))
                 {
                     allSouthAmerica = false;
                 }
             }
+
+            bool allAustralia = true;
+            foreach (Territory t in australia)
+            {
+                if (!current.Contains(t))
+                {
+                    allAustralia = false;
+                }
+            }
+
+            
             if (allSouthAmerica)
+            {
+                total += 2;
+            }
+            if (allAustralia)
             {
                 total += 2;
             }
