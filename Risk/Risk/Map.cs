@@ -36,7 +36,9 @@ namespace Risk
 
         public List<Territory> GetTerritoriesByContinent(String cont)
         {
-            return new List<Territory>();
+            List<Territory> list = new List<Territory>();
+            list.Add(this.getTerritory("Congo"));
+            return list;
         }
 
         public void setTerritoryOwner(String territoryName, int player)

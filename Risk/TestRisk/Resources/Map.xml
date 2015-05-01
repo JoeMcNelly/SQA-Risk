@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<territories>
+  <territory>
+    <name>Alaska</name>
+    <continent>North America</continent>
+    <adjacent>Northwest Territory:Alberta:Kamchatka</adjacent>
+  </territory>
+  <territory>
+    <name>Alberta</name>
+    <continent>North America</continent>
+    <adjacent>Northwest Territory:Alaska:Ontario:Western United States</adjacent>
+  </territory>
+  <territory>
+    <name>Central America</name>
+    <continent>North America</continent>
+    <adjacent>Western United States:Eastern United States:Venezuela</adjacent>
+  </territory>
+  <territory>
+    <name>Eastern United States</name>
+    <continent>North America</continent>
+    <adjacent>Quebec:Ontario:Western United States:Central America</adjacent>
+  </territory>
+  <territory>
+    <name>Greenland</name>
+    <continent>North America</continent>
+    <adjacent>Quebec:Ontario:Northwest Territory:Iceland</adjacent>
+  </territory>
+  <territory>
+    <name>Northwest Territory</name>
+    <continent>North America</continent>
+    <adjacent>Alaska:Alberta:Ontario:Greenland</adjacent>
+  </territory>
+  <territory>
+    <name>Ontario</name>
+    <continent>North America</continent>
+    <adjacent>Quebec:Northwest Territory:Alberta:Western United States:Eastern United States</adjacent>
+  </territory>
+  <territory>
+    <name>Quebec</name>
+    <continent>North America</continent>
+    <adjacent>Ontario:Eastern United States:Greenland</adjacent>
+  </territory>
+  <territory>
+    <name>Western United States</name>
+    <continent>North America</continent>
+    <adjacent>Alberta:Ontario:Eastern United States:Central America</adjacent>
+  </territory>
+
+  <territory>
+    <name>Argentina</name>
+    <continent>South America</continent>
+    <adjacent>Peru:Brazil</adjacent>
+  </territory>
+  <territory>
+    <name>Brazil</name>
+    <continent>South America</continent>
+    <adjacent>Argentina:Peru:Argentina:North Africa</adjacent>
+  </territory>
+  <territory>
+    <name>Peru</name>
+    <continent>South America</continent>
+    <adjacent>Argentina:Brazil:Venezuela</adjacent>
+  </territory>
+  <territory>
+    <name>Venezuela</name>
+    <continent>South America</continent>
+    <adjacent>Central America:Peru:Brazil</adjacent>
+  </territory>
+
+  <territory>
+    <name>Great Britain</name>
+    <continent>Europe</continent>
+    <adjacent>Western Europe:Northern Europe:Scandinavia:Iceland</adjacent>
+  </territory>
+  <territory>
+    <name>Iceland</name>
+    <continent>Europe</continent>
+    <adjacent>Greenland:Great Britain:Scandinavia</adjacent>
+  </territory>
+  <territory>
+    <name>Northern Europe</name>
+    <continent>Europe</continent>
+    <adjacent>Southern Europe:Ukraine:Scandinavia:Great Britain:Western Europe</adjacent>
+  </territory>
+  <territory>
+    <name>Scandinavia</name>
+    <continent>Europe</continent>
+    <adjacent>Ukraine:Nothern Europe:Great Britain:Iceland</adjacent>
+  </territory>
+  <territory>
+    <name>Southern Europe</name>
+    <continent>Europe</continent>
+    <adjacent>Ukraine:Nothern Europe:Western Europe:Middle East:Egypt:North Africa</adjacent>
+  </territory>
+  <territory>
+    <name>Ukraine</name>
+    <continent>Europe</continent>
+    <adjacent>Scandinavia:Nothern Europe:Southern Europe:Ural:Afghanistan:Middle East</adjacent>
+  </territory>
+  <territory>
+    <name>Western Europe</name>
+    <continent>Europe</continent>
+    <adjacent>Great Britain:Nothern Europe:Southern Europe:North Africa</adjacent>
+  </territory>
+  <territory>
+    <name>Congo</name>
+    <continent>Africa</continent>
+    <adjacent>South Africa:East Africa:Nothern Africa</adjacent>
+  </territory>
+  <territory>
+    <name>East Africa</name>
+    <continent>Africa</continent>
+    <adjacent>Middle East:Egypt:North Africa:Congo:South Africa:Madagascar</adjacent>
+  </territory>
+  <territory>
+    <name>Egypt</name>
+    <continent>Africa</continent>
+    <adjacent>Middle East:Southern Europe:North Africa:East Africa</adjacent>
+  </territory>
+  <territory>
+    <name>Madagascar</name>
+    <continent>Africa</continent>
+    <adjacent>East Africa:South Africa</adjacent>
+  </territory>
+  <territory>
+    <name>North Africa</name>
+    <continent>Africa</continent>
+    <adjacent>Congo:East Africa:Egypt:Southern Europe:Western Europe:Brazil</adjacent>
+  </territory>
+  <territory>
+    <name>South Africa</name>
+    <continent>Africa</continent>
+    <adjacent>Madagascar:East Africa:Congo</adjacent>
+  </territory>
+
+  <territory>
+    <name>Afghanistan</name>
+    <continent>Asia</continent>
+    <adjacent>Middle East:India:China:Ural:Ukraine</adjacent>
+  </territory>
+  <territory>
+    <name>China</name>
+    <continent>Asia</continent>
+    <adjacent>Siam:India:Afghanistan:Ural:Siberia:Mongolia</adjacent>
+  </territory>
+  <territory>
+    <name>India</name>
+    <continent>Asia</continent>
+    <adjacent>Siam:China:Afghanistan:Middle East</adjacent>
+  </territory>
+  <territory>
+    <name>Irkutsk</name>
+    <continent>Asia</continent>
+    <adjacent>Kamchatka:Yakutsk:Siberia:Mongolia</adjacent>
+  </territory>
+  <territory>
+    <name>Japan</name>
+    <continent>Asia</continent>
+    <adjacent>Kamchatka:Mongolia</adjacent>
+  </territory>
+  <territory>
+    <name>Kamchatka</name>
+    <continent>Asia</continent>
+    <adjacent>Yakutsk:Irkutsk:Mongolia:Japan</adjacent>
+  </territory>
+  <territory>
+    <name>Middle East</name>
+    <continent>Asia</continent>
+    <adjacent>India:Afghanistan:Ukraine:Egypt:East Africa</adjacent>
+  </territory>
+  <territory>
+    <name>Mongolia</name>
+    <continent>Asia</continent>
+    <adjacent>Japan:Kamchatka:Irkutsk:Siberia:China</adjacent>
+  </territory>
+  <territory>
+    <name>Siam</name>
+    <continent>Asia</continent>
+    <adjacent>China:India:Indonesia</adjacent>
+  </territory>
+  <territory>
+    <name>Siberia</name>
+    <continent>Asia</continent>
+    <adjacent>Yakutsk:Irkutsk:Mongolia:China:Ural</adjacent>
+  </territory>
+  <territory>
+    <name>Ural</name>
+    <continent>Asia</continent>
+    <adjacent>Siberia:China:Afghanistan:Ukraine</adjacent>
+  </territory>
+  <territory>
+    <name>Yakutsk</name>
+    <continent>Asia</continent>
+    <adjacent>Kamchatka:Irkutsk:Siberia</adjacent>
+  </territory>
+
+  <territory>
+    <name>Eastern Australia</name>
+    <continent>Australia</continent>
+    <adjacent>Western Australia:New Guinea</adjacent>
+  </territory>
+  <territory>
+    <name>Indonesia</name>
+    <continent>Australia</continent>
+    <adjacent>Siam:New Guinea:Western Australia</adjacent>
+  </territory>
+  <territory>
+    <name>New Guinea</name>
+    <continent>Australia</continent>
+    <adjacent>Eastern Australia:Western Australia:Indonesia</adjacent>
+  </territory>
+  <territory>
+    <name>Western Australia</name>
+    <continent>Australia</continent>
+    <adjacent>Eastern Australia:New Gulinea:Indonesia</adjacent>
+  </territory>
+</territories>

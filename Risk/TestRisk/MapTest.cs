@@ -235,11 +235,10 @@ namespace UnitTestProject1
         public void TestGetTerritoriesByContinentAfrica()
         {
             Map target = new Map();
-            target.makeMapFromXML(testXML);
+            target.makeMapFromXML(global::TestRisk.Properties.Resources.Map);
 
             List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
-
-            Assert.IsTrue(terrs.Contains(target.getTerritory("Congo")));
+            Assert.IsTrue(terrs[0].getName().Equals("Congo"));
         }
 
     }

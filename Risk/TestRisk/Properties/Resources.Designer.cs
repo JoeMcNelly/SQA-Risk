@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UnitTestProject1.Properties {
+namespace TestRisk.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace UnitTestProject1.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UnitTestProject1.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TestRisk.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -67,6 +67,14 @@ namespace UnitTestProject1.Properties {
             get {
                 object obj = ResourceManager.GetObject("Blank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static string Map
+        {
+            get
+            {
+                return ResourceManager.GetString("Map", resourceCulture);
             }
         }
     }
