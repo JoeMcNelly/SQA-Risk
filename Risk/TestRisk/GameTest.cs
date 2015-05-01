@@ -461,5 +461,15 @@ namespace TestRisk
             Assert.AreNotEqual(0, game.getCurrentPlayer().hand.Count);
         }
 
+        [TestMethod]
+        public void testCardTurnInNoSets()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            game.drawCard(game.getCurrentPlayer());
+            Assert.IsFalse(game.cardTurnIn(game.getCurrentPlayer()));
+        }
+
     }
 }
