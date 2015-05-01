@@ -103,7 +103,7 @@ namespace Risk
             {
                 tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
-            label1.Text = "Choose your territories";
+            label1.Text = "Choose a Territory";
         }
 
 
@@ -128,7 +128,15 @@ namespace Risk
                 {
                     case 0:
                         button.Text = (current.getTemporaryReinforcements() + current.getNumTroops()) + "";
-                        label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
+                        if (game.getInitPhase())
+                        {
+                            label1.Text = "Choose a Territory";
+                        }
+                        else
+                        {
+                            label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
+                        }
+                        
                         break;
                     case 1:
                         //attack button/label things
