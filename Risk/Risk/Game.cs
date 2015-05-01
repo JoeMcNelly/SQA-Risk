@@ -223,8 +223,7 @@ namespace Risk
 
         public Card drawCard(Player curr)
         {
-            return null;
-            // not yet implemented
+            return this.deck.Pop();
         }
 
         public Boolean cardTurnIn(Player curr)
