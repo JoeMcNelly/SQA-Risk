@@ -418,6 +418,16 @@ namespace TestRisk
             Assert.AreEqual(0, game4.initialReinforcements());
 
         }
+        [TestMethod]
+        public void TestTerrReinforcements1Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Territory> terr = new List<Territory>();
+            terr.Add(new Territory());
+            Player p = new Player("test", 0, terr);
+            Assert.AreEqual(3, game.getTerritoryBonus());
+        }
 
     }
 }

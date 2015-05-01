@@ -277,6 +277,10 @@ namespace Risk
         {
             return 15;
         }
+        public int getTerritoryBonus()
+        {
+            return -1;
+        }
         //For testing only
         public void turnOffInit()
         {
