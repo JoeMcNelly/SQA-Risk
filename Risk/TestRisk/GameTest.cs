@@ -486,5 +486,21 @@ namespace TestRisk
             Assert.AreEqual(3, game.getDiscard().Count);
         }
 
+        [TestMethod]
+        public void testShuffleDeck()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+            Stack<Card> initialDeck = game.getDeck();
+
+            for (int i = 0; i < 42; i++)
+            {
+                game.drawCard(game.getCurrentPlayer());
+            }
+
+            game.shuffleDeck();
+            Assert.AreNotSame(initialDeck, game.getDeck());
+        }
+
     }
 }
