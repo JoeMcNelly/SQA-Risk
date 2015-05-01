@@ -27,7 +27,7 @@ namespace Risk
         Player neutralPlayer = new Player("Neutral", -1);
         private int numberOfInitialTerritories;
         //These 2 variables should become depreciated when Map.cs is full implemented
-        private List<Territory> territories;
+        //private List<Territory> territories;
         //private Dictionary<String, Territory> map;
         private int[] setValues = { 2, 4, 7, 10, 13, 17, 21, 25, 30 };
         private int GoldenCavalry = 0;
@@ -149,74 +149,34 @@ namespace Risk
             //4
               */ 
             #endregion
-            #region build deck
-            //this.deck.Push(new Card(0, "Afghanistan", Risk.Properties.Resources.AFGHANISTAN));
-            //this.deck.Push(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));
-            //this.deck.Push(new Card(0, "Alberta", Risk.Properties.Resources.ALBERTA));
-            //this.deck.Push(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
-            //this.deck.Push(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
-            //this.deck.Push(new Card(1, "Central America", Risk.Properties.Resources.CENTRAL_AMERICA));
-            //this.deck.Push(new Card(1, "China", Risk.Properties.Resources.CHINA));
-            //this.deck.Push(new Card(1, "Congo", Risk.Properties.Resources.CONGO));
-            //this.deck.Push(new Card(2, "East Africa", Risk.Properties.Resources.EAST_AFRICA));
-            //this.deck.Push(new Card(0, "Eastern Australia", Risk.Properties.Resources.EASTERN_AUSTRALIA));
-            //this.deck.Push(new Card(2, "Eastern United States", Risk.Properties.Resources.EASTERN_UNITED_STATES));
-            //this.deck.Push(new Card(0, "Egypt", Risk.Properties.Resources.EGYPT));
-            //this.deck.Push(new Card(1, "Great Britain", Risk.Properties.Resources.GREAT_BRITAIN));
-            //this.deck.Push(new Card(1, "Greenland", Risk.Properties.Resources.GREENLAND));
-            //this.deck.Push(new Card(1, "Iceland", Risk.Properties.Resources.ICELAND));
-            //this.deck.Push(new Card(1, "India", Risk.Properties.Resources.INDIA));
-            //this.deck.Push(new Card(1, "Indonesia", Risk.Properties.Resources.INDONESIA));
-            //this.deck.Push(new Card(0, "Irkutsk", Risk.Properties.Resources.IRKUTSK));
-            this.deck.Push(new Card(0, "Japan", Risk.Properties.Resources.JAPAN));
-            this.deck.Push(new Card(1, "Kamchatka", Risk.Properties.Resources.KAMCHATKA));
-            this.deck.Push(new Card(0, "Madagascar", Risk.Properties.Resources.MADAGASCAR));
-            this.deck.Push(new Card(2, "Middle East", Risk.Properties.Resources.MIDDLE_EAST));
-            this.deck.Push(new Card(2, "Mongolia", Risk.Properties.Resources.MONGOLIA));
-            this.deck.Push(new Card(1, "New Guinea", Risk.Properties.Resources.NEW_GUINEA));
-            this.deck.Push(new Card(0, "North Africa", Risk.Properties.Resources.NORTH_AFRICA));
-            this.deck.Push(new Card(1, "Northern Europe", Risk.Properties.Resources.NORTHERN_EUROPE));
-            this.deck.Push(new Card(2, "Northwest Territory", Risk.Properties.Resources.NORTHWEST_TERRITORY));
-            this.deck.Push(new Card(1, "Ontario", Risk.Properties.Resources.ONTARIO));
-            this.deck.Push(new Card(1, "Peru", Risk.Properties.Resources.PERU));
-            this.deck.Push(new Card(2, "Quebec", Risk.Properties.Resources.QUEBEC));
-            this.deck.Push(new Card(2, "Scandinavia", Risk.Properties.Resources.SCANDINAVIA));
-            this.deck.Push(new Card(2, "Siam", Risk.Properties.Resources.SIAM));
-            this.deck.Push(new Card(2, "Siberia", Risk.Properties.Resources.SIBERIA));
-            this.deck.Push(new Card(2, "South Africa", Risk.Properties.Resources.SOUTH_AFRICA));
-            this.deck.Push(new Card(1, "Southern Europe", Risk.Properties.Resources.SOUTHERN_EUROPE));
-            this.deck.Push(new Card(2, "Ukraine", Risk.Properties.Resources.UKRAINE));
-            this.deck.Push(new Card(1, "Ural", Risk.Properties.Resources.URAL));
-            this.deck.Push(new Card(2, "Venezuela", Risk.Properties.Resources.VENEZUELA));
-            this.deck.Push(new Card(2, "Western Australia", Risk.Properties.Resources.WESTERN_AUSTRALIA));
-            this.deck.Push(new Card(0, "Western Europe", Risk.Properties.Resources.WESTERN_EUROPE));
-            this.deck.Push(new Card(0, "Western United States", Risk.Properties.Resources.WESTERN_UNITED_STATES));
-            this.deck.Push(new Card(1, "Yakutsk", Risk.Properties.Resources.YAKUTSK));
-            #endregion
+
+            initializeDeck();
+
+            //not needed
             #region set hands
-            this.players[0].addCard(new Card(0, "Afghanistan", Risk.Properties.Resources.AFGHANISTAN));
-            this.players[0].addCard(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));
-            this.players[0].addCard(new Card(0, "Alberta", Risk.Properties.Resources.ALBERTA));
+            //this.players[0].addCard(new Card(0, "Afghanistan", Risk.Properties.Resources.AFGHANISTAN));
+            //this.players[0].addCard(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));
+            //this.players[0].addCard(new Card(0, "Alberta", Risk.Properties.Resources.ALBERTA));
 
-            this.players[1].addCard(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
-            this.players[1].addCard(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
-            this.players[1].addCard(new Card(1, "Central America", Risk.Properties.Resources.CENTRAL_AMERICA));
+            //this.players[1].addCard(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
+            //this.players[1].addCard(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
+            //this.players[1].addCard(new Card(1, "Central America", Risk.Properties.Resources.CENTRAL_AMERICA));
 
-            this.players[2].addCard(new Card(1, "China", Risk.Properties.Resources.CHINA));
-            this.players[2].addCard(new Card(1, "Congo", Risk.Properties.Resources.CONGO));
-            this.players[2].addCard(new Card(2, "East Africa", Risk.Properties.Resources.EAST_AFRICA));
+            //this.players[2].addCard(new Card(1, "China", Risk.Properties.Resources.CHINA));
+            //this.players[2].addCard(new Card(1, "Congo", Risk.Properties.Resources.CONGO));
+            //this.players[2].addCard(new Card(2, "East Africa", Risk.Properties.Resources.EAST_AFRICA));
 
-            this.players[3].addCard(new Card(0, "Eastern Australia", Risk.Properties.Resources.EASTERN_AUSTRALIA));
-            this.players[3].addCard(new Card(2, "Eastern United States", Risk.Properties.Resources.EASTERN_UNITED_STATES));
-            this.players[3].addCard(new Card(0, "Egypt", Risk.Properties.Resources.EGYPT));
+            //this.players[3].addCard(new Card(0, "Eastern Australia", Risk.Properties.Resources.EASTERN_AUSTRALIA));
+            //this.players[3].addCard(new Card(2, "Eastern United States", Risk.Properties.Resources.EASTERN_UNITED_STATES));
+            //this.players[3].addCard(new Card(0, "Egypt", Risk.Properties.Resources.EGYPT));
 
-            this.players[4].addCard(new Card(1, "Great Britain", Risk.Properties.Resources.GREAT_BRITAIN));
-            this.players[4].addCard(new Card(1, "Greenland", Risk.Properties.Resources.GREENLAND));
-            this.players[4].addCard(new Card(1, "Iceland", Risk.Properties.Resources.ICELAND));
+            //this.players[4].addCard(new Card(1, "Great Britain", Risk.Properties.Resources.GREAT_BRITAIN));
+            //this.players[4].addCard(new Card(1, "Greenland", Risk.Properties.Resources.GREENLAND));
+            //this.players[4].addCard(new Card(1, "Iceland", Risk.Properties.Resources.ICELAND));
 
-            this.players[5].addCard(new Card(1, "India", Risk.Properties.Resources.INDIA));
-            this.players[5].addCard(new Card(1, "Indonesia", Risk.Properties.Resources.INDONESIA));
-            this.players[5].addCard(new Card(0, "Irkutsk", Risk.Properties.Resources.IRKUTSK));
+            //this.players[5].addCard(new Card(1, "India", Risk.Properties.Resources.INDIA));
+            //this.players[5].addCard(new Card(1, "Indonesia", Risk.Properties.Resources.INDONESIA));
+            //this.players[5].addCard(new Card(0, "Irkutsk", Risk.Properties.Resources.IRKUTSK));
             #endregion
           
         }
@@ -264,7 +224,7 @@ namespace Risk
                 if (initReinforceCounter == this.numOfPlayers)
                 {
                     initReinforce = false;
-                    //DRAWCARDS
+                    drawCard();
                     this.reinforcements = generateReinforcements();
                 }
             }
@@ -286,8 +246,9 @@ namespace Risk
             this.dest = new Territory();
             this.canSetSrc = false;
             this.canSetDst = false;
-            nextGamePhase();
             nextPlayer();
+            drawCard();
+            nextGamePhase();
         }
 
         public void resetFortify()
@@ -492,6 +453,82 @@ namespace Risk
         {
             if (GoldenCavalry < setValues.Length - 2)
                 GoldenCavalry++;
+        }
+
+        public void ShuffleDeck(List<Card> cards)
+        {
+            Random rng = new Random();
+            int n = cards.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                Card value = cards[k];
+                cards[k] = cards[n];
+                cards[n] = value;
+            }
+        }
+
+        public void drawCard()
+        {
+            this.getCurrentPlayer().addCard(this.deck.Pop());
+        }
+
+        public void discardToDeck()
+        {
+            ShuffleDeck(this.discardPile);
+            this.deck = new Stack<Card>(this.discardPile);
+        }
+
+        public void initializeDeck()
+        {
+            List<Card> toBeDeck = new List<Card>();
+
+
+            toBeDeck.Add(new Card(0, "Afghanistan", Risk.Properties.Resources.AFGHANISTAN));
+            toBeDeck.Add(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));
+            toBeDeck.Add(new Card(0, "Alberta", Risk.Properties.Resources.ALBERTA));
+            toBeDeck.Add(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
+            toBeDeck.Add(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
+            toBeDeck.Add(new Card(1, "Central America", Risk.Properties.Resources.CENTRAL_AMERICA));
+            toBeDeck.Add(new Card(1, "China", Risk.Properties.Resources.CHINA));
+            toBeDeck.Add(new Card(1, "Congo", Risk.Properties.Resources.CONGO));
+            toBeDeck.Add(new Card(2, "East Africa", Risk.Properties.Resources.EAST_AFRICA));
+            toBeDeck.Add(new Card(0, "Eastern Australia", Risk.Properties.Resources.EASTERN_AUSTRALIA));
+            toBeDeck.Add(new Card(2, "Eastern United States", Risk.Properties.Resources.EASTERN_UNITED_STATES));
+            toBeDeck.Add(new Card(0, "Egypt", Risk.Properties.Resources.EGYPT));
+            toBeDeck.Add(new Card(1, "Great Britain", Risk.Properties.Resources.GREAT_BRITAIN));
+            toBeDeck.Add(new Card(1, "Greenland", Risk.Properties.Resources.GREENLAND));
+            toBeDeck.Add(new Card(1, "Iceland", Risk.Properties.Resources.ICELAND));
+            toBeDeck.Add(new Card(1, "India", Risk.Properties.Resources.INDIA));
+            toBeDeck.Add(new Card(1, "Indonesia", Risk.Properties.Resources.INDONESIA));
+            toBeDeck.Add(new Card(0, "Irkutsk", Risk.Properties.Resources.IRKUTSK));
+            toBeDeck.Add(new Card(0, "Japan", Risk.Properties.Resources.JAPAN));
+            toBeDeck.Add(new Card(1, "Kamchatka", Risk.Properties.Resources.KAMCHATKA));
+            toBeDeck.Add(new Card(0, "Madagascar", Risk.Properties.Resources.MADAGASCAR));
+            toBeDeck.Add(new Card(2, "Middle East", Risk.Properties.Resources.MIDDLE_EAST));
+            toBeDeck.Add(new Card(2, "Mongolia", Risk.Properties.Resources.MONGOLIA));
+            toBeDeck.Add(new Card(1, "New Guinea", Risk.Properties.Resources.NEW_GUINEA));
+            toBeDeck.Add(new Card(0, "North Africa", Risk.Properties.Resources.NORTH_AFRICA));
+            toBeDeck.Add(new Card(1, "Northern Europe", Risk.Properties.Resources.NORTHERN_EUROPE));
+            toBeDeck.Add(new Card(2, "Northwest Territory", Risk.Properties.Resources.NORTHWEST_TERRITORY));
+            toBeDeck.Add(new Card(1, "Ontario", Risk.Properties.Resources.ONTARIO));
+            toBeDeck.Add(new Card(1, "Peru", Risk.Properties.Resources.PERU));
+            toBeDeck.Add(new Card(2, "Quebec", Risk.Properties.Resources.QUEBEC));
+            toBeDeck.Add(new Card(2, "Scandinavia", Risk.Properties.Resources.SCANDINAVIA));
+            toBeDeck.Add(new Card(2, "Siam", Risk.Properties.Resources.SIAM));
+            toBeDeck.Add(new Card(2, "Siberia", Risk.Properties.Resources.SIBERIA));
+            toBeDeck.Add(new Card(2, "South Africa", Risk.Properties.Resources.SOUTH_AFRICA));
+            toBeDeck.Add(new Card(1, "Southern Europe", Risk.Properties.Resources.SOUTHERN_EUROPE));
+            toBeDeck.Add(new Card(2, "Ukraine", Risk.Properties.Resources.UKRAINE));
+            toBeDeck.Add(new Card(1, "Ural", Risk.Properties.Resources.URAL));
+            toBeDeck.Add(new Card(2, "Venezuela", Risk.Properties.Resources.VENEZUELA));
+            toBeDeck.Add(new Card(2, "Western Australia", Risk.Properties.Resources.WESTERN_AUSTRALIA));
+            toBeDeck.Add(new Card(0, "Western Europe", Risk.Properties.Resources.WESTERN_EUROPE));
+            toBeDeck.Add(new Card(0, "Western United States", Risk.Properties.Resources.WESTERN_UNITED_STATES));
+            toBeDeck.Add(new Card(1, "Yakutsk", Risk.Properties.Resources.YAKUTSK));
+            ShuffleDeck(toBeDeck);
+            this.deck = new Stack<Card>(toBeDeck);
         }
 
         
