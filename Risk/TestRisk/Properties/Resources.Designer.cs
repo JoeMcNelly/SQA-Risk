@@ -69,11 +69,27 @@ namespace TestRisk.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        internal static string Map
-        {
-            get
-            {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;territories&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Alaska&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Northwest Territory:Alberta:Kamchatka&lt;/adjacent&gt;
+        ///  &lt;/territory&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Alberta&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Northwest Territory:Alaska:Ontario:Western United States&lt;/adjacent&gt;
+        ///  &lt;/territory&gt;
+        ///  &lt;territory&gt;
+        ///    &lt;name&gt;Central America&lt;/name&gt;
+        ///    &lt;continent&gt;North America&lt;/continent&gt;
+        ///    &lt;adjacent&gt;Western [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Map {
+            get {
                 return ResourceManager.GetString("Map", resourceCulture);
             }
         }

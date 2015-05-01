@@ -234,8 +234,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestGetTerritoriesByContinentAfrica()
         {
-            Map target = new Map();
-            target.makeMapFromXML(global::TestRisk.Properties.Resources.Map);
+            Map target = new Map(global::TestRisk.Properties.Resources.Map);
 
             List<Territory> terrs = target.GetTerritoriesByContinent("Africa");
             Assert.IsTrue(terrs[0].getName().Equals("Congo"));

@@ -84,9 +84,9 @@
     <None Include="Resources\blank.gif" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Map.xml">
+    <None Include="Resources\Map.xml">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
