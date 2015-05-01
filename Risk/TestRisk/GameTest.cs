@@ -429,6 +429,17 @@ namespace TestRisk
             Player p = new Player("test", 0, terr);
             Assert.AreEqual(3, game.getTerritoryBonus());
         }
+        [TestMethod]
+        public void TestTerrReinforcements12Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Territory> terr = new List<Territory>();
+            for (int i = 0; i < 12;i++ )
+                terr.Add(new Territory());
+            Player p = new Player("test", 0, terr);
+            Assert.AreEqual(4, game.getTerritoryBonus());
+        }
 
     }
 }
