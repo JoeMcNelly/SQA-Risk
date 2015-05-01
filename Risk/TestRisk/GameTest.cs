@@ -441,5 +441,15 @@ namespace TestRisk
             Assert.AreEqual("Infantry", card.getTroopType());
         }
 
+        [TestMethod]
+        public void testThatDrawingCardRemovesFromDeck()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            Card card = game.drawCard(game.getCurrentPlayer());
+            Assert.AreEqual(41, game.getDeck().Count);
+        }
+
     }
 }
