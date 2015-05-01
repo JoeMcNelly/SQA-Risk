@@ -463,6 +463,23 @@ namespace TestRisk
 
             Assert.AreEqual(5, game.getTerritoryBonus());
         }
+        [TestMethod]
+        public void TestTerrReinforcements37Terr()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+            List<Territory> terr = new List<Territory>();
+            Player p = new Player("test", 0, terr);
+            playerList.Add(p);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            for (int i = 0; i < 37; i++)
+                terr.Add(new Territory());
+
+            Assert.AreEqual(12, game.getTerritoryBonus());
+        }
 
     }
 }
