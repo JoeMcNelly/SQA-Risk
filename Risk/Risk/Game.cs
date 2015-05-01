@@ -245,6 +245,9 @@ namespace Risk
                     numArt++;
                 }
             }
+            //Console.WriteLine("Number of Infantry: " + numInf);
+            //Console.WriteLine("Number of Calvalry: " + numCalv);
+            //Console.WriteLine("Number of Artillery: " + numArt);
 
             if(numInf >= 3) {
                 for(int i = 0; i < curr.hand.Count; i++) 
@@ -279,37 +282,28 @@ namespace Risk
                 }
                 return true;
             } else if(numInf == 1 && numCalv == 1 && numArt == 1) {
-                Boolean infRemove = false;
-                Boolean calvRemove = false;
-                Boolean artRemove = false;
-                for (int i = 0; i < curr.hand.Count; i++)
-                {
-                    if (curr.hand.ElementAt(i).getTroopType().Equals("Infantry") && !infRemove)
-                    {
-                        this.discardPile.Add(curr.hand.ElementAt(i));
-                        curr.hand.RemoveAt(i);
-                        i--;
-                        infRemove = true;
-                    }
-                    else if (curr.hand.ElementAt(i).getTroopType().Equals("Calvalry") && !calvRemove)
-                    {
-                        this.discardPile.Add(curr.hand.ElementAt(i));
-                        curr.hand.RemoveAt(i);
-                        i--;
-                        calvRemove = true;
-                    }
-                    else if (curr.hand.ElementAt(i).getTroopType().Equals("Artillery") && !artRemove)
-                    {
-                        this.discardPile.Add(curr.hand.ElementAt(i));
-                        curr.hand.RemoveAt(i);
-                        i--;
-                        artRemove = true;
-                    }
-                    return true;
-                }
+                int indexOfInf = this.getCurrentPlayer().hand.FindIndex(0, this.getCurrentPlayer().hand.Count, byTroopType("Infantry"));
+                int indexOfCalv = this.getCurrentPlayer().hand.FindIndex(0, this.getCurrentPlayer().hand.Count, byTroopType("Calvalry"));
+                int indexOfArt = this.getCurrentPlayer().hand.FindIndex(0, this.getCurrentPlayer().hand.Count, byTroopType("Artillery"));
+                this.discardPile.Add(this.getCurrentPlayer().hand[indexOfInf]);
+                this.discardPile.Add(this.getCurrentPlayer().hand[indexOfCalv]);
+                this.discardPile.Add(this.getCurrentPlayer().hand[indexOfArt]);
+                this.getCurrentPlayer().hand.RemoveAt(indexOfInf);
+                this.getCurrentPlayer().hand.RemoveAt(indexOfCalv);
+                this.getCurrentPlayer().hand.RemoveAt(indexOfArt);
+                return true;
             }
 
             return false;
+        }
+
+        private static Predicate<Card> byTroopType(String type)
+        {
+            return delegate(Card card)
+                {
+                    return card.getTroopType() == type;
+                };
+
         }
 
         public List<List<Card>> shuffleDeck() // return value is newly the shuffled list for comparison's sake in tests

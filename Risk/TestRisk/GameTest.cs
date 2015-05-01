@@ -540,6 +540,10 @@ namespace TestRisk
             game.getDeck().Push(new Card(new Territory(), "Calvalry"));
             game.getDeck().Push(new Card(new Territory(), "Artillery"));
 
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+            game.drawCard(game.getCurrentPlayer());
+
             Assert.IsTrue(game.cardTurnIn(game.getCurrentPlayer()));
 
 
