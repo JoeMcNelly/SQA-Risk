@@ -213,7 +213,12 @@ namespace Risk
 
         public void initializeDeck() // except for this one.
         {
-            
+            for (int i = 0; i < 42; i++)
+            {
+                this.deck.Push(new Card(new Territory("Cont", "Terr" + i), "Infantry"));
+                // Adds mock territories "Terr0" thru "Terr41" all with type Infantry.
+                // Can add method to randomize troop type later for testing purposes.
+            }
         } 
 
         public List<Card> shuffleDeck() 
