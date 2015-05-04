@@ -158,8 +158,8 @@ namespace Risk
             //this.players[0].addCard(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));
             //this.players[0].addCard(new Card(0, "Alberta", Risk.Properties.Resources.ALBERTA));
 
-            //this.players[1].addCard(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
-            //this.players[1].addCard(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
+            //this.players[0].addCard(new Card(0, "Argentina", Risk.Properties.Resources.ARGENTINA));
+            //this.players[0].addCard(new Card(2, "Brazil", Risk.Properties.Resources.BRAZIL));
             //this.players[1].addCard(new Card(1, "Central America", Risk.Properties.Resources.CENTRAL_AMERICA));
 
             //this.players[2].addCard(new Card(1, "China", Risk.Properties.Resources.CHINA));

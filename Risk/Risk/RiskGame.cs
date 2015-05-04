@@ -224,6 +224,7 @@ namespace Risk
             setPlayerPhaseLabel();
             resetSrcAndDest();
             loadPlayerCards();
+            Check5Cards();
         }
 
         private void initAttackPhase()
@@ -619,6 +620,10 @@ namespace Risk
                     //activate the tradein button
                     tradeIn.Enabled = true;
                 }
+                else
+                {
+                    tradeIn.Enabled = false; 
+                }
             }
         }
 
@@ -640,6 +645,7 @@ namespace Risk
             }
         }
 
+        //this is the turn in button, I know its a crap name.
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -649,6 +655,7 @@ namespace Risk
             loadPlayerCards();
             tradeIn.Enabled = false;
             label1.Text = "Reinforcements left: " + game.getReinforcements();
+            save.Enabled = true;
         }
 
         private void resetHand()
@@ -661,6 +668,16 @@ namespace Risk
                 card.Cursor = Cursors.Arrow;
                 card.Refresh();
 
+            }
+        }
+
+        //if a player has 5 cards they HAVE to turn in 3
+        private void Check5Cards()
+        {
+            if (game.getCurrentPlayer().getHand().Count == 5)
+            {
+                //probably should make a label that says why this is disabled.
+                save.Enabled = false;
             }
         }
 
