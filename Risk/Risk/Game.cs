@@ -500,12 +500,9 @@ namespace Risk
                         {
                             this.source = current;
                         }
-                        else if (!this.source.getName().Equals(""))
-                        {
-                            this.dest = current;
-                        }
                         else
                         {
+                            this.dest = current;
                             Console.WriteLine("Select a source, then a destination");
                         }
                         break;
