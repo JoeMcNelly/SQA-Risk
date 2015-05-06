@@ -22,6 +22,7 @@ namespace Risk
         Territory srcT;
         Territory destT;
         List<PictureBox> selectedCards;
+        List<Color> colors;
 
         public RiskGame()
         {
@@ -114,6 +115,13 @@ namespace Risk
                 tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
             label1.Text = "Choose a Territory";
+            colors = new List<Color>();
+            colors.Add(Color.LimeGreen);
+            colors.Add(Color.Red);
+            colors.Add(Color.SandyBrown);
+            colors.Add(Color.Yellow);
+            colors.Add(Color.HotPink);
+            colors.Add(Color.Cyan);
         }
 
 
@@ -183,7 +191,7 @@ namespace Risk
                         }
                         break;
                 }
-            
+                updateColors();
         }
 
         private void setPlayerPhaseLabel()
@@ -203,6 +211,20 @@ namespace Risk
                     break;
             }
             label2.Text = game.getCurrentPlayer().playerName + stringPhase;
+        }
+
+        private void updateColors()
+        {
+            foreach(KeyValuePair<String, Button> kv in buttons)
+            {
+                Territory terr = this.game.getMap().getTerritory(kv.Key);
+                int owner = terr.getOwner();
+                if(owner != -1)
+                {
+                    kv.Value.BackColor = colors[owner];
+                }
+            }
+  
         }
 
         private void resetSrcAndDest()
@@ -297,7 +319,7 @@ namespace Risk
 
         private void attack_click(object sender, EventArgs e)
         {
-            
+            updateColors();   
         }
 
         private void endAttack_click(object sender, EventArgs e)
