@@ -503,7 +503,6 @@ namespace Risk
                         else
                         {
                             this.dest = current;
-                            Console.WriteLine("Select a source, then a destination");
                         }
                         break;
                     case 2:

@@ -47,6 +47,13 @@ namespace Risk
             this.src = null;
             this.dest = null;
             selectedCards = new List<PictureBox>();
+            colors = new List<Color>();
+            colors.Add(Color.LimeGreen);
+            colors.Add(Color.Red);
+            colors.Add(Color.DarkGoldenrod);
+            colors.Add(Color.DarkOrchid);
+            colors.Add(Color.HotPink);
+            colors.Add(Color.Cyan);
             initReinforcePhase();
 
             #region buttons
@@ -115,13 +122,7 @@ namespace Risk
                 tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
             label1.Text = "Choose a Territory";
-            colors = new List<Color>();
-            colors.Add(Color.LimeGreen);
-            colors.Add(Color.Red);
-            colors.Add(Color.SandyBrown);
-            colors.Add(Color.Yellow);
-            colors.Add(Color.HotPink);
-            colors.Add(Color.Cyan);
+
         }
 
 
@@ -134,7 +135,9 @@ namespace Risk
 
             if (game.getInitPhase())
             {
+                
                 label2.Text = game.getCurrentPlayer().playerName;
+                label2.ForeColor = colors[game.getCurrentPlayer().playerNumber];
             }
             else
             {
@@ -211,6 +214,7 @@ namespace Risk
                     break;
             }
             label2.Text = game.getCurrentPlayer().playerName + stringPhase;
+            label2.ForeColor = colors[game.getCurrentPlayer().playerNumber];
         }
 
         private void updateColors()
