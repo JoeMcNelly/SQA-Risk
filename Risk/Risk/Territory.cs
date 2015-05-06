@@ -116,6 +116,10 @@ namespace Risk
         {
             return adjacencies;
         }
+        public bool canAttack(Territory dest)
+        {
+            return false;
+        }
 
         public override bool Equals(Object obj)
         {

@@ -35,7 +35,7 @@ namespace Risk
 
         public Game() : this(6)
         {
-           
+            //not used
             #region set territory owner, hard code
              /*
             this.map.getTerritory("North Africa").setOwner(0);
@@ -152,7 +152,7 @@ namespace Risk
 
             
 
-            //not needed
+            //not used
             #region set hands
             //this.players[0].addCard(new Card(0, "Afghanistan", Risk.Properties.Resources.AFGHANISTAN));
             //this.players[0].addCard(new Card(0, "Alaska", Risk.Properties.Resources.ALASKA));

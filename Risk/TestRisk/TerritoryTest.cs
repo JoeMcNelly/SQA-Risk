@@ -176,7 +176,23 @@ namespace TestRisk
             Assert.AreEqual(0, terr.getTemporaryReinforcements());
             Assert.AreEqual(0, terr.getNumTroops());
         }
-        
+
+        [TestMethod]
+        public void TestCanAttackNoTroops()
+        {
+            Territory src = new Territory();
+            Territory dest = new Territory();
+            int numSoldiers = 0;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                src.addTroops();
+                dest.addTroops();
+            }
+            src.saveTroops();
+            dest.saveTroops();
+
+            Assert.IsFalse(src.canAttack(dest));
+        }
     }
 
 }
