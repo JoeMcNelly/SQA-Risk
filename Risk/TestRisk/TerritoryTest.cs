@@ -241,6 +241,7 @@ namespace TestRisk
 
             Assert.IsTrue(src.canAttack(dest));
         }
+
     }
 
 }

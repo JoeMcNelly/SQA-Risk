@@ -118,7 +118,7 @@ namespace Risk
         }
         public bool canAttack(Territory dest)
         {
-            if (this.getNumTroops() == 2)
+            if (this.getNumTroops() > 1)
                 return true;
             return false;
         }
