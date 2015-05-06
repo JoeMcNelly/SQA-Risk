@@ -215,6 +215,10 @@ namespace TestRisk
             Territory src = new Territory();
             Territory dest = new Territory();
             int numSoldiers = 2;
+            src.setOwner(0);
+            dest.setOwner(1);
+            src.addAdjancent(dest);
+            dest.addAdjancent(src);
             for (int i = 0; i < numSoldiers; i++)
             {
                 src.addTroops();
@@ -231,6 +235,10 @@ namespace TestRisk
             Territory src = new Territory();
             Territory dest = new Territory();
             int numSoldiers = 3;
+            src.setOwner(0);
+            dest.setOwner(1);
+            dest.addAdjancent(src);
+            src.addAdjancent(dest);
             for (int i = 0; i < numSoldiers; i++)
             {
                 src.addTroops();
@@ -240,6 +248,31 @@ namespace TestRisk
             dest.saveTroops();
 
             Assert.IsTrue(src.canAttack(dest));
+        }
+        [TestMethod]
+        public void TestCanAttack3TroopsIsNotAdjacent()
+        {
+            Territory src = new Territory();
+            Territory dest = new Territory();
+            Territory inBetween = new Territory();
+            int numSoldiers = 3;
+            src.setOwner(0);
+            inBetween.setOwner(0);
+            dest.setOwner(1);
+            dest.addAdjancent(inBetween);
+            src.addAdjancent(inBetween);
+            inBetween.addAdjancent(src);
+            inBetween.addAdjancent(dest);
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                src.addTroops();
+                dest.addTroops();
+                inBetween.addTroops();
+            }
+            src.saveTroops();
+            dest.saveTroops();
+            inBetween.saveTroops();
+            Assert.IsFalse(src.canAttack(dest));
         }
 
     }

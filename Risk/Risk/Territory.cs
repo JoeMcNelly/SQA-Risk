@@ -119,7 +119,16 @@ namespace Risk
         public bool canAttack(Territory dest)
         {
             if (this.getNumTroops() > 1)
-                return true;
+            {
+                if (this.getAdjancencies().Contains(dest))
+                {
+                    if (this.getOwner() != dest.getOwner())
+                    {
+                        return true;
+                    }
+                }
+            }
+                
             return false;
         }
 
