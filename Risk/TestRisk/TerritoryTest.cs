@@ -193,6 +193,38 @@ namespace TestRisk
 
             Assert.IsFalse(src.canAttack(dest));
         }
+        [TestMethod]
+        public void TestCanAttack1Troops()
+        {
+            Territory src = new Territory();
+            Territory dest = new Territory();
+            int numSoldiers = 1;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                src.addTroops();
+                dest.addTroops();
+            }
+            src.saveTroops();
+            dest.saveTroops();
+
+            Assert.IsFalse(src.canAttack(dest));
+        }
+        [TestMethod]
+        public void TestCanAttack2TroopsIsAdjacent()
+        {
+            Territory src = new Territory();
+            Territory dest = new Territory();
+            int numSoldiers = 2;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                src.addTroops();
+                dest.addTroops();
+            }
+            src.saveTroops();
+            dest.saveTroops();
+
+            Assert.IsTrue(src.canAttack(dest));
+        }
     }
 
 }
