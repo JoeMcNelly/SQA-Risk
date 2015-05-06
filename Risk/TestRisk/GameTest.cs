@@ -698,5 +698,24 @@ namespace TestRisk
             Assert.AreEqual(3, game.getContinentBonus());
         }
 
+        [TestMethod]
+        public void testThatDrawingCardRemovesFromDeck()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            game.drawCard();
+            Assert.AreEqual(41, game.getDeck().Count);
+        }
+
+        [TestMethod]
+        public void testCardGoesIntoPlayerHandOnDraw()
+        {
+            Game game = new Game();
+            game.initializeDeck();
+
+            game.drawCard();
+            Assert.AreNotEqual(0, game.getCurrentPlayer().getHand().Count);
+        }
     }
 }

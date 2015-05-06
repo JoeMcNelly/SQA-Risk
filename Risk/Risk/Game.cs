@@ -400,6 +400,16 @@ namespace Risk
         }
 
         #region getters and setters
+        public Stack<Card> getDeck()
+        {
+            return this.deck;
+        }
+
+        public List<Card> getDiscard()
+        {
+            return this.discardPile;
+        }
+
         public int getReinforcements()
         {
             return reinforcements;
@@ -609,6 +619,8 @@ namespace Risk
                 cards[n] = value;
             }
         }
+
+
 
         public void drawCard()
         {

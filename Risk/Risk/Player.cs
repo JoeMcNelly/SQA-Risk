@@ -50,6 +50,10 @@ namespace Risk
         {
             return this.cards;
         }
+        public List<Card> playerHandToList()
+        {
+            return this.cards.Values.ToList();
+        }
         public void addCard(Card card)
         {
             this.cards.Add(card.GetTerritoryName(), card);
