@@ -225,6 +225,22 @@ namespace TestRisk
 
             Assert.IsTrue(src.canAttack(dest));
         }
+        [TestMethod]
+        public void TestCanAttack3TroopsIsAdjacent()
+        {
+            Territory src = new Territory();
+            Territory dest = new Territory();
+            int numSoldiers = 3;
+            for (int i = 0; i < numSoldiers; i++)
+            {
+                src.addTroops();
+                dest.addTroops();
+            }
+            src.saveTroops();
+            dest.saveTroops();
+
+            Assert.IsTrue(src.canAttack(dest));
+        }
     }
 
 }
