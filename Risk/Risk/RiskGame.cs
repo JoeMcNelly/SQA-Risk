@@ -150,6 +150,7 @@ namespace Risk
                         break;
                     case 1:
                         //attack button/label things
+
                         break;
                     case 2:
                         if (this.src == null && game.canSetSource())

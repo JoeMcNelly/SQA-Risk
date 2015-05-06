@@ -484,6 +484,20 @@ namespace Risk
                         break;
                     case 1:
                         //do attacking things
+                        
+                        
+                        if(current.getOwner() == getCurrentPlayer().playerNumber)
+                        {
+                            this.source = current;
+                        }
+                        else if (!this.source.getName().Equals(""))
+                        {
+                            this.dest = current;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Select a source, then a destination");
+                        }
                         break;
                     case 2:
                         if (current.getOwner() != getCurrentPlayer().playerNumber)
