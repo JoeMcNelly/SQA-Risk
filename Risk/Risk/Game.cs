@@ -493,20 +493,13 @@ namespace Risk
                         }
                         break;
                     case 1:
-                        //do attacking things
-                        
-                        
                         if(current.getOwner() == getCurrentPlayer().playerNumber)
                         {
                             this.source = current;
                         }
-                        else if (!this.source.getName().Equals(""))
-                        {
-                            this.dest = current;
-                        }
                         else
                         {
-                            Console.WriteLine("Select a source, then a destination");
+                            this.dest = current;
                         }
                         break;
                     case 2:
@@ -683,6 +676,63 @@ namespace Risk
             ShuffleDeck(toBeDeck);
             this.deck = new Stack<Card>(toBeDeck);
 
+        }
+
+        public void attack(List<int> riggedRolls = null)
+        {
+            if(this.source != new Territory() && this.dest != new Territory()) {
+                if (riggedRolls == null) // rolls aren't rigged; proceed normally
+                {
+                    Random rnd = new Random();
+                    List<int> attackerRolls = new List<int>();
+                    List<int> defenderRolls = new List<int>();
+                    int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
+                    int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
+                    for (int i = 0; i < numOfAttackers; i++)
+                    {
+                        attackerRolls.Add(rnd.Next(1, 6));  
+                    }
+                    for (int i = 0; i < numOfDefenders; i++)
+                    {
+                        defenderRolls.Add(rnd.Next(1, 6));
+                    }
+                    attackerRolls = attackerRolls.OrderByDescending(x => x).ToList();
+                    defenderRolls = defenderRolls.OrderByDescending(x => x).ToList();
+                    for (int i = 0; i < Math.Min(numOfAttackers, numOfDefenders); i++)
+                    {
+                        if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
+                        {
+                            this.source.decTroops();
+                            this.source.saveTroops();
+
+                            if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
+                            {
+                                this.dest.setOwner(this.source.getOwner());
+                                for (int j = 0; j < numOfAttackers; j++)
+                                {
+                                    this.source.decTroops();
+                                    this.dest.addTroops();
+                                }
+                                this.source.saveTroops();
+                                this.dest.saveTroops();
+                            }
+                        }
+                        else //attacker's highest roll is less than or equal to defender's highest
+                        {
+                            this.dest.decTroops();
+                            this.dest.saveTroops();
+                        }
+                    }
+                }
+                else // rolls are rigged; do something else
+                {
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("You need to select an attacking and defending territory first!");
+            }
         }
 
         

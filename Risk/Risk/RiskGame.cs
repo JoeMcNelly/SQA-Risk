@@ -297,7 +297,7 @@ namespace Risk
 
         private void attack_click(object sender, EventArgs e)
         {
-            
+            this.game.attack();
         }
 
         private void endAttack_click(object sender, EventArgs e)
