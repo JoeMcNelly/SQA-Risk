@@ -157,11 +157,21 @@ namespace Risk
                         {
                             label1.Text = "Reinforcements left: " + this.game.getReinforcements().ToString();
                         }
-                        
+
+
+   
+                                         
                         break;
                     case 1:
                         //attack button/label things
+                        string srcString = game.getSource().getName();
+                        if (srcString == "")
+                            srcString = "?";
+                        string destString = game.getDest().getName();
+                        if (destString == "")
+                            destString = "?";
 
+                        label1.Text = srcString + " vs: " + destString;
                         break;
                     case 2:
                         if (this.src == null && game.canSetSource())
@@ -262,6 +272,7 @@ namespace Risk
             endAttack.Enabled = true;
             tradeIn.Enabled = false;
             setPlayerPhaseLabel();
+            label1.Text = "? vs: ?";
         }
 
         private void initFortifyPhase()

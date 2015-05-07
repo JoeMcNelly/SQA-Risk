@@ -453,7 +453,14 @@ namespace Risk
         {
             return this.canSetDst;
         }
-
+        public Territory getSource()
+        {
+            return source;
+        }
+        public Territory getDest()
+        {
+            return dest;
+        }
         private void clickInitTerritory(Territory current){
             Console.WriteLine(current.getOwner());
             Console.WriteLine(current.getNumTroops());
