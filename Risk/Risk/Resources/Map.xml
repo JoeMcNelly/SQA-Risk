@@ -54,7 +54,7 @@
   <territory>
     <name>Brazil</name>
     <continent>South America</continent>
-    <adjacent>Argentina:Peru:Argentina:North Africa</adjacent>
+    <adjacent>Argentina:Peru:Venezuela:North Africa</adjacent>
   </territory>
   <territory>
     <name>Peru</name>
