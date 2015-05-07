@@ -27,7 +27,7 @@ namespace Risk
         public RiskGame()
         {
             InitializeComponent();
-            this.game = new Game(); // Hard coding in 6 players for now
+            this.game = new Game(3); // Hard coding in 6 players for now
 
             this.displayedHand = new List<PictureBox>();
             #region cards

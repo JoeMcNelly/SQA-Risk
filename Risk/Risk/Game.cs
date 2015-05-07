@@ -238,14 +238,19 @@ namespace Risk
 
         public void endAttack()
         {
+            resetSrcAndDest();
             nextGamePhase();
+        }
+        public void resetSrcAndDest()
+        {
+            this.source = new Territory();
+            this.dest = new Territory();
         }
         public void endFortify()
         {
             this.source.saveTroops();
             this.dest.saveTroops();
-            this.source = new Territory();
-            this.dest = new Territory();
+            resetSrcAndDest();
             this.canSetSrc = false;
             this.canSetDst = false;
             nextPlayer();
