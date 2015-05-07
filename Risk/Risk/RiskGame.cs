@@ -179,6 +179,13 @@ namespace Risk
                         label1.Text = srcString + " vs: " + destString;
                         break;
                     case 2:
+                            srcString = game.getSource().getName();
+                                if (srcString == "")
+                                    srcString = "?";
+                                destString = game.getDest().getName();
+                                if (destString == "")
+                                    destString = "?";
+                                label1.Text = srcString + " --> " + destString;
                         if (this.src == null && game.canSetSource())
                         {
                             this.src = button;
@@ -278,7 +285,7 @@ namespace Risk
             tradeIn.Enabled = false;
             setPlayerPhaseLabel();
             label1.Text = "? vs: ?";
-            label1.ForeColor = Color.Black;
+            label1.ForeColor = Color.Red;
         }
 
         private void initFortifyPhase()
@@ -289,7 +296,7 @@ namespace Risk
             resetFortify.Enabled = true;
             tradeIn.Enabled = false;
             setPlayerPhaseLabel();
-            label1.Text = "";
+            label1.Text = "? --> ?";
             label1.ForeColor = Color.Black;
         }
 
