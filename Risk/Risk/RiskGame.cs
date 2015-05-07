@@ -349,7 +349,9 @@ namespace Risk
 
         private void attack_click(object sender, EventArgs e)
         {
-            updateColors();   
+            this.game.attack();
+            updateColors();
+           
         }
 
         private void endAttack_click(object sender, EventArgs e)
