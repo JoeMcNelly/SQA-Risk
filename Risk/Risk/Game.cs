@@ -31,6 +31,9 @@ namespace Risk
         //private Dictionary<String, Territory> map;
         private int[] setValues = { 2, 4, 7, 10, 13, 17, 21, 25, 30 };
         private int GoldenCavalry = 0;
+        Random dice = new Random();
+        List<int> attackerRolls = new List<int>();
+        List<int> defenderRolls = new List<int>();
         
 
         public Game() : this(6)
@@ -704,61 +707,63 @@ namespace Risk
 
         }
 
-        public void attack(List<int> riggedRolls = null)
+        public void rollDice()
         {
-            if (this.source != new Territory() && this.dest != new Territory())
+            attackerRolls = new List<int>();
+            defenderRolls = new List<int>();
+            int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
+            int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
+            for (int i = 0; i < numOfAttackers; i++)
             {
-                if (riggedRolls == null) // rolls aren't rigged; proceed normally
+                attackerRolls.Add(dice.Next(1, 6));
+            }
+            for (int i = 0; i < numOfDefenders; i++)
+            {
+                defenderRolls.Add(dice.Next(1, 6));
+            }
+            attackerRolls = attackerRolls.OrderByDescending(x => x).ToList();
+            defenderRolls = defenderRolls.OrderByDescending(x => x).ToList();
+        }
+
+        public void attack()
+        {
+
+            int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
+            int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
+            for (int i = 0; i < Math.Min(numOfAttackers, numOfDefenders); i++)
+            {
+                if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
                 {
-                    Random rnd = new Random();
-                    List<int> attackerRolls = new List<int>();
-                    List<int> defenderRolls = new List<int>();
-                    int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
-                    int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
-                    for (int i = 0; i < numOfAttackers; i++)
+                    this.dest.decTroops();
+                    this.dest.saveTroops();
+                    
+                    if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
-                        attackerRolls.Add(rnd.Next(1, 6));
-                    }
-                    for (int i = 0; i < numOfDefenders; i++)
-                    {
-                        defenderRolls.Add(rnd.Next(1, 6));
-                    }
-                    attackerRolls = attackerRolls.OrderByDescending(x => x).ToList();
-                    defenderRolls = defenderRolls.OrderByDescending(x => x).ToList();
-                    for (int i = 0; i < Math.Min(numOfAttackers, numOfDefenders); i++)
-                    {
-                        if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
+                        this.dest.setOwner(this.source.getOwner());
+                        //add dest to curr player
+                        this.getCurrentPlayer().getTerritories().Add(dest);
+                        //take dest from defending player unless its a neutral
+                        int destOwner = this.dest.getOwner();
+                        if (destOwner != -1)
+                        {
+                            this.players[destOwner].getTerritories().Remove(dest);
+                        }
+
+                        for (int j = 0; j < numOfAttackers-i; j++) //added -i for if this is on the second roll
                         {
                             this.source.decTroops();
-                            this.source.saveTroops();
-
-                            if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
-                            {
-                                this.dest.setOwner(this.source.getOwner());
-                                for (int j = 0; j < numOfAttackers; j++)
-                                {
-                                    this.source.decTroops();
-                                    this.dest.addTroops();
-                                }
-                                this.source.saveTroops();
-                                this.dest.saveTroops();
-                            }
+                            this.dest.addTroops();
                         }
-                        else //attacker's highest roll is less than or equal to defender's highest
-                        {
-                            this.dest.decTroops();
-                            this.dest.saveTroops();
-                        }
+                        this.source.saveTroops();
+                        this.dest.saveTroops();
                     }
                 }
-                else // rolls are rigged; do something else
+                else //attacker's highest roll is less than or equal to defender's highest
                 {
-
+                    this.source.decTroops();
+                    this.source.saveTroops();
                 }
-            }
-            else
-            {
-                Console.WriteLine("You need to select an attacking and defending territory first!");
+        
             }
         }
         
