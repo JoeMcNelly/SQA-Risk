@@ -267,6 +267,13 @@ namespace UnitTestProject1
             Assert.IsTrue(terrs.Contains(target.getTerritory("Argentina")));
             Assert.AreEqual(4, terrs.Count);
         }
+        [TestMethod]
+        public void TestMakeMapFromBlankXML()
+        {
+            var map = new Map();
+            map.makeMapFromXML("");
+            Assert.IsTrue(map.getMap().Count == 0);
+        }
 
     }
 }
