@@ -737,7 +737,8 @@ namespace Risk
             {
                 if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
                 {
-                    
+                    this.dest.decTroops();
+                    this.dest.saveTroops();
                     
                     if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
