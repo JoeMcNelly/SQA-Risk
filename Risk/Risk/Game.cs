@@ -23,6 +23,7 @@ namespace Risk
         private List<Card> discardPile = new List<Card>(); // discard pile will always be empty at the start of any game
         private bool initPhase = true;
         private bool initReinforce = true;
+        private bool cardDrawn = false;
         private int initReinforceCounter = 0;
         Player neutralPlayer = new Player("Neutral", -1);
         private int numberOfInitialTerritories;
@@ -279,6 +280,7 @@ namespace Risk
         {
             currentPlayerIndex++;
             currentPlayerIndex = currentPlayerIndex % this.numOfPlayers;
+            this.cardDrawn = false;
             
         }
         public int initialReinforcements()
@@ -672,7 +674,11 @@ namespace Risk
 
         public void drawCard()
         {
-            this.getCurrentPlayer().addCard(this.deck.Pop());
+            if (!this.cardDrawn)
+            {
+                this.getCurrentPlayer().addCard(this.deck.Pop());
+                this.cardDrawn = true;
+            }
         }
 
         public void discardToDeck()
