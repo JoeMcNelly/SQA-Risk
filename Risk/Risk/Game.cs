@@ -213,7 +213,10 @@ namespace Risk
 
         }
 
-       
+        public bool isLastInit()
+        {
+            return this.numberOfInitialTerritories == 0;
+        }
         public void saveReinforcements(Player player) 
         {
             foreach (Territory t in player.getTerritories())
