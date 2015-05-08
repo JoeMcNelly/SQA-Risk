@@ -98,7 +98,11 @@ namespace Risk
                     foreach (String adjName in adjacenciesList)
                     {
                         if(!this.map.ContainsKey(adjName))
+                        {
+                            Console.WriteLine("terr: " + node.SelectSingleNode("name").InnerText);
+                            Console.WriteLine("adj: " + adjName);
                             break;
+                        }
                         adjacencyList.Add(this.map[adjName]);
                     }
                     this.map[node.SelectSingleNode("name").InnerText].setAdjacencyList(adjacencyList);

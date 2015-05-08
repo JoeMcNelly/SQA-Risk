@@ -85,27 +85,27 @@
   <territory>
     <name>Scandinavia</name>
     <continent>Europe</continent>
-    <adjacent>Ukraine:Nothern Europe:Great Britain:Iceland</adjacent>
+    <adjacent>Ukraine:Northern Europe:Great Britain:Iceland</adjacent>
   </territory>
   <territory>
     <name>Southern Europe</name>
     <continent>Europe</continent>
-    <adjacent>Ukraine:Nothern Europe:Western Europe:Middle East:Egypt:North Africa</adjacent>
+    <adjacent>Ukraine:Northern Europe:Western Europe:Middle East:Egypt:North Africa</adjacent>
   </territory>
   <territory>
     <name>Ukraine</name>
     <continent>Europe</continent>
-    <adjacent>Scandinavia:Nothern Europe:Southern Europe:Ural:Afghanistan:Middle East</adjacent>
+    <adjacent>Scandinavia:Northern Europe:Southern Europe:Ural:Afghanistan:Middle East</adjacent>
   </territory>
   <territory>
     <name>Western Europe</name>
     <continent>Europe</continent>
-    <adjacent>Great Britain:Nothern Europe:Southern Europe:North Africa</adjacent>
+    <adjacent>Great Britain:Northern Europe:Southern Europe:North Africa</adjacent>
   </territory>
   <territory>
     <name>Congo</name>
     <continent>Africa</continent>
-    <adjacent>South Africa:East Africa:Nothern Africa</adjacent>
+    <adjacent>South Africa:East Africa:North Africa</adjacent>
   </territory>
   <territory>
     <name>East Africa</name>
@@ -212,6 +212,6 @@
   <territory>
     <name>Western Australia</name>
     <continent>Australia</continent>
-    <adjacent>Eastern Australia:New Gulinea:Indonesia</adjacent>
+    <adjacent>Eastern Australia:New Guinea:Indonesia</adjacent>
   </territory>
 </territories>
