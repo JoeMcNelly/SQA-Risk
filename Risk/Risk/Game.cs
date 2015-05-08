@@ -733,13 +733,14 @@ namespace Risk
 
             int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
             int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
+            bool lostATroop = false;
             for (int i = 0; i < Math.Min(numOfAttackers, numOfDefenders); i++)
             {
                 if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
                 {
                     this.dest.decTroops();
                     this.dest.saveTroops();
-                    
+
                     if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
                         this.dest.setOwner(this.source.getOwner());
@@ -751,8 +752,12 @@ namespace Risk
                         {
                             this.players[destOwner].getTerritories().Remove(dest);
                         }
-
-                        for (int j = 0; j < numOfAttackers-i; j++) //added -i for if this is on the second roll
+                        int numToMove = numOfAttackers;
+                        if (lostATroop)
+                        {
+                            numToMove--;
+                        }
+                        for (int j = 0; j < numToMove; j++) //added -i for if this is on the second roll
                         {
                             this.source.decTroops();
                             this.dest.addTroops();
@@ -763,10 +768,11 @@ namespace Risk
                 }
                 else //attacker's highest roll is less than or equal to defender's highest
                 {
+                    lostATroop = true;
                     this.source.decTroops();
                     this.source.saveTroops();
                 }
-        
+
             }
         }
         
