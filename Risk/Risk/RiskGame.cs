@@ -24,10 +24,10 @@ namespace Risk
         List<PictureBox> selectedCards;
         List<Color> colors;
 
-        public RiskGame()
+        public RiskGame(int numPlayers)
         {
             InitializeComponent();
-            this.game = new Game(3); // Hard coding in 6 players for now
+            this.game = new Game(numPlayers); // Hard coding in 6 players for now
 
             this.displayedHand = new List<PictureBox>();
             #region cards
