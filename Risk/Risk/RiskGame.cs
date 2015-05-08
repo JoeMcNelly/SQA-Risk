@@ -125,7 +125,14 @@ namespace Risk
 
         }
 
-
+        private void disableAttack()
+        {
+            attack.Enabled = false;
+        }
+        private void enableAttack()
+        {
+            attack.Enabled = true;
+        }
         
         private void clickTerritory(Button button)
         {
@@ -171,10 +178,15 @@ namespace Risk
                         if (destString == "")
                             destString = "?";
                         if (!game.getSource().canAttack(game.getDest()))
+                        {
                             label1.ForeColor = Color.Red;
+                            disableAttack();
+                        }
+                            
                         else
                         {
                             label1.ForeColor = Color.Black;
+                            enableAttack();
                         }
                         label1.Text = srcString + " vs: " + destString;
                         break;
@@ -280,7 +292,7 @@ namespace Risk
         {
             save.Enabled = false;
             reset.Enabled = false;
-            attack.Enabled = true;
+            attack.Enabled = false;
             endAttack.Enabled = true;
             tradeIn.Enabled = false;
             setPlayerPhaseLabel();
