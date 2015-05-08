@@ -180,6 +180,8 @@ namespace Risk
                         break;
                     case 1:
                         //attack button/label things
+                        TransportButton.Enabled = false;
+                        TroopsToMove.Enabled = false;
                         string srcString = game.getSource().getName();
                         if (srcString == "")
                             srcString = "?";
@@ -299,6 +301,8 @@ namespace Risk
 
         private void initAttackPhase()
         {
+            TroopsToMove.Enabled = false;
+            TransportButton.Enabled = false;
             save.Enabled = false;
             reset.Enabled = false;
             attack.Enabled = false;
@@ -391,7 +395,6 @@ namespace Risk
                 {
                     TroopsToMove.Enabled = true;
                     TransportButton.Enabled = true;
-                    endAttack.Enabled = false;
                     attack.Enabled = false;
                     //Set label to inform of what to do
                 }
@@ -425,6 +428,8 @@ namespace Risk
         {
             game.endAttack();
             updatePhaseButtons();
+            TroopsToMove.Enabled = false;
+            TransportButton.Enabled = false;
         }
 
         private void fortify_click(object sender, EventArgs e)
