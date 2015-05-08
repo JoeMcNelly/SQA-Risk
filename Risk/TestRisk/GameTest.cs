@@ -935,5 +935,73 @@ namespace TestRisk
             game.attack();
             Assert.AreEqual(cardsBeforeAttack + 1, game.getCurrentPlayer().getHand().Count);
         }
+        [TestMethod]
+        public void TestMaxCardsDrawnPerTurnIsOne()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Madagascar");
+            p2Owned.Add(t2);
+            Territory t3 = game.getMap().getTerritory("Egypt");
+            p2Owned.Add(t2);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                t2.addTroops();
+                t3.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+            t3.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(1);
+            t3.setOwner(1);
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            List<int> attackRolls = new List<int>();
+            List<int> defendRolls = new List<int>();
+            attackRolls.Add(5);
+            attackRolls.Add(5);
+            attackRolls.Add(5);
+            defendRolls.Add(1);
+            defendRolls.Add(1);
+
+            typeof(Game).GetField("attackerRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, attackRolls);
+            typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
+            typeof(Game).GetField("source", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t1);
+            typeof(Game).GetField("dest", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t2);
+
+            int cardsBeforeAttack = p1.getHand().Count;
+            int cardsInDeckBeforeAttack = game.getDeck().Count;
+            //take first territory
+            game.attack();
+
+            //take second territory
+            typeof(Game).GetField("dest", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t3);
+            game.attack();
+
+            Assert.AreEqual(1, t2.getOwner());
+            Assert.AreEqual(1, t3.getOwner());
+            Assert.AreEqual(cardsBeforeAttack + 1, game.getCurrentPlayer().getHand().Count);
+            Assert.AreEqual(cardsInDeckBeforeAttack - 1, game.getDeck().Count);
+        }
     }
 }
