@@ -142,12 +142,19 @@ namespace Risk
 
             if (game.getInitPhase())
             {
-                
                 label2.Text = game.getCurrentPlayer().playerName;
                 label2.ForeColor = colors[game.getCurrentPlayer().playerNumber];
             }
             else
             {
+                if (game.isLastInit())
+                {
+                    foreach (var b in buttons)
+                    {
+                        Territory t = game.getMap().getTerritory(b.Key);
+                        b.Value.Text = (t.getTemporaryReinforcements() + t.getNumTroops()) + "";
+                    }
+                }
                 setPlayerPhaseLabel();
             }
 
