@@ -763,8 +763,8 @@ namespace Risk
                 }
                 else //attacker's highest roll is less than or equal to defender's highest
                 {
-                    this.source.decTroops();
-                    this.source.saveTroops();
+                    //this.source.decTroops();
+                    //this.source.saveTroops();
                 }
         
             }

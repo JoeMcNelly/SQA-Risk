@@ -717,5 +717,57 @@ namespace TestRisk
             game.drawCard();
             Assert.AreNotEqual(0, game.getCurrentPlayer().getHand().Count);
         }
+
+        [TestMethod]
+        public void testAttackDefenderWinsTwoRolls()
+        {
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Madagascar");
+            p2Owned.Add(t2);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+                t2.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            List<int> attackRolls = new List<int>();
+            List<int> defendRolls = new List<int>();
+            attackRolls.Add(1);
+            attackRolls.Add(1);
+            attackRolls.Add(1);
+            defendRolls.Add(6);
+            defendRolls.Add(6);
+
+            typeof(Game).GetField("attackerRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, attackRolls);
+            typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
+            typeof(Game).GetField("source", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t1);
+            typeof(Game).GetField("dest", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t2);
+
+
+            game.attack();
+
+            Assert.AreEqual(3, t1.getNumTroops());
+            Assert.AreEqual(5, t2.getNumTroops());
+                   
+        }
     }
 }
