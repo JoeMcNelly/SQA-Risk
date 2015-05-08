@@ -479,6 +479,17 @@ namespace Risk
                 numberOfInitialTerritories--;
                 if (numberOfInitialTerritories == 0) {
                     initPhase = false;
+                    foreach(Territory t in map.GetMapAsList())
+                    {
+                        if (t.getOwner() == -1)
+                        {
+                            for (int i = 0; i < 3; i++)
+                            {
+                                t.addTroops();
+                            }
+                            t.saveTroops();
+                        }
+                    }
                 }
             }
         }
