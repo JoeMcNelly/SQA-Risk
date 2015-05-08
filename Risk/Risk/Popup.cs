@@ -36,7 +36,7 @@ namespace Risk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String content = textBox1.Text;
+            String content = comboBox1.Text;
             Console.WriteLine(content);
             if(content.Equals("2"))
             {
@@ -64,6 +64,11 @@ namespace Risk
                 numPlayers = 6;
                 this.Close();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
