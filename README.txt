@@ -17,8 +17,11 @@ Reinforce works correctly
 Territory selecting working
 XML initialization map implememted
 Troop fortifying works
+Attacking Works
+Game initialization working
+Attacking Implemented
+Improved GUI
 
-TODO: 	Attacking
-	Make a decent GUI
+TODO: 	Bug Fixes
 	Title screen
 	End-Game Stats
