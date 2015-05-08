@@ -75,6 +75,8 @@
             this.NorthAfrica = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TransportButton = new System.Windows.Forms.Button();
+            this.TroopsToMove = new System.Windows.Forms.TextBox();
             this.resetFortify = new System.Windows.Forms.Button();
             this.fortify = new System.Windows.Forms.Button();
             this.endAttack = new System.Windows.Forms.Button();
@@ -82,6 +84,7 @@
             this.reset = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tradeIn = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -89,7 +92,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EndTurn = new System.Windows.Forms.Button();
-            this.tradeIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -621,6 +623,8 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.TransportButton);
+            this.panel2.Controls.Add(this.TroopsToMove);
             this.panel2.Controls.Add(this.resetFortify);
             this.panel2.Controls.Add(this.fortify);
             this.panel2.Controls.Add(this.endAttack);
@@ -633,9 +637,26 @@
             this.panel2.Size = new System.Drawing.Size(138, 678);
             this.panel2.TabIndex = 1;
             // 
+            // TransportButton
+            // 
+            this.TransportButton.Location = new System.Drawing.Point(56, 149);
+            this.TransportButton.Name = "TransportButton";
+            this.TransportButton.Size = new System.Drawing.Size(75, 28);
+            this.TransportButton.TabIndex = 7;
+            this.TransportButton.Text = "Transport";
+            this.TransportButton.UseVisualStyleBackColor = true;
+            this.TransportButton.Click += new System.EventHandler(this.TransportButton_click);
+            // 
+            // TroopsToMove
+            // 
+            this.TroopsToMove.Location = new System.Drawing.Point(3, 152);
+            this.TroopsToMove.Name = "TroopsToMove";
+            this.TroopsToMove.Size = new System.Drawing.Size(44, 20);
+            this.TroopsToMove.TabIndex = 6;
+            // 
             // resetFortify
             // 
-            this.resetFortify.Location = new System.Drawing.Point(2, 251);
+            this.resetFortify.Location = new System.Drawing.Point(3, 290);
             this.resetFortify.Margin = new System.Windows.Forms.Padding(2);
             this.resetFortify.Name = "resetFortify";
             this.resetFortify.Size = new System.Drawing.Size(129, 45);
@@ -646,7 +667,7 @@
             // 
             // fortify
             // 
-            this.fortify.Location = new System.Drawing.Point(2, 202);
+            this.fortify.Location = new System.Drawing.Point(3, 236);
             this.fortify.Margin = new System.Windows.Forms.Padding(2);
             this.fortify.Name = "fortify";
             this.fortify.Size = new System.Drawing.Size(129, 45);
@@ -657,7 +678,7 @@
             // 
             // endAttack
             // 
-            this.endAttack.Location = new System.Drawing.Point(2, 152);
+            this.endAttack.Location = new System.Drawing.Point(3, 182);
             this.endAttack.Margin = new System.Windows.Forms.Padding(2);
             this.endAttack.Name = "endAttack";
             this.endAttack.Size = new System.Drawing.Size(129, 45);
@@ -715,6 +736,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1235, 98);
             this.panel3.TabIndex = 2;
+            // 
+            // tradeIn
+            // 
+            this.tradeIn.Enabled = false;
+            this.tradeIn.Location = new System.Drawing.Point(301, 3);
+            this.tradeIn.Margin = new System.Windows.Forms.Padding(2);
+            this.tradeIn.Name = "tradeIn";
+            this.tradeIn.Size = new System.Drawing.Size(55, 89);
+            this.tradeIn.TabIndex = 6;
+            this.tradeIn.Text = "Trade In Cards";
+            this.tradeIn.UseVisualStyleBackColor = true;
+            this.tradeIn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox6
             // 
@@ -804,18 +837,6 @@
             this.EndTurn.UseVisualStyleBackColor = true;
             this.EndTurn.Click += new System.EventHandler(this.endTurn_Click);
             // 
-            // tradeIn
-            // 
-            this.tradeIn.Enabled = false;
-            this.tradeIn.Location = new System.Drawing.Point(301, 3);
-            this.tradeIn.Margin = new System.Windows.Forms.Padding(2);
-            this.tradeIn.Name = "tradeIn";
-            this.tradeIn.Size = new System.Drawing.Size(55, 89);
-            this.tradeIn.TabIndex = 6;
-            this.tradeIn.Text = "Trade In Cards";
-            this.tradeIn.UseVisualStyleBackColor = true;
-            this.tradeIn.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // RiskGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -833,6 +854,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -908,6 +930,8 @@
         private System.Windows.Forms.Button Madagascar;
         private System.Windows.Forms.Button resetFortify;
         private System.Windows.Forms.Button tradeIn;
+        private System.Windows.Forms.Button TransportButton;
+        private System.Windows.Forms.TextBox TroopsToMove;
     }
 }
 

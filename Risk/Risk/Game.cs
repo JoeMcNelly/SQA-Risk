@@ -409,6 +409,33 @@ namespace Risk
             }
                 
         }
+        public bool move(String stringNumToMove)
+        {
+            int numToMove;
+            try
+            {
+                numToMove = int.Parse(stringNumToMove);
+                Territory src = getSource();
+                Territory dst = getDest();
+                if (src.getNumTroops() <= numToMove)
+                    return false;
+                for (int i = 0; i < numToMove; i++)
+                {
+                    src.decTroops();
+                    dst.addTroops();
+                }
+                src.saveTroops();
+                dst.saveTroops();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+
+        }
 
         #region getters and setters
         public Stack<Card> getDeck()

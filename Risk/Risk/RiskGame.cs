@@ -44,6 +44,8 @@ namespace Risk
             endAttack.Enabled = false;
             fortify.Enabled = false;
             resetFortify.Enabled = false;
+            TransportButton.Enabled = false;
+            TroopsToMove.Enabled = false;
             this.src = null;
             this.dest = null;
             selectedCards = new List<PictureBox>();
@@ -385,13 +387,38 @@ namespace Risk
                 destButt.Text = (destTerr.getTemporaryReinforcements() + destTerr.getNumTroops()) + "";
 
                 int postPlayer = destTerr.getOwner();
-                if (initialPlayer != postPlayer || srcTerr.getNumTroops() <= 1)
+                if (initialPlayer != postPlayer && srcTerr.getNumTroops() > 1)
+                {
+                    TroopsToMove.Enabled = true;
+                    TransportButton.Enabled = true;
+                    endAttack.Enabled = false;
+                    attack.Enabled = false;
+                    //Set label to inform of what to do
+                }
+                else if (srcTerr.getNumTroops() <= 1)
                 {
                     initAttackPhase();
                     this.game.resetSrcAndDest();
                 }
+                
             }
            
+        }
+        private void TransportButton_click(object sender, EventArgs e)
+        {
+            if (game.move(TroopsToMove.Text))
+            {
+                Territory srcTerr = this.game.getSource();
+                Territory destTerr = this.game.getDest();
+                Button srcButt = this.buttons[srcTerr.getName()];
+                srcButt.Text = (srcTerr.getTemporaryReinforcements() + srcTerr.getNumTroops()) + "";
+
+
+                Button destButt = this.buttons[destTerr.getName()];
+                destButt.Text = (destTerr.getTemporaryReinforcements() + destTerr.getNumTroops()) + "";
+                initAttackPhase();
+                this.game.resetSrcAndDest();
+            }
         }
 
         private void endAttack_click(object sender, EventArgs e)
