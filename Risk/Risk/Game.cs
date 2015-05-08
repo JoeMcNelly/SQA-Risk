@@ -537,21 +537,17 @@ namespace Risk
                     case 2:
                         if (current.getOwner() != getCurrentPlayer().playerNumber)
                         {
-                            Console.WriteLine("You selected something that isn't yours. Shame.");
+                            Console.WriteLine("You selected something that isn't yours.");
                         }
                         else if (this.source.getName().Equals(""))
                         {
                             this.source = current;
                             this.canSetSrc = true;
-                            Console.WriteLine("Hey asshole, you selected the first territory!");
-                            Console.WriteLine("You selected: " + this.source.getName());
                         }
                         else if (this.dest.getName().Equals("") && current != this.source)
                         {
                             this.dest = current;
                             this.canSetDst = true;
-                            Console.WriteLine("Hey dumbass, you selected your destination territory!");
-                            Console.WriteLine("You selected: " + this.dest.getName());
                         }
 
                         else
