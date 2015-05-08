@@ -790,7 +790,7 @@ namespace Risk
                         this.dest.saveTroops();
 
                         //player took a territory so add a card to their hand
-
+                        drawCard();
                     }
                 }
                 else //attacker's highest roll is less than or equal to defender's highest
