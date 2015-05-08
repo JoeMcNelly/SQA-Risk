@@ -233,7 +233,6 @@ namespace Risk
                 if (initReinforceCounter == this.numOfPlayers)
                 {
                     initReinforce = false;
-                    drawCard();
                     this.reinforcements = generateReinforcements();
                 }
             }
