@@ -763,6 +763,7 @@ namespace Risk
                     if (selectedCards.Contains(picBox))
                     {
                         RemoveFromSelected(picBox);
+
                     }
                     else
                     {

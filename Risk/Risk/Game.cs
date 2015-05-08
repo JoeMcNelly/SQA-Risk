@@ -705,8 +705,8 @@ namespace Risk
             toBeDeck.Add(new Card(0, "Egypt", Risk.Properties.Resources.EGYPT));
             toBeDeck.Add(new Card(1, "Great Britain", Risk.Properties.Resources.GREAT_BRITAIN));
             toBeDeck.Add(new Card(1, "Greenland", Risk.Properties.Resources.GREENLAND));
-            toBeDeck.Add(new Card(1, "Iceland", Risk.Properties.Resources.ICELAND));
-            toBeDeck.Add(new Card(1, "India", Risk.Properties.Resources.INDIA));
+            toBeDeck.Add(new Card(0, "Iceland", Risk.Properties.Resources.ICELAND));
+            toBeDeck.Add(new Card(0, "India", Risk.Properties.Resources.INDIA));
             toBeDeck.Add(new Card(1, "Indonesia", Risk.Properties.Resources.INDONESIA));
             toBeDeck.Add(new Card(0, "Irkutsk", Risk.Properties.Resources.IRKUTSK));
             toBeDeck.Add(new Card(0, "Japan", Risk.Properties.Resources.JAPAN));
