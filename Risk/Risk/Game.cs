@@ -774,6 +774,7 @@ namespace Risk
                         if (destOwner != -1)
                         {
                             this.players[destOwner].getTerritories().Remove(dest);
+                            this.players[this.source.getOwner()].AddTerritory(dest);
                         }
                         int numToMove = numOfAttackers;
                         if (lostATroop)

@@ -396,7 +396,7 @@ namespace Risk
                     TroopsToMove.Enabled = true;
                     TransportButton.Enabled = true;
                     attack.Enabled = false;
-                    //Set label to inform of what to do
+                    label1.Text = "Enter number of troops to move";
                 }
                 else if (srcTerr.getNumTroops() <= 1)
                 {
