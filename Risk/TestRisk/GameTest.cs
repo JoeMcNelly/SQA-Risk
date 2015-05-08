@@ -945,6 +945,8 @@ namespace TestRisk
             List<Territory> p1Owned = new List<Territory>();
             Territory t1 = game.getMap().getTerritory("Congo");
             p1Owned.Add(t1);
+            Territory t4 = game.getMap().getTerritory("South Africa");
+            p1Owned.Add(t4);
 
             List<Territory> p2Owned = new List<Territory>();
             Territory t2 = game.getMap().getTerritory("Madagascar");
@@ -955,6 +957,7 @@ namespace TestRisk
             for (int i = 0; i < 5; i++)
             {
                 t1.addTroops();
+                t4.addTroops();
             }
             for (int i = 0; i < 2; i++)
             {
@@ -964,7 +967,9 @@ namespace TestRisk
             t1.saveTroops();
             t2.saveTroops();
             t3.saveTroops();
+            t4.saveTroops();
             t1.setOwner(0);
+            t4.setOwner(0);
             t2.setOwner(1);
             t3.setOwner(1);
 
@@ -994,12 +999,15 @@ namespace TestRisk
             //take first territory
             game.attack();
 
-            //take second territory
+            typeof(Game).GetField("attackerRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, attackRolls);
+            typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
+            typeof(Game).GetField("source", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t4);
             typeof(Game).GetField("dest", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, t3);
+           
             game.attack();
 
-            Assert.AreEqual(1, t2.getOwner());
-            Assert.AreEqual(1, t3.getOwner());
+            Assert.AreEqual(0, t2.getOwner());
+            Assert.AreEqual(0, t3.getOwner());
             Assert.AreEqual(cardsBeforeAttack + 1, game.getCurrentPlayer().getHand().Count);
             Assert.AreEqual(cardsInDeckBeforeAttack - 1, game.getDeck().Count);
         }
