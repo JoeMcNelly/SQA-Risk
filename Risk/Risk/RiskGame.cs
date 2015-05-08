@@ -368,8 +368,29 @@ namespace Risk
 
         private void attack_click(object sender, EventArgs e)
         {
-            this.game.attack();
-            updateColors();
+            Territory srcTerr = this.game.getSource();
+            Territory destTerr = this.game.getDest();
+            int initialPlayer = destTerr.getOwner();
+            if (srcTerr.canAttack(destTerr))
+            {
+                this.game.rollDice();
+                this.game.attack();
+                updateColors();
+
+                Button srcButt = this.buttons[srcTerr.getName()];
+                srcButt.Text = (srcTerr.getTemporaryReinforcements() + srcTerr.getNumTroops()) + "";
+
+
+                Button destButt = this.buttons[destTerr.getName()];
+                destButt.Text = (destTerr.getTemporaryReinforcements() + destTerr.getNumTroops()) + "";
+
+                int postPlayer = destTerr.getOwner();
+                if (initialPlayer != postPlayer || srcTerr.getNumTroops() <= 1)
+                {
+                    initAttackPhase();
+                    this.game.resetSrcAndDest();
+                }
+            }
            
         }
 
