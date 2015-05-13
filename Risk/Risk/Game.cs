@@ -779,6 +779,7 @@ namespace Risk
                         this.dest.setOwner(srcOwner);
                         this.getCurrentPlayer().getTerritories().Add(dest);
                         this.players[destOwner].incTerritoriesLost();
+                        this.players[srcOwner].incTerritoriesConquered();
                         if (destOwner != -1)
                         {
                             this.players[destOwner].getTerritories().Remove(dest);
