@@ -762,24 +762,29 @@ namespace Risk
             int numOfAttackers = Math.Min(3, this.source.getNumTroops() - 1);
             int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
             bool lostATroop = false;
+            int destOwner = this.dest.getOwner();
+            int srcOwner = this.source.getOwner();
             for (int i = 0; i < Math.Min(numOfAttackers, numOfDefenders); i++)
             {
                 if (attackerRolls[i] > defenderRolls[i]) // attacker's highest roll is higher than defender's highest
                 {
                     this.dest.decTroops();
                     this.dest.saveTroops();
+                    
+                    this.players[destOwner].incLostTroops();
+                    this.players[srcOwner].incTroopsKilled();
 
                     if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
-                        this.dest.setOwner(this.source.getOwner());
+                        this.dest.setOwner(srcOwner);
                         //add dest to curr player
                         this.getCurrentPlayer().getTerritories().Add(dest);
                         //take dest from defending player unless its a neutral
-                        int destOwner = this.dest.getOwner();
+                        
                         if (destOwner != -1)
                         {
                             this.players[destOwner].getTerritories().Remove(dest);
-                            this.players[this.source.getOwner()].AddTerritory(dest);
+                            this.players[srcOwner].AddTerritory(dest);
                         }
                         int numToMove = numOfAttackers;
                         if (lostATroop)
@@ -803,6 +808,8 @@ namespace Risk
                     lostATroop = true;
                     this.source.decTroops();
                     this.source.saveTroops();
+                    this.players[srcOwner].incLostTroops();
+                    this.players[destOwner].incTroopsKilled();
                 }
 
             }

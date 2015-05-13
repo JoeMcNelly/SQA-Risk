@@ -15,6 +15,8 @@ namespace Risk
         public bool winner = false;
         public String playerName;
         public int playerNumber;
+        private int troopsKilled;
+        private int troopsLost;
 
 
 
@@ -25,6 +27,8 @@ namespace Risk
             this.cards = new Dictionary<String, Card>();
             this.playerName = name;
             this.playerNumber = number;
+            this.troopsKilled = 0;
+            this.troopsLost = 0;
         }
 
         public Player(String name,int number, List<Territory> territories)
@@ -33,6 +37,8 @@ namespace Risk
             this.cards = new Dictionary<String, Card>();
             this.playerName = name;
             this.playerNumber = number;
+            this.troopsKilled = 0;
+            this.troopsLost = 0;
         }
 
         public List<Territory> getTerritories()
@@ -62,6 +68,25 @@ namespace Risk
         public bool ownsAll()
         {
             return this.territories.Count == 42;
+        }
+
+        public void incLostTroops(){
+
+        }
+
+        public void incTroopsKilled()
+        {
+
+        }
+
+        public int getLostTroops()
+        {
+            return this.troopsLost;
+        }
+
+        public int getTroopsKilled()
+        {
+            return this.troopsKilled;
         }
     }
 }
