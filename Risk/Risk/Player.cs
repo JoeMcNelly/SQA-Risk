@@ -58,5 +58,10 @@ namespace Risk
         {
             this.cards.Add(card.GetTerritoryName(), card);
         }
+
+        public bool ownsAll()
+        {
+            return false;
+        }
     }
 }

@@ -30,5 +30,18 @@ namespace TestRisk
             Assert.AreEqual(0, newgame.getPlayers().Count);
 
         }
+
+        [TestMethod]
+        public void TestOwnsAll()
+        {
+            Map map = new Map(global::TestRisk.Properties.Resources.Map);
+            Player p = new Player("test", 0);
+            foreach(Territory t in map.GetMapAsList())
+            {
+                p.AddTerritory(t);
+            }
+            Assert.AreEqual(p.ownsAll(), true);
+
+        }
     }
 }
