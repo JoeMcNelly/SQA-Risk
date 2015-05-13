@@ -97,7 +97,7 @@ namespace Risk
 
         public void incTerritoriesLost()
         {
-           
+            this.territoriesLost++;
         }
 
         public void incTerritoriesConquered()

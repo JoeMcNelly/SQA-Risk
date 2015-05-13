@@ -777,10 +777,8 @@ namespace Risk
                     if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
                         this.dest.setOwner(srcOwner);
-                        //add dest to curr player
                         this.getCurrentPlayer().getTerritories().Add(dest);
-                        //take dest from defending player unless its a neutral
-                        
+                        this.players[destOwner].incTerritoriesLost();
                         if (destOwner != -1)
                         {
                             this.players[destOwner].getTerritories().Remove(dest);
