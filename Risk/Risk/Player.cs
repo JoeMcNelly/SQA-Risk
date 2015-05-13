@@ -17,6 +17,8 @@ namespace Risk
         public int playerNumber;
         private int troopsKilled;
         private int troopsLost;
+        private int territoriesLost;
+        private int territoriesConquered;
 
 
 
@@ -29,6 +31,8 @@ namespace Risk
             this.playerNumber = number;
             this.troopsKilled = 0;
             this.troopsLost = 0;
+            this.territoriesLost = 0;
+            this.territoriesConquered = 0;
         }
 
         public Player(String name,int number, List<Territory> territories)
@@ -39,6 +43,8 @@ namespace Risk
             this.playerNumber = number;
             this.troopsKilled = 0;
             this.troopsLost = 0;
+            this.territoriesLost = 0;
+            this.territoriesConquered = 0;
         }
 
         public List<Territory> getTerritories()
@@ -87,6 +93,26 @@ namespace Risk
         public int getTroopsKilled()
         {
             return this.troopsKilled;
+        }
+
+        public void incTerritoriesLost()
+        {
+           
+        }
+
+        public void incTerritoriesConquered()
+        {
+            
+        }
+
+        public int getTerritoriesLost()
+        {
+            return this.territoriesLost;
+        }
+
+        public int getTerritoriesConquered()
+        {
+            return this.territoriesConquered;
         }
     }
 }
