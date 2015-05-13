@@ -403,7 +403,10 @@ namespace Risk
                     initAttackPhase();
                     this.game.resetSrcAndDest();
                 }
-                
+                if (this.game.isOver())
+                {
+                    this.Close();
+                }
             }
            
         }
@@ -807,6 +810,11 @@ namespace Risk
                 //probably should make a label that says why this is disabled.
                 save.Enabled = false;
             }
+        }
+
+        public List<Player> getPlayers()
+        {
+            return this.game.getPlayers();
         }
 
 

@@ -16,11 +16,21 @@ namespace Risk
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Popup p = new Popup();
-            Application.Run(p);
-            int numPlayers = 0;
-            numPlayers = p.getNumPlayers();
-            Application.Run(new RiskGame(numPlayers));
+            bool keepPlaying = true;
+            while (keepPlaying)
+            {
+                
+                Popup p = new Popup();
+                Application.Run(p);
+                int numPlayers = 0;
+                numPlayers = p.getNumPlayers();
+                RiskGame risk = new RiskGame(numPlayers);
+                Application.Run(risk);
+                List<Player> players = risk.getPlayers();
+                StatsScreen stats = new StatsScreen(players);
+                Application.Run(stats);
+                keepPlaying = stats.stillPlaying();
+            }
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Risk
         private bool initReinforce = true;
         private bool cardDrawn = false;
         private int initReinforceCounter = 0;
+        private bool gameOver = false;
         Player neutralPlayer = new Player("Neutral", -1);
         private int numberOfInitialTerritories;
         //These 2 variables should become depreciated when Map.cs is full implemented
@@ -481,7 +482,7 @@ namespace Risk
 
         public bool isOver()
         {
-            return true;
+            return this.gameOver;
 
         }
         public bool canSetSource()
@@ -771,19 +772,30 @@ namespace Risk
                     this.dest.decTroops();
                     this.dest.saveTroops();
                     
-                    this.players[destOwner].incLostTroops();
+                    
+                    if (destOwner != -1)
+                    {
+                        this.players[destOwner].incLostTroops();
+                    }
+
                     this.players[srcOwner].incTroopsKilled();
 
                     if (this.dest.getNumTroops() == 0) // attacker has defeated last army in defender's territory
                     {
                         this.dest.setOwner(srcOwner);
                         this.getCurrentPlayer().getTerritories().Add(dest);
-                        this.players[destOwner].incTerritoriesLost();
+                        
                         this.players[srcOwner].incTerritoriesConquered();
                         if (destOwner != -1)
                         {
+                            this.players[destOwner].incTerritoriesLost();
                             this.players[destOwner].getTerritories().Remove(dest);
                             this.players[srcOwner].AddTerritory(dest);
+                        }
+
+                        if(this.players[srcOwner].ownsAll())
+                        {
+                            this.gameOver = true;
                         }
                         int numToMove = numOfAttackers;
                         if (lostATroop)
@@ -808,7 +820,10 @@ namespace Risk
                     this.source.decTroops();
                     this.source.saveTroops();
                     this.players[srcOwner].incLostTroops();
-                    this.players[destOwner].incTroopsKilled();
+                    if (destOwner != -1)
+                    {
+                        this.players[destOwner].incTroopsKilled();
+                    }
                 }
 
             }
