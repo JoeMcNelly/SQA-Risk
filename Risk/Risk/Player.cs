@@ -76,7 +76,7 @@ namespace Risk
 
         public void incTroopsKilled()
         {
-
+            this.troopsKilled++;
         }
 
         public int getLostTroops()
