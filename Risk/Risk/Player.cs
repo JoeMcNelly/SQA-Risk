@@ -61,7 +61,7 @@ namespace Risk
 
         public bool ownsAll()
         {
-            return false;
+            return this.territories.Count == 42;
         }
     }
 }
