@@ -740,6 +740,8 @@ namespace TestRisk
             }
             t1.saveTroops();
             t2.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(1);
 
 
             Player p1 = new Player("test1", 0, p1Owned);
@@ -792,6 +794,9 @@ namespace TestRisk
             }
             t1.saveTroops();
             t2.saveTroops();
+
+            t1.setOwner(0);
+            t2.setOwner(1);
 
 
             Player p1 = new Player("test1", 0, p1Owned);
