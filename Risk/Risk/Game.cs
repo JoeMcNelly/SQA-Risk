@@ -802,11 +802,8 @@ namespace Risk
                             }
                             
                         }
-                        
-                        if(this.playersLeft == 1 || this.players[srcOwner].ownsAll())
-                        {
-                            this.gameOver = true;
-                        }
+                        checkEndGame();
+
                         int numToMove = numOfAttackers;
                         if (lostATroop)
                         {
