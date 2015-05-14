@@ -227,7 +227,14 @@ namespace Risk
         }
         public string getDefenderRolls()
         {
-            return this.defenderRolls.ElementAt(0).ToString();
+            string returnString = "";
+            foreach (int i in this.defenderRolls)
+            {
+                returnString += i + " : ";
+
+            }
+            char[] trimmer = { ' ', ':' };
+            return returnString.TrimEnd(trimmer);
         }
         public bool isLastInit()
         {
