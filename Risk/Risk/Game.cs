@@ -36,7 +36,7 @@ namespace Risk
         Random dice = new Random();
         List<int> attackerRolls = new List<int>();
         List<int> defenderRolls = new List<int>();
-        
+        int playersLeft;
 
         public Game() : this(6)
         {
@@ -196,7 +196,7 @@ namespace Risk
             this.reinforcements = initialReinforcements();
             this.currentPlayerIndex = 0;
             numberOfInitialTerritories = numOfPlayers*7;
-            
+            this.playersLeft = numOfPlayers;
             for (int i = 0; i < numOfPlayers; i++)
             {
                 String name = "Player " + (i + 1);
@@ -793,10 +793,13 @@ namespace Risk
                         {
                             this.players[destOwner].incTerritoriesLost();
                             this.players[destOwner].getTerritories().Remove(dest);
-                            //this.players[srcOwner].AddTerritory(dest);
+                            if (this.players[destOwner].getTerritories().Count == 0) // player eliminated
+                            {
+                                this.playersLeft--;
+                            }
                         }
-
-                        if(this.players[srcOwner].ownsAll())
+                        
+                        if(this.playersLeft == 1 || this.players[srcOwner].ownsAll())
                         {
                             this.gameOver = true;
                         }
