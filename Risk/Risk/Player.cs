@@ -127,9 +127,9 @@ namespace Risk
             return this.playerColor;
         }
 
-        public void setColor()
+        public void setColor(Color color)
         {
-
+            this.playerColor = color;
         }
     }
 }
