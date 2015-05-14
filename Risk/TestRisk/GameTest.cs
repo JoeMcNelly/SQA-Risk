@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Xml.XPath;
 using System.Reflection;
+using System.Drawing;
 
 namespace TestRisk
 {
@@ -1516,6 +1517,23 @@ namespace TestRisk
 
             typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
             Assert.AreEqual("2 : 1", game.getDefenderRolls());
+        }
+
+        [TestMethod]
+        public void TestSetPlayerColorsForOnePlayer()
+        {
+            Game game = new Game(2);
+            List<Player> playerList = new List<Player>();
+            Player p1 = new Player("test1", 0);
+            playerList.Add(p1);
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            List<Color> colorList = new List<Color>();
+            colorList.Add(System.Drawing.Color.Blue);
+
+            game.setPlayerColors(colorList);
+
+            Assert.AreEqual(System.Drawing.Color.Blue, game.getPlayers()[0].getColor());
         }
        
     }

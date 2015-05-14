@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 namespace Risk
 {
     public class Game
@@ -525,6 +526,12 @@ namespace Risk
         {
             return dest;
         }
+
+        public void setPlayerColors(List<Color> colorList)
+        {
+            return;
+        }
+
         private void clickInitTerritory(Territory current){
             Console.WriteLine(current.getOwner());
             Console.WriteLine(current.getNumTroops());
