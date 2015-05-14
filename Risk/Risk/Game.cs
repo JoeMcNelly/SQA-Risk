@@ -216,7 +216,14 @@ namespace Risk
         }
         public string getAttackerRolls()
         {
-            return "5 : 3 : 1";
+            string returnString = "";
+            foreach (int i in this.attackerRolls)
+            {
+                returnString += i + " : ";
+                
+            }
+            char[] trimmer = { ' ', ':' };
+            return returnString.TrimEnd(trimmer);
         }
         public string getDefenderRolls()
         {
