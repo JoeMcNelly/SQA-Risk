@@ -1504,6 +1504,19 @@ namespace TestRisk
             typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
             Assert.AreEqual("2", game.getDefenderRolls());
         }
+        [TestMethod]
+        public void TestGetDefenderRolls21()
+        {
+            Game game = new Game(2);
+            List<int> defendRolls = new List<int>();
+
+            defendRolls.Add(2);
+            defendRolls.Add(1);
+
+
+            typeof(Game).GetField("defenderRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, defendRolls);
+            Assert.AreEqual("2 : 1", game.getDefenderRolls());
+        }
        
     }
 }
