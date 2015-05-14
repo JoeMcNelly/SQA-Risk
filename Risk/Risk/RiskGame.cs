@@ -311,7 +311,7 @@ namespace Risk
             setPlayerPhaseLabel();
             label1.Text = "? vs: ?";
             label1.ForeColor = Color.Red;
-            DieRollLabel.Text = "";
+            //DieRollLabel.Text = "";
         }
 
         private void initFortifyPhase()

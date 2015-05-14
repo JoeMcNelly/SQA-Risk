@@ -771,11 +771,11 @@ namespace Risk
             int numOfDefenders = Math.Min(2, this.dest.getNumTroops());
             for (int i = 0; i < numOfAttackers; i++)
             {
-                attackerRolls.Add(dice.Next(1, 6));
+                attackerRolls.Add(dice.Next(1, 7));
             }
             for (int i = 0; i < numOfDefenders; i++)
             {
-                defenderRolls.Add(dice.Next(1, 6));
+                defenderRolls.Add(dice.Next(1, 7));
             }
             attackerRolls = attackerRolls.OrderByDescending(x => x).ToList();
             defenderRolls = defenderRolls.OrderByDescending(x => x).ToList();
