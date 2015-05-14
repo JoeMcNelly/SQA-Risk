@@ -841,7 +841,10 @@ namespace Risk
         
         public void checkEndGame()
         {
-            //do nothing at all, preparing for TDD
+            if (this.playersLeft == 1)
+            {
+                this.gameOver = true;
+            }
         }
         
     }
