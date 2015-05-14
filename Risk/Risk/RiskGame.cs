@@ -396,6 +396,8 @@ namespace Risk
                 if (initialPlayer != postPlayer && srcTerr.getNumTroops() > 1)
                 {
                     TroopsToMove.Enabled = true;
+                    TroopsToMove.Focus();
+                    TroopsToMove.Text = game.getSource().getNumTroops()-1 + "";
                     TransportButton.Enabled = true;
                     attack.Enabled = false;
                     label1.Text = "Enter number of troops to move";
