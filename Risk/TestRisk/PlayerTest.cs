@@ -40,8 +40,8 @@ namespace TestRisk
             {
                 p.AddTerritory(t);
             }
-            Assert.AreEqual(p.ownsAll(), true);
 
+            Assert.AreEqual(p.ownsAll(), true);
         }
     }
 }
