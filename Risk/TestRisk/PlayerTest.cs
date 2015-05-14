@@ -51,5 +51,15 @@ namespace TestRisk
 
             Assert.AreEqual(player.getColor(), System.Drawing.Color.White);
         }
+
+        [TestMethod]
+        public void TestSetColor()
+        {
+            Player player = new Player("test", 0);
+
+            player.setColor(System.Drawing.Color.Blue);
+
+            Assert.AreEqual(player.getColor(), System.Drawing.Color.Blue);
+        }
     }
 }
