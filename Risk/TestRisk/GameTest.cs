@@ -1452,6 +1452,20 @@ namespace TestRisk
 
 
         }
+        [TestMethod]
+        public void TestGetAttackerRolls()
+        {
+            Game game = new Game(2);
+            List<int> attackRolls = new List<int>();
+            List<int> defendRolls = new List<int>();
+            attackRolls.Add(5);
+            attackRolls.Add(3);
+            attackRolls.Add(1);
+
+
+            typeof(Game).GetField("attackerRolls", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, attackRolls);
+            Assert.AreEqual("5 : 3 : 1", game.getAttackerRolls());
+        }
        
     }
 }
