@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Risk
 {
@@ -19,6 +20,7 @@ namespace Risk
         private int troopsLost;
         private int territoriesLost;
         private int territoriesConquered;
+        private Color playerColor;
 
 
 
@@ -33,6 +35,7 @@ namespace Risk
             this.troopsLost = 0;
             this.territoriesLost = 0;
             this.territoriesConquered = 0;
+            this.playerColor = System.Drawing.Color.White;
         }
 
         public Player(String name,int number, List<Territory> territories)
@@ -45,6 +48,7 @@ namespace Risk
             this.troopsLost = 0;
             this.territoriesLost = 0;
             this.territoriesConquered = 0;
+            this.playerColor = System.Drawing.Color.White;
         }
 
         public List<Territory> getTerritories()
@@ -116,6 +120,16 @@ namespace Risk
         public int getTerritoriesConquered()
         {
             return this.territoriesConquered;
+        }
+
+        public Color getColor()
+        {
+            return null;
+        }
+
+        public void setColor()
+        {
+
         }
     }
 }

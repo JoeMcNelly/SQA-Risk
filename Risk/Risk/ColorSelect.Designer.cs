@@ -46,7 +46,7 @@
             // ColorBox
             // 
             this.ColorBox.FormattingEnabled = true;
-            this.ColorBox.Location = new System.Drawing.Point(84, 13);
+            this.ColorBox.Location = new System.Drawing.Point(50, 12);
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.Size = new System.Drawing.Size(121, 21);
             this.ColorBox.TabIndex = 1;
@@ -55,9 +55,9 @@
             // 
             this.SelectButton.Location = new System.Drawing.Point(16, 41);
             this.SelectButton.Name = "SelectButton";
-            this.SelectButton.Size = new System.Drawing.Size(189, 23);
+            this.SelectButton.Size = new System.Drawing.Size(155, 23);
             this.SelectButton.TabIndex = 2;
-            this.SelectButton.Text = "button1";
+            this.SelectButton.Text = "Select";
             this.SelectButton.UseVisualStyleBackColor = true;
             this.SelectButton.Click += new System.EventHandler(this.select);
             // 
@@ -65,7 +65,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 76);
+            this.ClientSize = new System.Drawing.Size(182, 76);
+            this.ControlBox = false;
             this.Controls.Add(this.SelectButton);
             this.Controls.Add(this.ColorBox);
             this.Controls.Add(this.label1);
