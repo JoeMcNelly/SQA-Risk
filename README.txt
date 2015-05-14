@@ -21,7 +21,10 @@ Attacking Works
 Game initialization working
 Attacking Implemented
 Improved GUI
+Prototype Title Screen
+Prototype End Screen
+Game can now be finished correctly
 
 TODO: 	Bug Fixes
-	Title screen
-	End-Game Stats
+	Improve Title screen
+	Improve End-Game Stats Screen
