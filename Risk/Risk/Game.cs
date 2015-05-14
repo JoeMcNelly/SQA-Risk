@@ -790,7 +790,7 @@ namespace Risk
                         {
                             this.players[destOwner].incTerritoriesLost();
                             this.players[destOwner].getTerritories().Remove(dest);
-                            this.players[srcOwner].AddTerritory(dest);
+                            //this.players[srcOwner].AddTerritory(dest);
                         }
 
                         if(this.players[srcOwner].ownsAll())
