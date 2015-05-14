@@ -214,7 +214,14 @@ namespace Risk
             
 
         }
-
+        public string getAttackerRolls()
+        {
+            return this.attackerRolls.ToString();
+        }
+        public string getDefenderRolls()
+        {
+            return this.defenderRolls.ToString();
+        }
         public bool isLastInit()
         {
             return this.numberOfInitialTerritories == 0;

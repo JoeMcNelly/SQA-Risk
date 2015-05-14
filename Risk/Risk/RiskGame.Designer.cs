@@ -92,6 +92,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EndTurn = new System.Windows.Forms.Button();
+            this.DieRollLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -725,6 +726,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.DieRollLabel);
             this.panel3.Controls.Add(this.tradeIn);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox5);
@@ -837,6 +839,15 @@
             this.EndTurn.UseVisualStyleBackColor = true;
             this.EndTurn.Click += new System.EventHandler(this.endTurn_Click);
             // 
+            // DieRollLabel
+            // 
+            this.DieRollLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DieRollLabel.Location = new System.Drawing.Point(417, 15);
+            this.DieRollLabel.Name = "DieRollLabel";
+            this.DieRollLabel.Size = new System.Drawing.Size(726, 65);
+            this.DieRollLabel.TabIndex = 44;
+            this.DieRollLabel.Text = "Attacker Rolled:";
+            // 
             // RiskGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -932,6 +943,7 @@
         private System.Windows.Forms.Button tradeIn;
         private System.Windows.Forms.Button TransportButton;
         private System.Windows.Forms.TextBox TroopsToMove;
+        private System.Windows.Forms.Label DieRollLabel;
     }
 }
 

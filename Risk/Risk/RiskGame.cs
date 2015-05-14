@@ -124,7 +124,7 @@ namespace Risk
                 tempButtonList[i].Text = tempTerritoryList[i].getNumTroops().ToString();
             }
             label1.Text = "Choose a Territory";
-
+            DieRollLabel.Text = "";
         }
 
         private void disableAttack()
@@ -138,7 +138,7 @@ namespace Risk
         
         private void clickTerritory(Button button)
         {
-            
+            DieRollLabel.Text = "";
             Territory current = this.game.getMap().getTerritory(button.Name);
             this.game.clickTerritory(current);
 
@@ -311,6 +311,7 @@ namespace Risk
             setPlayerPhaseLabel();
             label1.Text = "? vs: ?";
             label1.ForeColor = Color.Red;
+            DieRollLabel.Text = "";
         }
 
         private void initFortifyPhase()
@@ -323,6 +324,7 @@ namespace Risk
             setPlayerPhaseLabel();
             label1.Text = "? --> ?";
             label1.ForeColor = Color.Black;
+            DieRollLabel.Text = "";
         }
 
         public void save_Click(object sender, EventArgs e)
@@ -382,7 +384,7 @@ namespace Risk
                 this.game.rollDice();
                 this.game.attack();
                 updateColors();
-
+                DieRollLabel.Text = "Attacker has rolled: " + game.getAttackerRolls() + Environment.NewLine + "Defender has rolled: " + game.getDefenderRolls();
                 Button srcButt = this.buttons[srcTerr.getName()];
                 srcButt.Text = (srcTerr.getTemporaryReinforcements() + srcTerr.getNumTroops()) + "";
 
@@ -412,6 +414,7 @@ namespace Risk
         }
         private void TransportButton_click(object sender, EventArgs e)
         {
+            DieRollLabel.Text = "";
             if (game.move(TroopsToMove.Text))
             {
                 Territory srcTerr = this.game.getSource();
@@ -429,6 +432,7 @@ namespace Risk
 
         private void endAttack_click(object sender, EventArgs e)
         {
+            DieRollLabel.Text = "";
             game.endAttack();
             updatePhaseButtons();
             TroopsToMove.Enabled = false;
