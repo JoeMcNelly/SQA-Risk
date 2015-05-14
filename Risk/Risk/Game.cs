@@ -227,7 +227,7 @@ namespace Risk
         }
         public string getDefenderRolls()
         {
-            return "1";
+            return this.defenderRolls.ElementAt(0).ToString();
         }
         public bool isLastInit()
         {
