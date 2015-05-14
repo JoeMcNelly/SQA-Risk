@@ -124,7 +124,7 @@ namespace Risk
 
         public Color getColor()
         {
-            return null;
+            return this.playerColor;
         }
 
         public void setColor()
