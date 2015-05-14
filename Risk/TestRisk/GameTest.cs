@@ -1304,7 +1304,7 @@ namespace TestRisk
 
         }
         [TestMethod]
-        public void testGameNotEndingIfPlayerStillHasTerritories()
+        public void TestGameNotEnding()
         {
             Game game = new Game(2);
             game.turnOffInit();
@@ -1348,6 +1348,53 @@ namespace TestRisk
 
             game.checkEndGame();
             Assert.IsFalse(game.isOver());
+
+        }
+        [TestMethod]
+        public void TestGameShouldEnd()
+        {
+            Game game = new Game(2);
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Madagascar");
+            Territory t3 = game.getMap().getTerritory("China");
+            p2Owned.Add(t2);
+            p2Owned.Add(t3);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                t2.addTroops();
+                t3.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(1);
+            t3.saveTroops();
+            t3.setOwner(1);
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+            typeof(Game).GetField("playersLeft", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
+
+
+            game.checkEndGame();
+            Assert.IsTrue(game.isOver());
 
         }
        
