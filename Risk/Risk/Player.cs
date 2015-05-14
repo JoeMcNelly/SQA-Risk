@@ -113,7 +113,6 @@ namespace Risk
         {
             return this.territories.Count == 0;
         }
-
         public int getTerritoriesConquered()
         {
             return this.territoriesConquered;

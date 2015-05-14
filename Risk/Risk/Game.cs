@@ -793,10 +793,14 @@ namespace Risk
                         {
                             this.players[destOwner].incTerritoriesLost();
                             this.players[destOwner].getTerritories().Remove(dest);
+                            //remove me
+                            //this.players[srcOwner].AddTerritory(dest);
+                            
                             if (this.players[destOwner].getTerritories().Count == 0) // player eliminated
                             {
                                 this.playersLeft--;
                             }
+                            
                         }
                         
                         if(this.playersLeft == 1 || this.players[srcOwner].ownsAll())
@@ -833,6 +837,11 @@ namespace Risk
                 }
 
             }
+        }
+        
+        public void checkEndGame()
+        {
+            //do nothing at all, preparing for TDD
         }
         
     }

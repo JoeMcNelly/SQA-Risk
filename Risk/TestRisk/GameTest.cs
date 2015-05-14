@@ -56,14 +56,36 @@ namespace TestRisk
         public void TestgetPhaseAfter2Reinforces()
         {
             Game game = new Game();
-            Player player0 = new Player("player0", 0);
-            Player player1 = new Player("player1", 1);
+            game.turnOffInit();
             List<Player> playerList = new List<Player>();
-            playerList.Add(player0);
-            playerList.Add(player1);
 
-            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
-            typeof(Game).GetField("numOfPlayers", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 1);
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Madagascar");
+            p2Owned.Add(t2);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                t2.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(1);
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
             typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
             game.turnOffInit();
 
@@ -363,42 +385,71 @@ namespace TestRisk
 
         [TestMethod]
         //TODO: FIX THE SHIT OUT OF ME
-        public void TestCorrectlyFortifyFiveTroops() {
-            Game game = new Game(2);
-            game.initializeDeck();
-            List<Territory> terrList = new List<Territory>();
+        public void TestCorrectlyFortifyFiveTroops()
+        {
+            //this test is sooooo aggravating to work around
 
-            Territory testTerritory1 = game.getMap().getTerritory("China");
-            Territory testTerritory2 = game.getMap().getTerritory("India");
-            
-            testTerritory1.setOwner(0);
-            testTerritory2.setOwner(0);
-            terrList.Add(testTerritory1);
-            terrList.Add(testTerritory2);
-            Player p1 = new Player("Dummy Player", 0, terrList);
-            typeof(Game).GetField("currentPlayerIndex", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, 0);
+
+            Game game = new Game();
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Peru");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Brazil");
+            p1Owned.Add(t2);
+            Territory t3 = game.getMap().getTerritory("Congo");
+            p2Owned.Add(t3);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                t2.addTroops();
+                t3.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+            t3.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(0);
+            t3.setOwner(1);
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
             game.turnOffInit();
             for (int i = 0; i < 15; i++)
             {
-                game.clickTerritory(testTerritory1);
+                game.clickTerritory(t1);
             }
             game.saveReinforcements(p1);
             // player 1 sets 15 reinforcements into testTerritory
 
-            game.nextGamePhase();
+            game.endAttack();
             // puts game into fortify phase
 
-            game.clickTerritory(testTerritory1);
-            game.clickTerritory(testTerritory2);
-            for(int i = 0; i < 5; i++) {
-                game.clickTerritory(testTerritory2);
+            game.clickTerritory(t1);
+            game.clickTerritory(t2);
+            for (int i = 0; i < 5; i++)
+            {
+                game.clickTerritory(t2);
             }
             // player selects first territory as testTerritory1, then second as testTerritory2,
             // then clicks testTerritory2 5 times to add 5 troops
 
             game.endFortify();
 
-            Assert.AreEqual(5, testTerritory2.getNumTroops());
+            Assert.AreEqual(7, t2.getNumTroops());
         }
 
         [TestMethod]
@@ -1252,5 +1303,53 @@ namespace TestRisk
             Assert.AreEqual(0, p2.getTerritoriesConquered());
 
         }
+        [TestMethod]
+        public void testGameNotEndingIfPlayerStillHasTerritories()
+        {
+            Game game = new Game(2);
+            game.turnOffInit();
+            List<Player> playerList = new List<Player>();
+
+            List<Territory> p1Owned = new List<Territory>();
+            Territory t1 = game.getMap().getTerritory("Congo");
+            p1Owned.Add(t1);
+
+            List<Territory> p2Owned = new List<Territory>();
+            Territory t2 = game.getMap().getTerritory("Madagascar");
+            Territory t3 = game.getMap().getTerritory("China");
+            p2Owned.Add(t2);
+            p2Owned.Add(t3);
+
+            for (int i = 0; i < 5; i++)
+            {
+                t1.addTroops();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                t2.addTroops();
+                t3.addTroops();
+            }
+            t1.saveTroops();
+            t2.saveTroops();
+            t1.setOwner(0);
+            t2.setOwner(1);
+            t3.saveTroops();
+            t3.setOwner(1);
+
+
+            Player p1 = new Player("test1", 0, p1Owned);
+            Player p2 = new Player("test2", 1, p2Owned);
+            playerList.Add(p1);
+            playerList.Add(p2);
+
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+
+
+            game.checkEndGame();
+            Assert.IsFalse(game.isOver());
+
+        }
+       
     }
 }
