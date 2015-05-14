@@ -109,6 +109,10 @@ namespace Risk
         {
             return this.territoriesLost;
         }
+        public bool isEliminated()
+        {
+            return this.territories.Count == 0;
+        }
 
         public int getTerritoriesConquered()
         {

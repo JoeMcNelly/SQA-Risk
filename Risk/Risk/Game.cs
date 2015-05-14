@@ -280,7 +280,10 @@ namespace Risk
         {
             currentPlayerIndex++;
             currentPlayerIndex = currentPlayerIndex % this.numOfPlayers;
-            this.cardDrawn = false;
+            if (getCurrentPlayer().isEliminated() && !getInitPhase())
+                nextPlayer();
+            else
+                this.cardDrawn = false;
             
         }
         public int initialReinforcements()
