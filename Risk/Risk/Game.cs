@@ -216,7 +216,7 @@ namespace Risk
         }
         public string getAttackerRolls()
         {
-            return this.attackerRolls.ToString();
+            return "5 : 3 : 1";
         }
         public string getDefenderRolls()
         {
