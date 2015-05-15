@@ -25,6 +25,4 @@ Prototype Title Screen
 Prototype End Screen
 Game can now be finished correctly
 
-TODO: 	Bug Fixes
-	Improve Title screen
-	Improve End-Game Stats Screen
+TODO: 	Card Bug Fix
