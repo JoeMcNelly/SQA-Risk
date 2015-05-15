@@ -268,7 +268,33 @@ namespace Risk
                     return false;
                 }
             }
-            return true;
+            return VerifyNoDuplicateNames();
+        }
+        private bool VerifyNoDuplicateNames()
+        {
+            HashSet<string> listOfNames = new HashSet<string>();
+            if (numPlayers >= 2)
+            {
+                listOfNames.Add(playerOneName.Text.Trim());
+                listOfNames.Add(playerTwoName.Text.Trim());
+            }
+            if (numPlayers >= 3)
+            {
+                listOfNames.Add(playerThreeName.Text.Trim());
+            }
+            if (numPlayers >= 4)
+            {
+                listOfNames.Add(playerFourName.Text.Trim());
+            }
+            if (numPlayers >= 5)
+            {
+                listOfNames.Add(playerFiveName.Text.Trim());
+            }
+            if (numPlayers >= 6)
+            {
+                listOfNames.Add(playerSixName.Text.Trim());
+            }
+            return listOfNames.Count == numPlayers;
         }
         private void Start(object sender, EventArgs e)
         {
@@ -286,12 +312,12 @@ namespace Risk
                 #endregion
 
                 #region set Names
-                this.playerNames.Add(this.playerOneName.Text);
-                this.playerNames.Add(this.playerTwoName.Text);
-                this.playerNames.Add(this.playerThreeName.Text);
-                this.playerNames.Add(this.playerFourName.Text);
-                this.playerNames.Add(this.playerFiveName.Text);
-                this.playerNames.Add(this.playerSixName.Text);
+                this.playerNames.Add(this.playerOneName.Text.Trim());
+                this.playerNames.Add(this.playerTwoName.Text.Trim());
+                this.playerNames.Add(this.playerThreeName.Text.Trim());
+                this.playerNames.Add(this.playerFourName.Text.Trim());
+                this.playerNames.Add(this.playerFiveName.Text.Trim());
+                this.playerNames.Add(this.playerSixName.Text.Trim());
                 #endregion
 
                 this.Close();
