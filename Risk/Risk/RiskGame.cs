@@ -486,7 +486,21 @@ namespace Risk
 
         private void endTurn_Click(object sender, EventArgs e)
         {
+            if (this.game.getPhase() != 0)
+            {
+                while (this.game.getPhase() != 0)
+                {
+                    this.game.nextGamePhase();
+                }
+                this.game.nextPlayer();
+                updatePhaseButtons();
+                attack.Enabled = false;
+                endAttack.Enabled = false;
+                fortify.Enabled = false;
+                resetFortify.Enabled = false;
 
+
+            }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
