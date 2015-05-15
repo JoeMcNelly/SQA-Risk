@@ -127,6 +127,13 @@ namespace Risk
             DieRollLabel.Text = "";
         }
 
+        public RiskGame(int numPlayers, List<String> playerNames, List<Color> playerColors) : this(numPlayers)
+        {
+            this.game.setPlayerNames(playerNames);
+            this.game.setPlayerColors(playerColors);
+
+        }
+
         private void disableAttack()
         {
             attack.Enabled = false;
@@ -145,7 +152,7 @@ namespace Risk
             if (game.getInitPhase())
             {
                 label2.Text = game.getCurrentPlayer().playerName;
-                label2.ForeColor = colors[game.getCurrentPlayer().playerNumber];
+                label2.ForeColor = game.getCurrentPlayer().getColor();
             }
             else
             {
@@ -259,7 +266,7 @@ namespace Risk
                     break;
             }
             label2.Text = game.getCurrentPlayer().playerName + stringPhase;
-            label2.ForeColor = colors[game.getCurrentPlayer().playerNumber];
+            label2.ForeColor = game.getCurrentPlayer().getColor();
         }
 
         private void updateColors()
@@ -270,7 +277,7 @@ namespace Risk
                 int owner = terr.getOwner();
                 if(owner != -1)
                 {
-                    kv.Value.BackColor = colors[owner];
+                    kv.Value.BackColor = game.getPlayers()[owner].getColor();
                 }
             }
   

@@ -212,8 +212,6 @@ namespace Risk
                 neutralPlayer.AddTerritory(terr);
             }
             initializeDeck();
-            
-
         }
         public string getAttackerRolls()
         {
@@ -537,7 +535,10 @@ namespace Risk
 
         public void setPlayerNames(List<String> namesList)
         {
-            this.players[0].playerName = namesList[0];
+            for (int i=0; i<this.players.Count; i++)
+            {
+                this.players[i].playerName = namesList[i];
+            }
         }
 
         private void clickInitTerritory(Territory current){

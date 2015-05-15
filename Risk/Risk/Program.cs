@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Risk
 {
@@ -23,8 +24,12 @@ namespace Risk
                 Popup p = new Popup();
                 Application.Run(p);
                 int numPlayers = 0;
+                List<Color> colorList = new List<Color>();
+                List<String> playerNames = new List<String>();
                 numPlayers = p.getNumPlayers();
-                RiskGame risk = new RiskGame(numPlayers);
+                colorList = p.getPlayerColors();
+                playerNames = p.getPlayerNames();
+                RiskGame risk = new RiskGame(numPlayers, playerNames, colorList);
                 Application.Run(risk);
                 List<Player> players = risk.getPlayers();
                 StatsScreen stats = new StatsScreen(players);
