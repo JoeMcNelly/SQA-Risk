@@ -281,7 +281,7 @@ namespace Risk
             this.canSetSrc = false;
             this.canSetDst = false;
             nextPlayer();
-            drawCard();
+         //   drawCard();
             nextGamePhase();
         }
 
@@ -591,8 +591,6 @@ namespace Risk
                         }
                         break;
                     case 1:
-                        //do attacking things
-                        
                         
                         if(current.getOwner() == getCurrentPlayer().playerNumber)
                         {
@@ -824,6 +822,7 @@ namespace Risk
                     {
                         this.dest.setOwner(srcOwner);
                         this.getCurrentPlayer().getTerritories().Add(dest);
+
                         
                         this.players[srcOwner].incTerritoriesConquered();
                         if (destOwner != -1)
