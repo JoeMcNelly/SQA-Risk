@@ -131,6 +131,9 @@ namespace Risk
         {
             this.game.setPlayerNames(playerNames);
             this.game.setPlayerColors(playerColors);
+            label2.Text = game.getCurrentPlayer().playerName;
+            label2.ForeColor = game.getCurrentPlayer().getColor();
+
 
         }
 
