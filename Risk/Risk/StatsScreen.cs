@@ -18,8 +18,43 @@ namespace Risk
         {
             InitializeComponent();
             playerList = players;
-            Control label = tableLayoutPanel1.GetControlFromPosition(0, 1);
-            label.Text = "testtttttttttt";
+            setLabels();
+        }
+
+        public void setLabels()
+        {
+            int numPlayers = playerList.Count;
+            var table = tableLayoutPanel1;
+            Player winner = new Player("fake",-1);
+            foreach(Player p in playerList)
+            {
+                if (!p.isEliminated())
+                {
+                    winner = p;
+                }   
+            }
+            label36.Text = winner.playerName + "wins!";
+            label36.ForeColor = winner.getColor();
+            for(int i = 1 ; i <= 6; i++)
+            {
+                if(i<=numPlayers)
+                {
+                    table.GetControlFromPosition(i, 0).Text = playerList[i-1].playerName;
+                    table.GetControlFromPosition(i, 0).ForeColor = playerList[i-1].getColor();
+                    table.GetControlFromPosition(i, 1).Text = playerList[i-1].getTroopsKilled().ToString();
+                    table.GetControlFromPosition(i, 2).Text = playerList[i-1].getLostTroops().ToString();
+                    table.GetControlFromPosition(i, 3).Text = playerList[i-1].getTerritoriesConquered().ToString();
+                    table.GetControlFromPosition(i, 4).Text = playerList[i-1].getTerritoriesLost().ToString();
+                }
+                else
+                {
+                    table.GetControlFromPosition(i, 0).Text = "";
+                    table.GetControlFromPosition(i, 1).Text = "";
+                    table.GetControlFromPosition(i, 2).Text = "";
+                    table.GetControlFromPosition(i, 3).Text = "";
+                    table.GetControlFromPosition(i, 4).Text = "";
+                }
+            }
         }
 
         public bool stillPlaying()
