@@ -1556,6 +1556,23 @@ namespace TestRisk
             Assert.AreEqual(System.Drawing.Color.Blue, game.getPlayers()[0].getColor());
             Assert.AreEqual(System.Drawing.Color.Red, game.getPlayers()[1].getColor());
         }
+
+        [TestMethod]
+        public void TestSetPlayerNamesForOnePlayer()
+        {
+            Game game = new Game(2);
+            List<Player> playerList = new List<Player>();
+            Player p1 = new Player("test1", 0);
+            playerList.Add(p1);
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            List<String> nameList = new List<String>();
+            nameList.Add("pass1");
+
+            game.setPlayerNames(nameList);
+
+            Assert.AreEqual("pass1", game.getPlayers()[0].playerName);
+        }
        
     }
 }

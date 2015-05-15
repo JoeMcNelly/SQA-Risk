@@ -535,6 +535,11 @@ namespace Risk
             }
         }
 
+        public void setPlayerNames(List<String> namesList)
+        {
+            
+        }
+
         private void clickInitTerritory(Territory current){
             Console.WriteLine(current.getOwner());
             Console.WriteLine(current.getNumTroops());
