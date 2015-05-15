@@ -16,6 +16,7 @@ namespace Risk
         private int numPlayers;
         private List<Color> playerColors = new List<Color>();
         private List<String> playerNames = new List<String>();
+        private List<Color> colorsChosen = new List<Color>();
         public Popup()
         {
             InitializeComponent();
@@ -43,44 +44,6 @@ namespace Risk
         public List<String> getPlayerNames()
         {
             return this.playerNames;
-        }
- 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-            //code to set the number of players and start game
-            /*
-            String content = comboBox1.Text;
-            Console.WriteLine(content);
-            if(content.Equals("2"))
-            {
-                Console.WriteLine("is 2");
-                numPlayers = 2;
-                this.Close();
-            }
-            else if (content.Equals("3"))
-            {
-                numPlayers = 3;
-                this.Close();
-            }
-            else if (content.Equals("4"))
-            {
-                numPlayers = 4;
-                this.Close();
-            }
-            else if (content.Equals("5"))
-            {
-                numPlayers = 5;
-                this.Close();
-            }
-            else if (content.Equals("6"))
-            {
-                numPlayers = 6;
-                this.Close();
-            }
-             */
         }
 
         //sets both label for player name and color as visible
@@ -138,42 +101,79 @@ namespace Risk
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerOneColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerOneColor.BackColor);
+                this.playerOneColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
 
         private void playerTwoChooseColor(object sender, EventArgs e)
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerTwoColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerTwoColor.BackColor);
+                this.playerTwoColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
 
         private void playerThreeChooseColor(object sender, EventArgs e)
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerThreeColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerThreeColor.BackColor);
+                this.playerThreeColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
 
         private void playerFourChooseColor(object sender, EventArgs e)
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerFourColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerFourColor.BackColor);
+                this.playerFourColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
 
         private void playerFiveChooseColor(object sender, EventArgs e)
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerFiveColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerFiveColor.BackColor);
+                this.playerFiveColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
 
         private void playerSixChooseColor(object sender, EventArgs e)
         {
             ColorSelect c = new ColorSelect();
             c.ShowDialog(this);
-            this.playerSixColor.BackColor = c.getColor();
+            if (!colorsChosen.Contains(c.getColor()))
+            {
+                if (c.getColor().Name != "Control")
+                    colorsChosen.Remove(this.playerSixColor.BackColor);
+                this.playerSixColor.BackColor = c.getColor();
+                this.colorsChosen.Add(c.getColor());
+            }
         }
         #endregion
         private void ClickBack(object sender, EventArgs e)
