@@ -26,15 +26,24 @@ namespace Risk
             int numPlayers = playerList.Count;
             var table = tableLayoutPanel1;
             Player winner = new Player("fake",-1);
+            int count = 0;
             foreach(Player p in playerList)
             {
                 if (!p.isEliminated())
                 {
+                    count++;
                     winner = p;
                 }   
             }
-            label36.Text = winner.playerName + "wins!";
-            label36.ForeColor = winner.getColor();
+            if (count > 1)
+            {
+                label36.Text = "No one wins!";
+            }
+            else
+            {
+                label36.Text = winner.playerName + "wins!";
+                label36.ForeColor = winner.getColor();
+            }
             for(int i = 1 ; i <= 6; i++)
             {
                 if(i<=numPlayers)
