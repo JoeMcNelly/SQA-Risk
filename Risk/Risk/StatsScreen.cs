@@ -35,13 +35,13 @@ namespace Risk
                     winner = p;
                 }   
             }
-            if (count > 1)
+            if (count != 1)
             {
                 label36.Text = "No one wins!";
             }
             else
             {
-                label36.Text = winner.playerName + "wins!";
+                label36.Text = winner.playerName + " wins!";
                 label36.ForeColor = winner.getColor();
             }
             for(int i = 1 ; i <= 6; i++)

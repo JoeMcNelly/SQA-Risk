@@ -25,3 +25,6 @@ C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.RiskGa
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.Properties.Resources.resources
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.exe
 C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.pdb
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.ColorSelect.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.Popup.resources
+C:\Users\Administrator\Documents\GitHub\SQA-Risk\Risk\Risk\obj\Debug\Risk.StatsScreen.resources
