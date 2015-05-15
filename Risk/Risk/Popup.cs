@@ -224,29 +224,79 @@ namespace Risk
             this.NextButton.Click += new System.EventHandler(Start);
         }
 
+        private bool ValidateInputs()
+        {
+            if (numPlayers >= 2)
+            {
+                if (playerOneName.Text == "" || playerOneColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+
+                if (playerTwoName.Text == "" || playerTwoColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+            }
+            if (numPlayers >= 3)
+            {
+                if (playerThreeName.Text == "" || playerThreeColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+
+                
+            }
+            if (numPlayers >= 4)
+            {
+                if (playerFourName.Text == "" || playerFourColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+            }
+            if (numPlayers >= 5)
+            {
+                if (playerFiveName.Text == "" || playerFiveColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+            }
+            if (numPlayers >= 6)
+            {
+                if (playerSixName.Text == "" || playerSixColor.BackColor.Name == "Control")
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void Start(object sender, EventArgs e)
         {
-            #region set Colors
-            this.playerColors.Add(this.playerOneColor.BackColor);
-            this.playerColors.Add(this.playerTwoColor.BackColor);
-            this.playerColors.Add(this.playerThreeColor.BackColor);
-            this.playerColors.Add(this.playerFourColor.BackColor);
-            this.playerColors.Add(this.playerFiveColor.BackColor);
-            this.playerColors.Add(this.playerSixColor.BackColor);
-            #endregion
+            if (ValidateInputs())
+            {
 
-            #region set Names
-            this.playerNames.Add(this.playerOneName.Text);
-            this.playerNames.Add(this.playerTwoName.Text);
-            this.playerNames.Add(this.playerThreeName.Text);
-            this.playerNames.Add(this.playerFourName.Text);
-            this.playerNames.Add(this.playerFiveName.Text);
-            this.playerNames.Add(this.playerSixName.Text);
-            #endregion
 
-            this.Close();
+                #region set Colors
+                this.playerColors.Add(this.playerOneColor.BackColor);
+                this.playerColors.Add(this.playerTwoColor.BackColor);
+                this.playerColors.Add(this.playerThreeColor.BackColor);
+                this.playerColors.Add(this.playerFourColor.BackColor);
+                this.playerColors.Add(this.playerFiveColor.BackColor);
+                this.playerColors.Add(this.playerSixColor.BackColor);
+                #endregion
+
+                #region set Names
+                this.playerNames.Add(this.playerOneName.Text);
+                this.playerNames.Add(this.playerTwoName.Text);
+                this.playerNames.Add(this.playerThreeName.Text);
+                this.playerNames.Add(this.playerFourName.Text);
+                this.playerNames.Add(this.playerFiveName.Text);
+                this.playerNames.Add(this.playerSixName.Text);
+                #endregion
+
+                this.Close();
+            }
+
         }
-
-        
     }
 }
