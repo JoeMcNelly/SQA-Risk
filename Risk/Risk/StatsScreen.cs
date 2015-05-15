@@ -18,6 +18,8 @@ namespace Risk
         {
             InitializeComponent();
             playerList = players;
+            Control label = tableLayoutPanel1.GetControlFromPosition(0, 1);
+            label.Text = "testtttttttttt";
         }
 
         public bool stillPlaying()
@@ -34,6 +36,11 @@ namespace Risk
         private void quit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
