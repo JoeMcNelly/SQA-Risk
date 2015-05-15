@@ -529,7 +529,10 @@ namespace Risk
 
         public void setPlayerColors(List<Color> colorList)
         {
-            this.players[0].setColor(colorList[0]);
+            for (int i = 0; i < this.players.Count; i++)
+            {
+                this.players[i].setColor(colorList[i]);
+            }
         }
 
         private void clickInitTerritory(Territory current){
