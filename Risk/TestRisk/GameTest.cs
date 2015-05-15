@@ -1573,6 +1573,27 @@ namespace TestRisk
 
             Assert.AreEqual("pass1", game.getPlayers()[0].playerName);
         }
+
+        [TestMethod]
+        public void TestSetPlayerNamesForMultiplePlayers()
+        {
+            Game game = new Game(2);
+            List<Player> playerList = new List<Player>();
+            Player p1 = new Player("test1", 0);
+            Player p2 = new Player("test2", 0);
+            playerList.Add(p1);
+            playerList.Add(p2);
+            typeof(Game).GetField("players", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(game, playerList);
+
+            List<String> nameList = new List<String>();
+            nameList.Add("pass1");
+            nameList.Add("pass2");
+
+            game.setPlayerNames(nameList);
+
+            Assert.AreEqual("pass1", game.getPlayers()[0].playerName);
+            Assert.AreEqual("pass2", game.getPlayers()[1].playerName);
+        }
        
     }
 }

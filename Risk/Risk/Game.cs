@@ -537,7 +537,7 @@ namespace Risk
 
         public void setPlayerNames(List<String> namesList)
         {
-            
+            this.players[0].playerName = namesList[0];
         }
 
         private void clickInitTerritory(Territory current){
