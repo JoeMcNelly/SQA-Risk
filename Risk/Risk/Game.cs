@@ -340,6 +340,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allSouthAmerica = false;
+                    break;
                 }
             }
 
@@ -349,6 +350,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allAustralia = false;
+                    break;
                 }
             }
 
@@ -358,6 +360,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allNorthAmerica = false;
+                    break;
                 }
             }
             bool allEurope = true;
@@ -366,6 +369,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allEurope = false;
+                    break;
                 }
             }
 
@@ -375,6 +379,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allAsia = false;
+                    break;
                 }
             }
 
@@ -384,6 +389,7 @@ namespace Risk
                 if (!current.Contains(t))
                 {
                     allAfrica = false;
+                    break;
                 }
             }
 

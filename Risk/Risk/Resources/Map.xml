@@ -161,7 +161,7 @@
   <territory>
     <name>Kamchatka</name>
     <continent>Asia</continent>
-    <adjacent>Yakutsk:Irkutsk:Mongolia:Japan</adjacent>
+    <adjacent>Yakutsk:Irkutsk:Mongolia:Japan:Alaska</adjacent>
   </territory>
   <territory>
     <name>Middle East</name>

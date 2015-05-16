@@ -488,16 +488,18 @@ namespace Risk
         {
             if (this.game.getPhase() != 0)
             {
+                this.game.nextPlayer();
                 while (this.game.getPhase() != 0)
                 {
                     this.game.nextGamePhase();
                 }
-                this.game.nextPlayer();
                 updatePhaseButtons();
                 attack.Enabled = false;
                 endAttack.Enabled = false;
                 fortify.Enabled = false;
                 resetFortify.Enabled = false;
+                label1.ForeColor = Color.Black;
+                
 
 
             }
